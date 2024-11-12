@@ -11,6 +11,6 @@ A vizsgaremek feladat Git-Hub oldala.
 
 # Social media
 
-# Facebook készítéve: 2024.11.12 Csontos Márió Dávid által
+# Facebook készítéve: Sajnos ezt a rendszert nem tudtam megtenni (Csontos Márió Dávid)
 # Instagram készítve: 2024.11.12 Vékony Marcell által
 ##
