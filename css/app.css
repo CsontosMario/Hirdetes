@@ -3,3 +3,7 @@ nav a.nav-link.active {
   color: white !important;
   cursor: default;
 }
+footer {
+  background-color: red;
+  
+}
