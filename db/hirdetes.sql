@@ -44,7 +44,7 @@ INSERT INTO `fizetes` (`fizetesID`, `megnevezes`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `kosar`
+-- A tábla adatainak kiíratása `fizetes`
 --
 
 CREATE TABLE `kosar` (
