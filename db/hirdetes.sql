@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Nov 12. 11:11
+-- Létrehozás ideje: 2024. Nov 21. 10:52
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -28,9 +28,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `fizetes` (
-  `fizetesID` int(200) NOT NULL,
-  `megnevezes` varchar(200) NOT NULL
+  `fizetesID` int(11) NOT NULL,
+  `megnevezes` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `fizetes`
+--
+
+INSERT INTO `fizetes` (`fizetesID`, `megnevezes`) VALUES
+(1, 'készpénz'),
+(2, 'átutalás'),
+(3, 'bankkártya');
 
 -- --------------------------------------------------------
 
@@ -39,11 +48,22 @@ CREATE TABLE `fizetes` (
 --
 
 CREATE TABLE `kosar` (
-  `kosarID` int(200) NOT NULL,
-  `felhasznaloID` int(200) NOT NULL,
+  `kosarID` int(11) NOT NULL,
+  `felhasznaloID` int(11) NOT NULL,
   `datum` date NOT NULL,
-  `fizetesID` int(200) NOT NULL
+  `fizetesID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `kosar`
+--
+
+INSERT INTO `kosar` (`kosarID`, `felhasznaloID`, `datum`, `fizetesID`) VALUES
+(1, 1, '2017-11-15', 1),
+(2, 2, '2016-09-06', 2),
+(3, 3, '2019-06-12', 3),
+(4, 4, '2023-12-04', 4),
+(5, 5, '2018-03-20', 5);
 
 -- --------------------------------------------------------
 
@@ -52,11 +72,22 @@ CREATE TABLE `kosar` (
 --
 
 CREATE TABLE `kosarelemek` (
-  `kosarID` int(200) NOT NULL,
-  `termekID` int(200) NOT NULL,
-  `db` int(200) NOT NULL,
-  `ar` int(200) NOT NULL
+  `kosarID` int(11) NOT NULL,
+  `termekID` int(11) NOT NULL,
+  `db` int(11) NOT NULL,
+  `ar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `kosarelemek`
+--
+
+INSERT INTO `kosarelemek` (`kosarID`, `termekID`, `db`, `ar`) VALUES
+(1, 1, 3, 500),
+(2, 2, 12, 5500),
+(3, 3, 6, 3000),
+(4, 4, 16, 36000),
+(5, 5, 19, 12000);
 
 -- --------------------------------------------------------
 
@@ -65,15 +96,23 @@ CREATE TABLE `kosarelemek` (
 --
 
 CREATE TABLE `regisztracio` (
-  `felhasznaloID` int(200) NOT NULL,
-  `jelszo` varchar(300) NOT NULL,
-  `jelszo2` varchar(300) NOT NULL,
-  `nev` varchar(300) NOT NULL,
-  `iranyitoszam` int(200) NOT NULL,
-  `varos` varchar(200) NOT NULL,
-  `cim` varchar(300) NOT NULL,
-  `orszag` varchar(300) NOT NULL
+  `felhasznaloID` int(11) NOT NULL,
+  `jelszo` varchar(50) NOT NULL,
+  `jelszo2` varchar(50) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `iranyitoszam` int(11) NOT NULL,
+  `varos` varchar(50) NOT NULL,
+  `cim` varchar(50) NOT NULL,
+  `orszag` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `regisztracio`
+--
+
+INSERT INTO `regisztracio` (`felhasznaloID`, `jelszo`, `jelszo2`, `nev`, `iranyitoszam`, `varos`, `cim`, `orszag`) VALUES
+(1, 'numero2356', 'garfield2121', 'Szabó Zsuzsanna', 6900, 'Makó', 'Szegedi.u.2', 'Magyarország'),
+(2, 'uhtfsawd', 'awdawdaw', 'Vékony Erik', 6900, 'Makó', 'ady.u.2', 'Magyarország');
 
 -- --------------------------------------------------------
 
@@ -82,10 +121,26 @@ CREATE TABLE `regisztracio` (
 --
 
 CREATE TABLE `zoldseg-kepek` (
-  `termekID` int(200) NOT NULL,
-  `sorszam` int(200) NOT NULL,
-  `kepnev` varchar(300) NOT NULL
+  `termekID` int(11) NOT NULL,
+  `sorszam` int(11) NOT NULL,
+  `kepnev` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `zoldseg-kepek`
+--
+
+INSERT INTO `zoldseg-kepek` (`termekID`, `sorszam`, `kepnev`) VALUES
+(1, 1, 'Paprika'),
+(2, 2, 'Burgonya'),
+(3, 3, 'Spenót'),
+(4, 4, 'Sárgarépa'),
+(5, 5, 'Kerti Sóska'),
+(6, 6, 'Újhagyma'),
+(7, 7, 'Kukorica'),
+(8, 8, 'zöldborsó'),
+(9, 9, 'karalábé'),
+(10, 10, 'karfiol');
 
 -- --------------------------------------------------------
 
@@ -94,13 +149,29 @@ CREATE TABLE `zoldseg-kepek` (
 --
 
 CREATE TABLE `zoldsegek` (
-  `kep` varchar(300) NOT NULL,
-  `termekID` int(100) NOT NULL,
-  `megnevezes` varchar(300) NOT NULL,
-  `leiras` varchar(300) NOT NULL,
-  `ar` int(200) NOT NULL,
-  `kiszereles` varchar(300) NOT NULL
+  `kep` varchar(50) NOT NULL,
+  `termekID` int(10) NOT NULL,
+  `megnevezes` varchar(50) NOT NULL,
+  `leiras` text NOT NULL,
+  `ar` int(10) NOT NULL,
+  `kiszereles` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `zoldsegek`
+--
+
+INSERT INTO `zoldsegek` (`kep`, `termekID`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+('', 1, 'Burgonya (Balatoni-rózsa)', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'ömlesztve'),
+('', 2, 'Sárgarépa (Matador)', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'ömlesztve'),
+('', 3, 'Kerti Sóska (Pallagi nagylevelű)', 'Erőteljes levelű.  Magyar termék.', 400, 'csomagonként'),
+('', 4, 'Spenót', 'Közepes nagyságú levelek. Magyar termék.', 500, 'csomagonként'),
+('', 5, 'Újhagyma', 'Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.', 250, 'csomagonként'),
+('', 6, 'Kukorica (Csemege)', 'Közepes szemű, édes, főzésre kitűnő. Magyar termék.', 200, 'darabonként'),
+('', 7, 'Zöldborsó (Zsuzsi)', 'Közepes nagyságú szemek, zsengék és alkalmas levesekheez, főzelékekhez, salátákhoz. Magyar termék.', 1000, 'ömlesztve'),
+('', 8, 'Karalábé', 'Zsenge, fehér. Magyar termék.', 450, 'darabonként'),
+('', 9, 'Paprika (Fehérözön)', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'ömlesztve'),
+('', 10, 'Karfiol', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'fejenként');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -143,6 +214,16 @@ ALTER TABLE `zoldseg-kepek`
 --
 ALTER TABLE `zoldsegek`
   ADD PRIMARY KEY (`termekID`);
+
+--
+-- A kiírt táblák AUTO_INCREMENT értéke
+--
+
+--
+-- AUTO_INCREMENT a táblához `zoldsegek`
+--
+ALTER TABLE `zoldsegek`
+  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
