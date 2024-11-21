@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Nov 21. 10:52
+-- Létrehozás ideje: 2024. Nov 21. 11:56
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -44,7 +44,7 @@ INSERT INTO `fizetes` (`fizetesID`, `megnevezes`) VALUES
 -- --------------------------------------------------------
 
 --
--- A tábla adatainak kiíratása `fizetes`
+-- Tábla szerkezet ehhez a táblához `kosar`
 --
 
 CREATE TABLE `kosar` (
@@ -131,16 +131,16 @@ CREATE TABLE `zoldseg-kepek` (
 --
 
 INSERT INTO `zoldseg-kepek` (`termekID`, `sorszam`, `kepnev`) VALUES
-(1, 1, 'Paprika'),
-(2, 2, 'Burgonya'),
-(3, 3, 'Spenót'),
-(4, 4, 'Sárgarépa'),
-(5, 5, 'Kerti Sóska'),
-(6, 6, 'Újhagyma'),
-(7, 7, 'Kukorica'),
-(8, 8, 'zöldborsó'),
-(9, 9, 'karalábé'),
-(10, 10, 'karfiol');
+(1, 1, 'Pepper'),
+(2, 2, 'Potato'),
+(3, 3, 'Spinach'),
+(4, 4, 'Carrot'),
+(5, 5, 'Garden_Sorrel'),
+(6, 6, 'Chives'),
+(7, 7, 'Corn'),
+(8, 8, 'Pea'),
+(9, 9, 'Kohlrabi'),
+(10, 10, 'Cauliflower');
 
 -- --------------------------------------------------------
 
