@@ -5,5 +5,10 @@ nav a.nav-link.active {
 }
 footer {
   background-color: red;
-  
+}
+nav {
+  background-color: red !important;
+}
+footer a {
+  color: black;
 }
