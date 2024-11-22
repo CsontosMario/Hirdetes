@@ -1,56 +1,27 @@
 <div class="container">
-    <div class="row">
-        <div class="card-group">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Burgonya</h5>
-                    <h4 class="card-title">(Balatoni-rózsa)</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
+    <div class="row" ng-init="zoldsegek = [{'zoldsegnev':'Burgonya','zoldsegnev2':'(Balatoni-rózsa)'},
+                                           {'zoldsegnev':'Sárgarépa','zoldsegnev2':'(Matador)'},
+                                           {'zoldsegnev':'Kerti Sóska','zoldsegnev2':'(Pallagi nagylevelű)'},
+                                           {'zoldsegnev':'Spenót','zoldsegnev2':'-'},
+                                           {'zoldsegnev':'Újhagyma','zoldsegnev2':'-'},
+                                           {'zoldsegnev':'Kukorica','zoldsegnev2:'(Csemege)'},
+                                           {'zoldsegnev':'Zöldborsó','zoldsegnev2':'(Zsuzsi)'},
+                                           {'zoldsegnev':'Karalábé','zoldsegnev2':'-'},
+                                           {'zoldsegnev':'Paprika','zoldsegnev2':'(Fehérözön)'},
+                                           {'zoldsegnev':'Karfiol','zoldsegnev2':'-'}]">
+
+        <div class="card" ng-repeat="(k, v) in zoldsegek">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{v}}</h5>
+                <h4 class="card-title">(Balatoni-rózsa)</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
             </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sárgarépa</h5>
-                    <h4 class="card-title">(Matador)</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Kerti Sóska</h5>
-                    <h4 class="card-title">(Pallagi nagylevelű)</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Kerti Sóska</h5>
-                    <h4 class="card-title">(Pallagi nagylevelű)</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
+            <div class="card-footer">
+                <small class="text-body-secondary">Last updated 3 mins ago</small>
             </div>
         </div>
+
     </div>
 </div>
