@@ -6,8 +6,9 @@ nav a.nav-link.active {
 footer {
   background-color: red;
 }
-nav {
+.navbar {
   background-color: red !important;
+  font-weight: bold;
 }
 footer a {
   color: black;

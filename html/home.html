@@ -1,4 +1,5 @@
 <div class="container">
+
     <div class="row">
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
@@ -44,4 +45,27 @@
             </button>
         </div>
     </div>
+
+    <div class="row justify-content-center mt-5">
+        <h1 class="text-center">Hivás fogadási órák</h1>
+        <table class="table table-bordered table-striped w-auto">
+            <thead>
+                <tr>
+                    <th>Nap</th>
+                    <th>Kezdés</th>
+                    <th>Zárás</th>
+                </tr>
+            </thead>
+            <tbody ng-init="days=['Hétfő - Péntek','Szombat - Vasárnap']">
+                <tr ng-repeat="x in days"
+                    ng-init="availability_open = ''"
+                    ng-init="availability_close = ''">
+                    <td>{{x}}</td>
+                    <td ng-if="x == 'Hétfő - Péntek' ? availability_open = '9:00' : availability_open = '-'">{{availability_open}}</td>
+                    <td ng-if="x == 'Hétfő - Péntek' ? availability_close = '15:00' : availability_close = '-'">{{availability_close}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
 </div>
