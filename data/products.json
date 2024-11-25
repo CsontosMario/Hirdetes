@@ -12,10 +12,10 @@
         "vegetable_packaging":""
     },
     {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
+        "vegetable_name":"Kerti Sóska (Pallagi nagylevelű)",
+        "vegetable_price":"400",
+        "vegetable_description":"Erőteljes levelű. Magyar termék.",
+        "vegetable_packaging":"csomagonként"
     },
     {
         "vegetable_name":"",
@@ -30,10 +30,22 @@
         "vegetable_packaging":""
     },
     {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
+        "vegetable_name":"Kukorica (Csemege)",
+        "vegetable_price":"200",
+        "vegetable_description":"Közepes szemű, édes, főzésre kitűnő. Magyar termék.",
+        "vegetable_packaging":"darabonként"
+    },
+    {
+        "vegetable_name":"Zöldborsó (Zsuzsi)",
+        "vegetable_price":"1000",
+        "vegetable_description":"Közepes nagyságú szemek, zsengék és alkalmas levesekhez, főzelékekhez, salátákhoz. Magyar termék.",
+        "vegetable_packaging":"ömlesztve"
+    },
+    {
+        "vegetable_name":"Karalábé",
+        "vegetable_price":"450",
+        "vegetable_description":"Zsenge, fehér. Magyar termék.",
+        "vegetable_packaging":"darabonként"
     },
     {
         "vegetable_name":"",
@@ -42,21 +54,9 @@
         "vegetable_packaging":""
     },
     {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
-    },
-    {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
-    },
-    {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
+        "vegetable_name":"Karfiol",
+        "vegetable_price":"800",
+        "vegetable_description":"Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.",
+        "vegetable_packaging":"fejenként"
     }
 ]
