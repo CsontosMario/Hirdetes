@@ -8,8 +8,26 @@
     {
         "vegetable_name":"Sárgarépa (Matador)",
         "vegetable_price":"400",
+        "vegetable_description":"Sima hengeres, közepes hosszúságú.  Magyar termék.",
+        "vegetable_packaging":"ömlesztve"
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
         "vegetable_description":"",
         "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"Spenót",
+        "vegetable_price":"500",
+        "vegetable_description":"Közepes nagyságú levelek. Magyar termék.",
+        "vegetable_packaging":"csomagonként"
+    },
+    {
+        "vegetable_name":"Újhagyma",
+        "vegetable_price":"250",
+        "vegetable_description":"Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.",
+        "vegetable_packaging":"csomagonként"
     },
     {
         "vegetable_name":"",
@@ -30,28 +48,10 @@
         "vegetable_packaging":""
     },
     {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
-    },
-    {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
-    },
-    {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
-    },
-    {
-        "vegetable_name":"",
-        "vegetable_price":"",
-        "vegetable_description":"",
-        "vegetable_packaging":""
+        "vegetable_name":"Paprika (Fehérözön)",
+        "vegetable_price":"800",
+        "vegetable_description":"Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.",
+        "vegetable_packaging":"ömlesztve"
     },
     {
         "vegetable_name":"",
