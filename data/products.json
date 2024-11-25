@@ -1,0 +1,62 @@
+[
+    {
+        "vegetable_name":"Burgonya (Balatoni-rózsa)",
+        "vegetable_price":"1000",
+        "vegetable_description":"Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.",
+        "vegetable_packaging":"ömlesztve"
+    },
+    {
+        "vegetable_name":"Sárgarépa (Matador)",
+        "vegetable_price":"400",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    },
+    {
+        "vegetable_name":"",
+        "vegetable_price":"",
+        "vegetable_description":"",
+        "vegetable_packaging":""
+    }
+]

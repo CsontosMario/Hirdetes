@@ -5,7 +5,8 @@
         "birth_day":"2003-12-27",
         "about_short":"",
         "about":"",
-        "job_title":"A weboldal fejlesztői csapatának vezetője"
+        "job_title":"A weboldal fejlesztői csapatának vezetője",
+        "picture_name":"marcell"
     },
     {
         "name":"Csontos Márió Dávid",
@@ -13,6 +14,7 @@
         "birth_day":"2005-10-07",
         "about_short":"",
         "about":"",
-        "job_title":"A weboldal fejlesztői csapatának tagja"
+        "job_title":"A weboldal fejlesztői csapatának tagja",
+        "picture_name":"mario"
     }
 ]

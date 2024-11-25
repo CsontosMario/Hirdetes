@@ -5,7 +5,8 @@
         "birth_day":"",
         "about_short":"",
         "about":"",
-        "job_title":"Fő termelő"
+        "job_title":"Fő termelő",
+        "picture_name":"maria"
     },
     {
         "name":"Burkus Gusztáv",
@@ -13,6 +14,7 @@
         "birth_day":"",
         "about_short":"",
         "about":"",
-        "job_title":"Fő termelő"
+        "job_title":"Fő termelő",
+        "picture_name":"gusztav"
     }
 ]
