@@ -1,21 +1,21 @@
 <div class="container">
-    <div class="row mt-5" ng-init="zoldsegek=[{'Burgonya':'(Balatoni Rózsa)'},
-                                              {'Sárgarépa':'(Matador)'},
-                                              {'Kerti Sóska':'(Pallagi nagylevelű)'},
-                                              {'Spenót':'(-)'},
-                                              {'Újhagyma':'(-)'},
-                                              {'Kukorica':'(Csemege)'},
-                                              {'Zöldborsó':'(Zsuzsi)'},
-                                              {'Karalábé':'(-)'},
-                                              {'Paprika':'(Fehérözön)'},
-                                              {'Karfiol':'(-)'},]"></div>
-        <div class="card text-center col-sm-6 mb-3 mb-sm-0" ng-repeat="(k,v) in zoldsegek">
+    <div class="row mt-3" ng-init="zoldsegek=['Burgonya (Balatoni-rózsa)',
+                                              'Sárgarépa (Matador)',
+                                              'Kerti Sóska (Pallagi nagylevelű)',
+                                              'Spenót (-)',
+                                              'Újhagyma (-)',
+                                              'Kukorica (Csemege)',
+                                              'Zöldborsó (Zsuzsi)',
+                                              'Karalábé (-)',
+                                              'Paprika (Fehérözön)',
+                                              'Karfiol (-)']">
+        <div class="card text-center col-sm-6 mb-3 mb-sm-0" ng-repeat="x in zoldsegek">
             <div class="card-header">
-                <h1 class="text-center">{{k}}</h1>
+                <h1 class="text-center">{{x}}</h1>
             </div>
             <div class="card-body">
                 <img src="..." class="card-img-top" alt="...">
-                <h5 class="card-title">{{v}}</h5>
+                <h5 class="card-title">{{x}}</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <a href="#" class="btn btn-primary">További információk</a>
             </div>
