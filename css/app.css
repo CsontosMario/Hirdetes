@@ -3,6 +3,7 @@ nav a.nav-link.active {
   color: black !important;
   font-style: italic;
   cursor: default;
+  font-size: x-large;
 }
 footer {
   background-color: red;
@@ -10,6 +11,7 @@ footer {
 .navbar {
   background-color: red !important;
   font-weight: bold;
+  font-size: large;
 }
 footer a {
   color: black;
