@@ -38,13 +38,13 @@
             .state('aboutOurFarmers', {
                 url: '/',
                 parent: 'root',
-                templateUrl: './html/about_our_farmers.html',
+                templateUrl: './html/farmers_and_programmers/about_our_farmers.html',
                 controller: 'about_our_farmersController'
             })
             .state('aboutUs', {
                 url: '/',
                 parent: 'root',
-                templateUrl: './html/about_us.html',
+                templateUrl: './html/farmers_and_programmers/about_us.html',
                 controller: 'about_usController'
             })
 
