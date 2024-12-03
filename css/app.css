@@ -20,3 +20,8 @@ footer a {
 body {
   background-color: green !important;
 }
+.dropdown-item:active,
+.dropdown-item.active,
+.dropdown-item a.active {
+	background-color: transparent !important;
+}
