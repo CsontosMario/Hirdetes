@@ -30,31 +30,31 @@
                 controller: 'homeController'
             })
             .state('products', {
-                url: '/',
+                url: '/products',
                 parent: 'root',
                 templateUrl: './html/products.html',
                 controller: 'productsController'
             })
             .state('aboutOurFarmers', {
-                url: '/',
+                url: '/about_our_farmers',
                 parent: 'root',
                 templateUrl: './html/farmers_and_programmers/about_our_farmers.html',
                 controller: 'about_our_farmersController'
             })
             .state('aboutUs', {
-                url: '/',
+                url: '/about_our_website_creators',
                 parent: 'root',
                 templateUrl: './html/farmers_and_programmers/about_us.html',
                 controller: 'about_usController'
             })
             .state('register', {
-                url: '/',
+                url: '/sign_up',
                 parent: 'root',
                 templateUrl: './html/profil_and_cart/sign_up.html',
                 controller: 'registerController'
             })
             .state('login', {
-                url: '/',
+                url: '/sign_in',
                 parent: 'root',
                 templateUrl: './html/profil_and_cart/sign_in.html',
                 controller: 'loginController'

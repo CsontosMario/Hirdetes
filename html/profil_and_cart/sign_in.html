@@ -1,19 +1,30 @@
 <div class="container">
     <div class="row justify-content-center mt-5">
         <form class="w-auto p-3" style="border:1px solid #ccc" name="sign_in_form">
+            
+            <div class="mb-3">
+                <h1 class="text-center pb-3">Bejelentkezés</h1>
+            </div>
+            
             <div class="mb-3">
                 <label for="name" class="form-label">Név</label>
                 <input type="text" class="form-control" id="name" aria-describedby="emailHelp" required>
             </div>
+
             <div class="mb-3">
                 <label for="password" class="form-label">Jelszó</label>
                 <input type="password" class="form-control" id="password" required>
             </div>
+
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="showPassword">
                 <label class="form-check-label" for="showPassword">Jelszó mutatása</label>
             </div>
-            <button type="button" class="btn btn-primary" ng-disabled="sign_in_form">Bejelentkezés</button>
+            
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary" ng-disabled="sign_in_form">Bejelentkezés</button>
+            </div>
+
         </form>
     </div>
 </div>
