@@ -53,6 +53,12 @@
                 templateUrl: './html/profil_and_cart/sign_up.html',
                 controller: 'registerController'
             })
+            .state('login', {
+                url: '/',
+                parent: 'root',
+                templateUrl: './html/profil_and_cart/sign_in.html',
+                controller: 'loginController'
+            })
             $urlRouterProvider.otherwise('/');
 
         }
@@ -97,10 +103,20 @@
             console.log('Products controller...');
         }
     ])
+
+    //Register controller
     .controller('registerController', [
         '$scope',
         function($scope) {
-            console.log('registerController')
+            console.log('Register controller...')
+        }
+    ])
+
+    //Login controller
+    .controller('loginController', [
+        '$scope',
+        function($scope) {
+            console.log('Login controller...')
         }
     ])
 

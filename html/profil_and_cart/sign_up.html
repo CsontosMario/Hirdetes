@@ -1,42 +1,38 @@
 <div class="container">
-    <div class="row justify-content-center">
-        <form action="action_page.php" style="border:1px solid #ccc" name="sign_up_form">
-            <div class="container">
-              <h1>Regisztráció</h1>
-              <p>Kérem töltse ki ezt a regisztrációhoz szükséges adatokkal.</p>
-              <hr>
+    <div class="row justify-content-center mt-5">
+        <form class="w-auto p-3" style="border:1px solid #ccc" name="sign_up_form">
+            <h1>Regisztráció</h1>
           
-              <label for="email"><b>Név</b></label>
-              <input type="text" placeholder="Írja be a nevét" id="name" required>
+            <label for="email"><b>Név</b></label>
+            <input type="text" placeholder="Írja be a nevét" id="name" required>
           
-              <label for="password"><b>Jelszó</b></label>
-              <input type="password" placeholder="Írja be a jelszót" id="password" required>
+            <label for="password"><b>Jelszó</b></label>
+            <input type="password" placeholder="Írja be a jelszót" id="password" required>
           
-              <label for="password_repeat"><b>Jelszó megerősítése</b></label>
-              <input type="password" placeholder="Ismételje meg a jelszavát" id="password_repeat" required>
+            <label for="password_repeat"><b>Jelszó megerősítése</b></label>
+            <input type="password" placeholder="Ismételje meg a jelszavát" id="password_repeat" required>
 
-              <label for="postal_code"><b>Irányítószám</b></label>
-              <input type="text" placeholder="Adja meg az irányítószámát a településnek ahol lakik" id="postal_code" required>
+            <label for="postal_code"><b>Irányítószám</b></label>
+            <input type="text" placeholder="Adja meg az irányítószámát a településnek ahol lakik" id="postal_code" required>
 
-              <label for="settlement"><b>Település</b></label>
-              <input type="text" placeholder="Adja meg annak a településnek a nevét ahol lakik" id="settlement" required>
+            <label for="settlement"><b>Település</b></label>
+            <input type="text" placeholder="Adja meg annak a településnek a nevét ahol lakik" id="settlement" required>
 
-              <label for="r_adress"><b>Lakcím</b></label>
-              <input type="text" placeholder="Adja meg a lakcímét" id="r_adress" required>
+            <label for="r_adress"><b>Lakcím</b></label>
+            <input type="text" placeholder="Adja meg a lakcímét" id="r_adress" required>
 
-              <label for="country"><b>Ország</b></label>
-              <input type="text" placeholder="Adja meg az országot ahol lakik " id="country" required>
+            <label for="country"><b>Ország</b></label>
+            <input type="text" placeholder="Adja meg az országot ahol lakik " id="country" required>
           
-              <label>
-                <input type="checkbox" checked="checked" id="remember" style="margin-bottom:15px"> Emlékezz rám
-              </label>
+            <label>
+              <input type="checkbox" checked="checked" id="remember" style="margin-bottom:15px"> Emlékezz rám
+            </label>
           
-              <p>Azzal, hogy létrehoztál egy fiókot egyetértesz a <a href="#" style="color:dodgerblue">Feltételekkel és adatvédelemmel</a>.</p>
+            <p>Azzal, hogy létrehoztál egy fiókot egyetértesz a <a href="#" style="color:dodgerblue">Feltételekkel és adatvédelemmel</a>.</p>
           
-              <div class="clearfix">
-                <button type="button" class="cancelbtn">Mégse</button>
-                <button type="button" class="signupbtn" ng-disabled="sign_up_form">Regisztráció</button>
-              </div>
+            <div class="clearfix">
+              <button type="button" class="btn btn-primary">Mégse</button>
+              <button type="button" class="btn btn-primary" ng-disabled="sign_up_form">Regisztráció</button>
             </div>
           </form>
     </div>
