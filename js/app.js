@@ -121,3 +121,8 @@
     ])
 
 })(window, angular);
+
+function light_dark(){
+    alert("Clicked!!!")
+    console.log("Clicked!!!");
+}
