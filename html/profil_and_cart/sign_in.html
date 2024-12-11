@@ -8,7 +8,9 @@
 
             <div class="mb-3">
                 <label for="name" class="form-label">Név</label>
-                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control" 
+                       id="name" ng-model="name"
+                       required>
             </div>
 
             <div class="mb-3">
@@ -22,7 +24,11 @@
             </div>
             
             <div class="mb-3">
-                <button type="button" class="btn btn-primary" ng-disabled="sign_in_form"><i class="fa-solid fa-right-to-bracket me-1"></i> Bejelentkezés</button>
+                <button type="button" class="btn btn-primary" 
+                        ng-disabled="sign_in_form.$invalid">
+                    <i class="fa-solid fa-right-to-bracket me-1"></i> 
+                    Bejelentkezés
+                </button>
             </div>
 
         </form>
