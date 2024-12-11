@@ -47,7 +47,12 @@
                 templateUrl: './html/farmers_and_programmers/about_us.html',
                 controller: 'about_usController'
             })
-
+            .state('register', {
+                url: '/',
+                parent: 'root',
+                templateUrl: './html/profil_and_cart/sign_up.html',
+                controller: 'registerController'
+            })
             $urlRouterProvider.otherwise('/');
 
         }
@@ -90,6 +95,12 @@
         '$scope',
         function($scope) {
             console.log('Products controller...');
+        }
+    ])
+    .controller('registerController', [
+        '$scope',
+        function($scope) {
+            console.log('registerController')
         }
     ])
 
