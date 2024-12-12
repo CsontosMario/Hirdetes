@@ -8,37 +8,51 @@
       
       <div class="mb-3">
         <label for="email"><b>Név</b></label>
-        <input type="text" class="form-control" placeholder="Írja be a nevét" id="name" required>
+        <input type="text" class="form-control" placeholder="Írja be a nevét"
+               id="name" ng-model="register.name"
+               required>
       </div>
 
       <div class="mb-3">
         <label for="password"><b><i class="fa-solid fa-lock"></i> Jelszó</b></label>
-        <input type="password" class="form-control" placeholder="Írja be a jelszót" id="password" required>
+        <input type="password" class="form-control" placeholder="Írja be a jelszót"
+               id="password" ng-model="register.password"
+               required>
       </div>
 
       <div class="mb-3">
         <label for="password_repeat"><i class="fa-solid fa-lock"></i> <b>Jelszó megerősítése</b></label>
-        <input type="password" class="form-control" placeholder="Ismételje meg a jelszavát" id="password_repeat" required>
+        <input type="password" class="form-control" placeholder="Ismételje meg a jelszavát"
+               id="password_repeat" ng-model="register.password_repeat"
+               required>
       </div>
 
       <div class="mb-3">
         <label for="postal_code"><b>Irányítószám</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg az irányítószámát a településnek ahol lakik" id="postal_code" required>
+        <input type="text" class="form-control" placeholder="Adja meg az irányítószámát a településnek ahol lakik"
+               id="postal_code" ng-model="register.postal_code"
+               required>
       </div>
 
       <div class="mb-3">
         <label for="settlement"><b>Település</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg annak a településnek a nevét ahol lakik" id="settlement" required>
+        <input type="text" class="form-control" placeholder="Adja meg annak a településnek a nevét ahol lakik"
+               id="settlement" ng-model="register.settlement"
+               required>
       </div>
 
       <div class="mb-3">
         <label for="r_adress"><b>Lakcím</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg a lakcímét" id="r_adress" required>
+        <input type="text" class="form-control" placeholder="Adja meg a lakcímét"
+               id="r_adress" ng-model="register.r_adress"
+               required>
       </div>
 
       <div class="mb-3">
         <label for="country"><b>Ország</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg az országot ahol lakik " id="country" required>
+        <input type="text" class="form-control" placeholder="Adja meg az országot ahol lakik" 
+               id="country" ng-model="register.country"
+               required>
       </div>
 
       <label>
@@ -47,7 +61,7 @@
 
       <div class="clearfix">
         <button type="button" class="btn btn-primary"><i class="fa-solid fa-xmark"></i> Mégse</button>
-        <button type="button" class="btn btn-primary" ng-disabled="sign_up_form"><i class="fa-solid fa-id-card me-1"></i> Regisztráció</button>
+        <button type="button" class="btn btn-primary" ng-disabled="sign_up_form.$invalid"><i class="fa-solid fa-id-card me-1"></i> Regisztráció</button>
       </div>
 
     </form>
