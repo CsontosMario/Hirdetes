@@ -31,6 +31,9 @@ body {
   font-size: large;
   font-weight: bold;
 }
+.dropdown-menu{
+  background-color: red !important;
+}
 form{
   border-radius: 50px;
 }
