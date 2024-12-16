@@ -24,6 +24,12 @@ body {
 .dropdown-item.active,
 .dropdown-item a.active {
 	background-color: transparent !important;
+  color: black !important;
+  font-style: italic;
+  text-decoration: underline;
+  cursor: default;
+  font-size: large;
+  font-weight: bold;
 }
 form{
   border-radius: 50px;
