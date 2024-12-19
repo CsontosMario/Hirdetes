@@ -112,7 +112,7 @@
 
             $scope.register= ()=>{
                 alert("Sikeres a regisztráció!");
-                console.log($scope.register); //Ideiglenesen van benn!!!!
+                console.log($scope.sign_up); //Ideiglenesen van benn!!!!
             }
 
         }
