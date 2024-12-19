@@ -7,7 +7,7 @@
       </div>
       
       <div class="mb-3">
-        <label for="email"><b><i class="fa-solid fa-signature"></i> Név</b></label>
+        <label for="name"><b><i class="fa-solid fa-signature"></i> Név</b></label>
         <input type="text" class="form-control" placeholder="Írja be a nevét"
                id="name" ng-model="register.name"
                required>
@@ -61,7 +61,9 @@
 
       <div class="clearfix">
         <button type="button" class="btn btn-primary"><i class="fa-solid fa-xmark"></i> Mégse</button>
-        <button type="button" class="btn btn-primary" ng-disabled="sign_up_form.$invalid"><i class="fa-solid fa-id-card me-1"></i> Regisztráció</button>
+        <button type="button" class="btn btn-primary"
+                ng-disabled="sign_up_form.$invalid"
+                ng-click="register()"><i class="fa-solid fa-id-card me-1"></i> Regisztráció</button>
       </div>
 
     </form>

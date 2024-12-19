@@ -108,7 +108,13 @@
     .controller('registerController', [
         '$scope',
         function($scope) {
-            console.log('Register controller...')
+            console.log('Register controller...');
+
+            $scope.register= ()=>{
+                alert("Sikeres a regisztráció!");
+                console.log($scope.register); //Ideiglenesen van benn!!!!
+            }
+
         }
     ])
 
@@ -116,7 +122,12 @@
     .controller('loginController', [
         '$scope',
         function($scope) {
-            console.log('Login controller...')
+            console.log('Login controller...');
+
+            $scope.login = ()=>{
+                alert("Sikeres a bejelentkezés!");
+            }
+
         }
     ])
 
