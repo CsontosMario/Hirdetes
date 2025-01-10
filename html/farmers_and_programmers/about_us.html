@@ -1,12 +1,12 @@
 <div class="container">
-    <div class="row mt-5" ng-init="our_website_creators=['Vékony Marcell','Csontos Márió Dávid']">
+    <div class="row mt-5" ng-init="our_website_creators=['Vékony Marcell','Csontos Márió Dávid']; website_pictures=['marcell.jpg','mario_temporary_picture.jpg']">
         <div class="card text-center col-sm-6 mb-3 mb-sm-0" ng-repeat="website_creator in our_website_creators">
             <div class="card-header">
                 <h1 class="text-center">{{website_creator}}</h1>
             </div>
             <div class="card-body">
-                <img src="./img/fejlesztok/marcell.jpg" class="card-img-top" alt="{{website_creator}}">
-                <img src="./img/fejlesztok/" class="card-img-top" alt="{{website_creator}}">
+                <img src="./img/fejlesztok/{{website_pic}}" class="card-img-top" alt="{{website_creator}}">
+                <!--<img src="./img/fejlesztok/mario_temporary_picture.jpg" class="card-img-top" alt="{{website_creator}}">-->
                 <h5 class="card-title">A weboldal fejlesztői csapatának XXXXX</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <a href="#" class="btn btn-primary"><i class="fa-solid fa-scroll"></i> További információk</a>
