@@ -8,7 +8,7 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$query = "SELECT `felhasznaloID`, `jelszo`, `jelszo2`, `nev`, `iranyitoszam`, `varos`, `cim`, `orszag` FROM `regisztracio`"
+$query = "SELECT `felhasznaloID`, `jelszo`, `jelszo2`, `nev`, `iranyitoszam`, `varos`, `cim`, `orszag` FROM `regisztracio`";
 
 $result = $db->execute($query, $args);
 
