@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Nov 21. 11:56
+-- Létrehozás ideje: 2025. Jan 20. 14:11
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -98,7 +98,6 @@ INSERT INTO `kosarelemek` (`kosarID`, `termekID`, `db`, `ar`) VALUES
 CREATE TABLE `regisztracio` (
   `felhasznaloID` int(11) NOT NULL,
   `jelszo` varchar(50) NOT NULL,
-  `jelszo2` varchar(50) NOT NULL,
   `nev` varchar(50) NOT NULL,
   `iranyitoszam` int(11) NOT NULL,
   `varos` varchar(50) NOT NULL,
@@ -110,9 +109,9 @@ CREATE TABLE `regisztracio` (
 -- A tábla adatainak kiíratása `regisztracio`
 --
 
-INSERT INTO `regisztracio` (`felhasznaloID`, `jelszo`, `jelszo2`, `nev`, `iranyitoszam`, `varos`, `cim`, `orszag`) VALUES
-(1, 'numero2356', 'garfield2121', 'Szabó Zsuzsanna', 6900, 'Makó', 'Szegedi.u.2', 'Magyarország'),
-(2, 'uhtfsawd', 'awdawdaw', 'Vékony Erik', 6900, 'Makó', 'ady.u.2', 'Magyarország');
+INSERT INTO `regisztracio` (`felhasznaloID`, `jelszo`, `nev`, `iranyitoszam`, `varos`, `cim`, `orszag`) VALUES
+(1, 'numero2356', 'Szabó Zsuzsanna', 6900, 'Makó', 'Szegedi.u.2', 'Magyarország'),
+(2, 'uhtfsawd', 'Vékony Erik', 6900, 'Makó', 'ady.u.2', 'Magyarország');
 
 -- --------------------------------------------------------
 
@@ -131,16 +130,16 @@ CREATE TABLE `zoldseg-kepek` (
 --
 
 INSERT INTO `zoldseg-kepek` (`termekID`, `sorszam`, `kepnev`) VALUES
-(1, 1, 'Pepper'),
-(2, 2, 'Potato'),
-(3, 3, 'Spinach'),
-(4, 4, 'Carrot'),
-(5, 5, 'Garden_Sorrel'),
-(6, 6, 'Chives'),
-(7, 7, 'Corn'),
-(8, 8, 'Pea'),
-(9, 9, 'Kohlrabi'),
-(10, 10, 'Cauliflower');
+(1, 1, 'Paprika'),
+(2, 2, 'Burgonya'),
+(3, 3, 'Spenót'),
+(4, 4, 'Sárgarépa'),
+(5, 5, 'Kerti Sóska'),
+(6, 6, 'Újhagyma'),
+(7, 7, 'Kukorica'),
+(8, 8, 'zöldborsó'),
+(9, 9, 'karalábé'),
+(10, 10, 'karfiol');
 
 -- --------------------------------------------------------
 
@@ -218,6 +217,12 @@ ALTER TABLE `zoldsegek`
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
+
+--
+-- AUTO_INCREMENT a táblához `regisztracio`
+--
+ALTER TABLE `regisztracio`
+  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT a táblához `zoldsegek`
