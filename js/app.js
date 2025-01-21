@@ -117,8 +117,11 @@
                     url: './php/register.php',
                     data: $scope.sign_up
                 })
-                .then()
-                .catch()
+                .then(result => {
+                    $scope.data = result
+                    $scope.$applyAsync()
+                })
+                .catch(e=>console.log(e))
 
                 alert("Sikeres a regisztráció!");
                 console.log($scope.sign_up); //Ideiglenesen van benn!!!!
