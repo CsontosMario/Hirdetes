@@ -6,11 +6,9 @@ require_once("./environment.php");
 
 $db = new Database();
 
-$args = Util::getArgs();
-
 $query = "SELECT `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles` FROM `zoldsegek`";
 
-$result = $db->execute($query, $args);
+$result = $db->execute($query);
 
 $db = null;
 

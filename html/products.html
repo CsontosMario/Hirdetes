@@ -9,16 +9,16 @@
                                               'Karalábé (-)',
                                               'Paprika (Fehérözön)',
                                               'Karfiol (-)']">
-        <div class="card text-center col-sm-6 mb-3 mb-sm-0 g-4" ng-repeat="x in zoldsegek">
+        <div class="card text-center col-sm-6 mb-3 mb-sm-0 g-4" ng-repeat="zoldseg in zoldsegek">
             <div class="card-header">
-                <h1 class="text-center">{{x}}</h1>
+                <h1 class="text-center">{{zoldseg}}</h1>
             </div>
             <div class="card-body">
-                <img src="https://dummyimage.com/600x400" class="card-img-top" alt="{{x}}">
-                <h5 class="card-title">{{x}}</h5>
-                <p class="card-text">Leírás: With supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text">Ár: XXX Ft</p>
-                <p class="card-text">Kiszerelés: XXXXXX</p>
+                <img src="./img/termekek/potato.jpg" class="card-img-top" alt="{{zoldseg.megnevezes}}">
+                <h5 class="card-title">{{zoldseg}}</h5>
+                <p class="card-text">Leírás: ------------------</p>
+                <p class="card-text">Ár: XXXX Ft</p>
+                <p class="card-text">Kiszerelés: XXXXX</p>
                 <a href="#" class="btn btn-primary"><i class="fa-solid fa-wallet"></i> Vásárlás</a>
             </div>
         </div>
