@@ -107,13 +107,24 @@
     //Register controller
     .controller('registerController', [
         '$scope',
-        function($scope) {
+        'http',
+        function($scope, http) {
             console.log('Register controller...');
 
             $scope.register= ()=>{
+
+                http.request({
+                    url: './php/register.php',
+                    data: $scope.sign_up
+                })
+                .then()
+                .catch()
+
                 alert("Sikeres a regisztráció!");
                 console.log($scope.sign_up); //Ideiglenesen van benn!!!!
             }
+
+
 
         }
     ])

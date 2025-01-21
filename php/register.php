@@ -8,9 +8,9 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$query = "INSERT INTO `regisztracio`(`jelszo`, `nev`, `iranyitoszam`, `varos`, `cim`, `orszag`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]' )";
+$query = $db->preparateInsert("regisztracio", $args);
 
-$result = $db->execute($query, $args);
+$result = $db->execute($query, array_values($args));
 
 $db = null;
 
