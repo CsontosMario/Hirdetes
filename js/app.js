@@ -1,7 +1,8 @@
 ;(function(window, angular) {
 
     angular.module('app', [
-		'ui.router'
+		'ui.router',
+        'app.common'
 	])
     .config([
         '$stateProvider', 
