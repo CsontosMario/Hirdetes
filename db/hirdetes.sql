@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 21. 10:18
+-- Létrehozás ideje: 2025. Jan 21. 13:45
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -120,8 +120,8 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `nev`, `jelszo`, `iranyitoszam`, `t
 --
 
 CREATE TABLE `zoldsegek` (
-  `kep` varchar(50) NOT NULL,
   `termekID` int(10) NOT NULL,
+  `kep` varchar(50) NOT NULL,
   `megnevezes` varchar(50) NOT NULL,
   `leiras` text NOT NULL,
   `ar` int(10) NOT NULL,
@@ -132,17 +132,17 @@ CREATE TABLE `zoldsegek` (
 -- A tábla adatainak kiíratása `zoldsegek`
 --
 
-INSERT INTO `zoldsegek` (`kep`, `termekID`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
-('potato', 1, 'Burgonya (Balatoni-rózsa)', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'ömlesztve'),
-('carrot', 2, 'Sárgarépa (Matador)', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'ömlesztve'),
-('sorrel', 3, 'Kerti Sóska (Pallagi nagylevelű)', 'Erőteljes levelű.  Magyar termék.', 400, 'csomagonként'),
-('spinach', 4, 'Spenót', 'Közepes nagyságú levelek. Magyar termék.', 500, 'csomagonként'),
-('spring_onion', 5, 'Újhagyma', 'Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.', 250, 'csomagonként'),
-('corn', 6, 'Kukorica (Csemege)', 'Közepes szemű, édes, főzésre kitűnő. Magyar termék.', 200, 'darabonként'),
-('pea', 7, 'Zöldborsó (Zsuzsi)', 'Közepes nagyságú szemek, zsengék és alkalmas levesekheez, főzelékekhez, salátákhoz. Magyar termék.', 1000, 'ömlesztve'),
-('kohlrabi', 8, 'Karalábé', 'Zsenge, fehér. Magyar termék.', 450, 'darabonként'),
-('pepper', 9, 'Paprika (Fehérözön)', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'ömlesztve'),
-('cauliflower', 10, 'Karfiol', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'fejenként');
+INSERT INTO `zoldsegek` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+(1, 'potato.jpg', 'Burgonya (Balatoni-rózsa)', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'ömlesztve'),
+(2, 'carrot.jpg', 'Sárgarépa (Matador)', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'ömlesztve'),
+(3, 'sorrel.jpg', 'Kerti Sóska (Pallagi nagylevelű)', 'Erőteljes levelű.  Magyar termék.', 400, 'csomagonként'),
+(4, 'spinach.jpg', 'Spenót', 'Közepes nagyságú levelek. Magyar termék.', 500, 'csomagonként'),
+(5, 'spring_onion.jpg', 'Újhagyma', 'Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.', 250, 'csomagonként'),
+(6, 'corn.jpg', 'Kukorica (Csemege)', 'Közepes szemű, édes, főzésre kitűnő. Magyar termék.', 200, 'darabonként'),
+(7, 'pea.jpg', 'Zöldborsó (Zsuzsi)', 'Közepes nagyságú szemek, zsengék és alkalmas levesekheez, főzelékekhez, salátákhoz. Magyar termék.', 1000, 'ömlesztve'),
+(8, 'kohlrabi.jpg', 'Karalábé', 'Zsenge, fehér. Magyar termék.', 450, 'darabonként'),
+(9, 'pepper.jpg', 'Paprika (Fehérözön)', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'ömlesztve'),
+(10, 'cauliflower.jpg', 'Karfiol', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'fejenként');
 
 --
 -- Indexek a kiírt táblákhoz
