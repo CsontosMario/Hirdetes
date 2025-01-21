@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 21. 07:45
+-- Létrehozás ideje: 2025. Jan 21. 10:18
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -116,34 +116,6 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `nev`, `jelszo`, `iranyitoszam`, `t
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `zoldseg-kepek`
---
-
-CREATE TABLE `zoldseg-kepek` (
-  `termekID` int(11) NOT NULL,
-  `sorszam` int(11) NOT NULL,
-  `kepnev` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- A tábla adatainak kiíratása `zoldseg-kepek`
---
-
-INSERT INTO `zoldseg-kepek` (`termekID`, `sorszam`, `kepnev`) VALUES
-(1, 1, 'Paprika'),
-(2, 2, 'Burgonya'),
-(3, 3, 'Spenót'),
-(4, 4, 'Sárgarépa'),
-(5, 5, 'Kerti Sóska'),
-(6, 6, 'Újhagyma'),
-(7, 7, 'Kukorica'),
-(8, 8, 'zöldborsó'),
-(9, 9, 'karalábé'),
-(10, 10, 'karfiol');
-
--- --------------------------------------------------------
-
---
 -- Tábla szerkezet ehhez a táblához `zoldsegek`
 --
 
@@ -161,16 +133,16 @@ CREATE TABLE `zoldsegek` (
 --
 
 INSERT INTO `zoldsegek` (`kep`, `termekID`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
-('', 1, 'Burgonya (Balatoni-rózsa)', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'ömlesztve'),
-('', 2, 'Sárgarépa (Matador)', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'ömlesztve'),
-('', 3, 'Kerti Sóska (Pallagi nagylevelű)', 'Erőteljes levelű.  Magyar termék.', 400, 'csomagonként'),
-('', 4, 'Spenót', 'Közepes nagyságú levelek. Magyar termék.', 500, 'csomagonként'),
-('', 5, 'Újhagyma', 'Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.', 250, 'csomagonként'),
-('', 6, 'Kukorica (Csemege)', 'Közepes szemű, édes, főzésre kitűnő. Magyar termék.', 200, 'darabonként'),
-('', 7, 'Zöldborsó (Zsuzsi)', 'Közepes nagyságú szemek, zsengék és alkalmas levesekheez, főzelékekhez, salátákhoz. Magyar termék.', 1000, 'ömlesztve'),
-('', 8, 'Karalábé', 'Zsenge, fehér. Magyar termék.', 450, 'darabonként'),
-('', 9, 'Paprika (Fehérözön)', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'ömlesztve'),
-('', 10, 'Karfiol', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'fejenként');
+('potato', 1, 'Burgonya (Balatoni-rózsa)', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'ömlesztve'),
+('carrot', 2, 'Sárgarépa (Matador)', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'ömlesztve'),
+('sorrel', 3, 'Kerti Sóska (Pallagi nagylevelű)', 'Erőteljes levelű.  Magyar termék.', 400, 'csomagonként'),
+('spinach', 4, 'Spenót', 'Közepes nagyságú levelek. Magyar termék.', 500, 'csomagonként'),
+('spring_onion', 5, 'Újhagyma', 'Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.', 250, 'csomagonként'),
+('corn', 6, 'Kukorica (Csemege)', 'Közepes szemű, édes, főzésre kitűnő. Magyar termék.', 200, 'darabonként'),
+('pea', 7, 'Zöldborsó (Zsuzsi)', 'Közepes nagyságú szemek, zsengék és alkalmas levesekheez, főzelékekhez, salátákhoz. Magyar termék.', 1000, 'ömlesztve'),
+('kohlrabi', 8, 'Karalábé', 'Zsenge, fehér. Magyar termék.', 450, 'darabonként'),
+('pepper', 9, 'Paprika (Fehérözön)', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'ömlesztve'),
+('cauliflower', 10, 'Karfiol', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'fejenként');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -201,12 +173,6 @@ ALTER TABLE `kosarelemek`
 --
 ALTER TABLE `regisztracio`
   ADD PRIMARY KEY (`felhasznaloID`);
-
---
--- A tábla indexei `zoldseg-kepek`
---
-ALTER TABLE `zoldseg-kepek`
-  ADD PRIMARY KEY (`termekID`,`sorszam`);
 
 --
 -- A tábla indexei `zoldsegek`

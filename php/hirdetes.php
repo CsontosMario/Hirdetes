@@ -8,7 +8,7 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$query = "SELECT `kep`, `termekID`, `megnevezes`, `leiras`, `ar`, `kiszereles` FROM `zoldsegek`";
+$query = "SELECT `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles` FROM `zoldsegek`";
 
 $result = $db->execute($query, $args);
 
