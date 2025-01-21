@@ -1,29 +1,15 @@
 <div class="container justify-content-center mt-3 mb-3">
-    <div class="row w-auto row-cols-1 row-cols-md-2 g-4" ng-init="zoldsegek=['Burgonya (Balatoni-rózsa)',
-                                                                             'Sárgarépa (Matador)',
-                                                                             'Kerti Sóska (Pallagi nagylevelű)',
-                                                                             'Spenót (-)',
-                                                                             'Újhagyma (-)',
-                                                                             'Kukorica (Csemege)',
-                                                                             'Zöldborsó (Zsuzsi)',
-                                                                             'Karalábé (-)',
-                                                                             'Paprika (Fehérözön)',
-                                                                             'Karfiol (-)'];
-                                                                   zoldseg_kepek=['potato.jpg', 'carrot.jpg', 
-                                                                                  'sorrel.jpg', 'spinach.jpg',
-                                                                                  'spring_onion.jpg', 'corn.jpg',
-                                                                                  'pea.jpg', 'kohlrabi.jpg',
-                                                                                  'pepper.jpg', 'cauliflower.jpg']">
+    <div class="row w-auto row-cols-1 row-cols-md-2 g-4">
         <div class="card text-center col-sm-6 mb-3 mb-sm-0 g-4" ng-repeat="zoldseg in zoldsegek track by $index">
             <div class="card-header">
-                <h1 class="text-center">{{zoldseg}}</h1>
+                <h1 class="text-center">{{zoldseg.megnevezes}}</h1>
             </div>
             <div class="card-body">
-                <img ng-src="./img/termekek/{{zoldseg_kepek[$index]}}" class="card-img-top" alt="{{zoldseg.megnevezes}}">
-                <h5 class="card-title">{{zoldseg}}</h5>
-                <p class="card-text">Leírás: ------------------</p>
-                <p class="card-text">Ár: XXXX Ft</p>
-                <p class="card-text">Kiszerelés: XXXXX</p>
+                <img ng-src="./img/termekek/{{zoldseg.kep}}" class="card-img-top" alt="{{zoldseg.megnevezes}}">
+                <h5 class="card-title">{{zoldseg.megnevezes}}</h5>
+                <p class="card-text">Leírás: {{zoldseg.leiras}}</p>
+                <p class="card-text">Ár: {{zoldseg.ar}} Ft</p>
+                <p class="card-text">Kiszerelés: {{zoldseg.kiszereles}}</p>
                 <a href="#" class="btn btn-primary"><i class="fa-solid fa-wallet"></i> Vásárlás</a>
             </div>
         </div>

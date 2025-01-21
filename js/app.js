@@ -84,7 +84,16 @@
     //Products controller
     .controller('productsController', [
         '$scope',
-        function($scope) {
+        'http',
+        function($scope, http) {
+
+            http.request("./php/hirdetes.php")
+            .then(response => {
+                $scope.zoldsegek = response;
+                $scope.$applyAsync();
+            })
+            .catch(e=>console.log(e))
+
             console.log('Products controller...');
         }
     ])
