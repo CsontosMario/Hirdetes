@@ -10,7 +10,7 @@ $args = Util::getArgs();
 
 $query = $db->preparateInsert("regisztracio", $args);
 
-$result = $db->execute($query, array_values($args));
+$result = $db->execute($query, array_valuese($args));
 
 $db = null;
 
