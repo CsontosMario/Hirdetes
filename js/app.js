@@ -127,8 +127,6 @@
                 console.log($scope.sign_up); //Ideiglenesen van benn!!!!
             }
 
-
-
         }
     ])
 

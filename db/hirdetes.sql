@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 20. 14:11
+-- Létrehozás ideje: 2025. Jan 21. 07:45
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -97,10 +97,10 @@ INSERT INTO `kosarelemek` (`kosarID`, `termekID`, `db`, `ar`) VALUES
 
 CREATE TABLE `regisztracio` (
   `felhasznaloID` int(11) NOT NULL,
-  `jelszo` varchar(50) NOT NULL,
   `nev` varchar(50) NOT NULL,
+  `jelszo` varchar(50) NOT NULL,
   `iranyitoszam` int(11) NOT NULL,
-  `varos` varchar(50) NOT NULL,
+  `telepules` varchar(50) NOT NULL,
   `cim` varchar(50) NOT NULL,
   `orszag` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -109,9 +109,9 @@ CREATE TABLE `regisztracio` (
 -- A tábla adatainak kiíratása `regisztracio`
 --
 
-INSERT INTO `regisztracio` (`felhasznaloID`, `jelszo`, `nev`, `iranyitoszam`, `varos`, `cim`, `orszag`) VALUES
-(1, 'numero2356', 'Szabó Zsuzsanna', 6900, 'Makó', 'Szegedi.u.2', 'Magyarország'),
-(2, 'uhtfsawd', 'Vékony Erik', 6900, 'Makó', 'ady.u.2', 'Magyarország');
+INSERT INTO `regisztracio` (`felhasznaloID`, `nev`, `jelszo`, `iranyitoszam`, `telepules`, `cim`, `orszag`) VALUES
+(1, 'Vékony Marcell', '1234aA', 6900, 'Makó', 'Posta.u. 1', 'Magyarország'),
+(2, 'Csontos Márió Dávid', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország');
 
 -- --------------------------------------------------------
 
