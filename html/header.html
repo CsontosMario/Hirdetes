@@ -20,7 +20,7 @@
           <ul class="dropdown-menu">
             <li><h4 class="text-center fw-bold text-decoration-underline"><i class="fa-solid fa-id-badge"></i> Fiók</h4></li>
             <li><a class="dropdown-item" ui-sref="register" ui-sref-active="active"><i class="fa-solid fa-id-card me-1"></i> Regisztráció</a></li>
-            <li><a class="dropdown-item" ui-sref="login" ui-sref-active="active"><i class="fa-solid fa-right-to-bracket me-1"></i> Bejelentkezés</a></li>
+            <li ng-show="!$root.user.id"><a class="dropdown-item" ui-sref="login" ui-sref-active="active"><i class="fa-solid fa-right-to-bracket me-1"></i> Bejelentkezés</a></li>
             <li><a class="dropdown-item" ui-sref="profil" ui-sref-active="active"><i class="fa-solid fa-id-badge"></i> Profil</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><h4 class="text-center fw-bold text-decoration-underline"><i class="fa-solid fa-cart-shopping me-1"></i> Kosár</h4></li>
@@ -29,7 +29,7 @@
                  Kosár</a>
             </li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#" ui-sref-active="active"><i class="fa-solid fa-right-from-bracket me-1"></i> Kilépés</a></li>
+            <li ng-show="$root.user.id"><a class="dropdown-item" href="#" ui-sref-active="active" ng-click="$root.kilep()"><i class="fa-solid fa-right-from-bracket me-1"></i> Kilépés</a></li>
           </ul>
         </li>
         <li class="nav-item">

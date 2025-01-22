@@ -74,8 +74,19 @@
     .run([
       '$rootScope',
       '$state',
-      function($rootScope, $state) {
-              console.log('Run...'+$state.current.name);
+      'trans',
+      function($rootScope, $state, trans) {
+        
+        $rootScope.user = {id:null, name:null};
+
+        console.log('Run...'+$state.current.name);
+
+        $rootScope.kilep = () => {
+            if (confirm('Biztossan kilép?')) {
+                $rootScope.user.id = null;
+                $rootScope.$applyAsync();
+            }
+        }
       }
     ])
 
@@ -149,12 +160,15 @@
 
     //Login controller
     .controller('loginController', [
+        '$rootScope',
         '$scope',
-        function($scope) {
+        function($rootScope, $scope) {
             console.log('Login controller...');
 
             $scope.login = ()=>{
                 alert("Sikeres a bejelentkezés!");
+                $rootScope.user.id = 1;
+                $rootScope.$applyAsync();
             }
 
         }
