@@ -61,7 +61,7 @@
                 controller: 'loginController'
             })
             .state('profil', {
-                url: '/profile',
+                url: '/',
                 parent: 'root',
                 templateUrl: './html/profil_and_cart/profile.html',
                 controller: 'profileController'
