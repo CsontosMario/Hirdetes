@@ -6,5 +6,5 @@ A vizsgaremek feladat Git-Hub oldala.
 # Csapattagok
 
 
-# Csapat vezető: Vékony Marcell Csapattag: Csontos Márió Dávid
+# Csapat vezető: Csontos Márió Dávid Csapattag: Vékony Marcell
 ##
