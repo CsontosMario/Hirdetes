@@ -60,6 +60,12 @@
                 templateUrl: './html/profil_and_cart/sign_in.html',
                 controller: 'loginController'
             })
+            .state('profil', {
+                url: '/profile',
+                parent: 'root',
+                templateUrl: './html/profil_and_cart/profile.html',
+                controller: 'profileController'
+            })
             $urlRouterProvider.otherwise('/');
 
         }
@@ -146,6 +152,19 @@
         '$scope',
         function($scope) {
             console.log('Login controller...');
+
+            $scope.login = ()=>{
+                alert("Sikeres a bejelentkezés!");
+            }
+
+        }
+    ])
+
+    //Profile controller
+    .controller('profileController', [
+        '$scope',
+        function($scope) {
+            console.log('Profile controller...');
 
             $scope.login = ()=>{
                 alert("Sikeres a bejelentkezés!");
