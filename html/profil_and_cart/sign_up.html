@@ -34,13 +34,14 @@
              Jelszó
           </b>
         </label>
-        <input type="password"
+        <input type="{{model.showPassword ? 'text' : 'password'}}"
                class="form-control"
                placeholder="Írja be a jelszót"
                id="password"
                ng-model="sign_up.jelszo"
                required>
       </div>
+
 
       <!-- Jelszó megerősítése -->
       <div class="mb-3">
@@ -50,7 +51,7 @@
             Jelszó megerősítése
           </b>
         </label>
-        <input type="password"
+        <input type="{{model.showPassword ? 'text' : 'password'}}"
                class="form-control"
                placeholder="Ismételje meg a jelszavát"
                id="password_repeat">
@@ -119,6 +120,10 @@
                ng-model="sign_up.orszag"
                required>
       </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input"  ng-init="model.showPassword=false" ng-model="model.showPassword"  id="showPassword">
+        <label class="form-check-label" for="showPassword"><i class="fa-solid fa-lock-open"></i> Jelszó mutatása</label>
+    </div>
 
       <!-- Gomb (regisztráció) -->
       <div class="clearfix">
