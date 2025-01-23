@@ -1,20 +1,20 @@
 [
-    {
-        "name":"Vékony Marcell",
-        "birth_place":"Makó",
-        "birth_day":"2003",
-        "about_short":"",
-        "about":"Szoftverfejlesztő- és tesztelő vagyok",
-        "job_title":"A weboldal fejlesztői csapatának vezetője",
-        "picture_name":"marcell"
-    },
-    {
-        "name":"Csontos Márió Dávid",
-        "birth_place":"Makó",
-        "birth_day":"2005",
-        "about_short":"",
-        "about":"",
-        "job_title":"A weboldal fejlesztői csapatának tagja",
-        "picture_name":"mario"
-    }
+  {
+    "name": "Vékony Marcell",
+    "birth_place": "Makó",
+    "birth_day": "2003",
+    "about_short": "",
+    "about": "Szoftverfejlesztő- és tesztelő vagyok",
+    "job_title": "A weboldal fejlesztői csapatának vezetője",
+    "picture_name": "marcell"
+  },
+  {
+    "name": "Csontos Márió Dávid",
+    "birth_place": "Makó",
+    "birth_day": "2005",
+    "about_short": "",
+    "about": "",
+    "job_title": "A weboldal fejlesztői csapatának tagja",
+    "picture_name": "mario"
+  }
 ]

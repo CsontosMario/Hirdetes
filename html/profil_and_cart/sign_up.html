@@ -1,67 +1,132 @@
 <div class="container">
   <div class="row justify-content-center m-3">
+    
     <form class="w-auto p-3" style="border:1px solid #ccc" name="sign_up_form">
       
       <div class="mb-3">
-        <h1 class="text-center pb-3"><i class="fa-solid fa-id-card me-1"></i> Regisztráció</h1>
+        <h1 class="text-center pb-3">
+          <i class="fa-solid fa-id-card me-1"></i>
+           Regisztráció
+        </h1>
       </div>
       
+      <!-- Név bekérése (regisztráció) -->
       <div class="mb-3">
-        <label for="name"><b><i class="fa-solid fa-signature"></i> Név</b></label>
-        <input type="text" class="form-control" placeholder="Írja be a nevét"
-               id="name" ng-model="sign_up.nev"
+        <label for="name">
+          <b>
+            <i class="fa-solid fa-signature"></i>
+             Név
+          </b>
+        </label>
+        <input type="text"
+               class="form-control"
+               placeholder="Írja be a nevét"
+               id="name"
+               ng-model="sign_up.nev"
                required>
       </div>
 
+      <!-- Jelszó bekérése (regisztráció) -->
       <div class="mb-3">
-        <label for="password"><b><i class="fa-solid fa-lock"></i> Jelszó</b></label>
-        <input type="password" class="form-control" placeholder="Írja be a jelszót"
-               id="password" ng-model="sign_up.jelszo"
+        <label for="password">
+          <b>
+            <i class="fa-solid fa-lock"></i>
+             Jelszó
+          </b>
+        </label>
+        <input type="password"
+               class="form-control"
+               placeholder="Írja be a jelszót"
+               id="password"
+               ng-model="sign_up.jelszo"
                required>
       </div>
 
+      <!-- Jelszó megerősítése -->
       <div class="mb-3">
-        <label for="password_repeat"><b><i class="fa-solid fa-lock"></i> Jelszó megerősítése</b></label>
-        <input type="password" class="form-control" placeholder="Ismételje meg a jelszavát"
+        <label for="password_repeat">
+          <b>
+            <i class="fa-solid fa-lock"></i>
+            Jelszó megerősítése
+          </b>
+        </label>
+        <input type="password"
+               class="form-control"
+               placeholder="Ismételje meg a jelszavát"
                id="password_repeat">
       </div>
 
+      <!-- Irányítószám bekérése -->
       <div class="mb-3">
-        <label for="postal_code"><b><i class="fa-solid fa-signs-post"></i> Irányítószám</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg az irányítószámát a településnek ahol lakik"
-               id="postal_code" ng-model="sign_up.iranyitoszam"
+        <label for="postal_code">
+          <b>
+            <i class="fa-solid fa-signs-post"></i>
+             Irányítószám
+          </b>
+        </label>
+        <input type="text"
+               class="form-control"
+               placeholder="Adja meg az irányítószámát a településnek ahol lakik"
+               id="postal_code"
+               ng-model="sign_up.iranyitoszam"
                required>
       </div>
 
+      <!-- Település bekérése (regisztráció) -->
       <div class="mb-3">
-        <label for="settlement"><b><i class="fa-solid fa-location-dot"></i> Település</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg annak a településnek a nevét ahol lakik"
-               id="settlement" ng-model="sign_up.telepules"
+        <label for="settlement">
+          <b>
+            <i class="fa-solid fa-location-dot"></i>
+             Település
+          </b>
+        </label>
+        <input type="text"
+               class="form-control"
+               placeholder="Adja meg annak a településnek a nevét ahol lakik"
+               id="settlement"
+               ng-model="sign_up.telepules"
                required>
       </div>
 
+      <!-- Lakcím bekérése -->
       <div class="mb-3">
-        <label for="r_adress"><b><i class="fa-solid fa-location-pin"></i> Lakcím</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg a lakcímét"
-               id="r_adress" ng-model="sign_up.cim"
+        <label for="r_adress">
+          <b>
+            <i class="fa-solid fa-location-pin"></i>
+             Lakcím
+          </b>
+        </label>
+        <input type="text"
+               class="form-control"
+               placeholder="Adja meg a lakcímét"
+               id="r_adress"
+               ng-model="sign_up.cim"
                required>
       </div>
 
+      <!-- Ország bekérése -->
       <div class="mb-3">
-        <label for="country"><b><i class="fa-solid fa-flag"></i> Ország</b></label>
-        <input type="text" class="form-control" placeholder="Adja meg az országot ahol lakik" 
-               id="country" ng-model="sign_up.orszag"
+        <label for="country">
+          <b>
+            <i class="fa-solid fa-flag"></i>
+             Ország
+          </b>
+        </label>
+        <input type="text"
+               class="form-control"
+               placeholder="Adja meg az országot ahol lakik" 
+               id="country"
+               ng-model="sign_up.orszag"
                required>
       </div>
 
-      <label>
-        <input type="checkbox" id="remember" style="margin-bottom:15px"> <i class="fa-solid fa-bookmark"></i> Emlékezz rám
-      </label>
-
+      <!-- Gomb (regisztráció) -->
       <div class="clearfix">
-        <button type="button" class="btn btn-primary"
+        <button type="button"
+                class="btn btn-primary"
                 ng-disabled="sign_up_form.$invalid"
-                ng-click="register()"><i class="fa-solid fa-id-card me-1"></i>
+                ng-click="register()">
+          <i class="fa-solid fa-id-card me-1"></i>
           
            Regisztráció
         </button>

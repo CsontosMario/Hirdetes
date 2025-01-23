@@ -1,29 +1,57 @@
 <div class="container">
-    <div class="row justify-content-center m-5">
-        <form class="w-50 p-3" style="border:1px solid #ccc">
-            <div class="mb-3">
-                <h1 class="text-center">
-                    Profil
-                </h1>
-            </div>
-            <div class="mb-3">
-              <label for="name" class="form-label"><i class="fa-solid fa-user"></i> Név:</label>
-              <input type="email" class="form-control" id="name">
-            </div>
-            <div class="mb-3">
-              <label for="country" class="form-label"><i class="fa-solid fa-flag"></i> Ország:</label>
-              <input type="text" class="form-control" id="country">
-            </div>
-            <div class="mb-3">
-                <label for="settlement" class="form-label"><i class="fa-solid fa-location-dot"></i> Település:</label>
-                <input type="text" class="form-control" id="settlement">
-            </div>
-            <div class="mb-3">
-                <label for="country" class="form-label"><i class="fa-solid fa-flag"></i> Ország:</label>
-                <input type="text" class="form-control" id="country">
-            </div>
-            <button type="button" class="btn btn-primary" disabled><i class="fa-solid fa-floppy-disk"></i> Mentés</button>
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-xmark"></i> Mégsem</button>
-        </form>
-    </div>
+  <div class="row justify-content-center m-5">
+
+    <form class="w-50 p-3"
+          style="border:1px solid #ccc">
+      <div class="mb-3">
+        <h1 class="text-center">
+          Profil
+        </h1>
+      </div>
+
+      <!-- Név változtatása -->
+      <div class="mb-3">
+        <label for="name" class="form-label"><i class="fa-solid fa-user"></i> Név:</label>
+        <input type="email" class="form-control" id="name">
+      </div>
+
+      <!-- Ország változtatása -->
+      <div class="mb-3">
+        <label for="country" class="form-label"><i class="fa-solid fa-flag"></i> Ország:</label>
+        <input type="text" class="form-control" id="country">
+      </div>
+
+      <!-- Település változtatása -->
+      <div class="mb-3">
+        <label for="settlement" class="form-label">
+          <i class="fa-solid fa-location-dot"></i>
+           Település:
+        </label>
+        <input type="text" class="form-control" id="settlement">
+      </div>
+
+      <!-- Irányítószám változtatása -->
+      <div class="mb-3">
+        <label for="country" class="form-label">
+          <i class="fa-solid fa-signs-post"></i>
+          Irányítószám:
+        </label>
+        <input type="text" class="form-control" id="country">
+      </div>
+
+      <!-- Mentés -->
+      <button type="button" class="btn btn-primary" disabled>
+        <i class="fa-solid fa-floppy-disk"></i>
+         Mentés
+      </button>
+
+      <!-- Mégsem -->
+      <button type="button" class="btn btn-primary">
+        <i class="fa-solid fa-circle-xmark"></i>
+         Mégsem
+      </button>
+
+    </form>
+    
+  </div>
 </div>
