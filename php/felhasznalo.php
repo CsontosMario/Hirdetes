@@ -20,6 +20,13 @@ $query = "SELECT `felhasznaloID`,
 
 $result = $db->execute($query, array($args['nev']));
 
+if (is_null($result)) {
+     Util::setError("Kérem bejelentkezés előtt regisztrálja ezt a felhasználót!");
+}
+else{
+     $result = $result[0];
+}
+
 $db = null;
 
 Util::setResponse($result);
