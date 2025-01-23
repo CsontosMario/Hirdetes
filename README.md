@@ -28,4 +28,4 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
             Csinálta: 37,5% - Vékony Marcell (JavaScript)
                       37,5% - Csontos Márió Dávid (PHP)
 
-  -carousel kijavítása(méret kijavítása) <= Állapot: 0% (kész)
+  -carousel kijavítása(méret kijavítása) <= Állapot: 100% (Elkészítve)
