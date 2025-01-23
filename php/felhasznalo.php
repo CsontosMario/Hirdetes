@@ -6,6 +6,8 @@ require_once("./environment.php");
 
 $db = new Database();
 
+$args = Util::getArgs();
+
 $query = "SELECT `felhasznaloID`, 
                  `nev` 
             FROM `regisztracio`";

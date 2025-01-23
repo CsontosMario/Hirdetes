@@ -177,6 +177,7 @@
             $scope.login = ()=>{
                 http.request({
                     url: "./php/felhasznalo.php",
+                    data: $scope.sign_in
                 })
                 .then(result => {
                     $scope.data = result;
