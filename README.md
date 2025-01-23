@@ -10,5 +10,6 @@ A vizsgaremek feladat Git-Hub oldala.
 ##
 
 # Hátralévő feladatok:
-  -Profil és a kosár ne jelenjen meg, ha a felhasználó nincs bejelentkezve.
+  -Profil és a kosár ne jelenjen meg, ha a felhasználó nincs bejelentkezve. <= Elkészítve
   -bejelentkezés kijavítása
+  -carousel kijavítása(méret kijavítása)

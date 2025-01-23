@@ -181,7 +181,7 @@
                 .then(result => {
                     $scope.data = result;
                     alert("Sikeres a bejelentkezés!");
-                    $rootScope.user.id = data.felhasznaloID;
+                    $rootScope.user.id = 1;
                     $scope.$applyAsync();
                 })
                 .catch(e=>console.log(e))

@@ -4,41 +4,153 @@
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Menüpontok -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
       <ul class="navbar-nav">
+        <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link" ui-sref="home" ui-sref-active="active"><i class="fa-solid fa-house me-1"></i> Főoldal</a>
+          <a class="nav-link"
+             ui-sref="home"
+             ui-sref-active="active">
+            <i class="fa-solid fa-house me-1"></i>
+             Főoldal
+          </a>
         </li>
+
+        <!-- Products -->
         <li class="nav-item">
-          <a class="nav-link" ui-sref="products" ui-sref-active="active"><i class="fa-solid fa-wheat-awn"></i> Termékeink</a>
+          <a class="nav-link"
+             ui-sref="products"
+             ui-sref-active="active">
+           <i class="fa-solid fa-wheat-awn"></i>
+            Termékeink
+          </a>
         </li>
+
+        <!-- Dropdown -> Fiók és Kosár (button) -->
         <li class="nav-item dropdown" data-bs-auto-close="true">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             <i class="fa-solid fa-user-large"></i> 
             Fiók és Kosár
           </a>
+
+          <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
           <ul class="dropdown-menu">
-            <li><h4 class="text-center fw-bold text-decoration-underline"><i class="fa-solid fa-id-badge"></i> Fiók</h4></li>
-            <li><a class="dropdown-item" ui-sref="register" ui-sref-active="active"><i class="fa-solid fa-id-card me-1"></i> Regisztráció</a></li>
-            <li ng-show="!$root.user.id"><a class="dropdown-item" ui-sref="login" ui-sref-active="active"><i class="fa-solid fa-right-to-bracket me-1"></i> Bejelentkezés</a></li>
-            <li><a class="dropdown-item" ui-sref="profil" ui-sref-active="active"><i class="fa-solid fa-id-badge"></i> Profil</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li ng-show="$root.user.id"><h4 class="text-center fw-bold text-decoration-underline"><i class="fa-solid fa-cart-shopping me-1"></i> Kosár</h4></li>
-            <li><a class="dropdown-item" href="#" ui-sref-active="active">
-              <i class="fa-solid fa-cart-shopping me-1"></i>
-                 Kosár</a>
+
+            <!-- Cím -->
+            <li>
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-id-badge"></i>
+                 Fiók
+              </h4>
             </li>
+
+            <!-- Regisztráció -->
+            <li>
+              <a class="dropdown-item"
+                 ui-sref="register"
+                 ui-sref-active="active">
+                <i class="fa-solid fa-id-card me-1"></i>
+                 Regisztráció
+              </a>
+            </li>
+
+            <!-- Bejelentkezés -->
+            <li ng-show="!$root.user.id">
+              <a class="dropdown-item"
+                 ui-sref="login"
+                 ui-sref-active="active">
+                <i class="fa-solid fa-right-to-bracket me-1"></i>
+                 Bejelentkezés
+              </a>
+            </li>
+
+            <!-- Profil -->
+            <li ng-show="$root.user.id">
+              <a class="dropdown-item"
+                 ui-sref="profil"
+                 ui-sref-active="active">
+                <i class="fa-solid fa-id-badge"></i>
+                 Profil
+              </a>
+            </li>
+
+            <!-- különítő sor 1 -->
             <li><hr class="dropdown-divider"></li>
-            <li ng-show="$root.user.id"><a class="dropdown-item" href="#" ui-sref-active="active" ng-click="$root.kilep()"><i class="fa-solid fa-right-from-bracket me-1"></i> Kilépés</a></li>
+
+            <!-- Kosár cím -->
+            <li>
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-cart-shopping me-1"></i>
+                 Kosár
+              </h4>
+            </li>
+
+            <!-- Kosár (gomb) -->
+            <li ng-show="$root.user.id">
+              <a class="dropdown-item"
+                 href="#"
+                 ui-sref-active="active">
+              <i class="fa-solid fa-cart-shopping me-1"></i>
+                 Kosár
+              </a>
+            </li>
+
+            <!-- különítő sor 2 -->
+            <li><hr class="dropdown-divider"></li>
+
+            <!-- Kilépés cím -->
+            <li>
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-right-from-bracket me-1"></i>
+                Kilépés
+              </h4>
+            </li>
+
+            <!-- Kilépés (gomb) -->
+            <li ng-show="$root.user.id">
+              <a class="dropdown-item"
+                 href="#"
+                 ui-sref-active="active"
+                 ng-click="$root.kilep()">
+                <i class="fa-solid fa-right-from-bracket me-1"></i>
+                 Kilépés
+              </a>
+            </li>
+
           </ul>
+
         </li>
+
+        <!-- Termelőinkről -->
         <li class="nav-item">
-          <a class="nav-link" ui-sref="aboutOurFarmers" ui-sref-active="active"><i class="fa-solid fa-plant-wilt"></i> Termelőinkről</a>
+          <a class="nav-link"
+             ui-sref="aboutOurFarmers"
+             ui-sref-active="active">
+            <i class="fa-solid fa-plant-wilt"></i>
+             Termelőinkről
+          </a>
         </li>
+
+        <!-- Fejlesztőinkről -->
         <li class="nav-item">
-          <a class="nav-link" ui-sref="aboutUs" ui-sref-active="active"><i class="fa-solid fa-code"></i> Fejlesztőinkről</a>
+          <a class="nav-link"
+             ui-sref="aboutUs"
+             ui-sref-active="active">
+            <i class="fa-solid fa-code"></i>
+             Fejlesztőinkről
+          </a>
         </li>
+
       </ul>
+
     </div>
+
   </div>
 </nav>
