@@ -15,7 +15,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 # Hátralévő feladatok:
 
   -Profil és a kosár ne jelenjen meg, ha a felhasználó nincs bejelentkezve. <=  Állapot: 100% (Elkészítve)
-                                                                                Csinálta: Contos Márió Dávid
+                                                                                Csinálta: Csontos Márió Dávid
 
   -bejelentkezés kijavítása <=  Állapot: 75% (kész)  
 
