@@ -170,13 +170,21 @@
     .controller('loginController', [
         '$rootScope',
         '$scope',
+        'http',
         function($rootScope, $scope) {
             console.log('Login controller...');
 
             $scope.login = ()=>{
-                alert("Sikeres a bejelentkezés!");
-                $rootScope.user.id = 1;
-                $rootScope.$applyAsync();
+                http.request({
+                    url: "./php/felhasznalo.php",
+                })
+                .then(result => {
+                    $scope.data = result;
+                    alert("Sikeres a bejelentkezés!");
+                    $rootScope.user.id = data.felhasznaloID;
+                    $scope.$applyAsync();
+                })
+                .catch(e=>console.log(e))
             }
 
         }
