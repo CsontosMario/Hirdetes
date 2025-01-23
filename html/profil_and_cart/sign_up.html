@@ -120,10 +120,20 @@
                ng-model="sign_up.orszag"
                required>
       </div>
+
+      <!-- Jelszó megjelenítése (regisztráció) -->
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input"  ng-init="model.showPassword=false" ng-model="model.showPassword"  id="showPassword">
-        <label class="form-check-label" for="showPassword"><i class="fa-solid fa-lock-open"></i> Jelszó mutatása</label>
-    </div>
+        <input type="checkbox" 
+               class="form-check-input"  
+               ng-init="model.showPassword=false" 
+               ng-model="model.showPassword"  
+               id="showPassword">
+        <label class="form-check-label" 
+               for="showPassword">
+          <i class="fa-solid fa-lock-open"></i>
+           Jelszó mutatása
+        </label>
+      </div>
 
       <!-- Gomb (regisztráció) -->
       <div class="clearfix">
