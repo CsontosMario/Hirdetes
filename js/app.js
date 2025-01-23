@@ -181,8 +181,18 @@
           })
             .then(result => {
               $scope.data = result;
-              $rootScope.user.id = result.felhasznaloID;
               $scope.$applyAsync();
+              if (result) {
+                $rootScope.user.id = result.felhasznaloID;
+                alert("Sikeres a bejelentkezés!");
+              }
+              else {
+                $rootScope.user.id = null;
+                $rootScope.$applyAsync();
+                alert("Nincs ilyen felhasználó akit be lehetne léptetni.");
+                alert("Kérem regisztrálja ezt a felhasználót!")
+              }
+
             })
             .catch(e => console.log(e))
         }
