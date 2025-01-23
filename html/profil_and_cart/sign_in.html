@@ -1,39 +1,75 @@
 <div class="container">
-    <div class="row justify-content-center mt-5">
-        <form class="w-auto p-3" style="border:1px solid #ccc" name="sign_in_form">
-            
-            <div class="mb-3">
-                <h1 class="text-center pb-3"><i class="fa-solid fa-right-to-bracket me-1"></i> Bejelentkezés</h1>
-            </div>
+  <div class="row justify-content-center mt-5">
 
-            <div class="mb-3">
-                <label for="name" class="form-label"><b><i class="fa-solid fa-signature"></i> Név</b></label>
-                <input type="text" class="form-control" 
-                       id="name" ng-model="sign_in.name"
-                       required>
-            </div>
+    <form class="w-auto p-3"
+          style="border:1px solid #ccc"
+          name="sign_in_form">
 
-            <div class="mb-3">
-                <label for="password" class="form-label"><b><i class="fa-solid fa-lock"></i> Jelszó</b></label>
-                <input type="{{model.showPassword ? 'text' : 'password'}}" class="form-control"
-                       id="password" ng-model="sign_in.password"
-                       required>
-            </div>
+      <div class="mb-3">
+        <h1 class="text-center pb-3">
+          <i class="fa-solid fa-right-to-bracket me-1"></i>
+           Bejelentkezés
+        </h1>
+      </div>
 
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input"  ng-init="model.showPassword=false" ng-model="model.showPassword"  id="showPassword">
-                <label class="form-check-label" for="showPassword"><i class="fa-solid fa-lock-open"></i> Jelszó mutatása</label>
-            </div>
-            
-            <div class="mb-3">
-                <button type="button" class="btn btn-primary" 
-                        ng-disabled="sign_in_form.$invalid"
-                        ng-click="login()">
-                    <i class="fa-solid fa-right-to-bracket me-1"></i> 
-                    Bejelentkezés
-                </button>
-            </div>
+      <!-- Név (bejelentkezés) -->
+      <div class="mb-3">
+        <label for="name"
+               class="form-label">
+          <b>
+            <i class="fa-solid fa-signature"></i>
+             Név
+          </b>
+        </label>
+        <input type="text"
+               class="form-control"
+               id="name"
+               ng-model="sign_in.name"
+               required>
+      </div>
 
-        </form>
-    </div>
+      <!-- Jelszó (bejelentkezés) -->
+      <div class="mb-3">
+        <label for="password"
+               class="form-label">
+          <b>
+            <i class="fa-solid fa-lock"></i>
+             Jelszó
+          </b>
+        </label>
+        <input type="{{model.showPassword ? 'text' : 'password'}}"
+               class="form-control"
+               id="password"
+               ng-model="sign_in.password"
+               required>
+      </div>
+
+      <!-- Jelszó mutatása (bejelentkezés) -->
+      <div class="mb-3 form-check">
+        <input type="checkbox"
+               class="form-check-input"
+               ng-init="model.showPassword=false"
+               ng-model="model.showPassword"
+               id="showPassword">
+        <label class="form-check-label"
+               for="showPassword">
+          <i class="fa-solid fa-lock-open"></i>
+           Jelszó mutatása
+        </label>
+      </div>
+
+      <!-- Bejelentkezés (gomb) -->
+      <div class="mb-3">
+        <button type="button"
+                class="btn btn-primary"
+                ng-disabled="sign_in_form.$invalid"
+                ng-click="login()">
+          <i class="fa-solid fa-right-to-bracket me-1"></i>
+          Bejelentkezés
+        </button>
+      </div>
+
+    </form>
+
+  </div>
 </div>
