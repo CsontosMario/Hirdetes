@@ -185,8 +185,9 @@
               if (result) {
                 $rootScope.user.id = result.felhasznaloID;
                 alert("Sikeres a bejelentkezés!");
+                alert("Üdvözöljük "+ result.nev+ "!");
               }
-              else {
+              else{
                 $rootScope.user.id = null;
                 $rootScope.$applyAsync();
                 alert("Nincs ilyen felhasználó akit be lehetne léptetni.");
