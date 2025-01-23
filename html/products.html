@@ -1,17 +1,24 @@
 <div class="container justify-content-center mt-3 mb-3">
-    <div class="row w-auto row-cols-1 row-cols-md-2 g-4">
-        <div class="card text-center col-sm-6 mb-3 mb-sm-0 g-4" ng-repeat="zoldseg in zoldsegek track by $index">
-            <div class="card-header">
-                <h1 class="text-center">{{zoldseg.megnevezes}}</h1>
-            </div>
-            <div class="card-body">
-                <img ng-src="./img/termekek/{{zoldseg.kep}}" class="card-img-top" alt="{{zoldseg.megnevezes}}">
-                <h5 class="card-title">{{zoldseg.megnevezes}}</h5>
-                <p class="card-text">Leírás: {{zoldseg.leiras}}</p>
-                <p class="card-text">Ár: {{zoldseg.ar}} Ft</p>
-                <p class="card-text">Kiszerelés: {{zoldseg.kiszereles}}</p>
-                <a href="#" class="btn btn-primary"><i class="fa-solid fa-wallet"></i> Vásárlás</a>
-            </div>
-        </div>
+  <div class="row w-auto row-cols-1 row-cols-md-2 g-4">
+    <div class="card text-center col-sm-6 mb-3 mb-sm-0 g-4"
+         ng-repeat="zoldseg in zoldsegek track by $index">
+      <div class="card-header">
+        <h1 class="text-center">{{zoldseg.megnevezes}}</h1>
+      </div>
+      <div class="card-body">
+        <img ng-src="./img/termekek/{{zoldseg.kep}}"
+             class="card-img-top"
+             alt="{{zoldseg.megnevezes}}">
+        <h5 class="card-title">{{zoldseg.megnevezes}}</h5>
+        <p class="card-text">Leírás: {{zoldseg.leiras}}</p>
+        <p class="card-text">Ár: {{zoldseg.ar}} Ft</p>
+        <p class="card-text">Kiszerelés: {{zoldseg.kiszereles}}</p>
+        <a href="#"
+           class="btn btn-primary">
+          <i class="fa-solid fa-wallet"></i>
+           Vásárlás
+        </a>
+      </div>
     </div>
+  </div>
 </div>
