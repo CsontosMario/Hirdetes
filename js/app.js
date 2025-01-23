@@ -171,7 +171,7 @@
         '$rootScope',
         '$scope',
         'http',
-        function($rootScope, $scope) {
+        function($rootScope, $scope, http) {
             console.log('Login controller...');
 
             $scope.login = ()=>{

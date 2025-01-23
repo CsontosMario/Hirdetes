@@ -6,7 +6,9 @@ require_once("./environment.php");
 
 $db = new Database();
 
-$query = "SELECT `felhasznaloID`, `nev` FROM `regisztracio`";
+$query = "SELECT `felhasznaloID`, 
+                 `nev` 
+            FROM `regisztracio`";
 
 $result = $db->execute($query);
 

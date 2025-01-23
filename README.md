@@ -8,3 +8,7 @@ A vizsgaremek feladat Git-Hub oldala.
 
 # Csapat vezető: Csontos Márió Dávid Csapattag: Vékony Marcell
 ##
+
+# Hátralévő feladatok:
+  -Profil és a kosár ne jelenjen meg, ha a felhasználó nincs bejelentkezve.
+  -bejelentkezés kijavítása
