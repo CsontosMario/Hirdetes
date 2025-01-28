@@ -90,7 +90,7 @@
         console.log('Run...' + $state.current.name);
 
         $rootScope.kilep = () => {
-          if (confirm('Biztossan kilép?')) {
+          if (confirm('Biztosan ki szeretne lépni ebből a fiókból?')) {
             $rootScope.user.id = null;
             $rootScope.$applyAsync();
           }
