@@ -25,4 +25,4 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
             Csinálta: 37,5% - Vékony Marcell (JavaScript)
                       37,5% - Csontos Márió Dávid (PHP)
 
-  -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 0% (nincs kész)
+      -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 0% (nincs kész)
