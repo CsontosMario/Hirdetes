@@ -68,7 +68,7 @@
           })
 
           .state('cart', {
-            url: '/cart',
+            url: '/',
             parent: 'root',
             templateUrl: './html/profil_and_cart/cart.html',
             controller: 'cartController'
