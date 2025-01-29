@@ -14,15 +14,20 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
 # Hátralévő feladatok:
 
-  -bejelentkezés kijavítása <=  Állapot: 90% (kész)  
+  # Hibák:
 
-            Hiányzik: Megtalálni miért nem találja a data változót.
-                                
-            Funkcionál: 'felhasznalo.php' fájl
+    -bejelentkezés kijavítása <=  Állapot: 90% (kész)  
 
-            Nem funkcionál: 'javaScript'
+              Hiányzik: Megtalálni miért nem találja a data változót.
 
-            Csinálta: 37,5% - Vékony Marcell (JavaScript)
-                      37,5% - Csontos Márió Dávid (PHP)
+              Funkcionál: 'felhasznalo.php' fájl
 
-      -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 0% (nincs kész)
+              Nem funkcionál: 'javaScript'
+
+              Csinálta: 37,5% - Vékony Marcell (JavaScript)
+                        37,5% - Csontos Márió Dávid (PHP)
+    
+  # QOL szükségletek:
+
+    -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 0% (nincs kész)
+    -regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
