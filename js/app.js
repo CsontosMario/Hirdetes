@@ -201,8 +201,9 @@
 
     //Profile controller
     .controller('profileController', [
+      '$rootScope',
       '$scope',
-      function ($scope) {
+      function ($rootScope, $scope) {
         console.log('Profile controller...');
       }
     ])
