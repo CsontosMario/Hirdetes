@@ -31,3 +31,8 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
     -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 0% (nincs kész)
     -regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
+
+- [] Adatbázis átnézése 
+  - fizetes tabla azonosító character legyen
+  - Kosár dátum -> datetime
+- [] Tagolás

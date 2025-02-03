@@ -82,16 +82,21 @@
     .run([
       '$rootScope',
       '$state',
-      'trans',
-      function ($rootScope, $state, trans) {
+      'util',
+      function ($rootScope, $state, util) {
 
-        $rootScope.user = { id: null, name: null };
+        $rootScope.user = {};
+        $rootScope.user.id = util.localStorage('get', 'loginID');
+        $rootScope.user.name = util.localStorage('get', 'loginName');
 
         console.log('Run...' + $state.current.name);
 
         $rootScope.kilep = () => {
           if (confirm('Biztosan ki szeretne lépni ebből a fiókból?')) {
             $rootScope.user.id = null;
+            $rootScope.user.name = null;
+            util.localStorage('remove', 'loginID');
+            util.localStorage('remove', 'loginName');
             $rootScope.$applyAsync();
           }
         }
@@ -171,7 +176,8 @@
       '$rootScope',
       '$scope',
       'http',
-      function ($rootScope, $scope, http) {
+      'util',
+      function ($rootScope, $scope, http, util) {
         console.log('Login controller...');
 
         $scope.login = () => {
@@ -180,22 +186,14 @@
             data: $scope.sign_in
           })
             .then(result => {
-              $scope.data = result;
-              $scope.$applyAsync();
-              if (result) {
-                $rootScope.user.id = result.felhasznaloID;
-                alert("Sikeres a bejelentkezés!");
-                alert("Üdvözöljük "+ result.nev+ "!");
-              }
-              else{
-                $rootScope.user.id = null;
-                $rootScope.$applyAsync();
-                alert("Nincs ilyen felhasználó akit be lehetne léptetni.");
-                alert("Kérem regisztrálja ezt a felhasználót!")
-              }
+              $rootScope.user.id = result.felhasznaloID;
+              $rootScope.user.name = $scope.sign_in.nev;
 
+              util.localStorage('set', 'loginID', $rootScope.user.id);
+              util.localStorage('set', 'loginName', $rootScope.user.name);
+              alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $scope.sign_in.nev + "!");
             })
-            .catch(e => console.log(e))
+            .catch(e => alert(e))
         }
 
       }
