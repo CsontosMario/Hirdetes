@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 04. 09:25
+-- Létrehozás ideje: 2025. Feb 04. 09:41
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -97,6 +97,7 @@ INSERT INTO `kosarelemek` (`kosarID`, `termekID`, `db`, `ar`) VALUES
 
 CREATE TABLE `regisztracio` (
   `felhasznaloID` int(11) NOT NULL,
+  `azonosito` varchar(50) NOT NULL,
   `nev` varchar(50) NOT NULL,
   `jelszo` varchar(50) NOT NULL,
   `iranyitoszam` int(11) NOT NULL,
@@ -109,13 +110,13 @@ CREATE TABLE `regisztracio` (
 -- A tábla adatainak kiíratása `regisztracio`
 --
 
-INSERT INTO `regisztracio` (`felhasznaloID`, `nev`, `jelszo`, `iranyitoszam`, `telepules`, `cim`, `orszag`) VALUES
-(1, 'Vékony Marcell', '1234aA', 6900, 'Makó', 'Posta.u. 1', 'Magyarország'),
-(2, 'Csontos Márió Dávid', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország'),
-(3, 'Raikou Usagi', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország'),
-(4, 'Szabó Márió', '1234aA', 6900, 'Makó', 'Ady Endre u 1.', 'Magyarország'),
-(5, 'Kiss Andrea', '1234aA', 6900, 'Makó', 'Kossuth L utca 46.', 'Magyarország'),
-(6, 'Nagy Ákos', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország');
+INSERT INTO `regisztracio` (`felhasznaloID`, `azonosito`, `nev`, `jelszo`, `iranyitoszam`, `telepules`, `cim`, `orszag`) VALUES
+(1, 'vekonymarcell', 'Vékony Marcell', '1234aA', 6900, 'Makó', 'Posta.u. 1', 'Magyarország'),
+(2, 'csontosmariodavid', 'Csontos Márió Dávid', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország'),
+(3, 'raikouusagi', 'Raikou Usagi', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország'),
+(4, 'szabomario', 'Szabó Márió', '1234aA', 6900, 'Makó', 'Ady Endre u 1.', 'Magyarország'),
+(5, 'kissandrea', 'Kiss Andrea', '1234aA', 6900, 'Makó', 'Kossuth L utca 46.', 'Magyarország'),
+(6, 'nagyakos', 'Nagy Ákos', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország');
 
 -- --------------------------------------------------------
 
