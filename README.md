@@ -29,6 +29,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
     -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 100% (kész)
     -regisztráció után a felhasználó egybőli bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
+    -Megcsinálni a nyelv váltást <= Állapot: 0% (nincs kész)
 
 - [] Adatbázis átnézése 
   - fizetes tabla azonosító character legyen <= Állapot: 100% (kész)
