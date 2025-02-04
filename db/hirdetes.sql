@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 21. 13:45
+-- Létrehozás ideje: 2025. Feb 04. 07:58
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -50,7 +50,7 @@ INSERT INTO `fizetes` (`fizetesID`, `megnevezes`) VALUES
 CREATE TABLE `kosar` (
   `kosarID` int(11) NOT NULL,
   `felhasznaloID` int(11) NOT NULL,
-  `datum` date NOT NULL,
+  `datum` datetime NOT NULL,
   `fizetesID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -59,11 +59,11 @@ CREATE TABLE `kosar` (
 --
 
 INSERT INTO `kosar` (`kosarID`, `felhasznaloID`, `datum`, `fizetesID`) VALUES
-(1, 1, '2017-11-15', 1),
-(2, 2, '2016-09-06', 2),
-(3, 3, '2019-06-12', 3),
-(4, 4, '2023-12-04', 4),
-(5, 5, '2018-03-20', 5);
+(1, 1, '2017-11-15 00:00:00', 1),
+(2, 2, '2016-09-06 00:00:00', 2),
+(3, 3, '2019-06-12 00:00:00', 3),
+(4, 4, '2023-12-04 00:00:00', 4),
+(5, 5, '2018-03-20 00:00:00', 5);
 
 -- --------------------------------------------------------
 
