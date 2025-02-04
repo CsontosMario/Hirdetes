@@ -159,6 +159,57 @@
           </a>
         </li>
 
+        <!-- Dropdown -> Nyelvek (button) -->
+        <li class="nav-item dropdown" data-bs-auto-close="true">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            <i class="fa-solid fa-language"></i> 
+             Nyelvek
+          </a>
+
+          <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
+          <ul class="dropdown-menu">
+
+            <!-- Magyar -->
+            <li>
+              <a class="dropdown-item"
+                 ui-sref-active="active">
+                <img src="./img/icons/languages/done/flag_hungary.svg">
+                 Magyar
+              </a>
+            </li>
+
+            <!-- különítő sor 1 -->
+            <li><hr class="dropdown-divider"></li>
+
+            <!-- Angol -->
+            <li ng-show="$root.user.id">
+              <a class="dropdown-item"
+                 ui-sref-active="active">
+                <img src="./img/icons/languages/done/flag_usa.svg">
+                 Angol
+              </a>
+            </li>
+
+            <!-- különítő sor 2 -->
+            <li><hr class="dropdown-divider"></li>
+
+            <!-- Japán -->
+            <li ng-show="$root.user.id">
+              <a class="dropdown-item"
+                 ui-sref-active="active">
+                <img src="./img/icons/languages/done/torii-gate_japan.svg">
+                 Japán
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
       </ul>
 
     </div>

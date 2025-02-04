@@ -3,7 +3,21 @@
     "Hivás fogadási órák":"電話受付時間 (Denwa uketsuke jikan)",
     "Hétfő - Péntek":"月曜日 - 金曜日 (Getsuyōbi - kin'yōbi)",
     "Szombat - Vasárnap":"土曜日 - 日曜日 (Doyōbi - nichiyōbi)",
+    "Nap":"日 (Hi)",
+    "Kezdés":"始める (Hajimeru)",
+    "Zárás":"終わりに (Owari ni)",
     "Telephely":"サイト (Saito)",
-    "Regisztráció":""
+    "Regisztráció":"登録 (Tōroku)",
+    "Teljes név":"氏名 (Shimei)",
+    "Jelszó":"パスワード (Pasuwādo)",
+    "Jelszó megerősítése":"パスワードを認証する (Pasuwādo o ninshō suru)",
+    "Irányítószám":"郵便コード (Yūbin kōdo)",
+    "Település":"決済 (Kessai)",
+    "Lakcím":"住居住所 (Jūkyo jūsho)",
+    "Ország":"国 (Kuni)",
+    "Jelszó mutatása":"パスワードの表示 (Pasuwādo no hyōji)",
+    "Bejelentkezés":"ログイン (Roguin)",
+    "Kosár":"バスケット (Basuketto)",
+    "Kilépés":"終了 (Shūryō)"
   }
 ]
