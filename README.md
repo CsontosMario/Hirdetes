@@ -21,7 +21,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
   # QOL szükségletek:
 
     -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 100% (kész)
-    -regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
+    -regisztráció után a felhasználó egybőli bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
 
 - [] Adatbázis átnézése 
   - fizetes tabla azonosító character legyen

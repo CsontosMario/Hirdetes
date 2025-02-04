@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 04. 07:58
+-- Létrehozás ideje: 2025. Feb 04. 08:46
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `fizetes` (
-  `fizetesID` int(11) NOT NULL,
+  `fizetesTipus` varchar(11) NOT NULL,
   `megnevezes` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -36,10 +36,10 @@ CREATE TABLE `fizetes` (
 -- A tábla adatainak kiíratása `fizetes`
 --
 
-INSERT INTO `fizetes` (`fizetesID`, `megnevezes`) VALUES
-(1, 'készpénz'),
-(2, 'átutalás'),
-(3, 'bankkártya');
+INSERT INTO `fizetes` (`fizetesTipus`, `megnevezes`) VALUES
+('A', 'átutalás'),
+('BK', 'bankkártya'),
+('KP', 'készpénz');
 
 -- --------------------------------------------------------
 
@@ -51,19 +51,19 @@ CREATE TABLE `kosar` (
   `kosarID` int(11) NOT NULL,
   `felhasznaloID` int(11) NOT NULL,
   `datum` datetime NOT NULL,
-  `fizetesID` int(11) NOT NULL
+  `fizetesTipus` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `kosar`
 --
 
-INSERT INTO `kosar` (`kosarID`, `felhasznaloID`, `datum`, `fizetesID`) VALUES
-(1, 1, '2017-11-15 00:00:00', 1),
-(2, 2, '2016-09-06 00:00:00', 2),
-(3, 3, '2019-06-12 00:00:00', 3),
-(4, 4, '2023-12-04 00:00:00', 4),
-(5, 5, '2018-03-20 00:00:00', 5);
+INSERT INTO `kosar` (`kosarID`, `felhasznaloID`, `datum`, `fizetesTipus`) VALUES
+(1, 1, '2017-11-15 00:00:00', 'A'),
+(2, 2, '2016-09-06 00:00:00', 'BK'),
+(3, 3, '2019-06-12 00:00:00', 'KP'),
+(4, 4, '2023-12-04 00:00:00', 'KP'),
+(5, 5, '2018-03-20 00:00:00', 'BK');
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,8 @@ CREATE TABLE `regisztracio` (
 
 INSERT INTO `regisztracio` (`felhasznaloID`, `nev`, `jelszo`, `iranyitoszam`, `telepules`, `cim`, `orszag`) VALUES
 (1, 'Vékony Marcell', '1234aA', 6900, 'Makó', 'Posta.u. 1', 'Magyarország'),
-(2, 'Csontos Márió Dávid', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország');
+(2, 'Csontos Márió Dávid', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország'),
+(3, 'Raikou Usagi', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország');
 
 -- --------------------------------------------------------
 
@@ -152,7 +153,7 @@ INSERT INTO `zoldsegek` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kisze
 -- A tábla indexei `fizetes`
 --
 ALTER TABLE `fizetes`
-  ADD PRIMARY KEY (`fizetesID`);
+  ADD PRIMARY KEY (`fizetesTipus`);
 
 --
 -- A tábla indexei `kosar`
@@ -160,7 +161,7 @@ ALTER TABLE `fizetes`
 ALTER TABLE `kosar`
   ADD PRIMARY KEY (`kosarID`),
   ADD KEY `felhasznaloID` (`felhasznaloID`),
-  ADD KEY `fizetesID` (`fizetesID`);
+  ADD KEY `fizetesID` (`fizetesTipus`);
 
 --
 -- A tábla indexei `kosarelemek`
@@ -188,7 +189,7 @@ ALTER TABLE `zoldsegek`
 -- AUTO_INCREMENT a táblához `regisztracio`
 --
 ALTER TABLE `regisztracio`
-  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT a táblához `zoldsegek`
