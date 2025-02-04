@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 04. 09:41
+-- Létrehozás ideje: 2025. Feb 04. 11:05
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -116,7 +116,10 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `azonosito`, `nev`, `jelszo`, `iran
 (3, 'raikouusagi', 'Raikou Usagi', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország'),
 (4, 'szabomario', 'Szabó Márió', '1234aA', 6900, 'Makó', 'Ady Endre u 1.', 'Magyarország'),
 (5, 'kissandrea', 'Kiss Andrea', '1234aA', 6900, 'Makó', 'Kossuth L utca 46.', 'Magyarország'),
-(6, 'nagyakos', 'Nagy Ákos', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország');
+(6, 'nagyakos', 'Nagy Ákos', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország'),
+(7, '', 'Nyári Dániel', '1234aA', 6900, 'Makó', 'ukbuk.u. 1', 'Magyarország'),
+(8, '', 'Frank Castle', '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
+(9, '', 'Pete Castallengtion', '1234aA', 10000, 'New York', 'Park Avenue', 'United States');
 
 -- --------------------------------------------------------
 
@@ -193,7 +196,7 @@ ALTER TABLE `zoldsegek`
 -- AUTO_INCREMENT a táblához `regisztracio`
 --
 ALTER TABLE `regisztracio`
-  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT a táblához `zoldsegek`
