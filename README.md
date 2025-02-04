@@ -24,6 +24,6 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
     -regisztráció után a felhasználó egybőli bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
 
 - [] Adatbázis átnézése 
-  - fizetes tabla azonosító character legyen
-  - Kosár dátum -> datetime
+  - fizetes tabla azonosító character legyen <=  Állapot: 100% (kész)
+  - Kosár dátum -> datetime <=  Állapot: 100% (kész)
 - [] Tagolás <=  Állapot: 100% (kész)
