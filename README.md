@@ -23,7 +23,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Hibák:
 
-    -Ha a kosár oldalon jelentkezünk ki akkor kijelentkezés után nem tesz át afő oldalra.
+    -Ha a kosár oldalon jelentkezünk ki akkor kijelentkezés után nem tesz át a fő oldalra. <= 
     
   # QOL szükségletek:
 
@@ -31,6 +31,6 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
     -regisztráció után a felhasználó egybőli bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
 
 - [] Adatbázis átnézése 
-  - fizetes tabla azonosító character legyen <=  Állapot: 100% (kész)
-  - Kosár dátum -> datetime <=  Állapot: 100% (kész)
-- [] Tagolás <=  Állapot: 100% (kész)
+  - fizetes tabla azonosító character legyen <= Állapot: 100% (kész)
+  - Kosár dátum -> datetime <= Állapot: 100% (kész)
+- [] Tagolás <= Állapot: 100% (kész)
