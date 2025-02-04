@@ -23,7 +23,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Hibák:
 
-    -Jelenleg nem tudunk hibákról
+    -Ha a kosár oldalon jelentkezünk ki akkor kijelentkezés után nem tesz át afő oldalra.
     
   # QOL szükségletek:
 
