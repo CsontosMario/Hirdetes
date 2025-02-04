@@ -16,7 +16,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Hibák:
 
-    -bejelentkezés kijavítása <=  Állapot: 100% (kész)
+    -Jelenleg nem tudunk hibákról
     
   # QOL szükségletek:
 
