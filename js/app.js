@@ -4,7 +4,7 @@
     'ui.router',
     'app.common'
   ])
-    .config([
+  .config([
       '$stateProvider',
       '$urlRouterProvider',
       function ($stateProvider, $urlRouterProvider) {
@@ -66,7 +66,6 @@
             templateUrl: './html/profil_and_cart/profile.html',
             controller: 'profileController'
           })
-
           .state('cart', {
             url: '/',
             parent: 'root',
@@ -77,9 +76,9 @@
         $urlRouterProvider.otherwise('/');
 
       }
-    ])
+  ])
 
-    .run([
+  .run([
       '$rootScope',
       '$state',
       'util',
@@ -101,120 +100,119 @@
           }
         }
       }
-    ])
+  ])
 
-    //Home controller
-    .controller('homeController', [
-      '$scope',
-      function ($scope,) {
-        console.log('Home controller...');
+  //Home controller
+  .controller('homeController', [
+    '$scope',
+    function ($scope,) {
+      console.log('Home controller...');
+    }
+  ])
+
+  //Products controller
+  .controller('productsController', [
+    '$scope',
+    'http',
+    function ($scope, http) {
+
+      http.request("./php/hirdetes.php")
+      .then(response => {
+        $scope.zoldsegek = response;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e))
+
+      console.log('Products controller...');
+    }
+  ])
+
+  //About our farmers controller
+  .controller('about_our_farmersController', [
+    '$scope',
+    function ($scope) {
+      console.log('About_our_farmers controller...');
+    }
+  ])
+
+  //About us controller
+  .controller('about_usController', [
+    '$scope',
+    function ($scope) {
+      console.log('Products controller...');
+    }
+  ])
+
+  //Register controller
+  .controller('registerController', [
+    '$scope',
+    'http',
+    function ($scope, http) {
+      console.log('Register controller...');
+
+      $scope.register = () => {
+
+        http.request({
+          url: "./php/register.php",
+          data: $scope.sign_up
+        })
+        .then(result => {
+          $scope.data = result
+          $scope.$applyAsync()
+          alert("Sikeres a regisztráció!");
+        })
+        .catch(e => console.log(e))
+
+        console.log($scope.sign_up); //Ideiglenesen van benn!!!!
       }
-    ])
 
-    //Products controller
-    .controller('productsController', [
-      '$scope',
-      'http',
-      function ($scope, http) {
+    }
+  ])
 
-        http.request("./php/hirdetes.php")
-          .then(response => {
-            $scope.zoldsegek = response;
-            $scope.$applyAsync();
-          })
-          .catch(e => console.log(e))
+  //Login controller
+  .controller('loginController', [
+    '$rootScope',
+    '$scope',
+    'http',
+    'util',
+    function ($rootScope, $scope, http, util) {
+      console.log('Login controller...');
 
-        console.log('Products controller...');
+      $scope.login = () => {
+        http.request({
+          url: "./php/felhasznalo.php",
+          data: $scope.sign_in
+        })
+        .then(result => {
+          $rootScope.user.id = result.felhasznaloID;
+          $rootScope.user.name = $scope.sign_in.nev;
+
+          util.localStorage('set', 'loginID', $rootScope.user.id);
+          util.localStorage('set', 'loginName', $rootScope.user.name);
+          alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $scope.sign_in.nev + "!");
+        })
+        .catch(e => alert(e))
       }
-    ])
 
-    //About our farmers controller
-    .controller('about_our_farmersController', [
-      '$scope',
-      function ($scope) {
-        console.log('About_our_farmers controller...');
-      }
-    ])
+    }
+  ])
 
-    //About us controller
-    .controller('about_usController', [
-      '$scope',
-      function ($scope) {
-        console.log('Products controller...');
-      }
-    ])
-
-    //Register controller
-    .controller('registerController', [
-      '$scope',
-      'http',
-      function ($scope, http) {
-        console.log('Register controller...');
-
-        $scope.register = () => {
-
-          http.request({
-            url: "./php/register.php",
-            data: $scope.sign_up
-          })
-            .then(result => {
-              $scope.data = result
-              $scope.$applyAsync()
-              alert("Sikeres a regisztráció!");
-            })
-            .catch(e => console.log(e))
-
-
-          console.log($scope.sign_up); //Ideiglenesen van benn!!!!
-        }
-
-      }
-    ])
-
-    //Login controller
-    .controller('loginController', [
-      '$rootScope',
-      '$scope',
-      'http',
-      'util',
-      function ($rootScope, $scope, http, util) {
-        console.log('Login controller...');
-
-        $scope.login = () => {
-          http.request({
-            url: "./php/felhasznalo.php",
-            data: $scope.sign_in
-          })
-            .then(result => {
-              $rootScope.user.id = result.felhasznaloID;
-              $rootScope.user.name = $scope.sign_in.nev;
-
-              util.localStorage('set', 'loginID', $rootScope.user.id);
-              util.localStorage('set', 'loginName', $rootScope.user.name);
-              alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $scope.sign_in.nev + "!");
-            })
-            .catch(e => alert(e))
-        }
-
-      }
-    ])
-
-    //Profile controller
-    .controller('profileController', [
-      '$rootScope',
-      '$scope',
-      function ($rootScope, $scope) {
-        console.log('Profile controller...');
-      }
-    ])
+  //Profile controller
+  .controller('profileController', [
+    '$rootScope',
+    '$scope',
+    function ($rootScope, $scope) {
+      console.log('Profile controller...');
+    }
+  ])
 
     //Cart controller
-    .controller('cartController', [
-      '$rootScope',
-      '$scope',
-      function ($rootScope, $scope) {
-        console.log('Cart controller...');
-      }
-    ])
+  .controller('cartController', [
+    '$rootScope',
+    '$scope',
+    function ($rootScope, $scope) {
+      console.log('Cart controller...');
+    }
+  ])
 
 })(window, angular);
