@@ -35,4 +35,4 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 - [] Adatbázis átnézése 
   - fizetes tabla azonosító character legyen
   - Kosár dátum -> datetime
-- [] Tagolás
+- [] Tagolás <=  Állapot: 100% (kész)
