@@ -20,8 +20,9 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
                         /\
                         ||
     -Az előző feladatot automatizálni új felhasználóknál.     <= Állapot: 0% (nincs kész)
-    -Különböző nyelvekre lefordítani a weboldalt              <= Állapot: 0% (folyamatban)
+    -Különböző nyelvekre lefordítani a weboldalt              <= Állapot: 50% (folyamatban)
     -Megcsinálni a nyelv váltást                              <= Állapot: 0% (nincs kész)
+    -
 
   # Hibák:
 
