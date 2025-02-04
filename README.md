@@ -16,7 +16,10 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Feladaatok:
 
-    -Az adatbázisban a felhasználókat tartalmazó táblában a felhasználóknak egyedi azonosítókat kell létrehozni <= Állapot: 0% (nincs kész)
+    -Az adatbázisban a felhasználókat tartalmazó táblában a felhasználóknak egyedi azonosítókat kell létrehozni <= Állapot: 100% (kész)
+                        /\
+                        ||
+    -Az előző feladatot automatizálni új felhasználóknál.
 
   # Hibák:
 
