@@ -11,7 +11,7 @@ $query = "SELECT `kep`,
                  `leiras`, 
                  `ar`, 
                  `kiszereles` 
-            FROM `zoldsegek_en`";
+            FROM `zoldsegek_hu`";
 
 $result = $db->execute($query);
 
