@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 04. 11:05
+-- Létrehozás ideje: 2025. Feb 05. 09:10
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -117,17 +117,17 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `azonosito`, `nev`, `jelszo`, `iran
 (4, 'szabomario', 'Szabó Márió', '1234aA', 6900, 'Makó', 'Ady Endre u 1.', 'Magyarország'),
 (5, 'kissandrea', 'Kiss Andrea', '1234aA', 6900, 'Makó', 'Kossuth L utca 46.', 'Magyarország'),
 (6, 'nagyakos', 'Nagy Ákos', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország'),
-(7, '', 'Nyári Dániel', '1234aA', 6900, 'Makó', 'ukbuk.u. 1', 'Magyarország'),
-(8, '', 'Frank Castle', '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
-(9, '', 'Pete Castallengtion', '1234aA', 10000, 'New York', 'Park Avenue', 'United States');
+(7, 'nyaridaniel', 'Nyári Dániel', '1234aA', 6900, 'Makó', 'ukbuk.u. 1', 'Magyarország'),
+(8, 'frankcastle', 'Frank Castle', '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
+(9, 'petecastallengtion', 'Pete Castallengtion', '1234aA', 10000, 'New York', 'Park Avenue', 'United States');
 
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `zoldsegek`
+-- Tábla szerkezet ehhez a táblához `zoldsegek_en`
 --
 
-CREATE TABLE `zoldsegek` (
+CREATE TABLE `zoldsegek_en` (
   `termekID` int(10) NOT NULL,
   `kep` varchar(50) NOT NULL,
   `megnevezes` varchar(50) NOT NULL,
@@ -137,10 +137,35 @@ CREATE TABLE `zoldsegek` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- A tábla adatainak kiíratása `zoldsegek`
+-- A tábla adatainak kiíratása `zoldsegek_en`
 --
 
-INSERT INTO `zoldsegek` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+INSERT INTO `zoldsegek_en` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+(1, 'potato.jpg', 'Potato', 'Medium flour content, suitable for baking and cooking. Hungarian product.', 1000, 'in bulk'),
+(2, 'carrot.jpg', 'Carrot', 'Smooth cylindrical, medium length. Hungarian product.', 400, 'in bulk'),
+(3, 'sorrel.jpg', 'Garden Sorrel', 'Strong leaves. Hungarian product.', 400, 'per package'),
+(4, 'spinach.jpg', 'Spinach', 'Medium-sized leaves. Hungarian product.', 500, 'per package');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `zoldsegek_hu`
+--
+
+CREATE TABLE `zoldsegek_hu` (
+  `termekID` int(10) NOT NULL,
+  `kep` varchar(50) NOT NULL,
+  `megnevezes` varchar(50) NOT NULL,
+  `leiras` text NOT NULL,
+  `ar` int(10) NOT NULL,
+  `kiszereles` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `zoldsegek_hu`
+--
+
+INSERT INTO `zoldsegek_hu` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
 (1, 'potato.jpg', 'Burgonya (Balatoni-rózsa)', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'ömlesztve'),
 (2, 'carrot.jpg', 'Sárgarépa (Matador)', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'ömlesztve'),
 (3, 'sorrel.jpg', 'Kerti Sóska (Pallagi nagylevelű)', 'Erőteljes levelű.  Magyar termék.', 400, 'csomagonként'),
@@ -151,6 +176,21 @@ INSERT INTO `zoldsegek` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kisze
 (8, 'kohlrabi.jpg', 'Karalábé', 'Zsenge, fehér. Magyar termék.', 450, 'darabonként'),
 (9, 'pepper.jpg', 'Paprika (Fehérözön)', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'ömlesztve'),
 (10, 'cauliflower.jpg', 'Karfiol', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'fejenként');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `zoldsegek_jp`
+--
+
+CREATE TABLE `zoldsegek_jp` (
+  `termekID` int(10) NOT NULL,
+  `kep` varchar(50) NOT NULL,
+  `megnevezes` varchar(50) NOT NULL,
+  `leiras` text NOT NULL,
+  `ar` int(10) NOT NULL,
+  `kiszereles` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexek a kiírt táblákhoz
@@ -183,9 +223,21 @@ ALTER TABLE `regisztracio`
   ADD PRIMARY KEY (`felhasznaloID`);
 
 --
--- A tábla indexei `zoldsegek`
+-- A tábla indexei `zoldsegek_en`
 --
-ALTER TABLE `zoldsegek`
+ALTER TABLE `zoldsegek_en`
+  ADD PRIMARY KEY (`termekID`);
+
+--
+-- A tábla indexei `zoldsegek_hu`
+--
+ALTER TABLE `zoldsegek_hu`
+  ADD PRIMARY KEY (`termekID`);
+
+--
+-- A tábla indexei `zoldsegek_jp`
+--
+ALTER TABLE `zoldsegek_jp`
   ADD PRIMARY KEY (`termekID`);
 
 --
@@ -199,10 +251,22 @@ ALTER TABLE `regisztracio`
   MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT a táblához `zoldsegek`
+-- AUTO_INCREMENT a táblához `zoldsegek_en`
 --
-ALTER TABLE `zoldsegek`
+ALTER TABLE `zoldsegek_en`
+  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT a táblához `zoldsegek_hu`
+--
+ALTER TABLE `zoldsegek_hu`
   MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT a táblához `zoldsegek_jp`
+--
+ALTER TABLE `zoldsegek_jp`
+  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
