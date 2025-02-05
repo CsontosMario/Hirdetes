@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 05. 09:10
+-- Létrehozás ideje: 2025. Feb 05. 09:27
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -144,7 +144,13 @@ INSERT INTO `zoldsegek_en` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `ki
 (1, 'potato.jpg', 'Potato', 'Medium flour content, suitable for baking and cooking. Hungarian product.', 1000, 'in bulk'),
 (2, 'carrot.jpg', 'Carrot', 'Smooth cylindrical, medium length. Hungarian product.', 400, 'in bulk'),
 (3, 'sorrel.jpg', 'Garden Sorrel', 'Strong leaves. Hungarian product.', 400, 'per package'),
-(4, 'spinach.jpg', 'Spinach', 'Medium-sized leaves. Hungarian product.', 500, 'per package');
+(4, 'spinach.jpg', 'Spinach', 'Medium-sized leaves. Hungarian product.', 500, 'per package'),
+(5, 'spring_onion.jpg', 'Spring Onion', 'Elongated head, suitable for fresh consumption and salads. Hungarian product.', 250, 'per package'),
+(6, 'corn.jpg', 'Corn', 'Medium-grained, sweet, excellent for cooking. Hungarian product.', 200, 'piece by piece'),
+(7, 'pea.jpg', 'Green peas', 'Medium-sized grains, first-ripe and suitable for soups, vegetables, salads. Hungarian product.', 1000, 'in bulk'),
+(8, 'kohlrabi.jpg', 'Kohlrabi', 'First-born, white. Hungarian product.', 450, 'piece by piece'),
+(9, 'pepper.jpg', 'Pepper', 'Fleshy, medium-sized, suitable for both fresh consumption and cooking. Hungarian product.', 800, 'in bulk'),
+(10, 'cauliflower.jpg', 'Cauliflower', 'It has a large rosette, suitable for making soups, vegetables and countless dishes. Hungarian product.', 800, 'per capita');
 
 -- --------------------------------------------------------
 
@@ -254,7 +260,7 @@ ALTER TABLE `regisztracio`
 -- AUTO_INCREMENT a táblához `zoldsegek_en`
 --
 ALTER TABLE `zoldsegek_en`
-  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `zoldsegek_hu`
