@@ -190,6 +190,7 @@
           util.localStorage('set', 'loginID', $rootScope.user.id);
           util.localStorage('set', 'loginName', $rootScope.user.name);
           alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $scope.sign_in.nev + "!");
+          $scope.$applyAsync();
         })
         .catch(e => alert(e))
       }
