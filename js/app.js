@@ -232,7 +232,12 @@
                   $scope.lang.available, 'id', $scope.lang.id);
 
                 // Get language
-                methods.getLanguage().then(() => {});
+                methods.getLanguage().then(() => {
+
+                  // Change html title
+								  document.title = $scope.lang.data.language;
+                  
+                });
               })
               .catch(error => console.log(error));
           },
@@ -255,35 +260,39 @@
           },
 
           // Index array of object key value
-          indexByKeyValue: (a, k, v) => a.findIndex(o => o[k] === v)
+					indexByKeyValue: (a, k, v) => a.findIndex(o => o[k] === v)
         }
 
         // Set scope methods
         $scope.methods = {
 
           // Language changed
-          languageChanged: (langID) => {
+					languageChanged: (langID) => {
 
-            // Set selected language identifier
-            $scope.lang.id = langID;
+						// Set selected language identifier
+						$scope.lang.id = langID;
 
-            // Save selected language identifier to local storige
-            localStorage.setItem('languageID', langID);
+						// Save selected language identifier to local storige
+						localStorage.setItem('languageID', langID);
 
-            // Change html lang attribute value
-            document.documentElement.lang = langID;
+						// Change html lang attribute value
+						document.documentElement.lang = langID;
 
-            // Get selected language index
-            $scope.lang.index = methods.indexByKeyValue(
-              $scope.lang.available, 'id', $scope.lang.id);
+						// Get selected language index
+						$scope.lang.index = methods.indexByKeyValue(
+							$scope.lang.available, 'id', $scope.lang.id);
 
-            // Get language
-            methods.getLanguage().then(() => {});
-          }
+						// Get language
+						methods.getLanguage().then(() => {
+
+							// Change html title
+							document.title = $scope.lang.data.language;
+						});
+					}
         };
 
         // Initialize
-        methods.init();
+				methods.init();
       }
     ])
 
