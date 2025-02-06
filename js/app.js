@@ -197,6 +197,10 @@
 
     }
   ])
+  .controller('headerController', [
+    '$scope',
+    '$rootscope',
+  ])
 
   //Profile controller
   .controller('profileController', [
