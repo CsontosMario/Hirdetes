@@ -4,7 +4,7 @@
     'ui.router',
     'app.common'
   ])
-  .config([
+    .config([
       '$stateProvider',
       '$urlRouterProvider',
       function ($stateProvider, $urlRouterProvider) {
@@ -17,7 +17,8 @@
                 templateUrl: './html/root.html'
               },
               'header@root': {
-                templateUrl: './html/header.html'
+                templateUrl: './html/header.html',
+                controller: 'headerController'
               },
               'footer@root': {
                 templateUrl: './html/footer.html'
@@ -76,9 +77,9 @@
         $urlRouterProvider.otherwise('/');
 
       }
-  ])
+    ])
 
-  .run([
+    .run([
       '$rootScope',
       '$state',
       'util',
@@ -100,124 +101,208 @@
           }
         }
       }
-  ])
+    ])
 
-  //Home controller
-  .controller('homeController', [
-    '$scope',
-    function ($scope,) {
-      console.log('Home controller...');
-    }
-  ])
-
-  //Products controller
-  .controller('productsController', [
-    '$scope',
-    'http',
-    function ($scope, http) {
-
-      http.request("./php/hirdetes.php")
-      .then(response => {
-        $scope.zoldsegek = response;
-        $scope.$applyAsync();
-      })
-      .catch(e => console.log(e))
-
-      console.log('Products controller...');
-    }
-  ])
-
-  //About our farmers controller
-  .controller('about_our_farmersController', [
-    '$scope',
-    function ($scope) {
-      console.log('About_our_farmers controller...');
-    }
-  ])
-
-  //About us controller
-  .controller('about_usController', [
-    '$scope',
-    function ($scope) {
-      console.log('Products controller...');
-    }
-  ])
-
-  //Register controller
-  .controller('registerController', [
-    '$scope',
-    'http',
-    function ($scope, http) {
-      console.log('Register controller...');
-
-      $scope.register = () => {
-
-        http.request({
-          url: "./php/register.php",
-          data: $scope.sign_up
-        })
-        .then(result => {
-          $scope.data = result
-          $scope.$applyAsync()
-          alert("Sikeres a regisztráció!");
-        })
-        .catch(e => console.log(e))
-
-        console.log($scope.sign_up); //Ideiglenesen van benn!!!!
+    //Home controller
+    .controller('homeController', [
+      '$scope',
+      function ($scope,) {
+        console.log('Home controller...');
       }
+    ])
 
-    }
-  ])
+    //Products controller
+    .controller('productsController', [
+      '$scope',
+      'http',
+      function ($scope, http) {
 
-  //Login controller
-  .controller('loginController', [
-    '$rootScope',
-    '$scope',
-    'http',
-    'util',
-    function ($rootScope, $scope, http, util) {
-      console.log('Login controller...');
+        http.request("./php/hirdetes.php")
+          .then(response => {
+            $scope.zoldsegek = response;
+            $scope.$applyAsync();
+          })
+          .catch(e => console.log(e))
 
-      $scope.login = () => {
-        http.request({
-          url: "./php/felhasznalo.php",
-          data: $scope.sign_in
-        })
-        .then(result => {
-          $rootScope.user.id = result.felhasznaloID;
-          $rootScope.user.name = $scope.sign_in.nev;
-
-          util.localStorage('set', 'loginID', $rootScope.user.id);
-          util.localStorage('set', 'loginName', $rootScope.user.name);
-          alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $scope.sign_in.nev + "!");
-          $scope.$applyAsync();
-        })
-        .catch(e => alert(e))
+        console.log('Products controller...');
       }
+    ])
 
-    }
-  ])
-  .controller('headerController', [
-    '$scope',
-    '$rootscope',
-  ])
+    //About our farmers controller
+    .controller('about_our_farmersController', [
+      '$scope',
+      function ($scope) {
+        console.log('About_our_farmers controller...');
+      }
+    ])
 
-  //Profile controller
-  .controller('profileController', [
-    '$rootScope',
-    '$scope',
-    function ($rootScope, $scope) {
-      console.log('Profile controller...');
-    }
-  ])
+    //About us controller
+    .controller('about_usController', [
+      '$scope',
+      function ($scope) {
+        console.log('Products controller...');
+      }
+    ])
+
+    //Register controller
+    .controller('registerController', [
+      '$scope',
+      'http',
+      function ($scope, http) {
+        console.log('Register controller...');
+
+        $scope.register = () => {
+
+          http.request({
+            url: "./php/register.php",
+            data: $scope.sign_up
+          })
+            .then(result => {
+              $scope.data = result
+              $scope.$applyAsync()
+              alert("Sikeres a regisztráció!");
+            })
+            .catch(e => console.log(e))
+
+          console.log($scope.sign_up); //Ideiglenesen van benn!!!!
+        }
+
+      }
+    ])
+
+    //Login controller
+    .controller('loginController', [
+      '$rootScope',
+      '$scope',
+      'http',
+      'util',
+      function ($rootScope, $scope, http, util) {
+        console.log('Login controller...');
+
+        $scope.login = () => {
+          http.request({
+            url: "./php/felhasznalo.php",
+            data: $scope.sign_in
+          })
+            .then(result => {
+              $rootScope.user.id = result.felhasznaloID;
+              $rootScope.user.name = $scope.sign_in.nev;
+
+              util.localStorage('set', 'loginID', $rootScope.user.id);
+              util.localStorage('set', 'loginName', $rootScope.user.name);
+              alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $scope.sign_in.nev + "!");
+              $scope.$applyAsync();
+            })
+            .catch(e => alert(e))
+        }
+
+      }
+    ])
+    .controller('headerController', [
+      '$scope',
+      function ($scope) {
+
+        // Set local methods
+        let methods = {
+
+          // Initialize
+          init: () => {
+
+            // Get available languages
+            fetch('./languages/available.json')
+              .then(response => response.json())
+              .then(response => {
+
+                // Set language
+                $scope.lang = {
+                  available: response
+                };
+
+                // Get last language identifier
+                let langID = localStorage.getItem('languageID');
+
+                // When exist, then change html lang attribute value
+                if (langID) document.documentElement.lang = langID;
+
+                // Set selected language identifier
+                $scope.lang.id = document.documentElement.lang;
+
+                // Get actual language index
+                $scope.lang.index = methods.indexByKeyValue(
+                  $scope.lang.available, 'id', $scope.lang.id);
+
+                // Get language
+                methods.getLanguage().then(() => {});
+              })
+              .catch(error => console.log(error));
+          },
+
+          // Get language
+          getLanguage: () => {
+            return new Promise((resolve, reject) => {
+              fetch(`./languages/${$scope.lang.id}.json`)
+                .then(response => response.json())
+                .then(response => {
+                  $scope.lang.data = response;
+                  $scope.$applyAsync();
+                  resolve();
+                })
+                .catch(error => {
+                  console.log(error);
+                  reject();
+                });
+            });
+          },
+
+          // Index array of object key value
+          indexByKeyValue: (a, k, v) => a.findIndex(o => o[k] === v)
+        }
+
+        // Set scope methods
+        $scope.methods = {
+
+          // Language changed
+          languageChanged: (langID) => {
+
+            // Set selected language identifier
+            $scope.lang.id = langID;
+
+            // Save selected language identifier to local storige
+            localStorage.setItem('languageID', langID);
+
+            // Change html lang attribute value
+            document.documentElement.lang = langID;
+
+            // Get selected language index
+            $scope.lang.index = methods.indexByKeyValue(
+              $scope.lang.available, 'id', $scope.lang.id);
+
+            // Get language
+            methods.getLanguage().then(() => {});
+          }
+        };
+
+        // Initialize
+        methods.init();
+      }
+    ])
+
+    //Profile controller
+    .controller('profileController', [
+      '$rootScope',
+      '$scope',
+      function ($rootScope, $scope) {
+        console.log('Profile controller...');
+      }
+    ])
 
     //Cart controller
-  .controller('cartController', [
-    '$rootScope',
-    '$scope',
-    function ($rootScope, $scope) {
-      console.log('Cart controller...');
-    }
-  ])
+    .controller('cartController', [
+      '$rootScope',
+      '$scope',
+      function ($rootScope, $scope) {
+        console.log('Cart controller...');
+      }
+    ])
 
 })(window, angular);
