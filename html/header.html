@@ -72,10 +72,10 @@
             </li>
 
             <!-- különítő sor 1 -->
-            <li><hr class="dropdown-divider"></li>
+            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
 
             <!-- Profil cím -->
-            <li>
+            <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-id-badge me-1"></i>
                  Profil
@@ -93,10 +93,10 @@
             </li>
 
             <!-- különítő sor 2 -->
-            <li><hr class="dropdown-divider"></li>
+            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
 
             <!-- Kosár cím -->
-            <li>
+            <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-cart-shopping me-1"></i>
                  Kosár
@@ -114,10 +114,10 @@
             </li>
 
             <!-- különítő sor 3 -->
-            <li><hr class="dropdown-divider"></li>
+            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
 
             <!-- Kilépés cím -->
-            <li>
+            <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-right-from-bracket me-1"></i>
                 Kilépés
