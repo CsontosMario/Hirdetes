@@ -1,0 +1,32 @@
+[
+
+  
+  {
+
+    "id":"en",
+    "name":"english",
+    "local_name":"english",
+    "img":"en.png",
+    "valid":true
+
+  },
+  {
+
+    "id":"hu",
+    "name":"hungarian",
+    "local_name":"magyar",
+    "img":"hu.png",
+    "valid":true
+
+  },
+  {
+
+    "id":"jp",
+    "name":"japanese",
+    "local_name":"日本語",
+    "img":"jp.png",
+    "valid":true
+
+  }
+
+]
