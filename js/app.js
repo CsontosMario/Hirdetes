@@ -198,6 +198,8 @@
 
       }
     ])
+
+    //Header controller
     .controller('headerController', [
       '$scope',
       function ($scope) {
@@ -249,6 +251,7 @@
                 .then(response => response.json())
                 .then(response => {
                   $scope.lang.data = response;
+                  //console.log($scope.lang.data)
                   $scope.$applyAsync();
                   resolve();
                 })
@@ -293,6 +296,7 @@
 
         // Initialize
 				methods.init();
+
       }
     ])
 
