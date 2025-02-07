@@ -162,7 +162,6 @@
         <!-- Dropdown -> Nyelvek (button) -->
         <li class="nav-item dropdown ms-5" data-bs-auto-close="true">
           <a class="nav-link dropdown-toggle"
-             href="#"
              role="button"
              data-bs-toggle="dropdown"
              aria-expanded="false">
@@ -177,8 +176,7 @@
             <li ng-repeat="x in lang.available"
 								ng-if="x.id !== lang.available[lang.index].id && x.valid"
 								ng-click="methods.languageChanged(x.id)">
-							<a class="dropdown-item" 
-								href="#">
+							<a class="dropdown-item">
 								<img class="me-1" 
 										height="32" 
 										alt="flag"
