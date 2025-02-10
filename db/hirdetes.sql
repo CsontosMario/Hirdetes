@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 05. 11:46
+-- Létrehozás ideje: 2025. Feb 10. 13:37
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -99,6 +99,7 @@ CREATE TABLE `regisztracio` (
   `felhasznaloID` int(11) NOT NULL,
   `azonosito` varchar(50) NOT NULL,
   `nev` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `jelszo` varchar(50) NOT NULL,
   `iranyitoszam` int(11) NOT NULL,
   `telepules` varchar(50) NOT NULL,
@@ -110,16 +111,17 @@ CREATE TABLE `regisztracio` (
 -- A tábla adatainak kiíratása `regisztracio`
 --
 
-INSERT INTO `regisztracio` (`felhasznaloID`, `azonosito`, `nev`, `jelszo`, `iranyitoszam`, `telepules`, `cim`, `orszag`) VALUES
-(1, 'vekonymarcell', 'Vékony Marcell', '1234aA', 6900, 'Makó', 'Posta.u. 1', 'Magyarország'),
-(2, 'csontosmariodavid', 'Csontos Márió Dávid', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország'),
-(3, 'raikouusagi', 'Raikou Usagi', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország'),
-(4, 'szabomario', 'Szabó Márió', '1234aA', 6900, 'Makó', 'Ady Endre u 1.', 'Magyarország'),
-(5, 'kissandrea', 'Kiss Andrea', '1234aA', 6900, 'Makó', 'Kossuth L utca 46.', 'Magyarország'),
-(6, 'nagyakos', 'Nagy Ákos', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország'),
-(7, 'nyaridaniel', 'Nyári Dániel', '1234aA', 6900, 'Makó', 'ukbuk.u. 1', 'Magyarország'),
-(8, 'frankcastle', 'Frank Castle', '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
-(9, 'petecastallengtion', 'Pete Castallengtion', '1234aA', 10000, 'New York', 'Park Avenue', 'United States');
+INSERT INTO `regisztracio` (`felhasznaloID`, `azonosito`, `nev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `cim`, `orszag`) VALUES
+(1, 'vekonymarcell', 'Vékony Marcell', '', '1234aA', 6900, 'Makó', 'Posta.u. 1', 'Magyarország'),
+(2, 'csontosmariodavid', 'Csontos Márió Dávid', 'csontos.mariodavi-2020@keri.mako.hu', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország'),
+(3, 'raikouusagi', 'Raikou Usagi', 'villamnyul7777@gmail.com', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország'),
+(4, 'szabomario', 'Szabó Márió', '', '1234aA', 6900, 'Makó', 'Ady Endre u 1.', 'Magyarország'),
+(5, 'kissandrea', 'Kiss Andrea', '', '1234aA', 6900, 'Makó', 'Kossuth L utca 46.', 'Magyarország'),
+(6, 'nagyakos', 'Nagy Ákos', 'akosnagy@gmail.com', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország'),
+(7, 'nyaridaniel', 'Nyári Dániel', 'nyaridaniel@gmail.com', '1234aA', 6900, 'Makó', 'ukbuk.u. 1', 'Magyarország'),
+(8, 'frankcastle', 'Frank Castle', '', '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
+(9, 'petecastallengtion', 'Pete Castallengtion', '', '1234aA', 10000, 'New York', 'Park Avenue', 'United States'),
+(10, 'soujiseta', 'Souji Seta', 'soujiseta@gmail.com', '1234aA', 777, 'Fuefuki, Yamanashi', 'Yamanashi Prefectural Rte 313', 'Japan');
 
 -- --------------------------------------------------------
 
@@ -270,7 +272,7 @@ ALTER TABLE `zoldsegek_jp`
 -- AUTO_INCREMENT a táblához `regisztracio`
 --
 ALTER TABLE `regisztracio`
-  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `zoldsegek_en`

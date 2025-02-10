@@ -28,6 +28,22 @@
 
       <!-- Jelszó bekérése (regisztráció) -->
       <div class="mb-3">
+        <label for="email">
+          <b>
+            <i class="fa-solid fa-at"></i>
+             Email-cím
+          </b>
+        </label>
+        <input type="email"
+               class="form-control"
+               placeholder="Írja be az email-címét"
+               id="email"
+               ng-model="sign_up.email"
+               required>
+      </div>
+
+      <!-- Jelszó bekérése (regisztráció) -->
+      <div class="mb-3">
         <label for="password">
           <b>
             <i class="fa-solid fa-lock"></i>
