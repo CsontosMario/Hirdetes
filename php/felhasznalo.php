@@ -11,7 +11,7 @@ $args = Util::getArgs();
 $query = "SELECT `felhasznaloID`,
                  `jelszo`
             FROM `regisztracio`
-            WHERE `nev` = ?;";
+          WHERE `nev` = ?;";
 
 $result = $db->execute($query, array($args['nev']));
 
