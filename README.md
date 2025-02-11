@@ -14,18 +14,21 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
 # Hátralévő feladatok:
 
+  # Feladaatok:
+
+    -Az adatbázisban a felhasználókat tartalmazó táblában a felhasználóknak egyedi azonosítókat kell létrehozni <= Állapot: 100% (kész)
+    -Az adatbázisba email-címeket berakni + bejelentkezésnél emailt kérjen az oldal.
+                        /\
+                        ||
+    -Az előző feladatot automatizálni új felhasználóknál.     <= Állapot: 0% (nincs kész)
+    -Különböző nyelvekre lefordítani a weboldalt              <= Állapot: 50% (folyamatban)
+    -Megcsinálni a nyelv váltást                              <= Állapot: 0% (nincs kész)
+    -
+
   # Hibák:
 
-    -bejelentkezés kijavítása <=  Állapot: 90% (kész)  
-
-              Hiányzik: Megtalálni miért nem találja a data változót.
-
-              Funkcionál: 'felhasznalo.php' fájl
-
-              Nem funkcionál: 'javaScript'
-
-              Csinálta: 37,5% - Vékony Marcell (JavaScript)
-                        37,5% - Csontos Márió Dávid (PHP)
+    -Egyik különleges oldal sem tesz át a fő oldalra ha be/ki jelentkezünk. <= Javítási állapot: 0% (nincs kész)
+    -A weboldalon a title és a $scope.lang.data.language valamiért "undefined"-ként van mutatva.
     
   # QOL szükségletek:
 

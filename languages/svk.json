@@ -1,0 +1,43 @@
+[
+
+  {
+    "language":"Reklama na zeleninu",
+    "home":"Domovská stránka",
+    "products":"Naše produkty",
+    "accountAndCart":"Účet a košík",
+    "account":"Účet",
+    "registration":"Registrácia",
+    "login":"Prihláste sa",
+    "profile":"Profil",
+    "cart":"Košík",
+    "logOut":"Odhlásiť sa",
+    "fullName":"Celé meno",
+    "password":"Heslo",
+    "confirmPassword":"Potvrďte heslo",
+    "postalCode":"PSČ",
+    "settlement":"Osídlenie",
+    "rAdress":"Adresa",
+    "country":"Krajina",
+    "showPassword":"Zobraziť heslo",
+    "registerAccount":"Zaregistrujte si účet",
+    "loginToAccount":"Prihláste sa do svojho účtu",
+    "location":"Poloha",
+    "ourProducers":"O našich výrobcoch",
+    "ourProgrammers":"O našich vývojároch",
+    "languages":"Jazyky",
+    "bornIn":"Narodený",
+    "moreInformation":"Viac informácií",
+    "description":"Popis",
+    "price":"Cena",
+    "packaging":"Balenie",
+    "buy":"Nákup",
+    "callHours":"Zavolajte hodiny recepcie",
+    "mondayToFriday":"pondelok - piatok",
+    "saturdayToSunday":"sobota - nedeľa",
+    "day":"deň",
+    "opening":"Štart",
+    "closing":"Zatváranie",
+    "p_picture":"profilový obrázok"
+  }
+
+]

@@ -1,0 +1,43 @@
+[
+
+  {
+    "language":"野菜の広告",
+    "home":"ホームページ",
+    "products":"当社の製品",
+    "accountAndCart":"アカウントとカート",
+    "account":"アカウント",
+    "registration":"登録",
+    "login":"ログイン",
+    "profile":"プロフィール",
+    "cart":"バスケット",
+    "logOut":"終了",
+    "fullName":"氏名",
+    "password":"パスワード",
+    "confirmPassword":"パスワードを認証する",
+    "postalCode":"郵便コード",
+    "settlement":"決済",
+    "rAdress":"住居住所",
+    "country":"国",
+    "showPassword":"パスワードの表示",
+    "registerAccount":"登録",
+    "loginToAccount":"ログイン",
+    "location":"サイト",
+    "ourProducers":"私たちの生産者について",
+    "ourProgrammers":"私たちの開発者について",
+    "languages":"言語",
+    "bornIn":"生まれる",
+    "moreInformation":"詳細情報",
+    "description":"説明",
+    "price":"価格",
+    "packaging":"包装",
+    "buy":"購入",
+    "callHours":"電話受付時間",
+    "mondayToFriday":"月曜日 - 金曜日 ",
+    "saturdayToSunday":"土曜日 - 日曜日)",
+    "day":"日",
+    "opening":"始める",
+    "closing":"終了",
+    "p_picture":"プロファイル画像"
+  }
+
+]

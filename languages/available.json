@@ -1,0 +1,49 @@
+[
+
+  {
+
+    "id":"de",
+    "name":"german",
+    "local_name":"deutsch",
+    "img":"de.png",
+    "valid":true
+
+  },
+  {
+
+    "id":"en",
+    "name":"english",
+    "local_name":"english",
+    "img":"us.png",
+    "valid":true
+
+  },
+  {
+
+    "id":"hu",
+    "name":"hungarian",
+    "local_name":"magyar",
+    "img":"hu.png",
+    "valid":true
+
+  },
+  {
+
+    "id":"jp",
+    "name":"japanese",
+    "local_name":"日本語",
+    "img":"jp.png",
+    "valid":true
+
+  },
+  {
+
+    "id":"svk",
+    "name":"Slovak",
+    "local_name":"slovenský",
+    "img":"svk.png",
+    "valid":true
+
+  }
+
+]

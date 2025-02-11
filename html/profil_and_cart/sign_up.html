@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center m-3">
     
-    <form class="w-auto p-3" style="border:1px solid #ccc" name="sign_up_form">
+    <form class="w-50 p-3" style="border:1px solid #ccc" name="sign_up_form">
       
       <div class="mb-3">
         <h1 class="text-center pb-3">
@@ -15,7 +15,7 @@
         <label for="name">
           <b>
             <i class="fa-solid fa-signature"></i>
-             Név
+             Teljes név
           </b>
         </label>
         <input type="text"
@@ -23,6 +23,22 @@
                placeholder="Írja be a nevét"
                id="name"
                ng-model="sign_up.nev"
+               required>
+      </div>
+
+      <!-- Email bekérése (regisztráció) -->
+      <div class="mb-3">
+        <label for="email">
+          <b>
+            <i class="fa-solid fa-at"></i>
+             Email-cím
+          </b>
+        </label>
+        <input type="email"
+               class="form-control"
+               placeholder="Írja be az email-címét"
+               id="email"
+               ng-model="sign_up.email"
                required>
       </div>
 

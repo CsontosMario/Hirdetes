@@ -1,0 +1,43 @@
+[
+
+  {
+    "language": "Gemüsewerbung",
+    "home":"Startseite",
+    "products":"Produkte",
+    "accountAndCart":"Konto und Einkaufswagen",
+    "account":"konto",
+    "registration":"registrieren",
+    "login":"anmeldung",
+    "profile":"profil",
+    "cart":"einkaufswagen",
+    "logOut":"ausloggen",
+    "fullName":"Vollständiger Name",
+    "password":"passwort",
+    "confirmPassword":"Passwort bestätigen",
+    "postalCode":"postleitzahl",
+    "settlement":"Siedlung",
+    "rAdress":"anschrift",
+    "country":"land",
+    "showPassword":"Passwort anzeigen",
+    "registerAccount":"Konto registrieren",
+    "loginToAccount":"Anmeldung",
+    "location":"Standort",
+    "ourProducers":"Produzenten",
+    "ourProgrammers":"Entwickler",
+    "languages":"Sprachen",
+    "bornIn":"Geboren",
+    "moreInformation":"Weitere Informationen",
+    "description":"Beschreibung",
+    "price":"preis",
+    "packaging":"verpackung",
+    "buy":"kaufen",
+    "callHours":"Öffnungszeiten der Telefonrezeption",
+    "mondayToFriday":"Montag - Freitag",
+    "saturdayToSunday":"Samstag - Sonntag",
+    "day":"Tag",
+    "opening":"Start",
+    "closing":"Schließen",
+    "p_picture":"Profilbild"
+  }
+  
+]

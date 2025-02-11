@@ -1,21 +1,21 @@
 <div class="container">
-  <div class="row mt-5" ng-init="our_farmers=['Hudák Mária','Burkus Gusztáv']">
+  <div class="row mt-5">
     <div class="card text-center col-sm-6 mb-3 mb-sm-0"
-         ng-repeat="farmers in our_farmers">
+         ng-repeat="farmer in farmers">
       <div class="card-header">
-        <h1 class="text-center">{{farmers}}</h1>
+        <h1 class="text-center">{{farmer.name}}</h1>
       </div>
       <div class="card-body">
-        <img src="https://dummyimage.com/600x400" class="card-img-top" alt="...">
-        <h5 class="card-title">XXXXX termelő</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <img src="https://dummyimage.com/600x400" class="card-img-top" alt="{{farmer.name}}">
+        <h5 class="card-title">{{farmer.job_title}}</h5>
+        <p class="card-text">{{farmer.about_short}}</p>
         <a href="#" class="btn btn-primary">
           <i class="fa-solid fa-scroll"></i>
            További információk
         </a>
       </div>
       <div class="card-footer text-body-secondary">
-        <i class="fa-solid fa-calendar"></i> Született: XXXX-ban/-ben
+        <i class="fa-solid fa-calendar"></i> Született: {{farmer.birth_day}}-ban/-ben
       </div>
     </div>
   </div>

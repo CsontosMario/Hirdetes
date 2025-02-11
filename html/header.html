@@ -71,21 +71,32 @@
               </a>
             </li>
 
+            <!-- különítő sor 1 -->
+            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
+
+            <!-- Profil cím -->
+            <li ng-show="$root.user.id">
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-id-badge me-1"></i>
+                 Profil
+              </h4>
+            </li>
+
             <!-- Profil -->
             <li ng-show="$root.user.id">
               <a class="dropdown-item"
                  ui-sref="profil"
                  ui-sref-active="active">
                 <i class="fa-solid fa-id-badge"></i>
-                 Profil
+                 {{$root.user.name}}
               </a>
             </li>
 
-            <!-- különítő sor 1 -->
-            <li><hr class="dropdown-divider"></li>
+            <!-- különítő sor 2 -->
+            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
 
             <!-- Kosár cím -->
-            <li>
+            <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-cart-shopping me-1"></i>
                  Kosár
@@ -102,25 +113,25 @@
               </a>
             </li>
 
-            <!-- különítő sor 2 -->
-            <li><hr class="dropdown-divider"></li>
+            <!-- különítő sor 3 -->
+            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
 
-            <!-- Kilépés cím -->
-            <li>
+            <!-- Kijelentkezés cím -->
+            <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-right-from-bracket me-1"></i>
-                Kilépés
+                Kijelentkezés
               </h4>
             </li>
 
-            <!-- Kilépés (gomb) -->
+            <!-- Kijelentkezés (gomb) -->
             <li ng-show="$root.user.id">
               <a class="dropdown-item"
                  href="#"
                  ui-sref-active="active"
                  ng-click="$root.kilep()">
                 <i class="fa-solid fa-right-from-bracket me-1"></i>
-                 Kilépés
+                 Kijelentkezés
               </a>
             </li>
 
@@ -146,6 +157,39 @@
             <i class="fa-solid fa-code"></i>
              Fejlesztőinkről
           </a>
+        </li>
+
+        <!-- Dropdown -> Nyelvek (button) -->
+        <li class="nav-item dropdown ms-5" data-bs-auto-close="true">
+          <a class="nav-link dropdown-toggle"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            <i class="fa-solid fa-language"></i> 
+             Nyelvek
+          </a>
+
+          <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
+          <ul class="dropdown-menu">
+
+            <!-- Magyar -->
+            <li ng-repeat="x in lang.available"
+								ng-if="x.id !== lang.available[lang.index].id && x.valid"
+								ng-click="methods.languageChanged(x.id)">
+							<a class="dropdown-item">
+								<img class="me-1" 
+										height="32" 
+										alt="flag"
+										ng-src="./img/icons/languages/{{x.img}}">
+								<span class="text-capitalize">{{x.name}}</span>
+								<span ng-if="x.name !== x.local_name">
+									({{x.local_name}})
+								</span> 
+							</a>
+						</li>
+
+          </ul>
+
         </li>
 
       </ul>

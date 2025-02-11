@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row justify-content-center m-5">
 
-    <form class="w-50 p-3"
+    <form class="w-50 p-3" 
           style="border:1px solid #ccc">
+
       <div class="mb-3">
         <h1 class="text-center">
           Profil
@@ -11,68 +12,119 @@
 
       <!-- Név változtatása -->
       <div class="mb-3">
-        <label for="name"
+        <label for="name" 
                class="form-label">
           <i class="fa-solid fa-user"></i>
-           Név:
+          Név:
         </label>
-        <input type="email"
-               class="form-control"
-               id="name">
+        <input type="text" 
+               class="form-control" 
+               id="name" 
+               ng-model="profile.name">
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="row input-row mb-5">
+        <div>
+          <i class="fa-solid fa-image-portrait me-1"></i>
+          <label for="profile-image">
+            Profilkép:
+          </label>
+        </div>
+        <div class="col-11 col-md-7 position-relative"
+             style="height:100px;">
+          <input id="profile-image" 
+                 name="image"
+                 type="file" 
+                 accept="image/*" 
+                 class="form-control form-control d-none"
+                 spellcheck="false" 
+                 autocomplete="off" 
+                 ng-model="helper.image" 
+                 file-input 
+                 ng-clear-icon='{"left":"160px"}'>
+          <label for="profile-image">
+            <div class="bg-img bg-img-cover overflow-hidden rounded-circle border 
+													d-flex align-items-center justify-content-center cursor-pointer" 
+                 style="width:130px;height:130px;">
+              <span class="text-center text-muted" 
+                    ng-show="!model.img && !model.gender">
+                <i class="fa-solid fa-upload"></i><br>
+                <span class="fs-sm">Max: 64KB</span>
+              </span>
+            </div>
+          </label>
+        </div>
       </div>
 
       <!-- Ország változtatása -->
       <div class="mb-3">
-        <label for="country"
+        <label for="country" 
                class="form-label">
           <i class="fa-solid fa-flag"></i>
-           Ország:
+          Ország:
         </label>
-        <input type="text"
-               class="form-control"
-               id="country">
+        <input type="text" 
+               class="form-control" 
+               id="country" 
+               ng-model="profile.country">
       </div>
 
       <!-- Település változtatása -->
       <div class="mb-3">
-        <label for="settlement"
+        <label for="settlement" 
                class="form-label">
           <i class="fa-solid fa-location-dot"></i>
-           Település:
+          Település:
         </label>
-        <input type="text"
-               class="form-control"
-               id="settlement">
+        <input type="text" 
+               class="form-control" 
+               id="settlement" 
+               ng-model="profile.settlement">
+      </div>
+
+      <!-- Lakcím bekérése -->
+      <div class="mb-3">
+        <label for="r_adress">
+          <i class="fa-solid fa-location-pin"></i>
+          Lakcím:
+        </label>
+        <input type="text" 
+               class="form-control" 
+               id="r_adress" 
+               ng-model="profile.cim" 
+               required>
       </div>
 
       <!-- Irányítószám változtatása -->
-      <div class="mb-3">
-        <label for="country"
-               class="form-label">
+      <div class="mb-3 justify-content-center">
+        <label for="postal_code" class="form-label">
           <i class="fa-solid fa-signs-post"></i>
           Irányítószám:
         </label>
         <input type="text"
-               class="form-control"
-               id="country">
+              class="form-control"
+              id="postal_code" 
+              style="max-width:120px;"
+          ng-model="profile.postal_code">
       </div>
 
       <!-- Mentés (gomb) -->
       <button type="button"
-              class="btn btn-primary"
+              class="btn btn-primary" 
               disabled>
         <i class="fa-solid fa-floppy-disk"></i>
-         Mentés
+        Mentés
       </button>
 
       <!-- Mégsem (gomb) -->
-      <button type="button"
+      <button type="button" 
               class="btn btn-primary">
         <i class="fa-solid fa-circle-xmark"></i>
-         Mégsem
+        Mégsem
       </button>
 
     </form>
-    
+
   </div>
 </div>

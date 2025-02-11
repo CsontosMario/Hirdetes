@@ -1,0 +1,43 @@
+[
+
+  {
+    "language":"Zöldség hirdetés",
+    "home":"Főoldal",
+    "products":"Termékeink",
+    "accountAndCart":"Fiók és Kosár",
+    "account":"Fiók",
+    "registration":"Regisztráció",
+    "login":"Bejelentkezés",
+    "profile":"Profil",
+    "cart":"Kosár",
+    "logOut":"Kijelentkezés",
+    "fullName":"Teljes név",
+    "password":"Jelszó",
+    "confirmPassword":"Jelszó megerősítése",
+    "postalCode":"Irányítószám",
+    "settlement":"Település",
+    "rAdress":"Lakcím",
+    "country":"Ország",
+    "showPassword":"Jelszó megjelenítése",
+    "registerAccount":"Fiók regisztrálása",
+    "loginToAccount":"Bejelentkezés a fiókba",
+    "location":"Telephely",
+    "aboutOurProducers":"Termelőinkről",
+    "aboutOurProgrammers":"Fejlesztőinkről",
+    "languages":"Nyelvek",
+    "moreInformation":"További információk",
+    "bornIn":"Született",
+    "description":"Leírás",
+    "price":"Ár",
+    "packaging":"Kiszerelés",
+    "buy":"Vásárlás",
+    "callHours":"Hivás fogadási órák",
+    "mondayToFriday":"Hétfő - Péntek",
+    "saturdayToSunday":"Szombat - Vasárnap",
+    "day":"Nap",
+    "opening":"Kezdés",
+    "closing":"Zárás",
+    "p_picture":"Profilkép"
+  }
+
+]

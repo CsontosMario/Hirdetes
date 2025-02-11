@@ -1,7 +1,8 @@
 <div class="container justify-content-center mt-3 mb-3">
   <div class="row w-auto row-cols-1 row-cols-md-2 g-4">
     <div class="card text-center col-sm-6 mb-3 mb-sm-0 g-4"
-         ng-repeat="zoldseg in zoldsegek track by $index">
+         ng-repeat="zoldseg in zoldsegek track by $index"
+         ng-show="zoldsegek">
       <div class="card-header">
         <h1 class="text-center">{{zoldseg.megnevezes}}</h1>
       </div>
@@ -20,5 +21,10 @@
         </a>
       </div>
     </div>
+  </div>
+
+  <div class="row w-auto mt-5">
+    <h1 class="text-center"
+        ng-show="!zoldsegek">Nincs egy termék se amit ki lehetne mutatni!</h1>
   </div>
 </div>
