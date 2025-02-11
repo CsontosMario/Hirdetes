@@ -221,8 +221,9 @@
 
     //Header controller
     .controller('headerController', [
+      '$rootScope',
       '$scope',
-      function ($scope) {
+      function ($rootScope, $scope) {
 
         // Set local methods
         let methods = {
@@ -236,7 +237,7 @@
               .then(response => {
 
                 // Set language
-                $scope.lang = {
+                $rootScope.lang = {
                   available: response
                 };
 
@@ -247,17 +248,17 @@
                 if (langID) document.documentElement.lang = langID;
 
                 // Set selected language identifier
-                $scope.lang.id = document.documentElement.lang;
+                $rootScope.lang.id = document.documentElement.lang;
 
                 // Get actual language index
-                $scope.lang.index = methods.indexByKeyValue(
-                  $scope.lang.available, 'id', $scope.lang.id);
+                $rootScope.lang.index = methods.indexByKeyValue(
+                  $rootScope.lang.available, 'id', $rootScope.lang.id);
 
                 // Get language
                 methods.getLanguage().then(() => {
 
                   // Change html title
-								  document.title = $scope.lang.data.language;
+								  document.title = $rootScope.lang.data.language;
                   
                 });
               })
@@ -267,12 +268,12 @@
           // Get language
           getLanguage: () => {
             return new Promise((resolve, reject) => {
-              fetch(`./languages/${$scope.lang.id}.json`)
+              fetch(`./languages/${$rootScope.lang.id}.json`)
                 .then(response => response.json())
                 .then(response => {
-                  $scope.lang.data = response;
+                  $rootScope.lang.data = response;
                   //console.log($scope.lang.data)
-                  $scope.$applyAsync();
+                  $rootScope.$applyAsync();
                   resolve();
                 })
                 .catch(error => {
@@ -293,7 +294,7 @@
 					languageChanged: (langID) => {
 
 						// Set selected language identifier
-						$scope.lang.id = langID;
+						$rootScope.lang.id = langID;
 
 						// Save selected language identifier to local storige
 						localStorage.setItem('languageID', langID);
@@ -302,14 +303,14 @@
 						document.documentElement.lang = langID;
 
 						// Get selected language index
-						$scope.lang.index = methods.indexByKeyValue(
-							$scope.lang.available, 'id', $scope.lang.id);
+						$rootScope.lang.index = methods.indexByKeyValue(
+							$rootScope.lang.available, 'id', $rootScope.lang.id);
 
 						// Get language
 						methods.getLanguage().then(() => {
 
 							// Change html title
-							document.title = $scope.lang.data.language;
+							document.title = $rootScope.lang.data.language;
 						});
 					}
         };

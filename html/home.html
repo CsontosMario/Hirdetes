@@ -51,14 +51,14 @@
     <div class="row justify-content-center mt-5">
         <h1 class="text-center">
             <i class="fa-solid fa-clock"></i>
-             Hivás fogadási órák
+             {{$root.lang.data.callHours}}
         </h1>
         <table class="table table-bordered table-striped w-auto">
             <thead>
-                <tr>
-                    <th>Nap</th>
-                    <th>Kezdés</th>
-                    <th>Zárás</th>
+                <tr class="text-capitalize">
+                    <th>{{$root.lang.data.day}}</th>
+                    <th>{{$root.lang.data.opening}}</th>
+                    <th>{{$root.lang.data.closing}}</th>
                 </tr>
             </thead>
             <tbody ng-init="days=['Hétfő - Péntek','Szombat - Vasárnap']">
