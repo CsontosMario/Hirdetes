@@ -4,10 +4,8 @@
             Kosár
             <form>
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>Válaszd ki a fizetési módot</option>
-                    <option value="1">átutalás</option>
-                    <option value="2">bankkártya</option>
-                    <option value="3">készpénz</option>
+                    <option selected
+                            ng-repeat="(k, v) in pay_types track by $index">{{v}}</option>
                   </select>
                 <div class="mb-3">
                     <label for="card" class="form-label">Kártyaszám</label>

@@ -157,12 +157,12 @@
             url: "./php/register.php",
             data: $scope.sign_up
           })
-            .then(result => {
+          .then(result => {
               $scope.data = result
               $scope.$applyAsync()
               alert("Sikeres a regisztráció!");
-            })
-            .catch(e => console.log(e))
+          })
+          .catch(e => console.log(e))
 
           console.log($scope.sign_up); //Ideiglenesen van benn!!!!
         }
@@ -313,7 +313,16 @@
     .controller('cartController', [
       '$rootScope',
       '$scope',
-      function ($rootScope, $scope) {
+      'http',
+      function ($rootScope, $scope, http) {
+
+        http.request("./php/cart.php")
+        .then(result => {
+            $scope.pay_types = result;
+            $scope.$applyAsync();
+        })
+        .catch(e => console.log(e))
+
         console.log('Cart controller...');
       }
     ])
