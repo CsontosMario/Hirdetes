@@ -177,22 +177,14 @@
             data: $scope.sign_up
           })
           .then(result => {
-<<<<<<< HEAD
             $scope.data = result
             $scope.$applyAsync()
             alert("Sikeres a regisztráció!");
           })
           .catch(e => console.log(e))
 
-=======
-              $scope.data = result
-              $scope.$applyAsync()
-              alert("Sikeres a regisztráció!");
-          })
-          .catch(e => console.log(e))
->>>>>>> 640202ceebe53c199f9042b59bd576eeda295770
 
-          console.log($scope.sign_up); //Ideiglenesen van benn!!!!
+          //console.log($scope.sign_up); //Ideiglenesen van benn!!!!
         }
 
       }
@@ -212,17 +204,6 @@
             url: "./php/felhasznalo.php",
             data: $scope.sign_in
           })
-<<<<<<< HEAD
-          .then(result => {
-            $rootScope.user.id    = result.felhasznaloID;
-            $rootScope.user.name  = $scope.sign_in.nev;
-
-            util.localStorage('set', 'loginID', $rootScope.user.id);
-            util.localStorage('set', 'loginName', $rootScope.user.name);
-            alert("Sikeres a bejelentkezés!\nÜdvözöljük "+ $scope.sign_in.nev + "!");
-          })
-          .catch(e => alert(e))
-=======
             .then(result => {
               $rootScope.user.id = result.felhasznaloID;
               $rootScope.user.name = $scope.sign_in.nev;
@@ -233,7 +214,6 @@
               $scope.$applyAsync();
             })
             .catch(e => alert(e))
->>>>>>> 640202ceebe53c199f9042b59bd576eeda295770
         }
 
       }
