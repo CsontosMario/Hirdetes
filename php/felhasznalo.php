@@ -6,27 +6,27 @@ require_once("./environment.php");
 
 $db = new Database();
 
-// $args = array(
-//      "nev" => "Raikou Usagi",
-//      "jelszo" => "1234aA"
-// );
-
 $args = Util::getArgs();
 
-$query = "SELECT `felhasznaloID`, 
-                 `nev` 
+$query = "SELECT `felhasznaloID`,
+                 `jelszo`
             FROM `regisztracio`
-            WHERE `nev` = ?";
+            WHERE `nev` = ?;";
 
 $result = $db->execute($query, array($args['nev']));
+
+$db = null;
 
 if (is_null($result)) {
      Util::setError("Kérem bejelentkezés előtt regisztrálja ezt a felhasználót!");
 }
-else{
-     $result = $result[0];
+
+$result = $result[0];
+
+if ($args['jelszo'] !== $result['jelszo']) {
+     Util::setError("Hibás jelszó!");
 }
 
-$db = null;
+unset($result['jelszo']);
 
 Util::setResponse($result);
