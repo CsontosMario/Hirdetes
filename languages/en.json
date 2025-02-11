@@ -36,7 +36,8 @@
     "saturdayToSunday":"Saturday - Sunday",
     "day":"Day",
     "opening":"Opening",
-    "closing":"Closing"
+    "closing":"Closing",
+    "p_picture":"Profile picture"
   }
 
 ]
