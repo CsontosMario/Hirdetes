@@ -131,7 +131,16 @@
     //About our farmers controller
     .controller('about_our_farmersController', [
       '$scope',
-      function ($scope) {
+      'http',
+      function ($scope, http) {
+
+        http.request('./data/our_farmers.json')
+        .then(result => {
+          $scope.farmers = result;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e))
+
         console.log('About_our_farmers controller...');
       }
     ])
@@ -139,7 +148,17 @@
     //About us controller
     .controller('about_usController', [
       '$scope',
-      function ($scope) {
+      'http',
+      function ($scope, http) {
+
+        http.request('./data/our_programmers.json')
+        .then(result => {
+          $scope.programmers = result;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e))
+
+
         console.log('Products controller...');
       }
     ])

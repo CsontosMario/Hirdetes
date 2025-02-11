@@ -1,20 +1,18 @@
 <div class="container">
-  <div class="row mt-5" ng-init="our_website_creators=['Vékony Marcell','Csontos Márió Dávid']; 
-                  website_pictures=['marcell.jpg','mario_temporary_picture.jpg']">
+  <div class="row mt-5">
     <div class="card text-center col-sm-6 mb-3 mb-sm-0"
-      ng-repeat="website_creator in our_website_creators track by $index">
+      ng-repeat="website_creator in programmers track by $index">
       <div class="card-header">
-        <h1 class="text-center">{{website_creator}}</h1>
+        <h1 class="text-center">{{website_creator.name}}</h1>
       </div>
       <div class="card-body">
-        <img ng-src="./img/fejlesztok/{{website_pictures[$index]}}" class="card-img-top" alt="{{website_creator}}">
-        <!--<img src="./img/fejlesztok/mario_temporary_picture.jpg" class="card-img-top" alt="{{website_creator}}">-->
-        <h5 class="card-title">A weboldal fejlesztői csapatának XXXXX</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <img ng-src="./img/fejlesztok/{{website_creator.picture_name}}" class="card-img-top" alt="{{website_creator.name}}">
+        <h5 class="card-title">{{website_creator.job_title}}</h5>
+        <p class="card-text">{{website_creator.about}}</p>
         <a href="#" class="btn btn-primary"><i class="fa-solid fa-scroll"></i> További információk</a>
       </div>
       <div class="card-footer text-body-secondary">
-        <i class="fa-solid fa-calendar"></i> Született: 200X-ban/-ben
+        <i class="fa-solid fa-calendar"></i> Született: {{website_creator.birth_day}}-ban/-ben
       </div>
     </div>
   </div>
