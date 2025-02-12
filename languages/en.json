@@ -20,8 +20,8 @@
   "registerAccount":"Register account",
   "loginToAccount":"Login to account",
   "location":"Location",
-  "ourProducers":"Our producers",
-  "ourProgrammers":"Our programmers",
+  "aboutOurProducers":"Our producers",
+  "aboutOurProgrammers":"Our programmers",
   "languages":"Languages",
   "bornIn":"Born in",
   "moreInformation":"More information",
@@ -35,5 +35,7 @@
   "day":"Day",
   "opening":"Opening",
   "closing":"Closing",
-  "p_picture":"Profile picture"
+  "p_picture":"Profile picture",
+  "elseText":"There are no products to display!",
+  "and":"and"
 }

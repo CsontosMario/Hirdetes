@@ -35,5 +35,7 @@
   "day":"nap",
   "opening":"kezdés",
   "closing":"zárás",
-  "p_picture":"Profilkép"
+  "p_picture":"Profilkép",
+  "elseText":"Nincs egy termék se amit ki lehetne mutatni!",
+  "and":"és"
 }

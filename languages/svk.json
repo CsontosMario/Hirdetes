@@ -20,8 +20,8 @@
   "registerAccount":"Zaregistrujte si účet",
   "loginToAccount":"Prihláste sa do svojho účtu",
   "location":"Poloha",
-  "ourProducers":"O našich výrobcoch",
-  "ourProgrammers":"O našich vývojároch",
+  "aboutOurProducers":"O našich výrobcoch",
+  "aboutOurProgrammers":"O našich vývojároch",
   "languages":"Jazyky",
   "bornIn":"Narodený",
   "moreInformation":"Viac informácií",
@@ -35,5 +35,7 @@
   "day":"deň",
   "opening":"Štart",
   "closing":"Zatváranie",
-  "p_picture":"profilový obrázok"
+  "p_picture":"profilový obrázok",
+  "elseText":"Nie je tu ani jeden produkt, ktorý by sa dal predviesť!",
+  "and":"a"
 }

@@ -20,7 +20,7 @@
   "registerAccount":"登録",
   "loginToAccount":"ログイン",
   "location":"サイト",
-  "ourProducers":"私たちの生産者について",
+  "aboutOurProducers":"私たちの生産者について",
   "ourProgrammers":"私たちの開発者について",
   "languages":"言語",
   "bornIn":"生まれる",
@@ -35,5 +35,7 @@
   "day":"日",
   "opening":"始める",
   "closing":"終了",
-  "p_picture":"プロファイル画像"
+  "p_picture":"プロファイル画像",
+  "elseText":"表示できる製品が一つもありません!",
+  "and":"と"
 }

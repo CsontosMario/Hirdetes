@@ -15,7 +15,7 @@
              ui-sref="home"
              ui-sref-active="active">
             <i class="fa-solid fa-house me-1"></i>
-             Főoldal
+             {{$root.lang.data.home}}
           </a>
         </li>
 
@@ -25,7 +25,7 @@
              ui-sref="products"
              ui-sref-active="active">
            <i class="fa-solid fa-wheat-awn"></i>
-            Termékeink
+            {{$root.lang.data.products}}
           </a>
         </li>
 
@@ -37,7 +37,7 @@
              data-bs-toggle="dropdown"
              aria-expanded="false">
             <i class="fa-solid fa-user-large"></i> 
-            Fiók és Kosár
+            {{$root.lang.data.accountAndCart}}
           </a>
 
           <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
@@ -47,7 +47,7 @@
             <li>
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-id-badge"></i>
-                 Fiók
+                 {{$root.lang.data.account}}
               </h4>
             </li>
 
@@ -57,7 +57,7 @@
                  ui-sref="register"
                  ui-sref-active="active">
                 <i class="fa-solid fa-id-card me-1"></i>
-                 Regisztráció
+                 {{$root.lang.data.registration}}
               </a>
             </li>
 
@@ -67,7 +67,7 @@
                  ui-sref="login"
                  ui-sref-active="active">
                 <i class="fa-solid fa-right-to-bracket me-1"></i>
-                 Bejelentkezés
+                 {{$root.lang.data.login}}
               </a>
             </li>
 
@@ -78,7 +78,7 @@
             <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-id-badge me-1"></i>
-                 Profil
+                 {{$root.lang.data.profile}}
               </h4>
             </li>
 
@@ -99,7 +99,7 @@
             <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-cart-shopping me-1"></i>
-                 Kosár
+                 {{$root.lang.data.cart}}
               </h4>
             </li>
 
@@ -109,7 +109,7 @@
                  ui-sref="cart"
                  ui-sref-active="active">
               <i class="fa-solid fa-cart-shopping me-1"></i>
-                 Kosár
+                 {{$root.lang.data.cart}}
               </a>
             </li>
 
@@ -120,7 +120,7 @@
             <li ng-show="$root.user.id">
               <h4 class="text-center fw-bold text-decoration-underline">
                 <i class="fa-solid fa-right-from-bracket me-1"></i>
-                Kijelentkezés
+                {{$root.lang.data.logOut}}
               </h4>
             </li>
 
@@ -131,7 +131,7 @@
                  ui-sref-active="active"
                  ng-click="$root.kilep()">
                 <i class="fa-solid fa-right-from-bracket me-1"></i>
-                 Kijelentkezés
+                 {{$root.lang.data.logOut}}
               </a>
             </li>
 
@@ -145,7 +145,7 @@
              ui-sref="aboutOurFarmers"
              ui-sref-active="active">
             <i class="fa-solid fa-plant-wilt"></i>
-             Termelőinkről
+             {{$root.lang.data.aboutOurProducers}}
           </a>
         </li>
 
@@ -155,7 +155,7 @@
              ui-sref="aboutUs"
              ui-sref-active="active">
             <i class="fa-solid fa-code"></i>
-             Fejlesztőinkről
+            {{$root.lang.data.aboutOurProducers}}
           </a>
         </li>
 
@@ -166,7 +166,7 @@
              data-bs-toggle="dropdown"
              aria-expanded="false">
             <i class="fa-solid fa-language"></i> 
-             Nyelvek
+             {{$root.lang.data.languages}}
           </a>
 
           <!-- Dropdown -> Fiók és Kosár (menüpontok) -->

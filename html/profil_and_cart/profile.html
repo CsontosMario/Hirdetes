@@ -6,7 +6,7 @@
 
       <div class="mb-3">
         <h1 class="text-center">
-          Profil
+          {{$root.lang.data.profile}}
         </h1>
       </div>
 
@@ -15,7 +15,7 @@
         <label for="name" 
                class="form-label">
           <i class="fa-solid fa-user"></i>
-          Név:
+          {{$root.lang.data.fullName}}:
         </label>
         <input type="text" 
                class="form-control" 
@@ -28,7 +28,7 @@
         <div>
           <i class="fa-solid fa-image-portrait me-1"></i>
           <label for="profile-image">
-            Profilkép:
+            {{$root.lang.data.p_picture}}:
           </label>
         </div>
         <div class="col-11 col-md-7 position-relative"
@@ -62,7 +62,7 @@
         <label for="country" 
                class="form-label">
           <i class="fa-solid fa-flag"></i>
-          Ország:
+          {{$root.lang.data.country}}:
         </label>
         <input type="text" 
                class="form-control" 
@@ -75,7 +75,7 @@
         <label for="settlement" 
                class="form-label">
           <i class="fa-solid fa-location-dot"></i>
-          Település:
+          {{$root.lang.data.settlement}}:
         </label>
         <input type="text" 
                class="form-control" 
@@ -87,7 +87,7 @@
       <div class="mb-3">
         <label for="r_adress">
           <i class="fa-solid fa-location-pin"></i>
-          Lakcím:
+          {{$root.lang.data.rAdress}}:
         </label>
         <input type="text" 
                class="form-control" 
@@ -100,7 +100,7 @@
       <div class="mb-3 justify-content-center">
         <label for="postal_code" class="form-label">
           <i class="fa-solid fa-signs-post"></i>
-          Irányítószám:
+          {{$root.lang.data.postalCode}}:
         </label>
         <input type="text"
               class="form-control"
