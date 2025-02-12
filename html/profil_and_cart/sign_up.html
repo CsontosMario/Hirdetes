@@ -6,7 +6,7 @@
       <div class="mb-3">
         <h1 class="text-center pb-3">
           <i class="fa-solid fa-id-card me-1"></i>
-           Regisztráció
+          {{$root.lang.data.registration}}
         </h1>
       </div>
       
@@ -15,12 +15,12 @@
         <label for="name">
           <b>
             <i class="fa-solid fa-signature"></i>
-             Teljes név
+            {{$root.lang.data.fullName}}
           </b>
         </label>
         <input type="text"
                class="form-control"
-               placeholder="Írja be a nevét"
+               placeholder={{$root.lang.data.placeholder_name}} 
                id="name"
                ng-model="sign_up.nev"
                required>
@@ -31,12 +31,12 @@
         <label for="email">
           <b>
             <i class="fa-solid fa-at"></i>
-             Email-cím
+             {{$root.lang.data.email}}
           </b>
         </label>
         <input type="email"
                class="form-control"
-               placeholder="Írja be az email-címét"
+               placeholder={{$root.lang.data.placeholder_email}} 
                id="email"
                ng-model="sign_up.email"
                required>
@@ -47,12 +47,12 @@
         <label for="password">
           <b>
             <i class="fa-solid fa-lock"></i>
-             Jelszó
+             {{$root.lang.data.password}}
           </b>
         </label>
         <input type="{{model.showPassword ? 'text' : 'password'}}"
                class="form-control"
-               placeholder="Írja be a jelszót"
+               placeholder={{$root.lang.data.placeholder_password}} 
                id="password"
                ng-model="sign_up.jelszo"
                required>
@@ -64,12 +64,12 @@
         <label for="password_repeat">
           <b>
             <i class="fa-solid fa-lock"></i>
-            Jelszó megerősítése
+            {{$root.lang.data.confirmPassword}}
           </b>
         </label>
         <input type="{{model.showPassword ? 'text' : 'password'}}"
                class="form-control"
-               placeholder="Ismételje meg a jelszavát"
+               placeholder={{$root.lang.data.placeholder_repassword}} 
                id="password_repeat">
       </div>
 
@@ -78,12 +78,12 @@
         <label for="postal_code">
           <b>
             <i class="fa-solid fa-signs-post"></i>
-             Irányítószám
+             {{$root.lang.data.postalCode}}
           </b>
         </label>
         <input type="text"
                class="form-control"
-               placeholder="Adja meg az irányítószámát a településnek ahol lakik"
+               placeholder={{$root.lang.data.placeholder_pcode}} 
                id="postal_code"
                ng-model="sign_up.iranyitoszam"
                required>
@@ -94,12 +94,12 @@
         <label for="settlement">
           <b>
             <i class="fa-solid fa-location-dot"></i>
-             Település
+             {{$root.lang.data.settlement}}
           </b>
         </label>
         <input type="text"
                class="form-control"
-               placeholder="Adja meg annak a településnek a nevét ahol lakik"
+               placeholder={{$root.lang.data.placeholder_settlment}} 
                id="settlement"
                ng-model="sign_up.telepules"
                required>
@@ -110,12 +110,12 @@
         <label for="r_adress">
           <b>
             <i class="fa-solid fa-location-pin"></i>
-             Lakcím
+             {{$root.lang.data.rAdress}}
           </b>
         </label>
         <input type="text"
                class="form-control"
-               placeholder="Adja meg a lakcímét"
+               placeholder={{$root.lang.data.placeholder_radress}} 
                id="r_adress"
                ng-model="sign_up.cim"
                required>
@@ -126,12 +126,12 @@
         <label for="country">
           <b>
             <i class="fa-solid fa-flag"></i>
-             Ország
+             {{$root.lang.data.country}}
           </b>
         </label>
         <input type="text"
                class="form-control"
-               placeholder="Adja meg az országot ahol lakik" 
+               placeholder={{$root.lang.data.placeholder_country}} 
                id="country"
                ng-model="sign_up.orszag"
                required>
@@ -147,7 +147,7 @@
         <label class="form-check-label" 
                for="showPassword">
           <i class="fa-solid fa-lock-open"></i>
-           Jelszó mutatása
+           {{$root.lang.data.showPassword}}
         </label>
       </div>
 
@@ -158,7 +158,7 @@
                 ng-disabled="sign_up_form.$invalid"
                 ng-click="register()">
           <i class="fa-solid fa-id-card me-1"></i>
-           Regisztráció
+           {{$root.lang.data.registerAccount}}
         </button>
       </div>
 

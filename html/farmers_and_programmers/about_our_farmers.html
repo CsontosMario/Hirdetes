@@ -11,11 +11,11 @@
         <p class="card-text">{{farmer.about_short}}</p>
         <a href="#" class="btn btn-primary">
           <i class="fa-solid fa-scroll"></i>
-           További információk
+          {{$root.lang.data.moreInformation}}
         </a>
       </div>
       <div class="card-footer text-body-secondary">
-        <i class="fa-solid fa-calendar"></i> Született: {{farmer.birth_day}}-ban/-ben
+        <i class="fa-solid fa-calendar"></i> {{$root.lang.data.bornIn}}: {{farmer.birth_day}}-ban/-ben
       </div>
     </div>
   </div>

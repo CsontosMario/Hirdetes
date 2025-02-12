@@ -37,5 +37,16 @@
   "closing":"Closing",
   "p_picture":"Profile picture",
   "elseText":"There are no products to display!",
-  "and":"and"
+  "and":"and",
+  "email":"Email",
+  "placeholder_name":"Enter your name",
+  "placeholder_email":"Enter your email address",
+  "placeholder_password":"Enter your password",
+  "placeholder_repassword":"Repeat your password",
+  "placeholder_pcode":"Enter the postal code of the municipality where you live",
+  "placeholder_settlment":"Enter the name of the town where you live",
+  "placeholder_radress":"Enter your home address",
+  "placeholder_country":"Enter the country where you live",
+  "exit_question":"Are you sure you want to log out of this account?",
+  "registered":"Registration successful!"
 }

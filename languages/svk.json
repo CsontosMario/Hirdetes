@@ -37,5 +37,16 @@
   "closing":"Zatváranie",
   "p_picture":"profilový obrázok",
   "elseText":"Nie je tu ani jeden produkt, ktorý by sa dal predviesť!",
-  "and":"a"
+  "and":"a",
+  "email":"email",
+  "placeholder_name":"Zadajte svoje meno",
+  "placeholder_email":"Zadajte svoju e-mailovú adresu",
+  "placeholder_password":"Zadajte svoje heslo",
+  "placeholder_repassword":"Zopakujte svoje heslo",
+  "placeholder_pcode":"Zadajte PSČ mesta, v ktorom žijete",
+  "placeholder_settlment":"Zadajte názov mesta, v ktorom bývate.",
+  "placeholder_radress":"Zadajte svoju domácu adresu",
+  "placeholder_country":"Zadajte krajinu, v ktorej žijete.",
+  "exit_question":"Naozaj sa chcete odhlásiť z tohto účtu?",
+  "registered":"Registrácia úspešná!"
 }

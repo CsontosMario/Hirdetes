@@ -92,7 +92,7 @@
         console.log('Run...' + $state.current.name);
 
         $rootScope.kilep = () => {
-          if (confirm('Biztosan ki szeretne lépni ebből a fiókból?')) {
+          if (confirm($rootScope.lang.data.exit_question)) {
             $rootScope.user.id = null;
             $rootScope.user.name = null;
             util.localStorage('remove', 'loginID');
@@ -106,7 +106,7 @@
     //Home controller
     .controller('homeController', [
       '$scope',
-      function ($scope,) {
+      function ($scope) {
         console.log('Home controller...');
       }
     ])

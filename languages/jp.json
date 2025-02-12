@@ -21,7 +21,7 @@
   "loginToAccount":"ログイン",
   "location":"サイト",
   "aboutOurProducers":"私たちの生産者について",
-  "ourProgrammers":"私たちの開発者について",
+  "aboutOurProgrammers":"私たちの開発者について",
   "languages":"言語",
   "bornIn":"生まれる",
   "moreInformation":"詳細情報",
@@ -37,5 +37,16 @@
   "closing":"終了",
   "p_picture":"プロファイル画像",
   "elseText":"表示できる製品が一つもありません!",
-  "and":"と"
+  "and":"と",
+  "email":"メール",
+  "placeholder_name":"名前を入力してください",
+  "placeholder_email":"メールアドレスを入力",
+  "placeholder_password":"パスワードを入力",
+  "placeholder_repassword":"パスワードを繰り返してください",
+  "placeholder_pcode":"お住まいの市の郵便番号を入力してください",
+  "placeholder_settlment":"お住まいの町の名前を入力してください",
+  "placeholder_radress":"自宅の住所を入力",
+  "placeholder_country":"あなたが住んでいる国を入力してください",
+  "exit_question":"何か問題がありますか?",
+  "registered":"登録が完了しました！"
 }

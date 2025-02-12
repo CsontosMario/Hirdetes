@@ -37,5 +37,16 @@
   "closing":"Schließen",
   "p_picture":"Profilbild",
   "elseText":"Es gibt kein einziges Produkt, das man vorführen könnte!",
-  "and":"und"
+  "and":"und",
+  "email":"E-Mail",
+  "placeholder_name":"Gib deinen Namen ein",
+  "placeholder_email":"Geben Sie Ihre E-Mail-Adresse ein",
+  "placeholder_password":"Gib dein Passwort ein",
+  "placeholder_repassword":"Wiederhole dein Passwort",
+  "placeholder_pcode":"Geben Sie die Postleitzahl Ihres Wohnortes ein",
+  "placeholder_settlment":"Geben Sie den Namen der Stadt ein, in der Sie leben",
+  "placeholder_radress":"Geben Sie Ihre Heimatadresse ein",
+  "placeholder_country":"Geben Sie das Land ein, in dem Sie wohnen",
+  "exit_question":"Möchten Sie sich wirklich von diesem Konto abmelden?",
+  "registered":"Die Registrierung war erfolgreich!"
 }
