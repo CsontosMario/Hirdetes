@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 11. 13:07
+-- Létrehozás ideje: 2025. Feb 12. 11:33
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -92,6 +92,31 @@ INSERT INTO `kosarelemek` (`kosarID`, `termekID`, `db`, `ar`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet ehhez a táblához `programozoink`
+--
+
+CREATE TABLE `programozoink` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletesihely` varchar(20) NOT NULL,
+  `szuletesiev` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(50) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `programozoink`
+--
+
+INSERT INTO `programozoink` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Vékony Marcell', 'Makó', 2003, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának tagja vagyok.', 'marcell.jpg'),
+(2, 'Csontos Márió Dávid', 'Makó', 2005, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának vezetője vagyok.', 'mario_temporary_picture.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet ehhez a táblához `regisztracio`
 --
 
@@ -122,6 +147,61 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `azonosito`, `nev`, `telefonszam`, 
 (8, 'frankcastle', 'Frank Castle', NULL, '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
 (9, 'petecastallengtion', 'Pete Castallengtion', NULL, '1234aA', 10000, 'New York', 'Park Avenue', 'United States'),
 (10, 'soujiseta', 'Souji Seta', '+8175322198', '1234aA', 777, 'Fuefuki, Yamanashi Prefecture', 'Yamanashi Prefectural Rd 303', 'Japan');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `termeloink`
+--
+
+CREATE TABLE `termeloink` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletett` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(30) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `termeloink`
+--
+
+INSERT INTO `termeloink` (`id`, `nev`, `szuletett`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Hudák Mária', 0, '', '', 'Fő termelő', 'maria.jpg'),
+(2, 'Burkus Gusztáv', 0, '', '', 'Fő termelő', 'gusztav.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `zoldsegek_de`
+--
+
+CREATE TABLE `zoldsegek_de` (
+  `termekID` int(10) NOT NULL,
+  `kep` varchar(50) NOT NULL,
+  `megnevezes` varchar(50) NOT NULL,
+  `leiras` text NOT NULL,
+  `ar` int(10) NOT NULL,
+  `kiszereles` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `zoldsegek_de`
+--
+
+INSERT INTO `zoldsegek_de` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+(1, 'potato.jpg', 'Kartoffel', 'Mittlerer Mehlanteil, zum Backen und Kochen geeignet. Ungarisches Produkt.', 1000, 'in großen Mengen'),
+(2, 'carrot.jpg', 'Karotte', 'Glatt, zylindrisch, mittlere Länge. Ungarisches Produkt.', 400, 'in großen Mengen'),
+(3, 'sorrel.jpg', 'Gartensauerampfer', 'Starke Blätter. Ungarisches Produkt.', 400, 'pro Paket'),
+(4, 'spinach.jpg', 'Spinat', 'Mittelgroße Blätter. Ungarisches Produkt.', 500, 'pro Paket'),
+(5, 'spring_onion.jpg', 'Frühlingszwiebeln', 'Länglicher Kopf, geeignet zum Frischverzehr und für Salate. Ungarisches Produkt.', 250, 'pro Paket'),
+(6, 'corn.jpg', 'Mais', 'Mittelkörnig, süß, hervorragend zum Kochen geeignet. Ungarisches Produkt.', 200, 'Stück für Stück'),
+(7, 'pea.jpg', 'Grüne Erbsen', 'Mittelgroße Körner, erstreif und geeignet für Suppen, Gemüse, Salate. Ungarisches Produkt.', 1000, 'in großen Mengen'),
+(8, 'kohlrabi.jpg', 'Kohlrabi', 'Erstgeborener, weiß. Ungarisches Produkt.', 450, 'Stück für Stück'),
+(9, 'pepper.jpg', 'Pfeffer', 'Fleischig, mittelgroß, sowohl zum Frischverzehr als auch zum Kochen geeignet. Ungarisches Produkt.', 800, 'in großen Mengen'),
+(10, 'cauliflower.jpg', 'Blumenkohl', 'Es hat eine große Rosette und eignet sich für die Zubereitung von Suppen, Gemüse und unzähligen Gerichten. Ungarisches Produkt.', 800, 'pro Kopf');
 
 -- --------------------------------------------------------
 
@@ -200,6 +280,37 @@ CREATE TABLE `zoldsegek_jp` (
   `kiszereles` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `zoldsegek_svk`
+--
+
+CREATE TABLE `zoldsegek_svk` (
+  `termekID` int(10) NOT NULL,
+  `kep` varchar(50) NOT NULL,
+  `megnevezes` varchar(50) NOT NULL,
+  `leiras` text NOT NULL,
+  `ar` int(10) NOT NULL,
+  `kiszereles` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `zoldsegek_svk`
+--
+
+INSERT INTO `zoldsegek_svk` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+(1, 'potato.jpg', 'zemiak', 'Stredný obsah múky, vhodné na pečenie a varenie. Maďarský výrobok.', 1000, 'hromadne'),
+(2, 'carrot.jpg', 'Mrkva', 'Hladký cylindrický, stredne dlhý. Maďarský výrobok.', 400, 'hromadne'),
+(3, 'sorrel.jpg', 'Záhradný šťavel', 'Silné listy. Maďarský výrobok.', 400, 'za balenie'),
+(4, 'spinach.jpg', 'Špenát', 'Stredne veľké listy. Maďarský výrobok.', 500, 'za balenie'),
+(5, 'spring_onion.jpg', 'Jarná cibuľka', 'Predĺžená hlávka, vhodná na čerstvú konzumáciu a šaláty. Maďarský výrobok.', 250, 'za balenie'),
+(6, 'corn.jpg', 'Kukurica', 'Stredne zrnité, sladké, výborné na varenie. Maďarský výrobok.', 200, 'kus po kuse'),
+(7, 'pea.jpg', 'Zelený hrášok', 'Stredne veľké zrná, prvé zrelé a vhodné do polievok, zeleniny, šalátov. Maďarský výrobok.', 1000, 'hromadne'),
+(8, 'kohlrabi.jpg', 'kaleráb', 'Prvorodený, biely. Maďarský výrobok.', 450, 'kus po kuse'),
+(9, 'pepper.jpg', 'Pepper', 'Mäsité, stredne veľké, vhodné na čerstvú konzumáciu aj varenie. Maďarský výrobok.', 800, 'hromadne'),
+(10, 'cauliflower.jpg', 'Karfiol', 'Má veľkú rozetu, vhodnú na prípravu polievok, zeleniny a nespočetného množstva jedál. Maďarský výrobok.', 800, 'na obyvateľa');
+
 --
 -- Indexek a kiírt táblákhoz
 --
@@ -225,10 +336,28 @@ ALTER TABLE `kosarelemek`
   ADD PRIMARY KEY (`kosarID`,`termekID`);
 
 --
+-- A tábla indexei `programozoink`
+--
+ALTER TABLE `programozoink`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `regisztracio`
 --
 ALTER TABLE `regisztracio`
   ADD PRIMARY KEY (`felhasznaloID`);
+
+--
+-- A tábla indexei `termeloink`
+--
+ALTER TABLE `termeloink`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `zoldsegek_de`
+--
+ALTER TABLE `zoldsegek_de`
+  ADD PRIMARY KEY (`termekID`);
 
 --
 -- A tábla indexei `zoldsegek_en`
@@ -249,14 +378,38 @@ ALTER TABLE `zoldsegek_jp`
   ADD PRIMARY KEY (`termekID`);
 
 --
+-- A tábla indexei `zoldsegek_svk`
+--
+ALTER TABLE `zoldsegek_svk`
+  ADD PRIMARY KEY (`termekID`);
+
+--
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
+
+--
+-- AUTO_INCREMENT a táblához `programozoink`
+--
+ALTER TABLE `programozoink`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT a táblához `regisztracio`
 --
 ALTER TABLE `regisztracio`
   MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT a táblához `termeloink`
+--
+ALTER TABLE `termeloink`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT a táblához `zoldsegek_de`
+--
+ALTER TABLE `zoldsegek_de`
+  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `zoldsegek_en`
@@ -275,6 +428,12 @@ ALTER TABLE `zoldsegek_hu`
 --
 ALTER TABLE `zoldsegek_jp`
   MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT a táblához `zoldsegek_svk`
+--
+ALTER TABLE `zoldsegek_svk`
+  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
