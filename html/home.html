@@ -61,15 +61,15 @@
                     <th>{{$root.lang.data.closing}}</th>
                 </tr>
             </thead>
-            <tbody ng-init="days=['Hétfő - Péntek','Szombat - Vasárnap']">
+            <tbody ng-init="days=['mondayToFriday','saturdayToSunday']">
                 <tr ng-repeat="x in days"
                     ng-init="availability_open = ''"
                     ng-init="availability_close = ''">
-                    <td>{{x}}</td>
-                    <td ng-if="x == 'Hétfő - Péntek' ? availability_open = '9:00' : availability_open = '-'">
+                    <td>{{$root.lang.data[x]}}</td>
+                    <td ng-if="x == 'mondayToFriday' ? availability_open = '9:00' : availability_open = '-'">
                         {{availability_open}}
                     </td>
-                    <td ng-if="x == 'Hétfő - Péntek' ? availability_close = '15:00' : availability_close = '-'">
+                    <td ng-if="x == 'mondayToFriday' ? availability_close = '15:00' : availability_close = '-'">
                         {{availability_close}}
                     </td>
                 </tr>
