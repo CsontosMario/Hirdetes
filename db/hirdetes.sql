@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 12. 11:33
+-- Létrehozás ideje: 2025. Feb 12. 12:24
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -113,6 +113,31 @@ CREATE TABLE `programozoink` (
 INSERT INTO `programozoink` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
 (1, 'Vékony Marcell', 'Makó', 2003, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának tagja vagyok.', 'marcell.jpg'),
 (2, 'Csontos Márió Dávid', 'Makó', 2005, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának vezetője vagyok.', 'mario_temporary_picture.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `programozoink_de`
+--
+
+CREATE TABLE `programozoink_de` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletesihely` varchar(20) NOT NULL,
+  `szuletesiev` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(50) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `programozoink_de`
+--
+
+INSERT INTO `programozoink_de` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Vékony Marcell', 'Mako', 2003, '', 'Ich bin Softwareentwickler und -tester.', 'Ich bin Mitglied des Website-Entwicklungsteams.', 'marcell.jpg'),
+(2, 'Csontos Márió Dávid', 'Mako', 2005, '', 'Ich bin Softwareentwickler und -tester.', 'Ich bin der Leiter des Website-Entwicklungsteams.', 'mario_temporary_picture.jpg');
 
 -- --------------------------------------------------------
 
@@ -280,6 +305,22 @@ CREATE TABLE `zoldsegek_jp` (
   `kiszereles` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- A tábla adatainak kiíratása `zoldsegek_jp`
+--
+
+INSERT INTO `zoldsegek_jp` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+(1, 'potato.jpg', 'じゃがいも', '小麦粉含有量が中程度で、パンや料理に適しています。ハンガリー産。', 1000, '大量に'),
+(2, 'carrot.jpg', 'ニンジン', '滑らかな円筒形、中程度の長さ。ハンガリー産。', 400, '大量に'),
+(3, 'sorrel.jpg', 'ガーデンスイバ', '葉が丈夫。ハンガリー産。', 400, 'パッケージあたり'),
+(4, 'spinach.jpg', 'ほうれん草', '中サイズの葉。ハンガリー産。', 500, 'パッケージあたり'),
+(5, 'spring_onion.jpg', 'ネギ', '細長い頭部は生食やサラダに適しています。ハンガリー産。', 250, 'パッケージあたり'),
+(6, 'corn.jpg', 'トウモロコシ', '中粒で甘く、料理に最適です。ハンガリー産。', 200, '少しずつ'),
+(7, 'pea.jpg', 'グリーンピース', '中粒で、初熟しており、スープ、野菜、サラダに適しています。ハンガリー産。', 1000, '大量に'),
+(8, 'kohlrabi.jpg', 'コールラビ', '長男、白人。ハンガリー産。', 450, '少しずつ'),
+(9, 'pepper.jpg', 'ペッパー', '肉厚で中型、生食にも調理にも適しています。ハンガリー産。', 800, '大量に'),
+(10, 'cauliflower.jpg', 'カリフラワー', '大きなロゼットがあり、スープ、野菜、その他さまざまな料理を作るのに適しています。ハンガリー製品。', 800, '一人当たり');
+
 -- --------------------------------------------------------
 
 --
@@ -342,6 +383,12 @@ ALTER TABLE `programozoink`
   ADD PRIMARY KEY (`id`);
 
 --
+-- A tábla indexei `programozoink_de`
+--
+ALTER TABLE `programozoink_de`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `regisztracio`
 --
 ALTER TABLE `regisztracio`
@@ -391,6 +438,12 @@ ALTER TABLE `zoldsegek_svk`
 -- AUTO_INCREMENT a táblához `programozoink`
 --
 ALTER TABLE `programozoink`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT a táblához `programozoink_de`
+--
+ALTER TABLE `programozoink_de`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -427,7 +480,7 @@ ALTER TABLE `zoldsegek_hu`
 -- AUTO_INCREMENT a táblához `zoldsegek_jp`
 --
 ALTER TABLE `zoldsegek_jp`
-  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT a táblához `zoldsegek_svk`
