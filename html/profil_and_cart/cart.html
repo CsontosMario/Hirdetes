@@ -1,25 +1,31 @@
 <div class="container">
   <div class="row justify-content-center m-3">
 
-    <form class="w-50 p-3" style="border:1px solid #ccc" name="cart_form">
+    <form class="w-50 p-3" 
+          style="border:1px solid #ccc" 
+          name="cart_form">
 
       <div class="mb-3">
         <h1 class="text-center pb-3">
-          <i class="fa-solid fa-id-card me-1"></i>
+          <i class="fa-solid fa-cart-shopping me-1"></i>
           {{$root.lang.data.cart}}
         </h1>
       </div>
 
       <!-- Fizetési mód -->
       <div class="mb-3">
-        <label for="pay_type" class="form-label">
+        <label for="pay_type" 
+               class="form-label">
           <b>
-            <i class="fa-solid fa-signature"></i>
+            <i class="fa-solid fa-credit-card"></i>
             {{$root.lang.data.pay_type}}:
           </b>
         </label>
-        <select class="form-select" aria-label="Default select example" id="pay_type">
-          <option selected ng-repeat="(k, v) in pay_types track by $index">
+        <select class="form-select" 
+                aria-label="Default select example" 
+                id="pay_type">
+          <option selected 
+                  ng-repeat="(k, v) in pay_types track by $index">
             {{v}}
           </option>
         </select>
@@ -27,25 +33,36 @@
 
       <!-- Kártya szám -->
       <div class="mb-3">
-        <label for="ccn" class="form-label">
+        <label for="ccn" 
+               class="form-label">
           <b>
-            <i class="fa-solid fa-signature"></i>
+            <i class="fa-solid fa-hashtag"></i>
             {{$root.lang.data.card_num}}:
           </b>
         </label>
-        <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19"
-          class="form-control" placeholder="xxxx xxxx xxxx xxxx" required>
+        <input id="ccn" 
+               type="tel" 
+               inputmode="numeric" 
+               pattern="[0-9\s]{13,19}" 
+               autocomplete="cc-number" 
+               maxlength="19" 
+               class="form-control" 
+               placeholder="xxxx xxxx xxxx xxxx" 
+               required>
       </div>
 
       <!-- Lejárati dátum -->
       <div class="mb-3">
-        <label for="date" class="form-label">
+        <label for="date" 
+               class="form-label">
           <b>
-            <i class="fa-solid fa-signature"></i>
+            <i class="fa-solid fa-calendar-days"></i>
             {{$root.lang.data.expiration_date}}:
           </b>
         </label>
-        <input id="date" type="date" class="form-control">
+        <input id="date" 
+               type="date" 
+               class="form-control">
       </div>
 
 
@@ -53,8 +70,11 @@
 
       <!-- Gomb (fizetés) -->
       <div class="clearfix">
-        <button type="button" class="btn btn-primary" ng-disabled="cart_form.$invalid" ng-click="pay()">
-          <i class="fa-solid fa-id-card me-1"></i>
+        <button type="button" 
+                class="btn btn-primary" 
+                ng-disabled="cart_form.$invalid" 
+                ng-click="pay()">
+          <i class="fa-solid fa-cart-shopping me-1"></i>
           Fizetés
         </button>
       </div>
