@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 13. 08:26
+-- Létrehozás ideje: 2025. Feb 13. 11:27
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -88,6 +88,31 @@ INSERT INTO `kosarelemek` (`kosarID`, `termekID`, `db`, `ar`) VALUES
 (3, 3, 6, 2400),
 (4, 4, 16, 8000),
 (5, 5, 19, 4750);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `programozoink`
+--
+
+CREATE TABLE `programozoink` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletesihely` varchar(20) NOT NULL,
+  `szuletesiev` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(50) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `programozoink`
+--
+
+INSERT INTO `programozoink` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Vékony Marcell', 'Makó', 2003, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának tagja vagyok.', 'marcell.jpg'),
+(2, 'Csontos Márió Dávid', 'Makó', 2005, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának vezetője vagyok.', 'mario_temporary_picture.jpg');
 
 -- --------------------------------------------------------
 
@@ -452,6 +477,12 @@ ALTER TABLE `kosarelemek`
   ADD PRIMARY KEY (`kosarID`,`termekID`);
 
 --
+-- A tábla indexei `programozoink`
+--
+ALTER TABLE `programozoink`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `programozoink_de`
 --
 ALTER TABLE `programozoink_de`
@@ -527,6 +558,12 @@ ALTER TABLE `zoldsegek_svk`
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
+
+--
+-- AUTO_INCREMENT a táblához `programozoink`
+--
+ALTER TABLE `programozoink`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT a táblához `programozoink_de`
