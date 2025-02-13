@@ -71,5 +71,8 @@
   "packaging_piece_by_piece":"piece by piece",
   "packaging_in_bulk":"in bulk",
   "packaging_per_package":"per package",
-  "packaging_by_head":"per head"
+  "packaging_by_head":"per head",
+  "pay_type":"Payment method",
+  "card_num":"Card number",
+  "expiration_date":"Card expiration date"
 }

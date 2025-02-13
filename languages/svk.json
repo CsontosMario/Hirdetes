@@ -71,5 +71,8 @@
   "packaging_piece_by_piece":"kus po kuse",
   "packaging_in_bulk":"hromadne",
   "packaging_per_package":"za balenie",
-  "packaging_by_head":"na obyvateľa"
+  "packaging_by_head":"na obyvateľa",
+  "pay_type":"Spôsob platby",
+  "card_num":"Číslo karty",
+  "expiration_date":"Dátum vypršania platnosti karty"
 }

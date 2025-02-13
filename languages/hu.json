@@ -71,5 +71,8 @@
   "packaging_piece_by_piece":"darabonként",
   "packaging_in_bulk":"ömlesztve",
   "packaging_per_package":"csomagonként",
-  "packaging_by_head":"fejenként"
+  "packaging_by_head":"fejenként",
+  "pay_type":"Fizetési mód",
+  "card_num":"Kártya szám",
+  "expiration_date":"Kártya lejárati dátuma"
 }

@@ -71,5 +71,8 @@
   "packaging_piece_by_piece":"Stück für Stück",
   "packaging_in_bulk":"in großen Mengen",
   "packaging_per_package":"pro Paket",
-  "packaging_by_head":"pro Kopf"
+  "packaging_by_head":"pro Kopf",
+  "pay_type":"Zahlungsmethode",
+  "card_num":"Kartennummer",
+  "expiration_date":"Ablaufdatum der Karte"
 }

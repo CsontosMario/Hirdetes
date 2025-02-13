@@ -71,5 +71,8 @@
   "packaging_piece_by_piece":"少しずつ",
   "packaging_in_bulk":"大量に",
   "packaging_per_package":"パッケージあたり",
-  "packaging_by_head":"一人当たり"
+  "packaging_by_head":"一人当たり",
+  "pay_type":"支払方法",
+  "card_num":"カード番号",
+  "expiration_date":"カードの有効期限"
 }
