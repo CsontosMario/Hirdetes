@@ -352,6 +352,10 @@
         })
         .catch(e => console.log(e))
 
+        $scope.pay = ()=>{
+          alert("fizetve");
+        }
+
         console.log('Cart controller...');
       }
     ])
