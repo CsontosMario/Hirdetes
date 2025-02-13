@@ -51,5 +51,7 @@
   "registered":"Registration successful!",
   "optional":"Optional",
   "wrong_password":"The two entered passwords do not match!",
-  "in":"in"
+  "in":"in",
+  "save":"Saving",
+  "cancel":"Cancel"
 }

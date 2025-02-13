@@ -51,5 +51,7 @@
   "registered":"Sikeres a regisztráció!",
   "optional":"Nem kötelező",
   "wrong_password":"A megadott két jelszó nem egyezik!",
-  "in":"-ban/-ben"
+  "in":"-ban/-ben",
+  "save":"Mentés",
+  "cancel":"Mégsem"
 }

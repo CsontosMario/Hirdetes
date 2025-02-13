@@ -51,5 +51,7 @@
   "registered":"登録が完了しました！",
   "optional":"任意です",
   "wrong_password":"入力した 2 つのパスワードが一致しません。",
-  "in":"で"
+  "in":"で",
+  "save":"救助",
+  "cancel":"キャンセル"
 }

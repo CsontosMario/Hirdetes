@@ -51,5 +51,7 @@
   "registered":"Registrácia úspešná!",
   "optional":"Je nepovinná",
   "wrong_password":"Dve zadané heslá sa nezhodujú!",
-  "in":"v"
+  "in":"v",
+  "save":"Záchrana",
+  "cancel":"Zrušiť"
 }
