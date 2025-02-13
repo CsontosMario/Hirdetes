@@ -53,5 +53,7 @@
   "wrong_password":"Die beiden eingegebenen Passwörter passen nicht zusammen!",
   "in":"In",
   "save":"Rettung",
-  "cancel":"Stornieren"
+  "cancel":"Stornieren",
+  "percent":"% Rabatt",
+  "discount_available":"Wochenend-Ausverkauf!"
 }

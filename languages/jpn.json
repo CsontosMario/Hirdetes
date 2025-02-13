@@ -53,5 +53,7 @@
   "wrong_password":"入力した 2 つのパスワードが一致しません。",
   "in":"で",
   "save":"救助",
-  "cancel":"キャンセル"
+  "cancel":"キャンセル",
+  "percent":"%割引",
+  "discount_available":"週末セール！"
 }

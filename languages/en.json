@@ -53,5 +53,7 @@
   "wrong_password":"The two entered passwords do not match!",
   "in":"in",
   "save":"Saving",
-  "cancel":"Cancel"
+  "cancel":"Cancel",
+  "percent":"% discount",
+  "discount_available":"Weekend sale!"
 }

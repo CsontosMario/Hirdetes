@@ -53,5 +53,7 @@
   "wrong_password":"Dve zadané heslá sa nezhodujú!",
   "in":"v",
   "save":"Záchrana",
-  "cancel":"Zrušiť"
+  "cancel":"Zrušiť",
+  "percent":"5% zľava",
+  "discount_available":"Víkendový výpredaj!"
 }

@@ -53,5 +53,7 @@
   "wrong_password":"A megadott két jelszó nem egyezik!",
   "in":"-ban/-ben",
   "save":"Mentés",
-  "cancel":"Mégsem"
+  "cancel":"Mégsem",
+  "percent":"% kedvezmény",
+  "discount_available":"Hétvégi akció!"
 }
