@@ -176,10 +176,11 @@
           <ul class="dropdown-menu dropdown-menu-end">
 
             <!-- Nyelvek kiválasztása -->
-            <li ng-repeat="x in lang.available"
+            <li class="nav-item"
+                ng-repeat="x in lang.available"
 								ng-if="x.id !== lang.available[lang.index].id && x.valid"
 								ng-click="methods.languageChanged(x.id)">
-							<a class="dropdown-item">
+							<a class="dropdown-item cursor-pointer">
 								<img class="me-1" 
 										height="32" 
 										alt="flag"
@@ -190,14 +191,9 @@
 								</span> 
 							</a>
 						</li>
-
           </ul>
-
         </li>
-
       </ul>
-
     </div>
-
   </div>
 </nav>
