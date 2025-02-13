@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 13. 07:26
+-- Létrehozás ideje: 2025. Feb 13. 08:12
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -92,31 +92,6 @@ INSERT INTO `kosarelemek` (`kosarID`, `termekID`, `db`, `ar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `programozoink`
---
-
-CREATE TABLE `programozoink` (
-  `id` int(11) NOT NULL,
-  `nev` varchar(50) NOT NULL,
-  `szuletesihely` varchar(20) NOT NULL,
-  `szuletesiev` int(4) NOT NULL,
-  `rolaroviden` text NOT NULL,
-  `rola` text NOT NULL,
-  `munkanev` varchar(50) NOT NULL,
-  `kep` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- A tábla adatainak kiíratása `programozoink`
---
-
-INSERT INTO `programozoink` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
-(1, 'Vékony Marcell', 'Makó', 2003, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának tagja vagyok.', 'marcell.jpg'),
-(2, 'Csontos Márió Dávid', 'Makó', 2005, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának vezetője vagyok.', 'mario_temporary_picture.jpg');
-
--- --------------------------------------------------------
-
---
 -- Tábla szerkezet ehhez a táblához `programozoink_de`
 --
 
@@ -138,6 +113,106 @@ CREATE TABLE `programozoink_de` (
 INSERT INTO `programozoink_de` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
 (1, 'Vékony Marcell', 'Mako', 2003, '', 'Ich bin Softwareentwickler und -tester.', 'Ich bin Mitglied des Website-Entwicklungsteams.', 'marcell.jpg'),
 (2, 'Csontos Márió Dávid', 'Mako', 2005, '', 'Ich bin Softwareentwickler und -tester.', 'Ich bin der Leiter des Website-Entwicklungsteams.', 'mario_temporary_picture.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `programozoink_en`
+--
+
+CREATE TABLE `programozoink_en` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletesihely` varchar(20) NOT NULL,
+  `szuletesiev` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(50) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `programozoink_en`
+--
+
+INSERT INTO `programozoink_en` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Vékony Marcell', 'Mako', 2003, '', 'I am a software developer and tester.', 'am a member of the website development team.', 'marcell.jpg'),
+(2, 'Csontos Márió Dávid', 'Mako', 2005, '', 'I am a software developer and tester.', 'I am the leader of the website development team.', 'mario_temporary_picture.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `programozoink_hu`
+--
+
+CREATE TABLE `programozoink_hu` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletesihely` varchar(20) NOT NULL,
+  `szuletesiev` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(50) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `programozoink_hu`
+--
+
+INSERT INTO `programozoink_hu` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Vékony Marcell', 'Makó', 2003, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának tagja vagyok.', 'marcell.jpg'),
+(2, 'Csontos Márió Dávid', 'Makó', 2005, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának vezetője vagyok.', 'mario_temporary_picture.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `programozoink_jp`
+--
+
+CREATE TABLE `programozoink_jp` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletesihely` varchar(20) NOT NULL,
+  `szuletesiev` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(50) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `programozoink_jp`
+--
+
+INSERT INTO `programozoink_jp` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Vékony Marcell', 'マコ', 2003, '', '私はソフトウェア開発者兼テスターです。', '私はウェブサイト開発チームのメンバーです。', 'marcell.jpg'),
+(2, 'Csontos Márió Dávid', 'マコ', 2005, '', '私はソフトウェア開発者兼テスターです。', '私はウェブサイト開発チームのリーダーです。', 'mario_temporary_picture.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `programozoink_svk`
+--
+
+CREATE TABLE `programozoink_svk` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(50) NOT NULL,
+  `szuletesihely` varchar(20) NOT NULL,
+  `szuletesiev` int(4) NOT NULL,
+  `rolaroviden` text NOT NULL,
+  `rola` text NOT NULL,
+  `munkanev` varchar(50) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `programozoink_svk`
+--
+
+INSERT INTO `programozoink_svk` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+(1, 'Vékony Marcell', 'Mako', 2003, '', 'Som softvérový vývojár a tester.', 'Som členom vývojového tímu webu.', 'marcell.jpg'),
+(2, 'Csontos Márió Dávid', 'Mako', 2005, '', 'Som softvérový vývojár a tester.', 'Som vedúci tímu vývojárov webových stránok.', 'mario_temporary_picture.jpg');
 
 -- --------------------------------------------------------
 
@@ -377,15 +452,33 @@ ALTER TABLE `kosarelemek`
   ADD PRIMARY KEY (`kosarID`,`termekID`);
 
 --
--- A tábla indexei `programozoink`
---
-ALTER TABLE `programozoink`
-  ADD PRIMARY KEY (`id`);
-
---
 -- A tábla indexei `programozoink_de`
 --
 ALTER TABLE `programozoink_de`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `programozoink_en`
+--
+ALTER TABLE `programozoink_en`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `programozoink_hu`
+--
+ALTER TABLE `programozoink_hu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `programozoink_jp`
+--
+ALTER TABLE `programozoink_jp`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `programozoink_svk`
+--
+ALTER TABLE `programozoink_svk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -436,15 +529,33 @@ ALTER TABLE `zoldsegek_svk`
 --
 
 --
--- AUTO_INCREMENT a táblához `programozoink`
---
-ALTER TABLE `programozoink`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT a táblához `programozoink_de`
 --
 ALTER TABLE `programozoink_de`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT a táblához `programozoink_en`
+--
+ALTER TABLE `programozoink_en`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT a táblához `programozoink_hu`
+--
+ALTER TABLE `programozoink_hu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT a táblához `programozoink_jp`
+--
+ALTER TABLE `programozoink_jp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT a táblához `programozoink_svk`
+--
+ALTER TABLE `programozoink_svk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
