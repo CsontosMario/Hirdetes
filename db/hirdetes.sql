@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 13. 08:12
+-- Létrehozás ideje: 2025. Feb 13. 08:26
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -167,10 +167,10 @@ INSERT INTO `programozoink_hu` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `ro
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `programozoink_jp`
+-- Tábla szerkezet ehhez a táblához `programozoink_jpn`
 --
 
-CREATE TABLE `programozoink_jp` (
+CREATE TABLE `programozoink_jpn` (
   `id` int(11) NOT NULL,
   `nev` varchar(50) NOT NULL,
   `szuletesihely` varchar(20) NOT NULL,
@@ -182,10 +182,10 @@ CREATE TABLE `programozoink_jp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- A tábla adatainak kiíratása `programozoink_jp`
+-- A tábla adatainak kiíratása `programozoink_jpn`
 --
 
-INSERT INTO `programozoink_jp` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
+INSERT INTO `programozoink_jpn` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
 (1, 'Vékony Marcell', 'マコ', 2003, '', '私はソフトウェア開発者兼テスターです。', '私はウェブサイト開発チームのメンバーです。', 'marcell.jpg'),
 (2, 'Csontos Márió Dávid', 'マコ', 2005, '', '私はソフトウェア開発者兼テスターです。', '私はウェブサイト開発チームのリーダーです。', 'mario_temporary_picture.jpg');
 
@@ -368,10 +368,10 @@ INSERT INTO `zoldsegek_hu` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `ki
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `zoldsegek_jp`
+-- Tábla szerkezet ehhez a táblához `zoldsegek_jpn`
 --
 
-CREATE TABLE `zoldsegek_jp` (
+CREATE TABLE `zoldsegek_jpn` (
   `termekID` int(10) NOT NULL,
   `kep` varchar(50) NOT NULL,
   `megnevezes` varchar(50) NOT NULL,
@@ -381,10 +381,10 @@ CREATE TABLE `zoldsegek_jp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- A tábla adatainak kiíratása `zoldsegek_jp`
+-- A tábla adatainak kiíratása `zoldsegek_jpn`
 --
 
-INSERT INTO `zoldsegek_jp` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
+INSERT INTO `zoldsegek_jpn` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
 (1, 'potato.jpg', 'じゃがいも', '小麦粉含有量が中程度で、パンや料理に適しています。ハンガリー産。', 1000, '大量に'),
 (2, 'carrot.jpg', 'ニンジン', '滑らかな円筒形、中程度の長さ。ハンガリー産。', 400, '大量に'),
 (3, 'sorrel.jpg', 'ガーデンスイバ', '葉が丈夫。ハンガリー産。', 400, 'パッケージあたり'),
@@ -470,9 +470,9 @@ ALTER TABLE `programozoink_hu`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `programozoink_jp`
+-- A tábla indexei `programozoink_jpn`
 --
-ALTER TABLE `programozoink_jp`
+ALTER TABLE `programozoink_jpn`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -513,9 +513,9 @@ ALTER TABLE `zoldsegek_hu`
   ADD PRIMARY KEY (`termekID`);
 
 --
--- A tábla indexei `zoldsegek_jp`
+-- A tábla indexei `zoldsegek_jpn`
 --
-ALTER TABLE `zoldsegek_jp`
+ALTER TABLE `zoldsegek_jpn`
   ADD PRIMARY KEY (`termekID`);
 
 --
@@ -547,9 +547,9 @@ ALTER TABLE `programozoink_hu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT a táblához `programozoink_jp`
+-- AUTO_INCREMENT a táblához `programozoink_jpn`
 --
-ALTER TABLE `programozoink_jp`
+ALTER TABLE `programozoink_jpn`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -589,9 +589,9 @@ ALTER TABLE `zoldsegek_hu`
   MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT a táblához `zoldsegek_jp`
+-- AUTO_INCREMENT a táblához `zoldsegek_jpn`
 --
-ALTER TABLE `zoldsegek_jp`
+ALTER TABLE `zoldsegek_jpn`
   MODIFY `termekID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
