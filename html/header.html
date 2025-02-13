@@ -172,10 +172,10 @@
              {{$root.lang.data.languages}}
           </a>
 
-          <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
+          <!-- Dropdown -> Nyelvek (menüpontok) -->
           <ul class="dropdown-menu dropdown-menu-end">
 
-            <!-- Magyar -->
+            <!-- Nyelvek kiválasztása -->
             <li ng-repeat="x in lang.available"
 								ng-if="x.id !== lang.available[lang.index].id && x.valid"
 								ng-click="methods.languageChanged(x.id)">

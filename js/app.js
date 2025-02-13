@@ -113,16 +113,16 @@
 
     //Products controller
     .controller('productsController', [
+      '$rootScope',
       '$scope',
       'http',
-      function ($scope, http) {
-
+      function ($rootScope, $scope, http) {
         http.request("./php/hirdetes.php")
-          .then(response => {
-            $scope.zoldsegek = response;
-            $scope.$applyAsync();
-          })
-          .catch(e => console.log(e))
+        .then(response => {
+          $scope.zoldsegek = response;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e))
 
         console.log('Products controller...');
       }
@@ -212,7 +212,7 @@
             url: "./php/felhasznalo.php",
             data: $scope.sign_in
           })
-            .then(result => {
+          .then(result => {
               $rootScope.user.id = result.felhasznaloID;
               $rootScope.user.name = result.nev;
 
@@ -220,8 +220,8 @@
               util.localStorage('set', 'loginName', $rootScope.user.name);
               alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $rootScope.user.name + "!");
               $scope.$applyAsync();
-            })
-            .catch(e => alert(e))
+          })
+          .catch(e => alert(e))
         }
 
       }
