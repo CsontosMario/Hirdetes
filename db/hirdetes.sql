@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 12. 13:30
+-- Létrehozás ideje: 2025. Feb 13. 07:26
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -163,15 +163,15 @@ CREATE TABLE `regisztracio` (
 
 INSERT INTO `regisztracio` (`felhasznaloID`, `email`, `nev`, `telefonszam`, `jelszo`, `iranyitoszam`, `telepules`, `cim`, `orszag`) VALUES
 (1, 'vekony.marcell-2020@keri.mako.hu', 'Vékony Marcell', NULL, '1234aA', 6900, 'Makó', 'Posta.u. 1', 'Magyarország'),
-(2, 'csontosmariodavid', 'Csontos Márió Dávid', '6205478301', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország'),
-(3, 'raikouusagi', 'Raikou Usagi', '06205478301', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország'),
+(2, 'csontos.mariodavi-2020@keri.mako.hu', 'Csontos Márió Dávid', '6205478301', '1234aA', 6915, 'Csanádalberti', 'Munkácsy Mihály utca 23.', 'Magyarország'),
+(3, 'villamnyul7777@gmail.com', 'Raikou Usagi', '06205478301', '1234aA', 6915, 'Csanádalberti', 'Dózsa György utca 3.', 'Magyarország'),
 (4, 'szabomario@gmail.com', 'Szabó Márió', '06705578905', '1234aA', 6900, 'Makó', 'Ady Endre u 1.', 'Magyarország'),
 (5, 'kissandrea@gmail.com', 'Kiss Andrea', NULL, '1234aA', 6900, 'Makó', 'Kossuth L utca 46.', 'Magyarország'),
 (6, 'nagyakos@gmail.com', 'Nagy Ákos', '06309846507', '1234aA', 6915, 'Csanádalberti', 'Petőfi Sándor utca 3.', 'Magyarország'),
 (7, 'nyaridaniel@gmail.com', 'Nyári Dániel', NULL, '1234aA', 6900, 'Makó', 'ukbuk.u. 1', 'Magyarország'),
 (8, 'frankcastle@gmail.com', 'Frank Castle', NULL, '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
 (9, 'petecastallengtion@gmail.com', 'Pete Castallengtion', NULL, '1234aA', 10000, 'New York', 'Park Avenue', 'United States'),
-(10, 'soujiseta', 'Souji Seta', '+8175322198', '1234aA', 777, 'Fuefuki, Yamanashi Prefecture', 'Yamanashi Prefectural Rd 303', 'Japan');
+(10, 'soujiseta2011@gmail.com', 'Souji Seta', '+8175322198', '1234aA', 777, 'Fuefuki, Yamanashi Prefecture', 'Yamanashi Prefectural Rd 303', 'Japan');
 
 -- --------------------------------------------------------
 
