@@ -7,7 +7,7 @@
       </div>
       <div class="card-body">
         <img src="https://dummyimage.com/600x400" class="card-img-top" alt="{{farmer.name}}">
-        <h5 class="card-title">{{farmer.job_title}}</h5>
+        <h5 class="card-title">{{$root.lang.data.job_title}}</h5>
         <p class="card-text">{{farmer.about_short}}</p>
         <a href="#" class="btn btn-primary">
           <i class="fa-solid fa-scroll"></i>
@@ -15,7 +15,7 @@
         </a>
       </div>
       <div class="card-footer text-body-secondary">
-        <i class="fa-solid fa-calendar"></i> {{$root.lang.data.bornIn}}: {{farmer.birth_day}}-ban/-ben
+        <i class="fa-solid fa-calendar"></i> {{$root.lang.data.bornIn}}: {{farmer.birth_day}}
       </div>
     </div>
   </div>
