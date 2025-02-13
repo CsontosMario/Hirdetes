@@ -50,5 +50,6 @@
   "exit_question":"Naozaj sa chcete odhlásiť z tohto účtu?",
   "registered":"Registrácia úspešná!",
   "optional":"Je nepovinná",
-  "wrong_password":"Dve zadané heslá sa nezhodujú!"
+  "wrong_password":"Dve zadané heslá sa nezhodujú!",
+  "in":"v"
 }

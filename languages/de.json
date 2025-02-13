@@ -50,5 +50,6 @@
   "exit_question":"Möchten Sie sich wirklich von diesem Konto abmelden?",
   "registered":"Die Registrierung war erfolgreich!",
   "optional":"Dies ist optional",
-  "wrong_password":"Die beiden eingegebenen Passwörter passen nicht zusammen!"
+  "wrong_password":"Die beiden eingegebenen Passwörter passen nicht zusammen!",
+  "in":"In"
 }

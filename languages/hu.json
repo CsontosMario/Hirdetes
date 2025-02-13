@@ -50,5 +50,6 @@
   "exit_question":"Biztosan ki szeretne lépni ebből a fiókból?",
   "registered":"Sikeres a regisztráció!",
   "optional":"Nem kötelező",
-  "wrong_password":"A megadott két jelszó nem egyezik!"
+  "wrong_password":"A megadott két jelszó nem egyezik!",
+  "in":"-ban/-ben"
 }

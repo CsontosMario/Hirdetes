@@ -29,10 +29,10 @@
   },
   {
 
-    "id":"jp",
+    "id":"jpn",
     "name":"japanese",
     "local_name":"日本語",
-    "img":"jp.png",
+    "img":"jpn.png",
     "valid":true
 
   },

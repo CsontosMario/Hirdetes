@@ -50,5 +50,6 @@
   "exit_question":"何か問題がありますか?",
   "registered":"登録が完了しました！",
   "optional":"任意です",
-  "wrong_password":"入力した 2 つのパスワードが一致しません。"
+  "wrong_password":"入力した 2 つのパスワードが一致しません。",
+  "in":""
 }
