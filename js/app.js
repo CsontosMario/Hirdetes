@@ -214,11 +214,11 @@
           })
             .then(result => {
               $rootScope.user.id = result.felhasznaloID;
-              $rootScope.user.name = $scope.sign_in.nev;
+              $rootScope.user.name = result.nev;
 
               util.localStorage('set', 'loginID', $rootScope.user.id);
               util.localStorage('set', 'loginName', $rootScope.user.name);
-              alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $scope.sign_in.nev + "!");
+              alert("Sikeres a bejelentkezés!\nÜdvözöljük " + $rootScope.user.name + "!");
               $scope.$applyAsync();
             })
             .catch(e => alert(e))

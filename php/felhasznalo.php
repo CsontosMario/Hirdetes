@@ -8,23 +8,25 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$query = "SELECT `felhasznaloID`,
-                 `jelszo`
-            FROM `regisztracio`
-            WHERE `nev` = ?;";
+$query = "SELECT `felhasznaloID`, 
+                 `nev`, 
+                 `jelszo` 
+            FROM `regisztracio` 
+          WHERE `email` 
+            LIKE ?;";
 
-$result = $db->execute($query, array($args['nev']));
+$result = $db->execute($query, array($args['email']));
 
 $db = null;
 
 if (is_null($result)) {
-     Util::setError("Kérem bejelentkezés előtt regisztrálja ezt a felhasználót!");
+  Util::setError("Kérem bejelentkezés előtt regisztrálja ezt a felhasználót!");
 }
 
 $result = $result[0];
 
 if ($args['jelszo'] !== $result['jelszo']) {
-     Util::setError("Hibás jelszó!");
+  Util::setError("Hibás jelszó!");
 }
 
 unset($result['jelszo']);
