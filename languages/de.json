@@ -74,5 +74,6 @@
   "packaging_by_head":"pro Kopf",
   "pay_type":"Zahlungsmethode",
   "card_num":"Kartennummer",
-  "expiration_date":"Ablaufdatum der Karte"
+  "expiration_date":"Ablaufdatum der Karte",
+  "pay":"Bezahlen"
 }

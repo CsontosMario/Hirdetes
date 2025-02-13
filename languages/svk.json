@@ -74,5 +74,6 @@
   "packaging_by_head":"na obyvateľa",
   "pay_type":"Spôsob platby",
   "card_num":"Číslo karty",
-  "expiration_date":"Dátum vypršania platnosti karty"
+  "expiration_date":"Dátum vypršania platnosti karty",
+  "pay":"Platba"
 }

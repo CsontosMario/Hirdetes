@@ -74,5 +74,6 @@
   "packaging_by_head":"一人当たり",
   "pay_type":"支払方法",
   "card_num":"カード番号",
-  "expiration_date":"カードの有効期限"
+  "expiration_date":"カードの有効期限",
+  "pay":"支払い"
 }

@@ -74,5 +74,6 @@
   "packaging_by_head":"per head",
   "pay_type":"Payment method",
   "card_num":"Card number",
-  "expiration_date":"Card expiration date"
+  "expiration_date":"Card expiration date",
+  "pay":"Pay"
 }

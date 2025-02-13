@@ -74,5 +74,6 @@
   "packaging_by_head":"fejenként",
   "pay_type":"Fizetési mód",
   "card_num":"Kártya szám",
-  "expiration_date":"Kártya lejárati dátuma"
+  "expiration_date":"Kártya lejárati dátuma",
+  "pay":"Fizetés"
 }
