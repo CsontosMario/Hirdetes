@@ -353,7 +353,7 @@
         .catch(e => console.log(e))
 
         $scope.pay = ()=>{
-          alert("fizetve");
+          alert($rootScope.lang.data.pay_msg);
         }
 
         console.log('Cart controller...');

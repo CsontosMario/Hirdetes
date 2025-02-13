@@ -75,5 +75,9 @@
   "pay_type":"支払方法",
   "card_num":"カード番号",
   "expiration_date":"カードの有効期限",
-  "pay":"支払い"
+  "pay":"支払い",
+  "pay_msg":"ご購入ありがとうございます！",
+  "transfer":"銀行振込",
+  "credit_card":"銀行カード",
+  "ready_money":"現金"
 }

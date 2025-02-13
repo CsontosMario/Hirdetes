@@ -75,5 +75,9 @@
   "pay_type":"Zahlungsmethode",
   "card_num":"Kartennummer",
   "expiration_date":"Ablaufdatum der Karte",
-  "pay":"Bezahlen"
+  "pay":"Bezahlen",
+  "pay_msg":"Danke für Ihren Einkauf!",
+  "transfer":"Banküberweisung",
+  "credit_card":"Bankkarte",
+  "ready_money":"Cash"
 }

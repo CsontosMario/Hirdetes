@@ -75,5 +75,9 @@
   "pay_type":"Fizetési mód",
   "card_num":"Kártya szám",
   "expiration_date":"Kártya lejárati dátuma",
-  "pay":"Fizetés"
+  "pay":"Fizetés",
+  "pay_msg":"Köszönjük a vásárlást!",
+  "transfer":"Banki átutalás",
+  "credit_card":"Bankkártya",
+  "ready_money":"Készpénz"
 }

@@ -75,5 +75,9 @@
   "pay_type":"Spôsob platby",
   "card_num":"Číslo karty",
   "expiration_date":"Dátum vypršania platnosti karty",
-  "pay":"Platba"
+  "pay":"Platba",
+  "pay_msg":"Ďakujeme za váš nákup!",
+  "transfer":"Bankový prevod",
+  "credit_card":"Banková karta",
+  "ready_money":"Hotovosť"
 }
