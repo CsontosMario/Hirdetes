@@ -58,6 +58,18 @@
   "discount_available":"Víkendový výpredaj!",
   "iAmSoftwareDevTester": "Som softvérový vývojár a tester.",
   "job_title":"Hlavným výrobcom",
-  "potato":"",
-  "packaging_type":""
+  "potato":"zemiak",
+  "carrot":"Mrkva",
+  "sorrel":"Záhradný šťavel",
+  "spinach":"Špenát",
+  "spring_onion":"Jarná cibuľka",
+  "corn":"Kukurica",
+  "pea":"Zelený hrášok",
+  "kohlrabi":"kaleráb",
+  "pepper":"Pepper",
+  "cauliflower":"Karfiol",
+  "packaging_piece_by_piece":"kus po kuse",
+  "packaging_in_bulk":"hromadne",
+  "packaging_per_package":"za balenie",
+  "packaging_by_head":"na obyvateľa"
 }

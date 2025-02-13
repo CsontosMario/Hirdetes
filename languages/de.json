@@ -58,6 +58,18 @@
   "discount_available":"Wochenend-Ausverkauf!",
   "iAmSoftwareDevTester": "Ich bin Softwareentwickler und -tester.",
   "job_title":"Hauptproduzent",
-  "potato":"",
-  "packaging_type":""
+  "potato":"Kartoffel",
+  "carrot":"Karotte",
+  "sorrel":"Gartensauerampfer",
+  "spinach":"Spinat",
+  "spring_onion":"Frühlingszwiebeln",
+  "corn":"Mais",
+  "pea":"Grüne Erbsen",
+  "kohlrabi":"Kohlrabi",
+  "pepper":"Pfeffer",
+  "cauliflower":"Blumenkohl",
+  "packaging_piece_by_piece":"Stück für Stück",
+  "packaging_in_bulk":"in großen Mengen",
+  "packaging_per_package":"pro Paket",
+  "packaging_by_head":"pro Kopf"
 }

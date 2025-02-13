@@ -58,6 +58,18 @@
   "discount_available":"週末セール！",
   "iAmSoftwareDevTester": "私はソフトウェア開発者兼テスターです。",
   "job_title":"主な生産者",
-  "potato":"",
-  "packaging_type":""
+  "potato":"じゃがいも",
+  "carrot":"ニンジン",
+  "sorrel":"ガーデンスイバ",
+  "spinach":"ほうれん草",
+  "spring_onion":"ネギ",
+  "corn":"トウモロコシ",
+  "pea":"グリーンピース",
+  "kohlrabi":"コールラビ",
+  "pepper":"ペッパー",
+  "cauliflower":"カリフラワー",
+  "packaging_piece_by_piece":"少しずつ",
+  "packaging_in_bulk":"大量に",
+  "packaging_per_package":"パッケージあたり",
+  "packaging_by_head":"一人当たり"
 }

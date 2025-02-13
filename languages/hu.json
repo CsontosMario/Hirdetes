@@ -58,9 +58,18 @@
   "discount_available":"Hétvégi akció!",
   "iAmSoftwareDevTester": "Szoftverfejlesztő- és tesztelő vagyok.",
   "job_title":"Fő termelő",
-  "potato":"",
-  "carrot":"",
-  "packaging_type_1":"",
-  "packaging_type_2":"",
-  "packaging_type_3":""
+  "potato":"Burgonya (Balatoni-rózsa)",
+  "carrot":"Sárgarépa (Matador)",
+  "sorrel":"Kerti Sóska (Pallagi nagylevelű)",
+  "spinach":"Spenót",
+  "spring_onion":"Újhagyma",
+  "corn":"Kukorica (Csemege)",
+  "pea":"Zöldborsó (Zsuzsi)",
+  "kohlrabi":"Karalábé",
+  "pepper":"Paprika (Fehérözön)",
+  "cauliflower":"Karfiol",
+  "packaging_piece_by_piece":"darabonként",
+  "packaging_in_bulk":"ömlesztve",
+  "packaging_per_package":"csomagonként",
+  "packaging_by_head":"fejenként"
 }

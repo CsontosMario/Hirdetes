@@ -58,6 +58,18 @@
   "discount_available":"Weekend sale!",
   "iAmSoftwareDevTester": "I am a software developer and tester.",
   "job_title":"Main producer",
-  "potato":"",
-  "packaging_type":""
+  "potato":"Potato",
+  "carrot":"Carrot",
+  "sorrel":"Garden Sorrel",
+  "spinach":"Spinach",
+  "spring_onion":"Spring Onion",
+  "corn":"Corn",
+  "pea":"Green peas",
+  "kohlrabi":"Kohlrabi",
+  "pepper":"Pepper",
+  "cauliflower":"Cauliflower",
+  "packaging_piece_by_piece":"piece by piece",
+  "packaging_in_bulk":"in bulk",
+  "packaging_per_package":"per package",
+  "packaging_by_head":"per head"
 }
