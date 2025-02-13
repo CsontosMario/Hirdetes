@@ -13,7 +13,7 @@ $query = "SELECT `id`, `nev`,
                  `rolaroviden`, `rola`, 
                  `munkanev`, 
                  `kep` 
-          FROM `programozoink_hu`";
+          FROM `programozoink`";
 
 $result = $db->preparateInsert($query);
 

@@ -57,9 +57,7 @@
   "percent":"% discount",
   "discount_available":"Weekend sale!",
   "iAmSoftwareDevTester": "I am a software developer and tester.",
-  "teamMemberText":"I am ",
-  "leader":"the leader",
-  "member":"a member",
-  "am":"of the website development team.",
-  "job_title":"Main producer"
+  "job_title":"Main producer",
+  "potato":"",
+  "packaging_type":""
 }

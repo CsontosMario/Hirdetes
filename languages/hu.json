@@ -57,9 +57,10 @@
   "percent":"% kedvezmény",
   "discount_available":"Hétvégi akció!",
   "iAmSoftwareDevTester": "Szoftverfejlesztő- és tesztelő vagyok.",
-  "teamMemberText":"A weboldal fejlesztői csapatának",
-  "leader":"vezetője",
-  "member":"tagja",
-  "am":"vagyok.",
-  "job_title":"Fő termelő"
+  "job_title":"Fő termelő",
+  "potato":"",
+  "carrot":"",
+  "packaging_type_1":"",
+  "packaging_type_2":"",
+  "packaging_type_3":""
 }
