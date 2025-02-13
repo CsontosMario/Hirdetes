@@ -56,5 +56,9 @@
   "cancel":"Mégsem",
   "percent":"% kedvezmény",
   "discount_available":"Hétvégi akció!",
-  "iAmSoftwareDevTester": "Szoftverfejlesztő- és tesztelő vagyok"
+  "iAmSoftwareDevTester": "Szoftverfejlesztő- és tesztelő vagyok.",
+  "teamMemberText":"A weboldal fejlesztői csapatának",
+  "leader":"vezetője",
+  "member":"tagja",
+  "am":"vagyok."
 }

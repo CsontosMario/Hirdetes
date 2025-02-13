@@ -56,5 +56,9 @@
   "cancel":"Cancel",
   "percent":"% discount",
   "discount_available":"Weekend sale!",
-  "iAmSoftwareDevTester": "I am a software developer and tester"
+  "iAmSoftwareDevTester": "I am a software developer and tester.",
+  "teamMemberText":"I am ",
+  "leader":"the leader",
+  "member":"a member",
+  "am":"of the website development team."
 }
