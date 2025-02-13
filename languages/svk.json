@@ -48,5 +48,7 @@
   "placeholder_radress":"Zadajte svoju domácu adresu",
   "placeholder_country":"Zadajte krajinu, v ktorej žijete.",
   "exit_question":"Naozaj sa chcete odhlásiť z tohto účtu?",
-  "registered":"Registrácia úspešná!"
+  "registered":"Registrácia úspešná!",
+  "optional":"Je nepovinná",
+  "wrong_password":"Dve zadané heslá sa nezhodujú!"
 }

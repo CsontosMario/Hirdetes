@@ -70,7 +70,9 @@
         <input type="{{model.showPassword ? 'text' : 'password'}}"
                class="form-control"
                placeholder={{$root.lang.data.placeholder_repassword}} 
-               id="password_repeat">
+               id="password_repeat"
+               ng-model="confirm_password"
+               required>
       </div>
 
       <!-- Irányítószám bekérése -->
@@ -78,15 +80,14 @@
         <label for="postal_code">
           <b>
             <i class="fa-solid fa-signs-post"></i>
-             {{$root.lang.data.postalCode}}
+             {{$root.lang.data.postalCode}} ({{$root.lang.data.optional}})
           </b>
         </label>
         <input type="text"
                class="form-control"
                placeholder={{$root.lang.data.placeholder_pcode}} 
                id="postal_code"
-               ng-model="sign_up.iranyitoszam"
-               required>
+               ng-model="sign_up.iranyitoszam">
       </div>
 
       <!-- Település bekérése (regisztráció) -->
@@ -94,15 +95,14 @@
         <label for="settlement">
           <b>
             <i class="fa-solid fa-location-dot"></i>
-             {{$root.lang.data.settlement}}
+             {{$root.lang.data.settlement}} ({{$root.lang.data.optional}})
           </b>
         </label>
         <input type="text"
                class="form-control"
                placeholder={{$root.lang.data.placeholder_settlment}} 
                id="settlement"
-               ng-model="sign_up.telepules"
-               required>
+               ng-model="sign_up.telepules">
       </div>
 
       <!-- Lakcím bekérése -->
@@ -110,15 +110,14 @@
         <label for="r_adress">
           <b>
             <i class="fa-solid fa-location-pin"></i>
-             {{$root.lang.data.rAdress}}
+             {{$root.lang.data.rAdress}} ({{$root.lang.data.optional}})
           </b>
         </label>
         <input type="text"
                class="form-control"
                placeholder={{$root.lang.data.placeholder_radress}} 
                id="r_adress"
-               ng-model="sign_up.cim"
-               required>
+               ng-model="sign_up.cim">
       </div>
 
       <!-- Ország bekérése -->
@@ -126,15 +125,14 @@
         <label for="country">
           <b>
             <i class="fa-solid fa-flag"></i>
-             {{$root.lang.data.country}}
+             {{$root.lang.data.country}} ({{$root.lang.data.optional}})
           </b>
         </label>
         <input type="text"
                class="form-control"
                placeholder={{$root.lang.data.placeholder_country}} 
                id="country"
-               ng-model="sign_up.orszag"
-               required>
+               ng-model="sign_up.orszag">
       </div>
 
       <!-- Jelszó megjelenítése (regisztráció) -->

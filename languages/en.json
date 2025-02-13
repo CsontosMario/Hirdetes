@@ -48,5 +48,7 @@
   "placeholder_radress":"Enter your home address",
   "placeholder_country":"Enter the country where you live",
   "exit_question":"Are you sure you want to log out of this account?",
-  "registered":"Registration successful!"
+  "registered":"Registration successful!",
+  "optional":"Optional",
+  "wrong_password":"The two entered passwords do not match!"
 }

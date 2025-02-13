@@ -165,24 +165,32 @@
 
     //Register controller
     .controller('registerController', [
+      '$rootScope',
       '$scope',
       'http',
-      function ($scope, http) {
+      function ($rootScope,$scope, http) {
         console.log('Register controller...');
 
         $scope.register = () => {
 
-          http.request({
-            url: "./php/register.php",
-            data: $scope.sign_up
-          })
-          .then(result => {
-            $scope.data = result
-            $scope.$applyAsync()
-            alert("Sikeres a regisztráció!");
-          })
-          .catch(e => console.log(e))
+          if ($scope.confirm_password === $scope.sign_up.jelszo) {
 
+            http.request({
+              url: "./php/register.php",
+              data: $scope.sign_up
+            })
+            .then(result => {
+              $scope.data = result
+              $scope.$applyAsync()
+              alert("Sikeres a regisztráció!");
+            })
+            .catch(e => console.log(e))
+
+          } else {
+            alert($rootScope.lang.data.wrong_password)
+          }
+
+          
 
           //console.log($scope.sign_up); //Ideiglenesen van benn!!!!
         }
