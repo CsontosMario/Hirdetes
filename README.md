@@ -23,8 +23,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Hibák:
 
-    -Egyik különleges oldal sem tesz át a fő oldalra ha be/ki jelentkezünk. <= Javítási állapot: 0% (nincs kész)
-    -A weboldalon a title és a $scope.lang.data.language valamiért "undefined"-ként van mutatva.
+    -Egyik különleges oldal sem tesz át a fő oldalra ha ki jelentkezünk. <= Javítási állapot: 0% (nincs kész)
     
   # QOL szükségletek:
 
