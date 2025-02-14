@@ -4,16 +4,16 @@
          ng-repeat="zoldseg in zoldsegek track by $index"
          ng-show="zoldsegek">
       <div class="card-header">
-        <h1 class="text-center">{{zoldseg.megnevezes}}</h1>
+        <h1 class="text-center">{{$root.lang.data[zoldseg.megnevezes]}}</h1>
       </div>
       <div class="card-body">
         <img ng-src="./img/termekek/{{zoldseg.kep}}"
              class="card-img-top"
              alt="{{zoldseg.megnevezes}}">
-        <h5 class="card-title">{{zoldseg.megnevezes}}</h5>
+        <h5 class="card-title">{{$root.lang.data[zoldseg.megnevezes]}}</h5>
         <p class="card-text">{{$root.lang.data.description}}: {{zoldseg.leiras}}</p>
         <p class="card-text">{{$root.lang.data.price}}: {{zoldseg.ar}} Ft</p>
-        <p class="card-text">{{$root.lang.data.packaging}}: {{$root.lang.data.packaging_by_head}}</p>
+        <p class="card-text">{{$root.lang.data.packaging}}: {{$root.lang.data[zoldseg.kiszereles]}}</p>
         <a ui-sref="cart"
            class="btn btn-primary">
           <i class="fa-solid fa-wallet"></i>

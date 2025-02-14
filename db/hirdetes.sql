@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 14. 12:17
+-- Létrehozás ideje: 2025. Feb 14. 12:28
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -193,16 +193,16 @@ CREATE TABLE `zoldsegek` (
 --
 
 INSERT INTO `zoldsegek` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kiszereles`) VALUES
-(1, 'potato.jpg', 'Burgonya (Balatoni-rózsa)', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'ömlesztve'),
-(2, 'carrot.jpg', 'Sárgarépa (Matador)', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'ömlesztve'),
-(3, 'sorrel.jpg', 'Kerti Sóska (Pallagi nagylevelű)', 'Erőteljes levelű.  Magyar termék.', 400, 'csomagonként'),
-(4, 'spinach.jpg', 'Spenót', 'Közepes nagyságú levelek. Magyar termék.', 500, 'csomagonként'),
-(5, 'spring_onion.jpg', 'Újhagyma', 'Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.', 250, 'csomagonként'),
-(6, 'corn.jpg', 'Kukorica (Csemege)', 'Közepes szemű, édes, főzésre kitűnő. Magyar termék.', 200, 'darabonként'),
-(7, 'pea.jpg', 'Zöldborsó (Zsuzsi)', 'Közepes nagyságú szemek, zsengék és alkalmas levesekheez, főzelékekhez, salátákhoz. Magyar termék.', 1000, 'ömlesztve'),
-(8, 'kohlrabi.jpg', 'Karalábé', 'Zsenge, fehér. Magyar termék.', 450, 'darabonként'),
-(9, 'pepper.jpg', 'Paprika (Fehérözön)', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'ömlesztve'),
-(10, 'cauliflower.jpg', 'Karfiol', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'fejenként');
+(1, 'potato.jpg', 'potato', 'Közepes liszttartalmú, sütésre és főzésre is alkalmas. Magyar termék.', 1000, 'packaging_in_bulk'),
+(2, 'carrot.jpg', 'carrot', 'Síma hengeres, közepes hosszúságú.  Magyar termék.', 400, 'packaging_in_bulk'),
+(3, 'sorrel.jpg', 'sorrel', 'Erőteljes levelű.  Magyar termék.', 400, 'packaging_per_package'),
+(4, 'spinach.jpg', 'spinach', 'Közepes nagyságú levelek. Magyar termék.', 500, 'packaging_per_package'),
+(5, 'spring_onion.jpg', 'spring_onion', 'Hosszúkás fejű, alkalmas friss fogyasztásra és salátákhoz. Magyar termék.', 250, 'packaging_per_package'),
+(6, 'corn.jpg', 'corn', 'Közepes szemű, édes, főzésre kitűnő. Magyar termék.', 200, 'packaging_piece_by_piece'),
+(7, 'pea.jpg', 'pea', 'Közepes nagyságú szemek, zsengék és alkalmas levesekheez, főzelékekhez, salátákhoz. Magyar termék.', 1000, 'packaging_in_bulk'),
+(8, 'kohlrabi.jpg', 'kohlrabi', 'Zsenge, fehér. Magyar termék.', 450, 'packaging_piece_by_piece'),
+(9, 'pepper.jpg', 'pepper', 'Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.', 800, 'packaging_in_bulk'),
+(10, 'cauliflower.jpg', 'cauliflower', 'Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.', 800, 'packaging_by_head');
 
 -- --------------------------------------------------------
 
