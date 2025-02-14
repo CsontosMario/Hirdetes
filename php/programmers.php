@@ -6,10 +6,12 @@ require_once("../../common/php/environment.php");
 
 $db = new Database();
 
-$query = "SELECT `id`, `nev`, 
+$query = "SELECT `id`, 
+                 `nev`, 
                  `szuletesiev`, 
                  `munkanev`, 
-                 `kep` 
+                 `kep`,
+                 `profesion`
             FROM `programozoink`";
 
 $result = $db->execute($query);

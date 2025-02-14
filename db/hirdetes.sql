@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 13. 12:25
+-- Létrehozás ideje: 2025. Feb 14. 12:17
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -103,16 +103,17 @@ CREATE TABLE `programozoink` (
   `rolaroviden` text NOT NULL,
   `rola` text NOT NULL,
   `munkanev` varchar(50) NOT NULL,
-  `kep` varchar(50) NOT NULL
+  `kep` varchar(50) NOT NULL,
+  `profesion` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `programozoink`
 --
 
-INSERT INTO `programozoink` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
-(1, 'Vékony Marcell', 'Makó', 2003, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának tagja vagyok.', 'marcell.jpg'),
-(2, 'Csontos Márió Dávid', 'Makó', 2005, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának vezetője vagyok.', 'mario_temporary_picture.jpg');
+INSERT INTO `programozoink` (`id`, `nev`, `szuletesihely`, `szuletesiev`, `rolaroviden`, `rola`, `munkanev`, `kep`, `profesion`) VALUES
+(1, 'Vékony Marcell', 'Makó', 2003, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának tagja vagyok.', 'marcell.jpg', 'iAmSoftwareDevTester'),
+(2, 'Csontos Márió Dávid', 'Makó', 2005, '', 'Szoftverfejlesztő- és tesztelő vagyok', 'A weboldal fejlesztői csapatának vezetője vagyok.', 'mario_temporary_picture.jpg', 'kohlrabi');
 
 -- --------------------------------------------------------
 
