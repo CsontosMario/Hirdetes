@@ -35,6 +35,9 @@ body {
   background-color: red !important;
 }
 form{
+  border-radius: 50px;
+}
+.cart_form{
   margin: 0;
   position: absolute;
   top: 50%;
