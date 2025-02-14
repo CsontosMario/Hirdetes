@@ -134,7 +134,7 @@
       'http',
       function ($scope, http) {
 
-        http.request('./data/our_farmers.json')
+        http.request('./php/producers.php')
         .then(result => {
           $scope.farmers = result;
           $scope.$applyAsync();
@@ -151,7 +151,7 @@
       'http',
       function ($scope, http) {
 
-        http.request('./data/our_programmers.json')
+        http.request('./php/programmers.php')
         .then(result => {
           $scope.programmers = result;
           $scope.$applyAsync();

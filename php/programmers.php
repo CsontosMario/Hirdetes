@@ -6,16 +6,13 @@ require_once("../../common/php/environment.php");
 
 $db = new Database();
 
-$args = Util::getArgs();
-
 $query = "SELECT `id`, `nev`, 
-                 `szuletesihely`, `szuletesiev`, 
-                 `rolaroviden`, `rola`, 
+                 `szuletesiev`, 
                  `munkanev`, 
                  `kep` 
-          FROM `programozoink`";
+            FROM `programozoink`";
 
-$result = $db->preparateInsert($query);
+$result = $db->execute($query);
 
 $db = null;
 
