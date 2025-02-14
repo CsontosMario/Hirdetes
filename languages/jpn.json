@@ -79,5 +79,10 @@
   "pay_msg":"ご購入ありがとうございます！",
   "transfer":"銀行振込",
   "credit_card":"銀行カード",
-  "ready_money":"現金"
+  "ready_money":"現金",
+  "hungarian":"ハンガリー語",
+  "english":"英語",
+  "german":"ドイツ語",
+  "japanese":"日本語",
+  "slovak":"スロバキア語"
 }

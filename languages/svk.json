@@ -79,5 +79,10 @@
   "pay_msg":"Ďakujeme za váš nákup!",
   "transfer":"Bankový prevod",
   "credit_card":"Banková karta",
-  "ready_money":"Hotovosť"
+  "ready_money":"Hotovosť",
+  "hungarian":"maďarský",
+  "english":"anglicky",
+  "german":"nemecký",
+  "japanese":"japonsko",
+  "slovak":"slovenský"
 }

@@ -79,5 +79,10 @@
   "pay_msg":"Köszönjük a vásárlást!",
   "transfer":"Banki átutalás",
   "credit_card":"Bankkártya",
-  "ready_money":"Készpénz"
+  "ready_money":"Készpénz",
+  "hungarian":"magyar",
+  "english":"angol",
+  "german":"német",
+  "japanese":"japán",
+  "slovak":"szlovák"
 }

@@ -79,5 +79,10 @@
   "pay_msg":"Thank you for your purchase!",
   "transfer":"Bank transfer",
   "credit_card":"Bank card",
-  "ready_money":"Cash money"
+  "ready_money":"Cash money",
+  "hungarian":"hungarian",
+  "english":"english",
+  "german":"german",
+  "japanese":"japanese",
+  "slovak":"slovak"
 }
