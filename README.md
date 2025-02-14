@@ -17,12 +17,8 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
   # Feladaatok:
 
     -Az adatbázisban a felhasználókat tartalmazó táblában a felhasználóknak egyedi azonosítókat kell létrehozni <= Állapot: 100% (kész)
-    -Az adatbázisba email-címeket berakni + bejelentkezésnél emailt kérjen az oldal.
-                        /\
-                        ||
-    -Az előző feladatot automatizálni új felhasználóknál.     <= Állapot: 0% (nincs kész)
-    -Különböző nyelvekre lefordítani a weboldalt              <= Állapot: 50% (folyamatban)
-    -Megcsinálni a nyelv váltást                              <= Állapot: 90% (kész)
+    -Különböző nyelvekre lefordítani a weboldalt              <= Állapot: 90% (folyamatban)
+    -Megcsinálni a nyelv váltást                              <= Állapot: 100% (kész)
     -
 
   # Hibák:
@@ -32,8 +28,9 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
     
   # QOL szükségletek:
 
-    -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 0% (nincs kész)
+    -bejelentkezés megtartása ha frissítjük az oldalt <= Állapot: 100% (kész)
     -regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
+    -Bejelentkezés után egyből a főoldalra tegyen <= Állapot: 0% (nincs kész)
 
 - [] Adatbázis átnézése 
   - fizetes tabla azonosító character legyen
