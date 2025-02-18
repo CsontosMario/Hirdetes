@@ -16,8 +16,8 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Feladaatok:
 
-    -Különböző nyelvekre lefordítani a weboldalt              <= Állapot: 95% (folyamatban)
-    -Megcsinálni a nyelv váltást                              <= Állapot: 100% (kész)
+    -Különböző nyelvekre lefordítani a weboldalt   <= Állapot: 95% (folyamatban)
+    -Megcsinálni a nyelv váltást                   <= Állapot: 100% (kész)
     -
 
   # Hibák:
@@ -30,5 +30,5 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
     -Bejelentkezés után egyből a főoldalra tegyen <= Állapot: 0% (nincs kész)
 
 - [] Adatbázis átnézése 
-  - Kosár dátum -> datetime
-- [] Tagolás
+  - Kosár dátum -> datetime   <= Állapot: 0% (nincs kész)
+- Tagolás                     <= Állapot: 100% (kész)

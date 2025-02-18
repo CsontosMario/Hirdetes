@@ -8,7 +8,6 @@
       '$stateProvider',
       '$urlRouterProvider',
       function ($stateProvider, $urlRouterProvider) {
-
         $stateProvider
           .state('root', {
             abstract: true,
@@ -75,7 +74,6 @@
           })
 
         $urlRouterProvider.otherwise('/');
-
       }
     ])
 
@@ -84,13 +82,10 @@
       '$state',
       'util',
       function ($rootScope, $state, util) {
-
         $rootScope.user       = {};
         $rootScope.user.id    = util.localStorage('get', 'loginID');
         $rootScope.user.name  = util.localStorage('get', 'loginName');
-
         console.log('Run...' + $state.current.name);
-
         $rootScope.kilep = () => {
           if (confirm($rootScope.lang.data.exit_question)) {
             $rootScope.user.id = null;
@@ -123,7 +118,6 @@
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-
         console.log('Products controller...');
       }
     ])
@@ -133,14 +127,12 @@
       '$scope',
       'http',
       function ($scope, http) {
-
         http.request('./php/producers.php')
         .then(result => {
           $scope.farmers = result;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-
         console.log('About_our_farmers controller...');
       }
     ])
@@ -150,15 +142,12 @@
       '$scope',
       'http',
       function ($scope, http) {
-
         http.request('./php/programmers.php')
         .then(result => {
           $scope.programmers = result;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-
-
         console.log('Products controller...');
       }
     ])
@@ -170,11 +159,8 @@
       'http',
       function ($rootScope,$scope, http) {
         console.log('Register controller...');
-
         $scope.register = () => {
-
           if ($scope.confirm_password === $scope.sign_up.jelszo) {
-
             http.request({
               url: "./php/register.php",
               data: $scope.sign_up
@@ -185,16 +171,10 @@
               alert($rootScope.lang.data.registered);
             })
             .catch(e => console.log(e))
-
           } else {
             alert($rootScope.lang.data.wrong_password)
           }
-
-          
-
-          //console.log($scope.sign_up); //Ideiglenesen van benn!!!!
         }
-
       }
     ])
 
@@ -206,7 +186,6 @@
       'util',
       function ($rootScope, $scope, http, util) {
         console.log('Login controller...');
-
         $scope.login = () => {
           http.request({
             url: "./php/felhasznalo.php",
@@ -215,7 +194,6 @@
           .then(result => {
               $rootScope.user.id = result.felhasznaloID;
               $rootScope.user.name = result.nev;
-
               util.localStorage('set', 'loginID', $rootScope.user.id);
               util.localStorage('set', 'loginName', $rootScope.user.name);
               alert($rootScope.lang.data.sign_in_success_1 + "\n" + $rootScope.lang.data.sign_in_success_2 + " " + $rootScope.user.name + "!");
@@ -223,7 +201,6 @@
           })
           .catch(e => alert(e))
         }
-
       }
     ])
 
@@ -232,42 +209,31 @@
       '$rootScope',
       '$scope',
       function ($rootScope, $scope) {
-
         // Set local methods
         let methods = {
-
           // Initialize
           init: () => {
-
             // Get available languages
             fetch('./languages/available.json')
               .then(response => response.json())
               .then(response => {
-
                 // Set language
                 $rootScope.lang = {
                   available: response
                 };
-
                 // Get last language identifier
                 let langID = localStorage.getItem('languageID');
-
                 // When exist, then change html lang attribute value
                 if (langID) document.documentElement.lang = langID;
-
                 // Set selected language identifier
                 $rootScope.lang.id = document.documentElement.lang;
-
                 // Get actual language index
                 $rootScope.lang.index = methods.indexByKeyValue(
                   $rootScope.lang.available, 'id', $rootScope.lang.id);
-
                 // Get language
                 methods.getLanguage().then(() => {
-
                   // Change html title
 								  document.title = $rootScope.lang.data.language;
-                  
                 });
               })
               .catch(error => console.log(error));
@@ -294,38 +260,28 @@
           // Index array of object key value
 					indexByKeyValue: (a, k, v) => a.findIndex(o => o[k] === v)
         }
-
         // Set scope methods
         $scope.methods = {
-
           // Language changed
 					languageChanged: (langID) => {
-
 						// Set selected language identifier
 						$rootScope.lang.id = langID;
-
 						// Save selected language identifier to local storige
 						localStorage.setItem('languageID', langID);
-
 						// Change html lang attribute value
 						document.documentElement.lang = langID;
-
 						// Get selected language index
 						$rootScope.lang.index = methods.indexByKeyValue(
 							$rootScope.lang.available, 'id', $rootScope.lang.id);
-
 						// Get language
 						methods.getLanguage().then(() => {
-
 							// Change html title
 							document.title = $rootScope.lang.data.language;
 						});
 					}
         };
-
         // Initialize
 				methods.init();
-
       }
     ])
 
@@ -344,18 +300,15 @@
       '$scope',
       'http',
       function ($rootScope, $scope, http) {
-
         http.request("./php/cart.php")
         .then(result => {
             $scope.pay_types = result;
             $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-
         $scope.pay = ()=>{
           alert($rootScope.lang.data.pay_msg);
         }
-
         console.log('Cart controller...');
       }
     ])

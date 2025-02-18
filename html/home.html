@@ -1,80 +1,94 @@
 <div class="container">
-    
-    <!-- Carousel -->
-    <div class="row mt-5" 
-         ng-init="discount=['01_10percent.png',
-                            '02_25percent.png',
-                            '03_50percent.png',
-                            '04_75percent.png',
-                            '05_90percent.png'];
-                 buttons=['prev', 'next']">
-        <div id="carouselExampleCaptions" class="carousel slide">
 
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-                <button type="button"
-                        data-bs-target="#carouselExampleCaptions" 
-                        data-bs-slide-to="{{$index}}" 
-                        ng-class="{'active': $index === 0}"
-                        ng-repeat="d in discount track by $index"
-                        aria-current="{{$index === 0 ? 'true': 'false'}}"
-                        aria-label="Slide {{$index+1}}">
-                </button>
-            </div>
+  <!-- Carousel -->
+  <div class="row mt-5"
+       ng-init="discount=['01_10percent.png',
+                          '02_25percent.png',
+                          '03_50percent.png',
+                          '04_75percent.png',
+                          '05_90percent.png'];
+                buttons=['prev', 'next']">
+    <div id="carouselExampleCaptions" 
+         class="carousel slide">
 
-            <!-- Images -->
-            <div class="carousel-inner">
-                <div class="carousel-item"
-                     ng-class="{'active': $index === 0}"
-                     ng-repeat="d in discount track by $index">
-                    <img ng-src="./img/discounts/{{d}}" class="d-block w-50 mx-auto" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>{{$index+1}}{{$root.lang.data.percent}}</h5>
-                        <p>{{$root.lang.data.discount_available}}</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" 
+                data-bs-target="#carouselExampleCaptions" 
+                data-bs-slide-to="{{$index}}"
+                ng-class="{'active': $index === 0}" 
+                ng-repeat="d in discount track by $index"
+                aria-current="{{$index === 0 ? 'true': 'false'}}" 
+                aria-label="Slide {{$index+1}}">
+        </button>
+      </div>
 
-            <!-- Buttons -->
-            <button class="carousel-control-{{x}}" 
-                    type="button" 
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="{{x}}"
-                    ng-repeat="x in buttons">
-                <span class="carousel-control-{{x}}-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">{{x}}</span>
-            </button>
+      <!-- Images -->
+      <div class="carousel-inner">
+        <div class="carousel-item" 
+             ng-class="{'active': $index === 0}" 
+             ng-repeat="d in discount track by $index">
+          <img ng-src="./img/discounts/{{d}}" 
+               class="d-block 
+                      w-50 
+                      mx-auto" 
+               alt="...">
+          <div class="carousel-caption 
+                      d-none 
+                      d-md-block">
+            <h5>{{$index+1}}{{$root.lang.data.percent}}</h5>
+            <p>{{$root.lang.data.discount_available}}</p>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Hívási fogadó óra táblázat -->
-    <div class="row justify-content-center mt-5">
-        <h1 class="text-center">
-            <i class="fa-solid fa-clock"></i>
-             {{$root.lang.data.callHours}}
-        </h1>
-        <table class="table table-bordered table-striped w-auto">
-            <thead>
-                <tr class="text-capitalize">
-                    <th>{{$root.lang.data.day}}</th>
-                    <th>{{$root.lang.data.opening}}</th>
-                    <th>{{$root.lang.data.closing}}</th>
-                </tr>
-            </thead>
-            <tbody ng-init="days=['mondayToFriday','saturdayToSunday']">
-                <tr ng-repeat="x in days"
-                    ng-init="availability_open = ''"
-                    ng-init="availability_close = ''">
-                    <td>{{$root.lang.data[x]}}</td>
-                    <td ng-if="x == 'mondayToFriday' ? availability_open = '9:00' : availability_open = '-'">
-                        {{availability_open}}
-                    </td>
-                    <td ng-if="x == 'mondayToFriday' ? availability_close = '15:00' : availability_close = '-'">
-                        {{availability_close}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+      <!-- Buttons -->
+      <button class="carousel-control-{{x}}" 
+              type="button" 
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="{{x}}" 
+              ng-repeat="x in buttons">
+        <span class="carousel-control-{{x}}-icon" 
+              aria-hidden="true"></span>
+        <span class="visually-hidden">{{x}}</span>
+      </button>
     </div>
-    
+  </div>
+
+  <!-- Hívási fogadó óra táblázat -->
+  <div class="row 
+              justify-content-center 
+              mt-5">
+    <h1 class="text-center">
+      <i class="fa-solid 
+                fa-clock"></i>
+      {{$root.lang.data.callHours}}
+    </h1>
+    <table class="table 
+                  table-bordered 
+                  table-striped 
+                  w-auto">
+      <thead>
+        <tr class="text-capitalize">
+          <th>{{$root.lang.data.day}}</th>
+          <th>{{$root.lang.data.opening}}</th>
+          <th>{{$root.lang.data.closing}}</th>
+        </tr>
+      </thead>
+      <tbody ng-init="days=['mondayToFriday','saturdayToSunday']">
+        <tr ng-repeat="x in days"
+            ng-init="availability_open = ''" 
+            ng-init="availability_close = ''">
+          <td>{{$root.lang.data[x]}}</td>
+          <td ng-if="x == 'mondayToFriday' ? availability_open = '9:00' : availability_open = '-'">
+            {{availability_open}}
+          </td>
+          <td ng-if="x == 'mondayToFriday' ? availability_close = '15:00' : availability_close = '-'">
+            {{availability_close}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>

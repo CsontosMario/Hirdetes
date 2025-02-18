@@ -1,75 +1,81 @@
 <div class="container">
-  <div class="row justify-content-center mt-5">
-
-    <form class="w-auto p-3"
-          style="border:1px solid #ccc"
+  <div class="row 
+              justify-content-center 
+              mt-5">
+    <form class="w-auto 
+                 p-3" 
+          style="border:1px solid #ccc" 
           name="sign_in_form">
-
       <div class="mb-3">
-        <h1 class="text-center pb-3">
-          <i class="fa-solid fa-right-to-bracket me-1"></i>
-           {{$root.lang.data.login}}
+        <h1 class="text-center 
+                   pb-3">
+          <i class="fa-solid 
+                    fa-right-to-bracket 
+                    me-1"></i>
+          {{$root.lang.data.login}}
         </h1>
       </div>
 
       <!-- Név (bejelentkezés) -->
       <div class="mb-3">
-        <label for="email"
+        <label for="email" 
                class="form-label">
           <b>
-            <i class="fa-solid fa-signature"></i>
+            <i class="fa-solid 
+                      fa-signature"></i>
             {{$root.lang.data.email}}
           </b>
         </label>
-        <input type="text"
-               class="form-control"
-               id="email"
-               ng-model="sign_in.email"
+        <input type="text" 
+               class="form-control" 
+               id="email" 
+               ng-model="sign_in.email" 
                required>
       </div>
 
       <!-- Jelszó (bejelentkezés) -->
       <div class="mb-3">
-        <label for="password"
+        <label for="password" 
                class="form-label">
           <b>
-            <i class="fa-solid fa-lock"></i>
+            <i class="fa-solid 
+                      fa-lock"></i>
             {{$root.lang.data.password}}
           </b>
         </label>
-        <input type="{{model.showPassword ? 'text' : 'password'}}"
-               class="form-control"
-               id="password"
-               ng-model="sign_in.jelszo"
-               required>
+        <input type="{{model.showPassword ? 'text' : 'password'}}" class="form-control" id="password"
+          ng-model="sign_in.jelszo" required>
       </div>
 
       <!-- Jelszó mutatása (bejelentkezés) -->
-      <div class="mb-3 form-check">
-        <input type="checkbox"
-               class="form-check-input"
-               ng-init="model.showPassword=false"
+      <div class="mb-3 
+                  form-check">
+        <input type="checkbox" 
+               class="form-check-input" 
+               ng-init="model.showPassword=false" 
                ng-model="model.showPassword"
                id="showPassword">
         <label class="form-check-label"
                for="showPassword">
-          <i class="fa-solid fa-lock-open"></i>
+          <i class="fa-solid 
+                    fa-lock-open"></i>
           {{$root.lang.data.showPassword}}
         </label>
       </div>
 
       <!-- Bejelentkezés (gomb) -->
       <div class="mb-3">
-        <button type="button"
-                class="btn btn-primary"
-                ng-disabled="sign_in_form.$invalid"
+        <button type="button" 
+                class="btn 
+                       btn-primary" 
+                ng-disabled="sign_in_form.$invalid" 
                 ng-click="login()">
-          <i class="fa-solid fa-right-to-bracket me-1"></i>
+          <i class="fa-solid 
+                    fa-right-to-bracket 
+                    me-1"></i>
           {{$root.lang.data.loginToAccount}}
         </button>
       </div>
-
     </form>
-
   </div>
 </div>

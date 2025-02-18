@@ -1,42 +1,51 @@
 <nav class="navbar navbar-expand-xl bg-body-tertiary">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Menüpontok -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-center" 
+         id="navbarNav">
 
       <ul class="navbar-nav">
         <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link"
-             ui-sref="home"
+          <a class="nav-link" 
+             ui-sref="home" 
              ui-sref-active="active">
             <i class="fa-solid fa-house me-1"></i>
-             {{$root.lang.data.home}}
+            {{$root.lang.data.home}}
           </a>
         </li>
 
         <!-- Products -->
         <li class="nav-item">
-          <a class="nav-link"
-             ui-sref="products"
+          <a class="nav-link" 
+             ui-sref="products" 
              ui-sref-active="active">
-           <i class="fa-solid fa-wheat-awn"></i>
+            <i class="fa-solid 
+                      fa-wheat-awn"></i>
             {{$root.lang.data.products}}
           </a>
         </li>
 
         <!-- Dropdown -> Fiók és Kosár (button) -->
-        <li class="nav-item dropdown" data-bs-auto-close="true">
-          <a class="nav-link dropdown-toggle"
-             href="#"
-             role="button"
-             data-bs-toggle="dropdown"
+        <li class="nav-item dropdown" 
+            data-bs-auto-close="true">
+          <a class="nav-link 
+                    dropdown-toggle" 
+             href="#" 
+             role="button" 
+             data-bs-toggle="dropdown" 
              aria-expanded="false">
-            <i class="fa-solid fa-user-large"></i> 
+            <i class="fa-solid fa-user-large"></i>
             {{$root.lang.data.accountAndCart}}
           </a>
 
@@ -45,93 +54,122 @@
 
             <!-- Cím -->
             <li>
-              <h4 class="text-center fw-bold text-decoration-underline">
-                <i class="fa-solid fa-id-badge"></i>
-                 {{$root.lang.data.account}}
+              <h4 class="text-center 
+                         fw-bold 
+                         text-decoration-underline">
+                <i class="fa-solid 
+                          fa-id-badge"></i>
+                {{$root.lang.data.account}}
               </h4>
             </li>
 
             <!-- Regisztráció -->
             <li>
               <a class="dropdown-item"
-                 ui-sref="register"
+                 ui-sref="register" 
                  ui-sref-active="active">
-                <i class="fa-solid fa-id-card me-1"></i>
-                 {{$root.lang.data.registration}}
+                <i class="fa-solid 
+                          fa-id-card me-1"></i>
+                {{$root.lang.data.registration}}
               </a>
             </li>
 
             <!-- Bejelentkezés -->
             <li ng-show="!$root.user.id">
-              <a class="dropdown-item"
+              <a class="dropdown-item" 
                  ui-sref="login"
                  ui-sref-active="active">
-                <i class="fa-solid fa-right-to-bracket me-1"></i>
-                 {{$root.lang.data.login}}
+                <i class="fa-solid 
+                          fa-right-to-bracket 
+                          me-1"></i>
+                {{$root.lang.data.login}}
               </a>
             </li>
 
             <!-- különítő sor 1 -->
-            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
+            <li ng-show="$root.user.id">
+              <hr class="dropdown-divider">
+            </li>
 
             <!-- Profil cím -->
             <li ng-show="$root.user.id">
-              <h4 class="text-center fw-bold text-decoration-underline">
-                <i class="fa-solid fa-id-badge me-1"></i>
-                 {{$root.lang.data.profile}}
+              <h4 class="text-center 
+                         fw-bold 
+                         text-decoration-underline">
+                <i class="fa-solid 
+                          fa-id-badge 
+                          me-1"></i>
+                {{$root.lang.data.profile}}
               </h4>
             </li>
 
             <!-- Profil -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item"
-                 ui-sref="profil"
+              <a class="dropdown-item" 
+                 ui-sref="profil" 
                  ui-sref-active="active">
-                <i class="fa-solid fa-id-badge"></i>
-                 {{$root.user.name}}
+                <i class="fa-solid 
+                          fa-id-badge"></i>
+                {{$root.user.name}}
               </a>
             </li>
 
             <!-- különítő sor 2 -->
-            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
+            <li ng-show="$root.user.id">
+              <hr class="dropdown-divider">
+            </li>
 
             <!-- Kosár cím -->
             <li ng-show="$root.user.id">
-              <h4 class="text-center fw-bold text-decoration-underline">
-                <i class="fa-solid fa-cart-shopping me-1"></i>
-                 {{$root.lang.data.cart}}
+              <h4 class="text-center 
+                         fw-bold 
+                         text-decoration-underline">
+                <i class="fa-solid 
+                          fa-cart-shopping 
+                          me-1"></i>
+                {{$root.lang.data.cart}}
               </h4>
             </li>
 
             <!-- Kosár (gomb) -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item"
+              <a class="dropdown-item" 
                  ui-sref="cart"
                  ui-sref-active="active">
-              <i class="fa-solid fa-cart-shopping me-1"></i>
-                 {{$root.lang.data.cart}}
+                <i class="fa-solid 
+                          fa-cart-shopping 
+                          me-1"></i>
+                {{$root.lang.data.cart}}
               </a>
             </li>
 
             <!-- különítő sor 3 -->
-            <li ng-show="$root.user.id"><hr class="dropdown-divider"></li>
+            <li ng-show="$root.user.id">
+              <hr class="dropdown-divider">
+            </li>
 
             <!-- Kijelentkezés cím -->
             <li ng-show="$root.user.id">
-              <h4 class="text-center fw-bold text-decoration-underline">
-                <i class="fa-solid fa-right-from-bracket me-1"></i>
+              <h4 class="text-center 
+                         fw-bold 
+                         text-decoration-underline">
+                <i class="fa-solid 
+                          fa-right-from-bracket 
+                          me-1"></i>
                 {{$root.lang.data.logOut}}
               </h4>
             </li>
 
             <!-- Kijelentkezés (gomb) -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item"
-                 href="#"
-                 ui-sref-active="active"
+              <a class="dropdown-item" 
+                 href="#" 
+                 ui-sref-active="active" 
                  ng-click="$root.kilep()">
-                <i class="fa-solid fa-right-from-bracket me-1"></i>
-                 {{$root.lang.data.logOut}}
+                <i class="fa-solid 
+                          fa-right-from-bracket 
+                          me-1"></i>
+                {{$root.lang.data.logOut}}
               </a>
             </li>
 
@@ -141,56 +179,63 @@
 
         <!-- Termelőinkről -->
         <li class="nav-item">
-          <a class="nav-link"
-             ui-sref="aboutOurFarmers"
+          <a class="nav-link" 
+             ui-sref="aboutOurFarmers" 
              ui-sref-active="active">
-            <i class="fa-solid fa-plant-wilt"></i>
-             {{$root.lang.data.aboutOurProducers}}
+            <i class="fa-solid 
+                      fa-plant-wilt"></i>
+            {{$root.lang.data.aboutOurProducers}}
           </a>
         </li>
 
         <!-- Fejlesztőinkről -->
         <li class="nav-item">
-          <a class="nav-link"
-             ui-sref="aboutUs"
+          <a class="nav-link" 
+             ui-sref="aboutUs" 
              ui-sref-active="active">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid 
+                      fa-code"></i>
             {{$root.lang.data.aboutOurProgrammers}}
           </a>
         </li>
 
         <!-- Dropdown -> Nyelvek (button) -->
-        <li class="nav-item dropdown ms-5" data-bs-auto-close="true">
-          <a class="nav-link dropdown-toggle"
-             role="button"
-             data-bs-toggle="dropdown"
+        <li class="nav-item 
+                   dropdown ms-5" 
+            data-bs-auto-close="true">
+          <a class="nav-link 
+                    dropdown-toggle" 
+             role="button" 
+             data-bs-toggle="dropdown" 
              aria-expanded="false">
             <img class="me-1" 
                  height="32" 
-                 alt="flag"
+                 alt="flag" 
                  ng-src="./img/icons/languages/{{lang.available[lang.index].img}}">
-             {{$root.lang.data.languages}}
+            {{$root.lang.data.languages}}
           </a>
 
           <!-- Dropdown -> Nyelvek (menüpontok) -->
-          <ul class="dropdown-menu dropdown-menu-end">
+          <ul class="dropdown-menu 
+                     dropdown-menu-end">
 
             <!-- Nyelvek kiválasztása -->
-            <li class="nav-item"
+            <li class="nav-item" 
                 ng-repeat="x in lang.available"
-								ng-if="x.id !== lang.available[lang.index].id && x.valid"
-								ng-click="methods.languageChanged(x.id)">
-							<a class="dropdown-item cursor-pointer">
-								<img class="me-1" 
-										height="32" 
-										alt="flag"
-										ng-src="./img/icons/languages/{{x.img}}">
-								<span class="text-capitalize">{{x.name}}</span>
-								<span ng-if="x.name !== x.local_name">
-									({{x.local_name}})
-								</span> 
-							</a>
-						</li>
+                ng-if="x.id !== lang.available[lang.index].id && x.valid" 
+                ng-click="methods.languageChanged(x.id)">
+              <a class="dropdown-item 
+                        cursor-pointer">
+                <img class="me-1" 
+                     height="32" 
+                     alt="flag" 
+                     ng-src="./img/icons/languages/{{x.img}}">
+                <span class="text-capitalize">{{x.name}}</span>
+                <span ng-if="x.name !== x.local_name">
+                  ({{x.local_name}})
+                </span>
+              </a>
+            </li>
           </ul>
         </li>
       </ul>

@@ -1,19 +1,70 @@
 <div class="container">
-  <div class="row my-5">
-    <div class="card text-center col-sm-6 mb-3 mb-sm-0"
-      ng-repeat="website_creator in programmers track by $index">
+  <div class="row 
+              my-5">
+    <div class="card 
+                text-center 
+                col-sm-6 
+                mb-3 
+                mb-sm-0"
+         ng-repeat="website_creator in programmers track by $index">
+      
+      <!-- Card header -->
       <div class="card-header">
-        <h1 class="text-center">{{website_creator.nev}}</h1>
+
+        <!--  -->
+        <h1 class="text-center">
+          {{website_creator.nev}}
+        </h1>
       </div>
+
+      <!-- Card body -->
       <div class="card-body">
-        <img ng-src="./img/fejlesztok/{{website_creator.kep}}" class="card-img-top" alt="{{website_creator.nev}}">
-        <h5 class="card-title">{{$root.lang.data[website_creator.munkanev]}}</h5>
-        <h4 class="card-text text-start">{{$root.lang.data.profession_title}}: <span class="not_bold fs-6">{{$root.lang.data[website_creator.profesion]}}</span></h4>
-        <h4 class="card-text">{{$root.lang.data.about_small_title}}: <span class="not_bold fs-6">{{$root.lang.data[website_creator.rolaroviden]}}</span></h4>
-        <a href="#" class="btn btn-primary"><i class="fa-solid fa-scroll"></i> {{$root.lang.data.moreInformation}}</a>
+        <!--  -->
+        <img ng-src="./img/fejlesztok/{{website_creator.kep}}" 
+             class="card-img-top" 
+             alt="{{website_creator.nev}}">
+
+        <!--  -->
+        <h5 class="card-title">
+          {{$root.lang.data[website_creator.munkanev]}}
+        </h5>
+
+        <!--  -->
+        <h4 class="card-text 
+                   text-start">
+          {{$root.lang.data.profession_title}}: 
+          <span class="not_bold 
+                       fs-6">
+            {{$root.lang.data[website_creator.profesion]}}
+          </span>
+        </h4>
+
+        <!--  -->
+        <h4 class="card-text">
+          {{$root.lang.data.about_small_title}}: 
+          <span class="not_bold 
+                       fs-6">
+            {{$root.lang.data[website_creator.rolaroviden]}}
+          </span>
+        </h4>
+
+        <!--  -->
+        <a href="#" 
+           class="btn btn-primary">
+           <i class="fa-solid 
+                     fa-scroll"></i> 
+            {{$root.lang.data.moreInformation}}
+        </a>
       </div>
-      <div class="card-footer text-body-secondary">
-        <i class="fa-solid fa-calendar"></i> {{$root.lang.data.bornIn}}: {{website_creator.szuletesiev}}
+
+      <!-- Card footer -->
+      <div class="card-footer 
+                  text-body-secondary">
+        <!--  -->
+        <i class="fa-solid 
+                  fa-calendar"></i> 
+        {{$root.lang.data.bornIn}}: 
+        {{website_creator.szuletesiev}}
       </div>
     </div>
   </div>

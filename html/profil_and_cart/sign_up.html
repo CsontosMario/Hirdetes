@@ -1,28 +1,35 @@
 <div class="container">
-  <div class="row justify-content-center m-3">
-    
-    <form class="w-50 p-3" style="border:1px solid #ccc" name="sign_up_form">
-      
+  <div class="row 
+              justify-content-center 
+              m-3">
+    <form class="w-50 
+                 p-3" 
+          style="border:1px solid #ccc" 
+          name="sign_up_form">
       <div class="mb-3">
-        <h1 class="text-center pb-3">
-          <i class="fa-solid fa-id-card me-1"></i>
+        <h1 class="text-center 
+                   pb-3">
+          <i class="fa-solid 
+                    fa-id-card 
+                    me-1"></i>
           {{$root.lang.data.registration}}
         </h1>
       </div>
-      
+
       <!-- Név bekérése (regisztráció) -->
       <div class="mb-3">
         <label for="name">
           <b>
-            <i class="fa-solid fa-signature"></i>
+            <i class="fa-solid 
+                      fa-signature"></i>
             {{$root.lang.data.fullName}}
           </b>
         </label>
-        <input type="text"
-               class="form-control"
+        <input type="text" 
+               class="form-control" 
                placeholder={{$root.lang.data.placeholder_name}} 
                id="name"
-               ng-model="sign_up.nev"
+               ng-model="sign_up.nev" 
                required>
       </div>
 
@@ -30,15 +37,16 @@
       <div class="mb-3">
         <label for="email">
           <b>
-            <i class="fa-solid fa-at"></i>
-             {{$root.lang.data.email}}
+            <i class="fa-solid 
+                      fa-at"></i>
+            {{$root.lang.data.email}}
           </b>
         </label>
-        <input type="email"
-               class="form-control"
+        <input type="email" 
+               class="form-control" 
                placeholder={{$root.lang.data.placeholder_email}} 
                id="email"
-               ng-model="sign_up.email"
+               ng-model="sign_up.email" 
                required>
       </div>
 
@@ -46,15 +54,16 @@
       <div class="mb-3">
         <label for="password">
           <b>
-            <i class="fa-solid fa-lock"></i>
-             {{$root.lang.data.password}}
+            <i class="fa-solid 
+                      fa-lock"></i>
+            {{$root.lang.data.password}}
           </b>
         </label>
-        <input type="{{model.showPassword ? 'text' : 'password'}}"
+        <input type="{{model.showPassword ? 'text' : 'password'}}" 
                class="form-control"
                placeholder={{$root.lang.data.placeholder_password}} 
-               id="password"
-               ng-model="sign_up.jelszo"
+               id="password" 
+               ng-model="sign_up.jelszo" 
                required>
       </div>
 
@@ -63,11 +72,12 @@
       <div class="mb-3">
         <label for="password_repeat">
           <b>
-            <i class="fa-solid fa-lock"></i>
+            <i class="fa-solid 
+                      fa-lock"></i>
             {{$root.lang.data.confirmPassword}}
           </b>
         </label>
-        <input type="{{model.showPassword ? 'text' : 'password'}}"
+        <input type="{{model.showPassword ? 'text' : 'password'}}" 
                class="form-control"
                placeholder={{$root.lang.data.placeholder_repassword}} 
                id="password_repeat"
@@ -79,12 +89,14 @@
       <div class="mb-3">
         <label for="postal_code">
           <b>
-            <i class="fa-solid fa-signs-post"></i>
-             {{$root.lang.data.postalCode}} ({{$root.lang.data.optional}})
+            <i class="fa-solid 
+                      fa-signs-post"></i>
+            {{$root.lang.data.postalCode}} 
+            ({{$root.lang.data.optional}})
           </b>
         </label>
-        <input type="text"
-               class="form-control"
+        <input type="text" 
+               class="form-control" 
                placeholder={{$root.lang.data.placeholder_pcode}} 
                id="postal_code"
                ng-model="sign_up.iranyitoszam">
@@ -94,12 +106,14 @@
       <div class="mb-3">
         <label for="settlement">
           <b>
-            <i class="fa-solid fa-location-dot"></i>
-             {{$root.lang.data.settlement}} ({{$root.lang.data.optional}})
+            <i class="fa-solid 
+                      fa-location-dot"></i>
+            {{$root.lang.data.settlement}} 
+            ({{$root.lang.data.optional}})
           </b>
         </label>
-        <input type="text"
-               class="form-control"
+        <input type="text" 
+               class="form-control" 
                placeholder={{$root.lang.data.placeholder_settlment}} 
                id="settlement"
                ng-model="sign_up.telepules">
@@ -109,12 +123,14 @@
       <div class="mb-3">
         <label for="r_adress">
           <b>
-            <i class="fa-solid fa-location-pin"></i>
-             {{$root.lang.data.rAdress}} ({{$root.lang.data.optional}})
+            <i class="fa-solid 
+                      fa-location-pin"></i>
+            {{$root.lang.data.rAdress}} 
+            ({{$root.lang.data.optional}})
           </b>
         </label>
-        <input type="text"
-               class="form-control"
+        <input type="text" 
+               class="form-control" 
                placeholder={{$root.lang.data.placeholder_radress}} 
                id="r_adress"
                ng-model="sign_up.cim">
@@ -124,12 +140,14 @@
       <div class="mb-3">
         <label for="country">
           <b>
-            <i class="fa-solid fa-flag"></i>
-             {{$root.lang.data.country}} ({{$root.lang.data.optional}})
+            <i class="fa-solid 
+                      fa-flag"></i>
+            {{$root.lang.data.country}} 
+            ({{$root.lang.data.optional}})
           </b>
         </label>
-        <input type="text"
-               class="form-control"
+        <input type="text" 
+               class="form-control" 
                placeholder={{$root.lang.data.placeholder_country}} 
                id="country"
                ng-model="sign_up.orszag">
@@ -138,28 +156,30 @@
       <!-- Jelszó megjelenítése (regisztráció) -->
       <div class="mb-3 form-check">
         <input type="checkbox" 
-               class="form-check-input"  
+               class="form-check-input" 
                ng-init="model.showPassword=false" 
-               ng-model="model.showPassword"  
+               ng-model="model.showPassword"
                id="showPassword">
         <label class="form-check-label" 
                for="showPassword">
           <i class="fa-solid fa-lock-open"></i>
-           {{$root.lang.data.showPassword}}
+          {{$root.lang.data.showPassword}}
         </label>
       </div>
 
       <!-- Gomb (regisztráció) -->
       <div class="clearfix">
         <button type="button"
-                class="btn btn-primary"
-                ng-disabled="sign_up_form.$invalid"
+                class="btn 
+                       btn-primary" 
+                ng-disabled="sign_up_form.$invalid" 
                 ng-click="register()">
-          <i class="fa-solid fa-id-card me-1"></i>
-           {{$root.lang.data.registerAccount}}
+          <i class="fa-solid 
+                    fa-id-card 
+                    me-1"></i>
+          {{$root.lang.data.registerAccount}}
         </button>
       </div>
-
     </form>
   </div>
 </div>

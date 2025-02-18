@@ -5,21 +5,26 @@ nav a.nav-link.active {
   cursor: default;
   font-size: x-large;
 }
+
 footer {
   background-color: red;
 }
+
 .navbar {
   background-color: red !important;
   font-weight: bold;
   font-size: large;
 }
+
 footer a {
   color: black;
   text-decoration: none;
 }
+
 body {
   background-color: green !important;
 }
+
 .dropdown-item:active,
 .dropdown-item.active,
 .dropdown-item a.active {
@@ -31,12 +36,15 @@ body {
   font-size: large;
   font-weight: bold;
 }
+
 .dropdown-menu{
   background-color: red !important;
 }
+
 form{
   border-radius: 50px;
 }
+
 .cart_form{
   margin: 0;
   position: absolute;
@@ -45,6 +53,7 @@ form{
   transform: translate(-50%, -50%);
   border-radius: 50px;
 }
+
 .not_bold {
   font-weight: normal;
 }

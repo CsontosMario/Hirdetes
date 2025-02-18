@@ -1,21 +1,55 @@
 <div class="container">
-  <div class="row mt-5">
-    <div class="card text-center col-sm-6 mb-3 mb-sm-0"
+  <div class="row 
+              mt-5">
+    <div class="card 
+                text-center 
+                col-sm-6 
+                mb-3
+                mb-sm-0"
          ng-repeat="farmer in farmers">
+
+      <!--  -->
       <div class="card-header">
-        <h1 class="text-center">{{farmer.nev}}</h1>
+        <h1 class="text-center">
+          {{farmer.nev}}
+        </h1>
       </div>
+
+      <!--  -->
       <div class="card-body">
-        <img src="https://dummyimage.com/600x400" class="card-img-top" alt="{{farmer.nev}}">
-        <h5 class="card-title">{{$root.lang.data.job_title}}</h5>
-        <p class="card-text">{{farmer.about_short}}</p>
-        <a href="#" class="btn btn-primary">
-          <i class="fa-solid fa-scroll"></i>
+
+        <!--  -->
+        <img src="https://dummyimage.com/600x400" 
+             class="card-img-top" 
+             alt="{{farmer.nev}}">
+
+        <!--  -->
+        <h5 class="card-title">
+          {{$root.lang.data.job_title}}
+        </h5>
+
+        <!--  -->
+        <p class="card-text">
+          {{farmer.about_short}}
+        </p>
+
+        <!--  -->
+        <a href="#" 
+           class="btn 
+                  btn-primary">
+          <i class="fa-solid 
+                    fa-scroll"></i>
           {{$root.lang.data.moreInformation}}
         </a>
       </div>
-      <div class="card-footer text-body-secondary">
-        <i class="fa-solid fa-calendar"></i> {{$root.lang.data.bornIn}}: {{farmer.szuletett}}
+
+      <!--  -->
+      <div class="card-footer 
+                  text-body-secondary">
+        <i class="fa-solid 
+                  fa-calendar"></i> 
+        {{$root.lang.data.bornIn}}: 
+        {{farmer.szuletett}}
       </div>
     </div>
   </div>
