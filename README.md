@@ -22,12 +22,13 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Hibák:
 
-    -Egyik különleges oldal sem tesz át a fő oldalra ha ki jelentkezünk. <= Javítási állapot: 0% (nincs kész)
+    -A fizetési módokat nem jeneíti meg rendesen.
     
   # QOL szükségletek:
 
     -regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
     -Bejelentkezés után egyből a főoldalra tegyen <= Állapot: 0% (nincs kész)
+    -Nyelv váltásnál lecserélni a nyelveket jelölő menüpontokat a kiválasztott nyelven történő leírására.
 
 - [] Adatbázis átnézése 
   - Kosár dátum -> datetime   <= Állapot: 0% (nincs kész)
