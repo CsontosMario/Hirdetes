@@ -102,5 +102,9 @@
   "kohlrabi_desc":"Zsenge, fehér. Magyar termék.",
   "pepper_desc":"Húsos, közepes nagyságú, friss fogyasztásra és főzésre egyaránt alkalmas. Magyar termék.",
   "cauliflower_desc":"Nagyrózsájú, alkalmas levesek, főzelékek és számtalan étel készítésére. Magyar termék.",
-  "about_small_title":"Rólam"
+  "about_small_title":"Rólam",
+  "sign_in_password_error":"Hibás jelszó!",
+  "please_register":"Kérem bejelentkezés előtt regisztrálja ezt a felhasználót!",
+  "sign_in_success_1":"Sikeres a bejelentkezés!",
+  "sign_in_success_2":"Üdvözöljük"
 }

@@ -102,5 +102,9 @@
   "kohlrabi_desc":"Erstgeborener, weiß. Ungarisches Produkt.",
   "pepper_desc":"Fleischig, mittelgroß, sowohl zum Frischverzehr als auch zum Kochen geeignet. Ungarisches Produkt.",
   "cauliflower_desc":"Es hat eine große Rosette und eignet sich für die Zubereitung von Suppen, Gemüse und unzähligen Gerichten. Ungarisches Produkt.",
-  "about_small_title":"Über mich"
+  "about_small_title":"Über mich",
+  "sign_in_password_error":"Falsches Passwort!",
+  "please_register":"Bitte registrieren Sie diesen Benutzer, bevor Sie sich anmelden!",
+  "sign_in_success_1":"Login erfolgreich!",
+  "sign_in_success_2":"Willkommen"
 }

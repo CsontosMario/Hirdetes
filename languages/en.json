@@ -102,5 +102,9 @@
   "kohlrabi_desc":"First-born, white. Hungarian product.",
   "pepper_desc":"Fleshy, medium-sized, suitable for both fresh consumption and cooking. Hungarian product.",
   "cauliflower_desc":"It has a large rosette, suitable for making soups, vegetables and countless dishes. Hungarian product.",
-  "about_small_title":"About me"
+  "about_small_title":"About me",
+  "sign_in_password_error":"Incorrect password!",
+  "please_register":"Please register this user before logging in!",
+  "sign_in_success_1":"Login successful!",
+  "sign_in_success_2":"Welcome"
 }
