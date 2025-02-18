@@ -16,9 +16,9 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Feladaatok:
 
-    -Különböző nyelvekre lefordítani a weboldalt   <= Állapot: 95% (folyamatban)
-    -Megcsinálni a nyelv váltást                   <= Állapot: 100% (kész)
-    -
+    -Különböző nyelvekre lefordítani a weboldalt                  <= Állapot: 95% (folyamatban)
+    -Megcsinálni a nyelv váltást                                  <= Állapot: 100% (kész)
+    -Hibás jelszó vagy email esetén küldött üzenetek lefordítása  <= Állapot: 0% (nincs kész)
 
   # Hibák:
 
