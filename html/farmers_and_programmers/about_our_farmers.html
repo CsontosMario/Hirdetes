@@ -8,32 +8,33 @@
                 mb-sm-0"
          ng-repeat="farmer in farmers">
 
-      <!--  -->
+      <!-- Card header -->
       <div class="card-header">
+        <!-- Termelők nevei -->
         <h1 class="text-center">
           {{farmer.nev}}
         </h1>
       </div>
 
-      <!--  -->
+      <!-- Card body -->
       <div class="card-body">
 
-        <!--  -->
+        <!-- Termelőinkről kép -->
         <img src="https://dummyimage.com/600x400" 
              class="card-img-top" 
              alt="{{farmer.nev}}">
 
-        <!--  -->
+        <!-- Termelőink munkaköre -->
         <h5 class="card-title">
           {{$root.lang.data.job_title}}
         </h5>
 
-        <!--  -->
+        <!-- Termelőinkről röviden -->
         <p class="card-text">
           {{farmer.about_short}}
         </p>
 
-        <!--  -->
+        <!-- Több információ (gomb) -->
         <a href="#" 
            class="btn 
                   btn-primary">
@@ -43,9 +44,10 @@
         </a>
       </div>
 
-      <!--  -->
+      <!-- Card footer -->
       <div class="card-footer 
                   text-body-secondary">
+        <!-- Termelőink születési idelye -->
         <i class="fa-solid 
                   fa-calendar"></i> 
         {{$root.lang.data.bornIn}}: 

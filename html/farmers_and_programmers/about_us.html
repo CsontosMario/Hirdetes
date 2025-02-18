@@ -11,7 +11,7 @@
       <!-- Card header -->
       <div class="card-header">
 
-        <!--  -->
+        <!-- Weboldalunk fejlesztőinek neve -->
         <h1 class="text-center">
           {{website_creator.nev}}
         </h1>
@@ -19,17 +19,17 @@
 
       <!-- Card body -->
       <div class="card-body">
-        <!--  -->
+        <!-- Weboldalunk fejlesztőinek képe -->
         <img ng-src="./img/fejlesztok/{{website_creator.kep}}" 
              class="card-img-top" 
              alt="{{website_creator.nev}}">
 
-        <!--  -->
+        <!-- Weboldalunk fejlesztőinek a projektben történő feladatköre  -->
         <h5 class="card-title">
           {{$root.lang.data[website_creator.munkanev]}}
         </h5>
 
-        <!--  -->
+        <!-- Weboldalunk fejlesztőinek szakmája -->
         <h4 class="card-text 
                    text-start">
           {{$root.lang.data.profession_title}}: 
@@ -39,7 +39,7 @@
           </span>
         </h4>
 
-        <!--  -->
+        <!-- Weboldalunk fejlesztőiről röviden -->
         <h4 class="card-text">
           {{$root.lang.data.about_small_title}}: 
           <span class="not_bold 
@@ -48,7 +48,7 @@
           </span>
         </h4>
 
-        <!--  -->
+        <!-- Több információ (gomb) -->
         <a href="#" 
            class="btn btn-primary">
            <i class="fa-solid 
@@ -60,7 +60,7 @@
       <!-- Card footer -->
       <div class="card-footer 
                   text-body-secondary">
-        <!--  -->
+        <!-- Weboldalunk fejlesztőinek születési idelye -->
         <i class="fa-solid 
                   fa-calendar"></i> 
         {{$root.lang.data.bornIn}}: 
