@@ -28,7 +28,6 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
     -regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
     -Bejelentkezés után egyből a főoldalra tegyen <= Állapot: 0% (nincs kész)
-    -Nyelv váltásnál lecserélni a nyelveket jelölő menüpontokat a kiválasztott nyelven történő leírására.
 
 - [] Adatbázis átnézése 
   - Kosár dátum -> datetime   <= Állapot: 0% (nincs kész)

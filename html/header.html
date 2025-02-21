@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-xl bg-body-tertiary">
   <div class="container-fluid">
+
+    <!-- Hamburger Icon -->
     <button class="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse" 
@@ -11,7 +13,9 @@
     </button>
 
     <!-- Menüpontok -->
-    <div class="collapse navbar-collapse justify-content-center" 
+    <div class="collapse 
+                navbar-collapse 
+                justify-content-center" 
          id="navbarNav">
 
       <ul class="navbar-nav">
@@ -20,7 +24,8 @@
           <a class="nav-link" 
              ui-sref="home" 
              ui-sref-active="active">
-            <i class="fa-solid fa-house me-1"></i>
+            <i class="fa-solid 
+                      fa-house me-1"></i>
             {{$root.lang.data.home}}
           </a>
         </li>
@@ -37,7 +42,8 @@
         </li>
 
         <!-- Dropdown -> Fiók és Kosár (button) -->
-        <li class="nav-item dropdown" 
+        <li class="nav-item 
+                   dropdown" 
             data-bs-auto-close="true">
           <a class="nav-link 
                     dropdown-toggle" 
@@ -45,12 +51,15 @@
              role="button" 
              data-bs-toggle="dropdown" 
              aria-expanded="false">
-            <i class="fa-solid fa-user-large"></i>
+            <i class="fa-solid 
+                      fa-user-large"></i>
             {{$root.lang.data.accountAndCart}}
           </a>
 
           <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu
+                     dropdown-menu-end
+                     text-center">
 
             <!-- Cím -->
             <li>
@@ -69,7 +78,8 @@
                  ui-sref="register" 
                  ui-sref-active="active">
                 <i class="fa-solid 
-                          fa-id-card me-1"></i>
+                          fa-id-card 
+                          me-1"></i>
                 {{$root.lang.data.registration}}
               </a>
             </li>
@@ -201,7 +211,8 @@
 
         <!-- Dropdown -> Nyelvek (button) -->
         <li class="nav-item 
-                   dropdown ms-5" 
+                   dropdown
+                   ms-5" 
             data-bs-auto-close="true">
           <a class="nav-link 
                     dropdown-toggle" 
@@ -217,7 +228,8 @@
 
           <!-- Dropdown -> Nyelvek (menüpontok) -->
           <ul class="dropdown-menu 
-                     dropdown-menu-end">
+                     dropdown-menu-end
+                     text-center">
 
             <!-- Nyelvek kiválasztása -->
             <li class="nav-item" 
@@ -230,8 +242,8 @@
                      height="32" 
                      alt="flag" 
                      ng-src="./img/icons/languages/{{x.img}}">
-                <span class="text-capitalize">{{x.name}}</span>
-                <span ng-if="x.name !== x.local_name">
+                <span class="text-capitalize">{{$root.lang.data[x.id]}}</span>
+                <span ng-if="$root.lang.data[x.id] !== x.local_name">
                   ({{x.local_name}})
                 </span>
               </a>
