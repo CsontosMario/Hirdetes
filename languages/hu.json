@@ -106,5 +106,7 @@
   "sign_in_password_error":"Hibás jelszó!",
   "please_register":"Kérem bejelentkezés előtt regisztrálja ezt a felhasználót!",
   "sign_in_success_1":"Sikeres a bejelentkezés!",
-  "sign_in_success_2":"Üdvözöljük"
+  "sign_in_success_2":"Üdvözöljük",
+  "more_about_us":"További információk",
+  "go_back":"Vissza az előző oldalra"
 }

@@ -106,5 +106,7 @@
   "sign_in_password_error":"パスワードが間違っています!",
   "please_register":"ログインする前にこのユーザーを登録してください!",
   "sign_in_success_1":"ログインに成功しました!",
-  "sign_in_success_2":"いらっしゃい"
+  "sign_in_success_2":"いらっしゃい",
+  "more_about_us":"詳細情報",
+  "go_back":"前のページに戻る"
 }
