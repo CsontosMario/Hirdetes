@@ -21,8 +21,6 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
     -Hibás jelszó vagy email esetén küldött üzenetek lefordítása  <= Állapot: 0% (nincs kész)
 
   # Hibák:
-
-    -A fizetési módokat nem jeneíti meg rendesen.
     
   # QOL szükségletek:
 
