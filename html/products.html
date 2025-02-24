@@ -38,18 +38,38 @@
         <h5 class="card-title">
           {{$root.lang.data[zoldseg.megnevezes]}}
         </h5>
-        <p class="card-text">
+
+        <!-- Termék leírás -->
+        <h4 class="card-text">
           {{$root.lang.data.description}}: 
-          {{$root.lang.data[zoldseg.leiras]}}
-        </p>
-        <p class="card-text">
+          <span class="not_bold 
+                       fs-6
+                       text-center">
+            {{$root.lang.data[zoldseg.leiras]}}
+          </span>
+        </h4>
+
+        <!-- Termék ár -->
+        <h4 class="card-text">
           {{$root.lang.data.price}}: 
-          {{zoldseg.ar}} Ft
-        </p>
-        <p class="card-text">
+          <span class="not_bold 
+                       fs-6
+                       text-center">
+            {{zoldseg.ar}} Ft
+          </span>
+        </h4>
+
+        <!-- Termék kiszerelés -->
+        <h4 class="card-text">
           {{$root.lang.data.packaging}}: 
-          {{$root.lang.data[zoldseg.kiszereles]}}
-        </p>
+          <span class="not_bold 
+                       fs-6
+                       text-center">
+            {{$root.lang.data[zoldseg.kiszereles]}}
+          </span>
+        </h4>
+
+        <!-- Vásárlás (gomb) -->
         <a ui-sref="cart" 
            class="btn 
                   btn-primary"
