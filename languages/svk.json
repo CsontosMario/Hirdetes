@@ -111,5 +111,7 @@
   "go_back":"Späť na predchádzajúcu stránku",
   "close":"Zavrieť",
   "has_profile":"Máš už profil? Prihláste sa.",
-  "doesnt_have_profile":"Ešte nemáte profil? Registrovať sa môžete tu."
+  "doesnt_have_profile":"Ešte nemáte profil? Registrovať sa môžete tu.",
+  "add_to_cart":"Pridať do košíka",
+  "quantity":"Množstvo"
 }

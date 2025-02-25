@@ -6,7 +6,8 @@ require_once("../../common/php/environment.php");
 
 $db = new Database();
 
-$query = "SELECT `kep`, 
+$query = "SELECT `termekID`,
+                 `kep`, 
                  `megnevezes`, 
                  `leiras`, 
                  `ar`, 

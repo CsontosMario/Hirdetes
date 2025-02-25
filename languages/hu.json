@@ -111,5 +111,7 @@
   "go_back":"Vissza az előző oldalra",
   "close":"Bezár",
   "has_profile":"Van már profilod? Jelentkezz be.",
-  "doesnt_have_profile":"Nincs még profilod? Itt tudsz regisztrálni."
+  "doesnt_have_profile":"Nincs még profilod? Itt tudsz regisztrálni.",
+  "add_to_cart":"Hozzáadás a kosárhoz",
+  "quantity":"Mennyiség"
 }

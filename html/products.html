@@ -13,6 +13,7 @@
     </h1>
   </div>
   
+  <!-- Cards -->
   <div class="row 
               w-auto 
               row-cols-1 
@@ -26,7 +27,10 @@
                 g-4"
          ng-repeat="zoldseg in zoldsegek track by $index" 
          ng-show="zoldsegek">
+
       <div class="card-header">
+
+        <!-- Termék nmegnevezése -->
         <h1 class="text-center">
           {{$root.lang.data[zoldseg.megnevezes]}}
         </h1>
@@ -35,6 +39,8 @@
         <img ng-src="./img/termekek/{{zoldseg.kep}}" 
              class="card-img-top" 
              alt="{{zoldseg.megnevezes}}">
+
+        <!-- Termék nmegnevezése -->
         <h5 class="card-title">
           {{$root.lang.data[zoldseg.megnevezes]}}
         </h5>
@@ -70,10 +76,11 @@
         </h4>
 
         <!-- Vásárlás (gomb) -->
-        <a ui-sref="cart" 
+        <a href="..." 
            class="btn 
                   btn-primary"
-           ng-disabled="!$root.user.id">
+           data-bs-toggle="modal"
+           data-bs-target="#modal{{zoldseg.termekID}}">
           <i class="fa-solid 
                     fa-wallet"></i>
           {{$root.lang.data.buy}}
@@ -82,6 +89,7 @@
     </div>
   </div>
 
+  <!-- No products  -->
   <div class="row 
               w-auto 
               mt-5">
@@ -89,5 +97,106 @@
         ng-show="!zoldsegek">
       {{$root.lang.data.elseText}}
     </h1>
+  </div>
+
+  <!-- Modals -->
+  <div ng-repeat="x in zoldsegek">
+    <!-- Modal -->
+    <div class="modal 
+                fade
+                W-50" 
+         id="modal{{x.termekID}}" 
+         data-bs-backdrop="static" 
+         data-bs-keyboard="false" 
+         tabindex="-1" 
+         aria-labelledby="staticBackdropLabel" 
+         aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title 
+                       fs-5" 
+                id="staticBackdropLabel">
+              {{$root.lang.data[x.megnevezes]}}
+            </h1>
+            <button type="button" 
+                    class="btn-close" 
+                    data-bs-dismiss="modal" 
+                    aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+
+                <!-- Product Images -->
+                <div class="col-md-6 mb-4">
+                  <img src="./img/termekek/{{x.kep}}" 
+                       alt="{{x.megnevezes}}" 
+                       class="img-fluid
+                              rounded 
+                              mb-3 
+                              product-image">
+                </div>
+
+                <!-- Product Details -->
+                <div class="col-md-6">
+                    <h2 class="mb-3">
+                      {{$root.lang.data[x.megnevezes]}}
+                    </h2>
+                    <div class="mb-3">
+                        <span class="h4 
+                                     me-2">
+                          {{x.ar}} huf
+                        </span>
+                    </div>
+                    <p class="mb-4">
+                      {{$root.lang.data[x.leiras]}}
+                    </p>
+                    <div class="mb-4">
+                        <h5>{{$root.lang.data.packaging}}:</h5>
+                        <p>{{$root.lang.data[x.kiszereles]}}</p>
+                    </div>
+                    <div class="mb-4">
+                      <label for="quantity" 
+                             class="form-label">
+                        {{$root.lang.data.quantity}}:
+                      </label>
+                      <input type="number" 
+                             class="form-control" 
+                             id="quantity" 
+                             value="1" 
+                             min="1" 
+                             style="width: 80px;">
+                    </div>
+                    <button class="btn 
+                                   btn-primary 
+                                   btn-lg 
+                                   mb-3 
+                                   me-2"
+                            ng-disabled="!$root.user.id"
+                            ui-sref="cart"
+                            data-bs-dismiss="modal">
+                      <i class="fa-solid 
+                                fa-cart-shopping 
+                                me-1"></i> 
+                      {{$root.lang.data.add_to_cart}}
+                    </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" 
+                    class="btn
+                           btn-primary" 
+                    data-bs-dismiss="modal">
+              {{$root.lang.data.close}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

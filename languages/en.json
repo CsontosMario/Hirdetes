@@ -111,5 +111,7 @@
   "go_back":"Return to previous page",
   "close":"Close",
   "has_profile":"Already have a profile? Sign in.",
-  "doesnt_have_profile":"Don't have a profile yet? You can register here."
+  "doesnt_have_profile":"Don't have a profile yet? You can register here.",
+  "add_to_cart":"Add to Cart",
+  "quantity":"Quantity"
 }

@@ -111,5 +111,7 @@
   "go_back":"Zurück zur vorherigen Seite",
   "close":"Schließen",
   "has_profile":"Haben Sie bereits ein Profil? Einloggen.",
-  "doesnt_have_profile":"Sie haben noch kein Profil? Hier können Sie sich registrieren."
+  "doesnt_have_profile":"Sie haben noch kein Profil? Hier können Sie sich registrieren.",
+  "add_to_cart":"Zum Warenkorb hinzufügen",
+  "quantity":"Quantität"
 }
