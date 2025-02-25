@@ -22,6 +22,8 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # Hibák:
     
+    -A weboldal a modalok miatt a Fejlesztőinkről, a Termelőinkről és a Termékeink oldalon a képekkel kapcsolatosan hibát jelez ki.
+
   # QOL szükségletek:
 
     -Regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
