@@ -55,7 +55,7 @@
             controller: 'registerController'
           })
           .state('login', {
-            url: '/sign_in',
+            url: '/',
             parent: 'root',
             templateUrl: './html/profil_and_cart/sign_in.html',
             controller: 'loginController'
@@ -93,6 +93,7 @@
             util.localStorage('remove', 'loginID');
             util.localStorage('remove', 'loginName');
             $rootScope.$applyAsync();
+            location.reload();
           }
         }
       }
@@ -198,6 +199,7 @@
               util.localStorage('set', 'loginName', $rootScope.user.name);
               alert($rootScope.lang.data.sign_in_success_1 + "\n" + $rootScope.lang.data.sign_in_success_2 + " " + $rootScope.user.name + "!");
               $scope.$applyAsync();
+              location.reload();
           })
           .catch(e => alert(e))
         }
