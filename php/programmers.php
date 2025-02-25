@@ -12,6 +12,7 @@ $query = "SELECT `id`,
                  `munkanev`, 
                  `kep`,
                  `rolaroviden`,
+                 `rola`,
                  `profesion`
             FROM `programozoink`";
 

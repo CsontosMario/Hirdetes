@@ -65,7 +65,9 @@
 
         <!-- Több információ (gomb) -->
         <a href="#" 
-           class="btn btn-primary">
+           class="btn btn-primary"
+           data-bs-toggle="modal"
+           data-bs-target="#modal{{website_creator.id}}">
            <i class="fa-solid 
                      fa-scroll"></i> 
             {{$root.lang.data.moreInformation}}
@@ -80,6 +82,60 @@
                   fa-calendar"></i> 
         {{$root.lang.data.bornIn}}: 
         {{website_creator.szuletesiev}}
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div ng-repeat="x in programmers">
+      <!-- Modal -->
+      <div class="modal 
+                  fade" 
+           id="modal{{x.id}}" 
+           data-bs-backdrop="static" 
+           data-bs-keyboard="false" 
+           tabindex="-1" 
+           aria-labelledby="staticBackdropLabel" 
+           aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title 
+                         fs-5" 
+                  id="staticBackdropLabel">
+                {{x.nev}}
+              </h1>
+              <button type="button" 
+                      class="btn-close" 
+                      data-bs-dismiss="modal" 
+                      aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img src="./img/fejlesztok/{{x.kep}}" 
+                         class="img-fluid"
+                         alt="{{x.nev}}">
+                  </div>
+                  <div class="col-sm-8">
+                    <p>
+                      {{$root.lang.data[x.rola]}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" 
+                      class="btn
+                             btn-primary" 
+                      data-bs-dismiss="modal">
+                {{$root.lang.data.close}}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
