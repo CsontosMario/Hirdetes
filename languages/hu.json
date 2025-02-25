@@ -109,5 +109,7 @@
   "sign_in_success_2":"Üdvözöljük",
   "more_about_us":"További információk",
   "go_back":"Vissza az előző oldalra",
-  "close":"Bezár"
+  "close":"Bezár",
+  "has_profile":"Van már profilod? Jelentkezz be.",
+  "doesnt_have_profile":"Nincs még profilod? Itt tudsz regisztrálni."
 }

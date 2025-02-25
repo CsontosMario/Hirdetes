@@ -109,5 +109,7 @@
   "sign_in_success_2":"Welcome",
   "more_about_us":"Additional information",
   "go_back":"Return to previous page",
-  "close":"Close"
+  "close":"Close",
+  "has_profile":"Already have a profile? Sign in.",
+  "doesnt_have_profile":"Don't have a profile yet? You can register here."
 }

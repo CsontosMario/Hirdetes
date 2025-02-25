@@ -57,3 +57,7 @@ form{
 .not_bold {
   font-weight: normal;
 }
+
+.login_register{
+  color:blue !important;
+}

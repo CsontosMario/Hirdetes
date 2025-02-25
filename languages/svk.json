@@ -109,5 +109,7 @@
   "sign_in_success_2":"Vitajte",
   "more_about_us":"Viac informácií",
   "go_back":"Späť na predchádzajúcu stránku",
-  "close":"Zavrieť"
+  "close":"Zavrieť",
+  "has_profile":"Máš už profil? Prihláste sa.",
+  "doesnt_have_profile":"Ešte nemáte profil? Registrovať sa môžete tu."
 }
