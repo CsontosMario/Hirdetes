@@ -61,7 +61,7 @@
           <span class="not_bold 
                        fs-6
                        text-center">
-            {{zoldseg.ar}} Ft
+            {{zoldseg.ar}} huf
           </span>
         </h4>
 
@@ -80,11 +80,16 @@
            class="btn 
                   btn-primary"
            data-bs-toggle="modal"
-           data-bs-target="#modal{{zoldseg.termekID}}">
+           data-bs-target="#modal{{zoldseg.termekID}}"
+           ng-if="$root.user.id">
           <i class="fa-solid 
                     fa-wallet"></i>
           {{$root.lang.data.buy}}
         </a>
+        <h4 class="text-center
+                   fw-bold"
+            ng-if="!$root.user.id">
+          {{$root.lang.data.cant_buy}}</h4>
       </div>
     </div>
   </div>
@@ -140,22 +145,42 @@
 
                 <!-- Product Details -->
                 <div class="col-md-6">
+
+                  <!-- Product name -->
                     <h2 class="mb-3">
                       {{$root.lang.data[x.megnevezes]}}
                     </h2>
+
+                    <!-- Product price -->
                     <div class="mb-3">
-                        <span class="h4 
-                                     me-2">
+                      <h4>
+                        {{$root.lang.data.price}}: 
+                        <span class="not_bold 
+                                     fs-6
+                                     text-center">
                           {{x.ar}} huf
                         </span>
+                      </h4>
                     </div>
+
+                    <!-- Product description -->
                     <p class="mb-4">
                       {{$root.lang.data[x.leiras]}}
                     </p>
+                    
+                    <!-- Product packaging -->
                     <div class="mb-4">
-                        <h5>{{$root.lang.data.packaging}}:</h5>
-                        <p>{{$root.lang.data[x.kiszereles]}}</p>
+                      <h4>
+                        {{$root.lang.data.packaging}}:
+                        <span class="not_bold 
+                                     fs-6
+                                     text-center">
+                          {{$root.lang.data[x.kiszereles]}}
+                        </span>
+                      </h4>
                     </div>
+
+                    <!-- Product quantity -->
                     <div class="mb-4">
                       <label for="quantity" 
                              class="form-label">
@@ -168,6 +193,8 @@
                              min="1" 
                              style="width: 80px;">
                     </div>
+
+                    <!-- Buy product -->
                     <button class="btn 
                                    btn-primary 
                                    btn-lg 

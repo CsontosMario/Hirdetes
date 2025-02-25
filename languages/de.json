@@ -113,5 +113,6 @@
   "has_profile":"Haben Sie bereits ein Profil? Einloggen.",
   "doesnt_have_profile":"Sie haben noch kein Profil? Hier können Sie sich registrieren.",
   "add_to_cart":"Zum Warenkorb hinzufügen",
-  "quantity":"Quantität"
+  "quantity":"Quantität",
+  "cant_buy":"Melden Sie sich an, um auf dieser Website einkaufen zu können!"
 }
