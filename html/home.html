@@ -36,8 +36,12 @@
           <div class="carousel-caption 
                       d-none 
                       d-md-block">
-            <h5>{{$index+1}}{{$root.lang.data.percent}}</h5>
-            <p>{{$root.lang.data.discount_available}}</p>
+            <h5>
+              {{$index+1}}{{$root.lang.data.percent}}
+            </h5>
+            <p>
+              {{$root.lang.data.discount_available}}
+            </p>
           </div>
         </div>
       </div>
@@ -50,7 +54,9 @@
               ng-repeat="x in buttons">
         <span class="carousel-control-{{x}}-icon" 
               aria-hidden="true"></span>
-        <span class="visually-hidden">{{x}}</span>
+        <span class="visually-hidden">
+          {{x}}
+        </span>
       </button>
     </div>
   </div>
