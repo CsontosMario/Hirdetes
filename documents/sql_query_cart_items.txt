@@ -1,7 +1,9 @@
-SELECT `termekID`, 
-       `db`, 
-       `ar` 
-  FROM `kosarelemek` 
-INNER JOIN `kosar` 
-  ON `kosarelemek`.`kosarID` = `kosar`.`kosarID` 
-  WHERE `kosar`.`felhasznaloID` = ?;
+Kosárba rakott termékek lekérése:
+
+  SELECT `termekID`, 
+         `db`, 
+         `ar` 
+    FROM `kosarelemek` 
+  INNER JOIN `kosar` 
+    ON `kosarelemek`.`kosarID` = `kosar`.`kosarID` 
+    WHERE `kosar`.`felhasznaloID` = ?;
