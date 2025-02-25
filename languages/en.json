@@ -108,5 +108,6 @@
   "sign_in_success_1":"Login successful!",
   "sign_in_success_2":"Welcome",
   "more_about_us":"Additional information",
-  "go_back":"Return to previous page"
+  "go_back":"Return to previous page",
+  "close":"Close"
 }
