@@ -197,11 +197,13 @@
               $rootScope.user.name = result.nev;
               util.localStorage('set', 'loginID', $rootScope.user.id);
               util.localStorage('set', 'loginName', $rootScope.user.name);
-              alert($rootScope.lang.data.sign_in_success_1 + "\n" + $rootScope.lang.data.sign_in_success_2 + " " + $rootScope.user.name + "!");
+              alert($rootScope.lang.data.sign_in_success_1 + "\n" + 
+                    $rootScope.lang.data.sign_in_success_2 + " " + 
+                    $rootScope.user.name + "!");
               $scope.$applyAsync();
               location.reload();
           })
-          .catch(e => alert(e))
+          .catch(e => alert($rootScope.lang.data[e]));
         }
       }
     ])

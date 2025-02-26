@@ -20,13 +20,13 @@ $result = $db->execute($query, array($args['email']));
 $db = null;
 
 if (is_null($result)) {
-  Util::setError("Kérem bejelentkezés előtt regisztrálja ezt a felhasználót!");
+  Util::setError("please_register");
 }
 
 $result = $result[0];
 
 if ($args['jelszo'] !== $result['jelszo']) {
-  Util::setError("Hibás jelszó!");
+  Util::setError("sign_in_password_error");
 }
 
 unset($result['jelszo']);
