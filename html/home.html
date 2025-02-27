@@ -75,10 +75,10 @@
                   table-striped 
                   w-auto">
       <thead>
-        <tr class="text-capitalize">
-          <th>{{$root.lang.data.day}}</th>
-          <th>{{$root.lang.data.opening}}</th>
-          <th>{{$root.lang.data.closing}}</th>
+        <tr class="text-capitalize"
+            ng-init="data_=['day','opening','closing']">
+          <th ng-repeat="y in data_">{{$root.lang.data[y]}}</th>
+          
         </tr>
       </thead>
       <tbody ng-init="days=['mondayToFriday','saturdayToSunday']">

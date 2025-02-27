@@ -7,11 +7,11 @@ nav a.nav-link.active {
 }
 
 footer {
-  background-color: rgb(57, 48, 83);
+  background-color:red;
 }
 
 .navbar {
-  background-color: rgb(57, 48, 83) !important;
+  background-color:red !important;
   font-weight: bold;
   font-size: large;
 }
@@ -22,7 +22,7 @@ footer a {
 }
 
 body {
-  background-color: rgb(68, 60, 104) !important;
+  background-color: green !important;
 }
 
 .dropdown-item:active,
