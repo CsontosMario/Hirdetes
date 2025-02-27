@@ -33,5 +33,12 @@
     "local_name":"slovenský",
     "img":"svk.png",
     "valid":true
+  },
+  {
+    "id":"rus",
+    "name":"russian",
+    "local_name":"Русский",
+    "img":"rus.png",
+    "valid":true
   }
 ]
