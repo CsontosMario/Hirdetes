@@ -38,7 +38,7 @@ body {
 }
 
 .dropdown-menu{
-  background-color: rgb(57, 48, 83) !important;
+  background-color: red !important;
 }
 
 form{
@@ -62,6 +62,6 @@ form{
   color:blue !important;
 }
 
-.card_color{
+/* .card_color{
   background-color: rgb(99, 89, 133) !important;
-}
+} */
