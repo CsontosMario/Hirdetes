@@ -119,7 +119,8 @@
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-        $scope.toCart = () => {
+
+        $scope.toCart = (product, quantity) => {
           http.request({
             url: "./php/cartelements.php",
             data: $scope.sign_up

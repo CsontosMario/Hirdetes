@@ -186,8 +186,9 @@
                       <input type="number" 
                              class="form-control" 
                              id="quantity{{x.termekID}}" 
-                             value="1" 
-                             min="1" 
+                             min="1"
+                             ng-init="model.quantity=1"
+                             ng-model="model.quantity"
                              style="width: 80px;">
                     </div>
 
@@ -197,7 +198,7 @@
                                    btn-lg 
                                    mb-3 
                                    me-2"
-                            ng-click="toCart()"
+                            ng-click="toCart(x, model.quantity)"
                             ng-disabled="!$root.user.id"
                             ui-sref="cart"
                             data-bs-dismiss="modal">

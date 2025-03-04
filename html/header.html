@@ -4,7 +4,7 @@
   <div class="container-fluid">
 
     <!-- Hamburger Icon -->
-    <button class="navbar-toggler" 
+    <button class="navbar-toggler bg-white" 
             type="button" 
             data-bs-toggle="collapse" 
             data-bs-target="#navbarNav"
@@ -21,14 +21,13 @@
          id="navbarNav">
 
       <ul class="navbar-nav">
+
         <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link
-                    color" 
+          <a class="nav-link color" 
              ui-sref="home" 
              ui-sref-active="active">
-            <i class="fa-solid 
-                      fa-house me-1"></i>
+            <i class="fa-solid fa-house me-1"></i>
             {{$root.lang.data.home}}
           </a>
         </li>
@@ -79,9 +78,9 @@
             </li>
 
             <!-- Regisztráció -->
-            <li>
+            <li class="text-center">
               <a class="dropdown-item 
-                        color"
+                        text-white"
                  ui-sref="register" 
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -231,7 +230,7 @@
         <!-- Dropdown -> Nyelvek (button) -->
         <li class="nav-item 
                    dropdown
-                   ms-5" 
+                   ms-0 ms-xl-5" 
             data-bs-auto-close="true">
           <a class="nav-link 
                     color 
