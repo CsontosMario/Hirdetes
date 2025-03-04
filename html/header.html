@@ -16,14 +16,14 @@
 
     <!-- Menüpontok -->
     <div class="collapse 
-                navbar-collapse 
+                navbar-collapse
                 justify-content-center" 
          id="navbarNav">
 
       <ul class="navbar-nav">
         <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link color" 
              ui-sref="home" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -34,7 +34,7 @@
 
         <!-- Products -->
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link color" 
              ui-sref="products" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -48,7 +48,8 @@
                    dropdown" 
             data-bs-auto-close="true">
           <a class="nav-link 
-                    dropdown-toggle" 
+                    dropdown-toggle 
+                    color" 
              href="#" 
              role="button" 
              data-bs-toggle="dropdown" 
@@ -67,7 +68,7 @@
             <li>
               <h4 class="text-center 
                          fw-bold 
-                         text-decoration-underline">
+                         text-decoration-underline color">
                 <i class="fa-solid 
                           fa-id-badge"></i>
                 {{$root.lang.data.account}}
@@ -76,7 +77,7 @@
 
             <!-- Regisztráció -->
             <li>
-              <a class="dropdown-item"
+              <a class="dropdown-item color"
                  ui-sref="register" 
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -88,7 +89,7 @@
 
             <!-- Bejelentkezés -->
             <li ng-show="!$root.user.id">
-              <a class="dropdown-item" 
+              <a class="dropdown-item color" 
                  ui-sref="login"
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -100,7 +101,7 @@
 
             <!-- különítő sor 1 -->
             <li ng-show="$root.user.id">
-              <hr class="dropdown-divider">
+              <hr class="dropdown-divider color">
             </li>
 
             <!-- Profil cím -->
@@ -117,7 +118,7 @@
 
             <!-- Profil -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item" 
+              <a class="dropdown-item color" 
                  ui-sref="profil" 
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -128,7 +129,7 @@
 
             <!-- különítő sor 2 -->
             <li ng-show="$root.user.id">
-              <hr class="dropdown-divider">
+              <hr class="dropdown-divider color">
             </li>
 
             <!-- Kosár cím -->
@@ -145,7 +146,7 @@
 
             <!-- Kosár (gomb) -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item" 
+              <a class="dropdown-item color" 
                  ui-sref="cart"
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -157,7 +158,7 @@
 
             <!-- különítő sor 3 -->
             <li ng-show="$root.user.id">
-              <hr class="dropdown-divider">
+              <hr class="dropdown-divider color">
             </li>
 
             <!-- Kijelentkezés cím -->
@@ -174,7 +175,7 @@
 
             <!-- Kijelentkezés (gomb) -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item" 
+              <a class="dropdown-item color"
                  href="#" 
                  ui-sref-active="active" 
                  ng-click="$root.kilep()">
@@ -191,7 +192,7 @@
 
         <!-- Termelőinkről -->
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link color" 
              ui-sref="aboutOurFarmers" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -202,7 +203,7 @@
 
         <!-- Fejlesztőinkről -->
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link color" 
              ui-sref="aboutUs" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -216,7 +217,7 @@
                    dropdown
                    ms-5" 
             data-bs-auto-close="true">
-          <a class="nav-link 
+          <a class="nav-link color 
                     dropdown-toggle" 
              role="button" 
              data-bs-toggle="dropdown" 
@@ -238,7 +239,7 @@
                 ng-repeat="x in lang.available"
                 ng-if="x.id !== lang.available[lang.index].id && x.valid" 
                 ng-click="methods.languageChanged(x.id)">
-              <a class="dropdown-item 
+              <a class="dropdown-item color 
                         cursor-pointer">
                 <img class="me-1" 
                      height="32" 

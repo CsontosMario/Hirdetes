@@ -1,35 +1,35 @@
 nav a.nav-link.active {
   text-decoration: underline;
-  color: black !important;
+  color: white !important;
   font-style: italic;
   cursor: default;
   font-size: x-large;
 }
 
 footer {
-  background-color:red;
+  background-color:rgb(57, 48, 83);
 }
 
 .navbar {
-  background-color:red !important;
+  background-color:rgb(57, 48, 83) !important;
   font-weight: bold;
   font-size: large;
 }
 
 footer a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 body {
-  background-color: green !important;
+  background-color: rgb(99, 89, 133) !important;
 }
 
 .dropdown-item:active,
 .dropdown-item.active,
 .dropdown-item a.active {
 	background-color: transparent !important;
-  color: black !important;
+  color: white !important;
   font-style: italic;
   text-decoration: underline;
   cursor: default;
@@ -38,7 +38,7 @@ body {
 }
 
 .dropdown-menu{
-  background-color: red !important;
+  background-color: rgb(57, 48, 83) !important;
 }
 
 form{
@@ -65,3 +65,7 @@ form{
 /* .card_color{
   background-color: rgb(99, 89, 133) !important;
 } */
+
+.color {
+  color: white;
+}
