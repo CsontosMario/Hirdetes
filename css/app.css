@@ -62,10 +62,6 @@ form{
   color:blue !important;
 }
 
-/* .card_color{
-  background-color: rgb(99, 89, 133) !important;
-} */
-
-.color {
-  color: white !important;
+.dark_color{
+  color: rgb(24, 18, 43) !important;
 }
