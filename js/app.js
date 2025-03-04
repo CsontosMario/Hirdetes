@@ -119,6 +119,19 @@
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))
+        $scope.toCart = () => {
+          http.request({
+            url: "./php/cartelements.php",
+            data: $scope.sign_up
+          })
+          .then(result => {
+            $scope.data = result
+            $scope.$applyAsync()
+            alert($rootScope.lang.data.registered);
+          })
+          .catch(e => console.log(e))
+
+        }
         console.log('Products controller...');
       }
     ])
