@@ -49,25 +49,25 @@
             controller: 'about_usController'
           })
           .state('register', {
-            url: '/sign_up',
+            url: '/profile/sign_up',
             parent: 'root',
             templateUrl: './html/profil_and_cart/sign_up.html',
             controller: 'registerController'
           })
           .state('login', {
-            url: '/',
+            url: '/profile/sign_in',
             parent: 'root',
             templateUrl: './html/profil_and_cart/sign_in.html',
             controller: 'loginController'
           })
           .state('profil', {
-            url: '/',
+            url: '/profile/profile',
             parent: 'root',
             templateUrl: './html/profil_and_cart/profile.html',
             controller: 'profileController'
           })
           .state('cart', {
-            url: '/',
+            url: '/cart',
             parent: 'root',
             templateUrl: './html/profil_and_cart/cart.html',
             controller: 'cartController'
@@ -185,7 +185,8 @@
       '$scope',
       'http',
       'util',
-      function ($rootScope, $scope, http, util) {
+      '$state',
+      function ($rootScope, $scope, http, util, $state) {
         console.log('Login controller...');
         $scope.login = () => {
           http.request({
@@ -200,8 +201,8 @@
               alert($rootScope.lang.data.sign_in_success_1 + "\n" + 
                     $rootScope.lang.data.sign_in_success_2 + " " + 
                     $rootScope.user.name + "!");
-              $scope.$applyAsync();
               location.reload();
+              $scope.$applyAsync();
           })
           .catch(e => alert($rootScope.lang.data[e]));
         }
