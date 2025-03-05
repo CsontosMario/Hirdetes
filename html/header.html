@@ -92,7 +92,8 @@
             </li>
 
             <!-- Bejelentkezés -->
-            <li ng-show="!$root.user.id">
+            <li class="text-center"
+                ng-show="!$root.user.id">
               <a class="dropdown-item
                         text-white" 
                  ui-sref="login"
@@ -110,7 +111,8 @@
             </li>
 
             <!-- Profil cím -->
-            <li ng-show="$root.user.id">
+            <li class="text-center"
+                ng-show="$root.user.id">
               <h4 class="text-center 
                          fw-bold 
                          text-decoration-underline">
@@ -122,7 +124,8 @@
             </li>
 
             <!-- Profil -->
-            <li ng-show="$root.user.id">
+            <li class="text-center"
+                ng-show="$root.user.id">
               <a class="dropdown-item 
                         text-white" 
                  ui-sref="profil" 
@@ -139,7 +142,8 @@
             </li>
 
             <!-- Kosár cím -->
-            <li ng-show="$root.user.id">
+            <li class="text-center"
+                ng-show="$root.user.id">
               <h4 class="text-center 
                          fw-bold 
                          text-decoration-underline">
@@ -151,7 +155,8 @@
             </li>
 
             <!-- Kosár (gomb) -->
-            <li ng-show="$root.user.id">
+            <li class="text-center"
+                ng-show="$root.user.id">
               <a class="dropdown-item
                         text-white" 
                  ui-sref="cart"
@@ -169,7 +174,8 @@
             </li>
 
             <!-- Kijelentkezés cím -->
-            <li ng-show="$root.user.id">
+            <li class="text-center"
+                ng-show="$root.user.id">
               <h4 class="text-center 
                          fw-bold 
                          text-decoration-underline">
@@ -181,7 +187,8 @@
             </li>
 
             <!-- Kijelentkezés (gomb) -->
-            <li ng-show="$root.user.id">
+            <li class="text-center"
+                ng-show="$root.user.id">
               <a class="dropdown-item
                         text-white"
                  href="#" 
