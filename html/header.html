@@ -24,7 +24,8 @@
 
         <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link color" 
+          <a class="nav-link
+                    text-white" 
              ui-sref="home" 
              ui-sref-active="active">
             <i class="fa-solid fa-house me-1"></i>
@@ -34,8 +35,8 @@
 
         <!-- Products -->
         <li class="nav-item">
-          <a class="nav-link 
-                    color" 
+          <a class="nav-link
+                    text-white" 
              ui-sref="products" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -49,8 +50,8 @@
                    dropdown" 
             data-bs-auto-close="true">
           <a class="nav-link 
-                    dropdown-toggle 
-                    color" 
+                    dropdown-toggle
+                    text-white" 
              href="#" 
              role="button" 
              data-bs-toggle="dropdown" 
@@ -63,14 +64,14 @@
           <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
           <ul class="dropdown-menu
                      dropdown-menu-end
-                     text-start">
+                     text-start
+                     text-white">
 
             <!-- Cím -->
             <li>
               <h4 class="text-center 
                          fw-bold 
-                         text-decoration-underline 
-                         color">
+                         text-decoration-underline">
                 <i class="fa-solid 
                           fa-id-badge"></i>
                 {{$root.lang.data.account}}
@@ -92,8 +93,8 @@
 
             <!-- Bejelentkezés -->
             <li ng-show="!$root.user.id">
-              <a class="dropdown-item 
-                        color" 
+              <a class="dropdown-item
+                        text-white" 
                  ui-sref="login"
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -105,16 +106,14 @@
 
             <!-- különítő sor 1 -->
             <li ng-show="$root.user.id">
-              <hr class="dropdown-divider 
-                         color">
+              <hr class="dropdown-divider">
             </li>
 
             <!-- Profil cím -->
             <li ng-show="$root.user.id">
               <h4 class="text-center 
                          fw-bold 
-                         text-decoration-underline
-                         color">
+                         text-decoration-underline">
                 <i class="fa-solid 
                           fa-id-badge 
                           me-1"></i>
@@ -125,7 +124,7 @@
             <!-- Profil -->
             <li ng-show="$root.user.id">
               <a class="dropdown-item 
-                        color" 
+                        text-white" 
                  ui-sref="profil" 
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -136,16 +135,14 @@
 
             <!-- különítő sor 2 -->
             <li ng-show="$root.user.id">
-              <hr class="dropdown-divider 
-                         color">
+              <hr class="dropdown-divider">
             </li>
 
             <!-- Kosár cím -->
             <li ng-show="$root.user.id">
               <h4 class="text-center 
                          fw-bold 
-                         text-decoration-underline
-                         color">
+                         text-decoration-underline">
                 <i class="fa-solid 
                           fa-cart-shopping 
                           me-1"></i>
@@ -155,8 +152,8 @@
 
             <!-- Kosár (gomb) -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item 
-                        color" 
+              <a class="dropdown-item
+                        text-white" 
                  ui-sref="cart"
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -168,16 +165,14 @@
 
             <!-- különítő sor 3 -->
             <li ng-show="$root.user.id">
-              <hr class="dropdown-divider 
-                         color">
+              <hr class="dropdown-divider">
             </li>
 
             <!-- Kijelentkezés cím -->
             <li ng-show="$root.user.id">
               <h4 class="text-center 
                          fw-bold 
-                         text-decoration-underline
-                         color">
+                         text-decoration-underline">
                 <i class="fa-solid 
                           fa-right-from-bracket 
                           me-1"></i>
@@ -187,8 +182,8 @@
 
             <!-- Kijelentkezés (gomb) -->
             <li ng-show="$root.user.id">
-              <a class="dropdown-item 
-                        color"
+              <a class="dropdown-item
+                        text-white"
                  href="#" 
                  ui-sref-active="active" 
                  ng-click="$root.kilep()">
@@ -205,8 +200,8 @@
 
         <!-- Termelőinkről -->
         <li class="nav-item">
-          <a class="nav-link 
-                    color" 
+          <a class="nav-link
+                    text-white" 
              ui-sref="aboutOurFarmers" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -217,8 +212,8 @@
 
         <!-- Fejlesztőinkről -->
         <li class="nav-item">
-          <a class="nav-link 
-                    color" 
+          <a class="nav-link
+                    text-white" 
              ui-sref="aboutUs" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -232,9 +227,9 @@
                    dropdown
                    ms-0 ms-xl-5" 
             data-bs-auto-close="true">
-          <a class="nav-link 
-                    color 
-                    dropdown-toggle" 
+          <a class="nav-link
+                    dropdown-toggle
+                    text-white" 
              role="button" 
              data-bs-toggle="dropdown" 
              aria-expanded="false">
@@ -255,8 +250,9 @@
                 ng-repeat="x in lang.available"
                 ng-if="x.id !== lang.available[lang.index].id && x.valid" 
                 ng-click="methods.languageChanged(x.id)">
-              <a class="dropdown-item color 
-                        cursor-pointer">
+              <a class="dropdown-item
+                        cursor-pointer
+                        text-white">
                 <img class="me-1" 
                      height="32" 
                      alt="flag" 

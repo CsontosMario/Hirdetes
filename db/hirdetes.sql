@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 17. 18:55
--- Kiszolgáló verziója: 10.4.25-MariaDB
--- PHP verzió: 7.4.30
+-- Létrehozás ideje: 2025. Már 05. 09:27
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `fizetes` (
   `fizetesTipus` varchar(11) NOT NULL,
   `megnevezes` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `fizetes`
@@ -52,7 +52,7 @@ CREATE TABLE `kosar` (
   `felhasznaloID` int(11) NOT NULL,
   `datum` datetime NOT NULL,
   `fizetesTipus` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `kosar`
@@ -76,7 +76,7 @@ CREATE TABLE `kosarelemek` (
   `termekID` int(11) NOT NULL,
   `db` int(11) NOT NULL,
   `ar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `kosarelemek`
@@ -105,7 +105,7 @@ CREATE TABLE `programozoink` (
   `munkanev` varchar(50) NOT NULL,
   `kep` varchar(50) NOT NULL,
   `profesion` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `programozoink`
@@ -131,7 +131,7 @@ CREATE TABLE `regisztracio` (
   `telepules` varchar(50) DEFAULT NULL,
   `cim` varchar(50) DEFAULT NULL,
   `orszag` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `regisztracio`
@@ -163,15 +163,15 @@ CREATE TABLE `termeloink` (
   `rola` text NOT NULL,
   `munkanev` varchar(30) NOT NULL,
   `kep` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `termeloink`
 --
 
 INSERT INTO `termeloink` (`id`, `nev`, `szuletett`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
-(1, 'Hudák Mária', 0, '', '', 'job_title', 'maria.jpg'),
-(2, 'Burkus Gusztáv', 0, '', '', 'job_title', 'gusztav.jpg');
+(1, 'Hudák Mária', 1964, '', '', 'job_title', 'maria.jpg'),
+(2, 'Burkus Gusztáv', 1960, '', '', 'job_title', 'gusztav.jpg');
 
 -- --------------------------------------------------------
 
@@ -186,7 +186,7 @@ CREATE TABLE `zoldsegek` (
   `leiras` text NOT NULL,
   `ar` int(10) NOT NULL,
   `kiszereles` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `zoldsegek`
