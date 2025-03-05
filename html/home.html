@@ -2,11 +2,11 @@
 
   <!-- Carousel -->
   <div class="row mt-5"
-       ng-init="discount=['01_10percent.png',
-                          '02_25percent.png',
-                          '03_50percent.png',
-                          '04_75percent.png',
-                          '05_90percent.png'];
+       ng-init="discount=['10',
+                          '02_25percent',
+                          '03_50percent',
+                          '04_75percent',
+                          '05_90percent'];
                 buttons=['prev', 'next']">
     <div id="carouselExampleCaptions" 
          class="carousel slide">
@@ -28,16 +28,16 @@
         <div class="carousel-item" 
              ng-class="{'active': $index === 0}" 
              ng-repeat="d in discount track by $index">
-          <img ng-src="./img/discounts/{{d}}" 
+          <img ng-src="./img/discounts/final_v1/{{d}}.png" 
                class="d-block 
                       w-50 
                       mx-auto" 
-               alt="...">
+               alt="{{d}}">
           <div class="carousel-caption 
                       d-none 
                       d-md-block">
             <h5>
-              {{$index+1}}{{$root.lang.data.percent}}
+              {{d}}{{$root.lang.data.percent}}
             </h5>
             <p>
               {{$root.lang.data.discount_available}}
