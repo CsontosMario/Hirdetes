@@ -8,7 +8,14 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$query = $db->preparateInsert("kosarelemek", $args);
+$params = Util::objMerge(array(
+  "kosarID" => NULL,
+  "termekID" => NULL,
+  "db" => NULL,
+  "ar" => NULL
+), $args, true);
+
+$query = "INSERT INTO `kosarelemek`(`kosarID`, `termekID`, `db`, `ar`) VALUES ('',10,1,2000);";
 
 $result = $db->execute($query, array_values($args));
 
