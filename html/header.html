@@ -1,6 +1,4 @@
-<nav class="navbar 
-            navbar-expand-xl 
-            bg-body-tertiary">
+<nav class="navbar navbar-expand-xl bg-body-tertiary">
   <div class="container-fluid">
 
     <!-- Hamburger Icon -->
@@ -15,17 +13,14 @@
     </button>
 
     <!-- Menüpontok -->
-    <div class="collapse 
-                navbar-collapse
-                justify-content-center" 
+    <div class="collapse navbar-collapse justify-content-center" 
          id="navbarNav">
 
       <ul class="navbar-nav">
 
         <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link
-                    text-white" 
+          <a class="nav-link text-white" 
              ui-sref="home" 
              ui-sref-active="active">
             <i class="fa-solid fa-house me-1"></i>
@@ -35,58 +30,43 @@
 
         <!-- Products -->
         <li class="nav-item">
-          <a class="nav-link
-                    text-white" 
+          <a class="nav-link text-white" 
              ui-sref="products" 
              ui-sref-active="active">
-            <i class="fa-solid 
-                      fa-wheat-awn"></i>
+            <i class="fa-solid fa-wheat-awn"></i>
             {{$root.lang.data.products}}
           </a>
         </li>
 
         <!-- Dropdown -> Fiók és Kosár (button) -->
-        <li class="nav-item 
-                   dropdown" 
+        <li class="nav-item dropdown" 
             data-bs-auto-close="true">
-          <a class="nav-link 
-                    dropdown-toggle
-                    text-white" 
+          <a class="nav-link dropdown-toggle text-white" 
              href="#" 
              role="button" 
              data-bs-toggle="dropdown" 
              aria-expanded="false">
-            <i class="fa-solid 
-                      fa-user-large"></i>
+            <i class="fa-solid fa-user-large"></i>
             {{$root.lang.data.accountAndCart}}
           </a>
 
           <!-- Dropdown -> Fiók és Kosár (menüpontok) -->
-          <ul class="dropdown-menu
-                     dropdown-menu-end
-                     text-start
-                     text-white">
+          <ul class="dropdown-menu dropdown-menu-end text-start text-white">
 
             <!-- Cím -->
             <li>
-              <h4 class="text-center 
-                         fw-bold 
-                         text-decoration-underline">
-                <i class="fa-solid 
-                          fa-id-badge"></i>
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-id-badge"></i>
                 {{$root.lang.data.account}}
               </h4>
             </li>
 
             <!-- Regisztráció -->
             <li class="text-center">
-              <a class="dropdown-item 
-                        text-white"
+              <a class="dropdown-item text-white"
                  ui-sref="register" 
                  ui-sref-active="active">
-                <i class="fa-solid 
-                          fa-id-card 
-                          me-1"></i>
+                <i class="fa-solid fa-id-card me-1"></i>
                 {{$root.lang.data.registration}}
               </a>
             </li>
@@ -94,13 +74,10 @@
             <!-- Bejelentkezés -->
             <li class="text-center"
                 ng-show="!$root.user.id">
-              <a class="dropdown-item
-                        text-white" 
+              <a class="dropdown-item text-white" 
                  ui-sref="login"
                  ui-sref-active="active">
-                <i class="fa-solid 
-                          fa-right-to-bracket 
-                          me-1"></i>
+                <i class="fa-solid fa-right-to-bracket me-1"></i>
                 {{$root.lang.data.login}}
               </a>
             </li>
@@ -113,12 +90,8 @@
             <!-- Profil cím -->
             <li class="text-center"
                 ng-show="$root.user.id">
-              <h4 class="text-center 
-                         fw-bold 
-                         text-decoration-underline">
-                <i class="fa-solid 
-                          fa-id-badge 
-                          me-1"></i>
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-id-badge me-1"></i>
                 {{$root.lang.data.profile}}
               </h4>
             </li>
@@ -126,8 +99,7 @@
             <!-- Profil -->
             <li class="text-center"
                 ng-show="$root.user.id">
-              <a class="dropdown-item 
-                        text-white" 
+              <a class="dropdown-item text-white" 
                  ui-sref="profil" 
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -144,12 +116,8 @@
             <!-- Kosár cím -->
             <li class="text-center"
                 ng-show="$root.user.id">
-              <h4 class="text-center 
-                         fw-bold 
-                         text-decoration-underline">
-                <i class="fa-solid 
-                          fa-cart-shopping 
-                          me-1"></i>
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-cart-shopping me-1"></i>
                 {{$root.lang.data.cart}}
               </h4>
             </li>
@@ -157,8 +125,7 @@
             <!-- Kosár (gomb) -->
             <li class="text-center"
                 ng-show="$root.user.id">
-              <a class="dropdown-item
-                        text-white" 
+              <a class="dropdown-item text-white" 
                  ui-sref="cart"
                  ui-sref-active="active">
                 <i class="fa-solid 
@@ -176,12 +143,8 @@
             <!-- Kijelentkezés cím -->
             <li class="text-center"
                 ng-show="$root.user.id">
-              <h4 class="text-center 
-                         fw-bold 
-                         text-decoration-underline">
-                <i class="fa-solid 
-                          fa-right-from-bracket 
-                          me-1"></i>
+              <h4 class="text-center fw-bold text-decoration-underline">
+                <i class="fa-solid fa-right-from-bracket me-1"></i>
                 {{$root.lang.data.logOut}}
               </h4>
             </li>
@@ -189,14 +152,11 @@
             <!-- Kijelentkezés (gomb) -->
             <li class="text-center"
                 ng-show="$root.user.id">
-              <a class="dropdown-item
-                        text-white"
+              <a class="dropdown-item text-white"
                  href="#" 
                  ui-sref-active="active" 
                  ng-click="$root.kilep()">
-                <i class="fa-solid 
-                          fa-right-from-bracket 
-                          me-1"></i>
+                <i class="fa-solid fa-right-from-bracket me-1"></i>
                 {{$root.lang.data.logOut}}
               </a>
             </li>
@@ -207,8 +167,7 @@
 
         <!-- Termelőinkről -->
         <li class="nav-item">
-          <a class="nav-link
-                    text-white" 
+          <a class="nav-link text-white" 
              ui-sref="aboutOurFarmers" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -219,8 +178,7 @@
 
         <!-- Fejlesztőinkről -->
         <li class="nav-item">
-          <a class="nav-link
-                    text-white" 
+          <a class="nav-link text-white" 
              ui-sref="aboutUs" 
              ui-sref-active="active">
             <i class="fa-solid 
@@ -230,13 +188,9 @@
         </li>
 
         <!-- Dropdown -> Nyelvek (button) -->
-        <li class="nav-item 
-                   dropdown
-                   ms-0 ms-xl-5" 
+        <li class="nav-item dropdown ms-0 ms-xl-5" 
             data-bs-auto-close="true">
-          <a class="nav-link
-                    dropdown-toggle
-                    text-white" 
+          <a class="nav-link dropdown-toggle text-white" 
              role="button" 
              data-bs-toggle="dropdown" 
              aria-expanded="false">
@@ -248,18 +202,14 @@
           </a>
 
           <!-- Dropdown -> Nyelvek (menüpontok) -->
-          <ul class="dropdown-menu 
-                     dropdown-menu-end
-                     text-start">
+          <ul class="dropdown-menu dropdown-menu-end text-start">
 
             <!-- Nyelvek kiválasztása -->
             <li class="nav-item" 
                 ng-repeat="x in lang.available"
                 ng-if="x.id !== lang.available[lang.index].id && x.valid" 
                 ng-click="methods.languageChanged(x.id)">
-              <a class="dropdown-item
-                        cursor-pointer
-                        text-white">
+              <a class="dropdown-item cursor-pointer text-white">
                 <img class="me-1" 
                      height="32" 
                      alt="flag" 

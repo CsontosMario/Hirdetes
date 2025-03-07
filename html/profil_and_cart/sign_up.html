@@ -1,17 +1,13 @@
 <div class="container">
-  <div class="row 
-              justify-content-center 
-              m-3">
-    <form class="w-50 
-                 p-3" 
+  
+  <div class="row justify-content-center m-3">
+
+    <form class="w-50 p-3" 
           style="border:1px solid #ccc" 
           name="sign_up_form">
       <div class="mb-3">
-        <h1 class="text-center 
-                   pb-3">
-          <i class="fa-solid 
-                    fa-id-card 
-                    me-1"></i>
+        <h1 class="text-center pb-3">
+          <i class="fa-solid fa-id-card me-1"></i>
           {{$root.lang.data.registration}}
         </h1>
       </div>
@@ -20,8 +16,7 @@
       <div class="mb-3">
         <label for="name">
           <b>
-            <i class="fa-solid 
-                      fa-signature"></i>
+            <i class="fa-solid fa-signature"></i>
             {{$root.lang.data.fullName}}
           </b>
         </label>
@@ -37,8 +32,7 @@
       <div class="mb-3">
         <label for="email">
           <b>
-            <i class="fa-solid 
-                      fa-at"></i>
+            <i class="fa-solid fa-at"></i>
             {{$root.lang.data.email}}
           </b>
         </label>
@@ -54,8 +48,7 @@
       <div class="mb-3">
         <label for="password">
           <b>
-            <i class="fa-solid 
-                      fa-lock"></i>
+            <i class="fa-solid fa-lock"></i>
             {{$root.lang.data.password}}
           </b>
         </label>
@@ -72,8 +65,7 @@
       <div class="mb-3">
         <label for="password_repeat">
           <b>
-            <i class="fa-solid 
-                      fa-lock"></i>
+            <i class="fa-solid fa-lock"></i>
             {{$root.lang.data.confirmPassword}}
           </b>
         </label>
@@ -89,8 +81,7 @@
       <div class="mb-3">
         <label for="postal_code">
           <b>
-            <i class="fa-solid 
-                      fa-signs-post"></i>
+            <i class="fa-solid fa-signs-post"></i>
             {{$root.lang.data.postalCode}} 
             ({{$root.lang.data.optional}})
           </b>
@@ -106,8 +97,7 @@
       <div class="mb-3">
         <label for="settlement">
           <b>
-            <i class="fa-solid 
-                      fa-location-dot"></i>
+            <i class="fa-solid fa-location-dot"></i>
             {{$root.lang.data.settlement}} 
             ({{$root.lang.data.optional}})
           </b>
@@ -123,8 +113,7 @@
       <div class="mb-3">
         <label for="r_adress">
           <b>
-            <i class="fa-solid 
-                      fa-location-pin"></i>
+            <i class="fa-solid fa-location-pin"></i>
             {{$root.lang.data.rAdress}} 
             ({{$root.lang.data.optional}})
           </b>
@@ -140,8 +129,7 @@
       <div class="mb-3">
         <label for="country">
           <b>
-            <i class="fa-solid 
-                      fa-flag"></i>
+            <i class="fa-solid fa-flag"></i>
             {{$root.lang.data.country}} 
             ({{$root.lang.data.optional}})
           </b>
@@ -154,8 +142,7 @@
       </div>
 
       <!-- Jelszó megjelenítése (regisztráció) -->
-      <div class="mb-3
-                  form-check">
+      <div class="mb-3 form-check">
         <input type="checkbox" 
                class="form-check-input" 
                ng-init="model.showPassword=false" 
@@ -163,8 +150,7 @@
                id="showPassword">
         <label class="form-check-label" 
                for="showPassword">
-          <i class="fa-solid
-                    fa-lock-open"></i>
+          <i class="fa-solid fa-lock-open"></i>
           {{$root.lang.data.showPassword}}
         </label>
       </div>
@@ -172,20 +158,16 @@
       <!-- Gomb (regisztráció) -->
       <div class="clearfix">
         <button type="button"
-                class="btn 
-                       btn-primary" 
+                class="btn btn-primary" 
                 ng-disabled="sign_up_form.$invalid" 
                 ng-click="register()">
-          <i class="fa-solid 
-                    fa-id-card 
-                    me-1"></i>
+          <i class="fa-solid fa-id-card me-1"></i>
           {{$root.lang.data.registerAccount}}
         </button>
       </div>
 
       <!-- Bejelentkezés (link) -->
-      <div class="mt-4 
-                  form-check"
+      <div class="mt-4 form-check"
            ng-show="!$root.user.id">
         <h5>
           <a ui-sref="login"
