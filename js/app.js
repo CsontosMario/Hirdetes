@@ -175,6 +175,8 @@
       'http',
       function ($rootScope,$scope,$state,http) {
         console.log('Register controller...');
+
+        //Nincs bejelentkezve egy felhasználó se
         $scope.register = () => {
           if ($scope.confirm_password === $scope.sign_up.jelszo) {
             http.request({
@@ -184,12 +186,30 @@
             .then(result => {
               $scope.data = result
               $state.go('login');
-              $scope.$applyAsync()
-              alert($rootScope.lang.data.registered);
+              $scope.$applyAsync();
+              alert($rootScope.lang.data.registered1);
             })
             .catch(e => console.log(e))
           } else {
-            alert($rootScope.lang.data.wrong_password)
+            alert($rootScope.lang.data.wrong_password);
+          }
+        }
+
+        //Be van jelentkezve egy felhasználó
+        $scope.register_logged_in = () => {
+          if ($scope.confirm_password === $scope.sign_up.jelszo) {
+            http.request({
+              url: "./php/register.php",
+              data: $scope.sign_up
+            })
+            .then(result => {
+              $scope.data = result;
+              $scope.$applyAsync();
+              alert($rootScope.lang.data.registered2);
+            })
+            .catch(e => console.log(e))
+          } else {
+            alert($rootScope.lang.data.wrong_password);
           }
         }
       }

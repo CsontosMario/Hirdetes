@@ -155,12 +155,25 @@
         </label>
       </div>
 
-      <!-- Gomb (regisztráció) -->
-      <div class="clearfix">
+      <!-- Gomb (regisztráció - nincs bejelentkezve) -->
+      <div class="clearfix" 
+           ng-show="!$root.user.id">
         <button type="button"
                 class="btn btn-primary" 
                 ng-disabled="sign_up_form.$invalid" 
                 ng-click="register()">
+          <i class="fa-solid fa-id-card me-1"></i>
+          {{$root.lang.data.registerAccount}}
+        </button>
+      </div>
+      
+      <!-- Gomb (regisztráció - bejelentkezett) -->
+      <div class="clearfix"
+           ng-show="$root.user.id">
+        <button type="button"
+                class="btn btn-primary" 
+                ng-disabled="sign_up_form.$invalid" 
+                ng-click="register_logged_in()">
           <i class="fa-solid fa-id-card me-1"></i>
           {{$root.lang.data.registerAccount}}
         </button>
