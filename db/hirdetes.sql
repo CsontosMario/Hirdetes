@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Már 05. 09:27
+-- Létrehozás ideje: 2025. Már 11. 12:14
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -147,7 +147,8 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `email`, `nev`, `telefonszam`, `jel
 (7, 'nyaridaniel@gmail.com', 'Nyári Dániel', NULL, '1234aA', 6900, 'Makó', 'ukbuk.u. 1', 'Magyarország'),
 (8, 'frankcastle@gmail.com', 'Frank Castle', NULL, '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
 (9, 'petecastallengtion@gmail.com', 'Pete Castallengtion', NULL, '1234aA', 10000, 'New York', 'Park Avenue', 'United States'),
-(10, 'soujiseta2011@gmail.com', 'Souji Seta', '+8175322198', '1234aA', 777, 'Fuefuki, Yamanashi Prefecture', 'Yamanashi Prefectural Rd 303', 'Japan');
+(10, 'soujiseta2011@gmail.com', 'Souji Seta', '+8175322198', '1234aA', 777, 'Fuefuki, Yamanashi Prefecture', 'Yamanashi Prefectural Rd 303', 'Japan'),
+(11, 'ordry.atilla@keri.mako.hu', 'Ódry Atilla', NULL, '1234aA', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -267,7 +268,7 @@ ALTER TABLE `programozoink`
 -- AUTO_INCREMENT a táblához `regisztracio`
 --
 ALTER TABLE `regisztracio`
-  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `felhasznaloID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT a táblához `termeloink`

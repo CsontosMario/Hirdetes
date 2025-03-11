@@ -93,7 +93,7 @@
             util.localStorage('remove', 'loginID');
             util.localStorage('remove', 'loginName');
             $rootScope.$applyAsync();
-            location.reload();
+            $state.go('home');
           }
         }
       }
@@ -171,8 +171,9 @@
     .controller('registerController', [
       '$rootScope',
       '$scope',
+      '$state',
       'http',
-      function ($rootScope,$scope, http) {
+      function ($rootScope,$scope,$state,http) {
         console.log('Register controller...');
         $scope.register = () => {
           if ($scope.confirm_password === $scope.sign_up.jelszo) {
@@ -182,6 +183,7 @@
             })
             .then(result => {
               $scope.data = result
+              $state.go('login');
               $scope.$applyAsync()
               alert($rootScope.lang.data.registered);
             })
@@ -215,7 +217,7 @@
               alert($rootScope.lang.data.sign_in_success_1 + "\n" + 
                     $rootScope.lang.data.sign_in_success_2 + " " + 
                     $rootScope.user.name + "!");
-              location.reload();
+              $state.go('home');
               $scope.$applyAsync();
           })
           .catch(e => alert($rootScope.lang.data[e]));
