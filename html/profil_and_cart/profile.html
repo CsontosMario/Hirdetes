@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row justify-content-center m-5">
     <form class="w-50 p-3" 
-          style="border:1px solid #ccc">
+          style="border:1px solid #ccc"
+          name="profile_form">
       <div class="mb-3">
         <h1 class="text-center">
           <i class="fa-solid fa-id-badge"></i>
@@ -114,14 +115,15 @@
       <!-- Mentés (gomb) -->
       <button type="button" 
               class="btn btn-primary" 
-              disabled>
+              ng-disabled="profile_form.$invalid">
         <i class="fa-solid fa-floppy-disk"></i>
         {{$root.lang.data.save}}
       </button>
 
       <!-- Mégsem (gomb) -->
       <button type="button"
-              class="btn btn-primary">
+              class="btn btn-primary"
+              ng-disabled="profile_form.$invalid">
         <i class="fa-solid 
                   fa-circle-xmark"></i>
         {{$root.lang.data.cancel}}
