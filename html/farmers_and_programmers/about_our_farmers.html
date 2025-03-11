@@ -1,21 +1,15 @@
 <div class="container">
-  <div class="row 
-              mt-5">
+  <div class="row mt-5">
 
     <div class="row text-center mb-3">
       <h1>
-        <i class="fa-solid
-                  fa-plant-wilt"></i>
+        <i class="fa-solid fa-plant-wilt"></i>
         {{$root.lang.data.aboutOurProducers}}
       </h1>
     </div>
 
     <!-- Cards -->
-    <div class="card 
-                text-center 
-                col-sm-6 
-                mb-3
-                mb-sm-0"
+    <div class="card text-center col-sm-6 mb-3 mb-sm-0"
          ng-repeat="farmer in farmers">
 
       <!-- Card header -->
@@ -46,23 +40,19 @@
 
         <!-- Több információ (gomb) -->
         <a href="#" 
-           class="btn 
-                  btn-primary"
+           class="btn btn-primary"
            type="button"
            data-bs-toggle="modal"
            data-bs-target="#modal{{farmer.id}}">
-          <i class="fa-solid 
-                    fa-scroll"></i>
+          <i class="fa-solid fa-scroll"></i>
           {{$root.lang.data.moreInformation}}
         </a>
       </div>
 
       <!-- Card footer -->
-      <div class="card-footer 
-                  text-body-secondary">
+      <div class="card-footer text-body-secondary">
         <!-- Termelőink születési idelye -->
-        <i class="fa-solid 
-                  fa-calendar"></i> 
+        <i class="fa-solid fa-calendar"></i> 
         {{$root.lang.data.bornIn}}: 
         {{farmer.szuletett}}
       </div>
@@ -71,8 +61,7 @@
     <!-- Modals -->
     <div ng-repeat="x in farmers">
       <!-- Modal -->
-      <div class="modal 
-                  fade" 
+      <div class="modal fade" 
            id="modal{{x.id}}" 
            data-bs-backdrop="static" 
            data-bs-keyboard="false" 
@@ -82,8 +71,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title 
-                         fs-5" 
+              <h1 class="modal-title fs-5" 
                   id="staticBackdropLabel">
                 {{x.nev}}
               </h1>
@@ -109,8 +97,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" 
-                      class="btn
-                             btn-primary" 
+                      class="btn btn-primary" 
                       data-bs-dismiss="modal">
                 {{$root.lang.data.close}}
               </button>

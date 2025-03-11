@@ -1,17 +1,11 @@
 <div class="container">
-  <div class="row 
-              justify-content-center 
-              mt-5">
-    <form class="w-auto 
-                 p-3" 
+  <div class="row justify-content-center mt-5">
+    <form class="w-auto p-3" 
           style="border:1px solid #ccc" 
           name="sign_in_form">
       <div class="mb-3">
-        <h1 class="text-center 
-                   pb-3">
-          <i class="fa-solid 
-                    fa-right-to-bracket 
-                    me-1"></i>
+        <h1 class="text-center pb-3">
+          <i class="fa-solid fa-right-to-bracket me-1"></i>
           {{$root.lang.data.login}}
         </h1>
       </div>
@@ -21,8 +15,7 @@
         <label for="email" 
                class="form-label">
           <b>
-            <i class="fa-solid 
-                      fa-signature"></i>
+            <i class="fa-solid fa-signature"></i>
             {{$root.lang.data.email}}
           </b>
         </label>
@@ -38,8 +31,7 @@
         <label for="password" 
                class="form-label">
           <b>
-            <i class="fa-solid 
-                      fa-lock"></i>
+            <i class="fa-solid fa-lock"></i>
             {{$root.lang.data.password}}
           </b>
         </label>
@@ -48,8 +40,7 @@
       </div>
 
       <!-- Jelszó mutatása (bejelentkezés) -->
-      <div class="mb-3 
-                  form-check">
+      <div class="mb-3 form-check">
         <input type="checkbox" 
                class="form-check-input" 
                ng-init="model.showPassword=false" 
@@ -57,8 +48,7 @@
                id="showPassword">
         <label class="form-check-label"
                for="showPassword">
-          <i class="fa-solid 
-                    fa-lock-open"></i>
+          <i class="fa-solid fa-lock-open"></i>
           {{$root.lang.data.showPassword}}
         </label>
       </div>
@@ -66,20 +56,16 @@
       <!-- Bejelentkezés (gomb) -->
       <div class="mb-3">
         <button type="button" 
-                class="btn 
-                       btn-primary" 
+                class="btn btn-primary" 
                 ng-disabled="sign_in_form.$invalid" 
                 ng-click="login()">
-          <i class="fa-solid 
-                    fa-right-to-bracket 
-                    me-1"></i>
+          <i class="fa-solid fa-right-to-bracket me-1"></i>
           {{$root.lang.data.loginToAccount}}
         </button>
       </div>
 
       <!-- Regisztráció (link) -->
-      <div class="mt-4 
-                  form-check">
+      <div class="mt-4 form-check">
         <h5>
           <a ui-sref="register"
              class="login_register">
