@@ -172,8 +172,11 @@
                       <i class="fa-solid fa-cart-shopping me-1"></i> 
                       {{$root.lang.data.add_to_cart}}
                     </button>
+                    <div class="mb-4 text-danger fw-bold"
+                         ng-show="!$root.user.id">
+                      {{$root.lang.data.cant_buy}}
+                    </div>
                 </div>
-
               </div>
             </div>
           </div>
