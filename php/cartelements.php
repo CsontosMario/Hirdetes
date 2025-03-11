@@ -15,9 +15,13 @@ $params = Util::objMerge(array(
   "ar" => NULL
 ), $args, true);
 
-$query = "INSERT INTO `kosarelemek`(`kosarID`, `termekID`, `db`, `ar`) VALUES ('',10,1,2000);";
+$query = "INSERT INTO `kosarelemek`(`kosarID`, `termekID`, `db`, `ar`) VALUES";
 
-$result = $db->execute($query, array_values($args));
+$result = $db->execute($query, $params);
+
+if (!$result['affectedRows']) {
+  Util::setError('apply_for_failed', $db);
+}
 
 $db = null;
 
