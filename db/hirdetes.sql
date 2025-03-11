@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Már 11. 12:14
+-- Létrehozás ideje: 2025. Már 11. 12:17
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -148,7 +148,7 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `email`, `nev`, `telefonszam`, `jel
 (8, 'frankcastle@gmail.com', 'Frank Castle', NULL, '1234aA', 6900, 'New York', 'street.u 7.', 'United States'),
 (9, 'petecastallengtion@gmail.com', 'Pete Castallengtion', NULL, '1234aA', 10000, 'New York', 'Park Avenue', 'United States'),
 (10, 'soujiseta2011@gmail.com', 'Souji Seta', '+8175322198', '1234aA', 777, 'Fuefuki, Yamanashi Prefecture', 'Yamanashi Prefectural Rd 303', 'Japan'),
-(11, 'ordry.atilla@keri.mako.hu', 'Ódry Atilla', NULL, '1234aA', NULL, NULL, NULL, NULL);
+(11, 'odry.atilla@keri.mako.hu', 'Ódry Atilla', NULL, '1234aA', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
