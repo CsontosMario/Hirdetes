@@ -1,17 +1,11 @@
 <div class="container">
-  <div class="row 
-              justify-content-center 
-              mt-5">
-    <form class="w-auto 
-                 p-3" 
+  <div class="row justify-content-center mt-5">
+    <form class="w-auto p-3" 
           style="border:1px solid #ccc" 
           name="cart_form">
       <div class="mb-3">
-        <h1 class="text-center 
-                   pb-3">
-          <i class="fa-solid 
-                    fa-cart-shopping 
-                    me-1"></i>
+        <h1 class="text-center pb-3">
+          <i class="fa-solid fa-cart-shopping me-1"></i>
           {{$root.lang.data.cart}}
         </h1>
       </div>
@@ -21,8 +15,7 @@
         <label for="pay_type" 
                class="form-label">
           <b>
-            <i class="fa-solid 
-                      fa-credit-card"></i>
+            <i class="fa-solid fa-credit-card"></i>
             {{$root.lang.data.pay_type}}:
           </b>
           <select class="form-select" 
@@ -42,8 +35,7 @@
         <label for="ccn" 
                class="form-label">
           <b>
-            <i class="fa-solid 
-                      fa-hashtag"></i>
+            <i class="fa-solid fa-hashtag"></i>
             {{$root.lang.data.card_num}}:
           </b>
         </label>
@@ -63,8 +55,7 @@
         <label for="date" 
                class="form-label">
           <b>
-            <i class="fa-solid 
-                      fa-calendar-days"></i>
+            <i class="fa-solid fa-calendar-days"></i>
             {{$root.lang.data.expiration_date}}:
           </b>
         </label>
@@ -78,13 +69,10 @@
       <!-- Gomb (fizetés) -->
       <div class="mb-3">
         <button type="button" 
-                class="btn 
-                       btn-primary" 
+                class="btn btn-primary" 
                 ng-disabled="cart_form.$invalid" 
                 ng-click="pay()">
-          <i class="fa-solid 
-                    fa-cart-shopping 
-                    me-1"></i>
+          <i class="fa-solid fa-cart-shopping me-1"></i>
           {{$root.lang.data.pay}}
         </button>
       </div>

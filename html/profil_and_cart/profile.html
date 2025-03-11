@@ -1,9 +1,6 @@
 <div class="container">
-  <div class="row 
-              justify-content-center 
-              m-5">
-    <form class="w-50 
-                 p-3" 
+  <div class="row justify-content-center m-5">
+    <form class="w-50 p-3" 
           style="border:1px solid #ccc">
       <div class="mb-3">
         <h1 class="text-center">
@@ -16,8 +13,7 @@
       <div class="mb-3">
         <label for="name" 
                class="form-label">
-          <i class="fa-solid 
-                    fa-user"></i>
+          <i class="fa-solid fa-user"></i>
           {{$root.lang.data.fullName}}:
         </label>
         <input type="text" 
@@ -28,49 +24,32 @@
       </div>
 
       <!-- Profile Picture -->
-      <div class="row 
-                  input-row 
-                  mb-5">
+      <div class="row input-row mb-5">
         <div>
-          <i class="fa-solid 
-                    fa-image-portrait 
-                    me-1"></i>
+          <i class="fa-solid fa-image-portrait me-1"></i>
           <label for="profile-image">
             {{$root.lang.data.p_picture}}:
           </label>
         </div>
-        <div class="col-11 
-                    col-md-7 
-                    position-relative" 
+        <div class="col-11 col-md-7 position-relative" 
              style="height:100px;">
           <input id="profile-image" 
                  name="image" 
                  type="file" 
                  accept="image/*" 
-                 class="form-control 
-                        form-control 
-                        d-none"
+                 class="form-control form-control d-none"
                  spellcheck="false" 
                  autocomplete="off" 
                  ng-model="helper.image" 
                  file-input 
                  ng-clear-icon='{"left":"160px"}'>
           <label for="profile-image">
-            <div class="bg-img 
-                        bg-img-cover 
-                        overflow-hidden 
-                        rounded-circle 
-                        border 
-												d-flex 
-                        align-items-center 
-                        justify-content-center 
-                        cursor-pointer" 
+            <div class="bg-img bg-img-cover overflow-hidden rounded-circle 
+                        border d-flex align-items-center justify-content-center cursor-pointer" 
                  style="width:130px;height:130px;">
-              <span class="text-center 
-                           text-muted" 
+              <span class="text-center ext-muted" 
                     ng-show="!model.img && !model.gender">
-                <i class="fa-solid 
-                          fa-upload"></i><br>
+                <i class="fa-solid fa-upload"></i><br>
                 <span class="fs-sm">
                   Max: 64KB
                 </span>
@@ -84,8 +63,7 @@
       <div class="mb-3">
         <label for="country" 
                class="form-label">
-          <i class="fa-solid 
-                    fa-flag"></i>
+          <i class="fa-solid fa-flag"></i>
           {{$root.lang.data.country}}:
         </label>
         <input type="text"
@@ -98,8 +76,7 @@
       <div class="mb-3">
         <label for="settlement" 
                class="form-label">
-          <i class="fa-solid 
-                    fa-location-dot"></i>
+          <i class="fa-solid fa-location-dot"></i>
           {{$root.lang.data.settlement}}:
         </label>
         <input type="text" 
@@ -111,8 +88,7 @@
       <!-- Lakcím bekérése -->
       <div class="mb-3">
         <label for="r_adress">
-          <i class="fa-solid 
-                    fa-location-pin"></i>
+          <i class="fa-solid fa-location-pin"></i>
           {{$root.lang.data.rAdress}}:
         </label>
         <input type="text" 
@@ -123,12 +99,10 @@
       </div>
 
       <!-- Irányítószám változtatása -->
-      <div class="mb-3 
-                  justify-content-center">
+      <div class="mb-3 justify-content-center">
         <label for="postal_code" 
                class="form-label">
-          <i class="fa-solid 
-                    fa-signs-post"></i>
+          <i class="fa-solid fa-signs-post"></i>
           {{$root.lang.data.postalCode}}:
         </label>
         <input type="text" 
@@ -140,18 +114,15 @@
 
       <!-- Mentés (gomb) -->
       <button type="button" 
-              class="btn
-                     btn-primary" 
+              class="btn btn-primary" 
               disabled>
-        <i class="fa-solid 
-                  fa-floppy-disk"></i>
+        <i class="fa-solid fa-floppy-disk"></i>
         {{$root.lang.data.save}}
       </button>
 
       <!-- Mégsem (gomb) -->
       <button type="button"
-              class="btn 
-                     btn-primary">
+              class="btn btn-primary">
         <i class="fa-solid 
                   fa-circle-xmark"></i>
         {{$root.lang.data.cancel}}
