@@ -14,7 +14,7 @@ $result = $db->execute($query, array_values($args));
 
 $db = null;
 
-if (is_null($result)) {
+if ($result['email'] === $args['email'] || $result['nev'] === $args['nev']) {
   Util::setError("duplicate_user");
 }
 
