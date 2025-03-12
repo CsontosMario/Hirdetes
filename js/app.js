@@ -189,7 +189,9 @@
               $scope.$applyAsync();
               alert($rootScope.lang.data.registered1);
             })
-            .catch(e => console.log(e))
+            .catch(e => {
+              alert($rootScope.lang.data[e])
+            })
           } else {
             alert($rootScope.lang.data.wrong_password);
           }
@@ -207,7 +209,9 @@
               $scope.$applyAsync();
               alert($rootScope.lang.data.registered2);
             })
-            .catch(e => console.log(e))
+            .catch(e => {
+              alert($rootScope.lang.data[e])
+            })
           } else {
             alert($rootScope.lang.data.wrong_password);
           }

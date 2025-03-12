@@ -120,5 +120,6 @@
   "doesnt_have_profile":"Ešte nemáte profil? Registrovať sa môžete tu.",
   "add_to_cart":"Pridať do košíka",
   "quantity":"Množstvo",
-  "cant_buy":"Melden Sie sich an, um auf dieser Website einkaufen zu können!"
+  "cant_buy":"Melden Sie sich an, um auf dieser Website einkaufen zu können!",
+  "duplicate_user":"Tento používateľ už existuje! Prosím, použite iné meno alebo e-mailovú adresu!"
 }

@@ -120,5 +120,6 @@
   "doesnt_have_profile":"Nincs még profilod? Itt tudsz regisztrálni.",
   "add_to_cart":"Hozzáadás a kosárhoz",
   "quantity":"Mennyiség",
-  "cant_buy":"Jelentkezz be hogy tudj vásárolni erről az oldalról!"
+  "cant_buy":"Jelentkezz be hogy tudj vásárolni erről az oldalról!",
+  "duplicate_user":"Már létezik ez a felhasználó! Kérjük használjon egy másik nevet vagy email címet!"
 }

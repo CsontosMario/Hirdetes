@@ -120,5 +120,6 @@
   "doesnt_have_profile":"Sie haben noch kein Profil? Hier können Sie sich registrieren.",
   "add_to_cart":"Zum Warenkorb hinzufügen",
   "quantity":"Quantität",
-  "cant_buy":"Melden Sie sich an, um auf dieser Website einkaufen zu können!"
+  "cant_buy":"Melden Sie sich an, um auf dieser Website einkaufen zu können!",
+  "duplicate_user":"Dieser Benutzer existiert bereits! Bitte einen anderen Namen bzw. eine andere E-Mail-Adresse verwenden!"
 }

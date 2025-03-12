@@ -14,4 +14,8 @@ $result = $db->execute($query, array_values($args));
 
 $db = null;
 
+if (is_null($result)) {
+  Util::setError("duplicate_user");
+}
+
 Util::setResponse($result);

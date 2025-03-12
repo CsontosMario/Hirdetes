@@ -120,5 +120,6 @@
   "doesnt_have_profile":"Don't have a profile yet? You can register here.",
   "add_to_cart":"Add to Cart",
   "quantity":"Quantity",
-  "cant_buy":"Log in to be able to shop from this site!"
+  "cant_buy":"Log in to be able to shop from this site!",
+  "duplicate_user":"This user already exists! Please use a different name or email address!"
 }
