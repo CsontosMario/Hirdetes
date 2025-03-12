@@ -18,4 +18,6 @@ if (is_null($result)) {
   Util::setError("duplicate_user");
 }
 
+$result = $result[0];
+
 Util::setResponse($result);
