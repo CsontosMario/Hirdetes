@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Már 11. 12:17
+-- Létrehozás ideje: 2025. Már 12. 09:32
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -171,8 +171,8 @@ CREATE TABLE `termeloink` (
 --
 
 INSERT INTO `termeloink` (`id`, `nev`, `szuletett`, `rolaroviden`, `rola`, `munkanev`, `kep`) VALUES
-(1, 'Hudák Mária', 1964, '', '', 'job_title', 'maria.jpg'),
-(2, 'Burkus Gusztáv', 1960, '', '', 'job_title', 'gusztav.jpg');
+(1, 'Hudák Mária', 1964, 'about_small_f1', 'about_f1', 'job_title', 'maria.jpg'),
+(2, 'Burkus Gusztáv', 1960, 'about_small_f2', 'about_f2', 'job_title', 'gusztav.jpg');
 
 -- --------------------------------------------------------
 
