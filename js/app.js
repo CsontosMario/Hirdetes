@@ -120,10 +120,14 @@
         })
         .catch(e => console.log(e))
 
-        $scope.toCart = (product, quantity) => {
+        $scope.toCart = (product_id, quantity, product_ar) => {
           http.request({
             url: "./php/toCart.php",
-            data: $scope.sign_up
+            data: {
+              termekID:product_id,
+              db:quantity,
+              ar:product_ar
+            }
           })
           .then(result => {
             $scope.data = result

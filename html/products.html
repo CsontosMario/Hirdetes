@@ -165,7 +165,7 @@
 
                     <!-- Buy product -->
                     <button class="btn btn-primary btn-lg mb-3 me-2"
-                            ng-click="toCart(x, model.quantity)"
+                            ng-click="toCart(x.termekID, model.quantity, x.ar*model.quantity)"
                             ng-disabled="!$root.user.id"
                             ui-sref="cart"
                             data-bs-dismiss="modal">
