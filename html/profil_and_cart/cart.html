@@ -3,13 +3,17 @@
     <div class="col col-md-1"></div>
     <div class="col col-md-4">
       <table class="table table-bordered table-striped">
-        <tr ng-init="table_header_data=['product_img','plant_name_table','packaging','quantity','price']">
+        <tr ng-init="table_header_data=['product_img','plant_name_table','packaging','quantity','price', 'cancel_product_head']">
           <th ng-repeat="x in table_header_data">{{$root.lang.data[x]}}</th>
         </tr>
         <tbody>
           <tr ng-repeat="bought_product in bought_products">
             <td><img src="./img/termekek/{{bought_product.img}}" alt="bought_product.name"></td>
-            <td></td>
+            <td>
+              <button class="btn btn-primary">
+                {{$root.lang.data.cancel_product}}
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
