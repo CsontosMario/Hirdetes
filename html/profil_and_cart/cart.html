@@ -4,9 +4,12 @@
     <!-- Kosárba tett termékel -->
     <div class="col col-md-4">
       <table class="table table-bordered table-striped">
-        <tr ng-init="table_header_data=['product_img','plant_name_table',
+        <tr ng-init="table_header_data=['plant_name_table',
                                         'packaging','quantity',
                                         'price']">
+          <th>
+            {{$root.lang.data.product_img}}
+          </th>
           <th ng-repeat="x in table_header_data">
             {{$root.lang.data[x]}}
           </th>
@@ -16,12 +19,12 @@
         </tr>
         <tbody>
           <tr ng-repeat="bought_product in bought_products">
-            <td>
+            <td ng-repeat="x in bought_products">
               <img ng-src="./img/termekek/{{bought_product.kep}}"
                    class="img-fluid"
                    alt="{{bought_product.name}}">
             </td>
-            <td ng-repeat="x in bought_products">
+            <td ng-repeat="z in bought_products">
               <button class="btn btn-danger">
                 X
               </button>
