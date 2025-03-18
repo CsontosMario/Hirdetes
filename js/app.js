@@ -357,13 +357,13 @@
       '$scope',
       'http',
       function ($rootScope, $scope, http) {
+        //Fizetési típusok
         http.request("./php/cart.php")
         .then(result => {
             $scope.pay_types = result;
             $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-
         //Megvett termékek adatainak leszedése
         http.request({
           url:"./php/cartelements.php",
@@ -374,7 +374,16 @@
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-
+        //Tartalom kiszedése a kosárból
+        $scope.remove_from_cart=()=>{
+          if (confirm($rootScope.lang.data.confirm_delete) === true) {
+            console.log("The item is removed from the cart!");
+          }
+          else{
+            console.log("The item isn't removed from the cart!");  
+          }
+        }
+        //Fizetés
         $scope.pay = ()=>{
           alert($rootScope.lang.data.pay_msg);
         }

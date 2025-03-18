@@ -26,7 +26,8 @@
                    alt="{{bought_product.name}}">
             </td>
             <td ng-repeat="z in bought_products">
-              <button class="btn btn-danger">
+              <button class="btn btn-danger"
+                      ng-click="remove_from_cart()">
                 X
               </button>
             </td>

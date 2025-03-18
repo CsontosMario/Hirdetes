@@ -126,5 +126,6 @@
   "product_img":"Termék képe",
   "cancel_product":"Termék eltávolítása",
   "finish_paying":"Vásárlás befejezése",
-  "empty_cart":"Üres a kosár"
+  "empty_cart":"Üres a kosár",
+  "confirm_delete":"Biztos törölni szeretnéd a terméket?"
 }
