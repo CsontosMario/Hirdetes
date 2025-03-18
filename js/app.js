@@ -335,7 +335,15 @@
       '$rootScope',
       '$scope',
       function ($rootScope, $scope) {
-        console.log('Profile controller...');
+
+        //Ideiglenesen teljesen kiüríti a profilt!!!
+        $scope.cancel_update = () => {
+          $scope.profile.name = "";
+          $scope.profile.country = "";
+          $scope.profile.settlement = "";
+          $scope.profile.cim = "";
+          $scope.profile.postal_code = "";
+        }
       }
     ])
 

@@ -123,7 +123,8 @@
       <!-- Mégsem (gomb) -->
       <button type="button"
               class="btn btn-primary"
-              ng-disabled="profile_form.$invalid">
+              ng-disabled="profile_form.$invalid"
+              ng-click="cancel_update()">
         <i class="fa-solid 
                   fa-circle-xmark"></i>
         {{$root.lang.data.cancel}}
