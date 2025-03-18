@@ -8,20 +8,8 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$params = Util::objMerge(array(
-  "kosarID" => NULL,
-  "termekID" => NULL,
-  "db" => NULL,
-  "ar" => NULL
-), $args, true);
-
-$query = "INSERT INTO `kosarelemek`(`kosarID`, `termekID`, `db`, `ar`) VALUES";
-
-$result = $db->execute($query, $params);
-
-if (!$result['affectedRows']) {
-  Util::setError('apply_for_failed', $db);
-}
+$query ="";
+$result = $db->execute($query, $args);
 
 $db = null;
 

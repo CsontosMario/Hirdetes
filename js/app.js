@@ -359,6 +359,17 @@
             $scope.$applyAsync();
         })
         .catch(e => console.log(e))
+
+        //Megvett termékek adatainak leszedése
+        http.request({
+          url:"./php/cartelements.php",
+          data: $rootScope.user.id
+        })
+        .then(result =>{
+          
+        })
+        .catch(e => console.log(e))
+
         $scope.pay = ()=>{
           alert($rootScope.lang.data.pay_msg);
         }
