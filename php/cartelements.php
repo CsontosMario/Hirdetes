@@ -16,7 +16,7 @@ $query ="SELECT `zoldsegek`.`kep`, `zoldsegek`.`megnevezes`,
             INNER JOIN `regisztracio` ON `regisztracio`.`felhasznaloID` = `kosar`.`felhasznaloID`
           WHERE `kosar`.`felhasznaloID` = ?";
           
-$result = $db->execute($query, $args);
+$result = $db->execute($query, strval($args));
 
 $db = null;
 

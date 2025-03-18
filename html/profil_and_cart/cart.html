@@ -6,20 +6,24 @@
       <table class="table table-bordered table-striped">
         <tr ng-init="table_header_data=['product_img','plant_name_table',
                                         'packaging','quantity',
-                                        'price','cancel_product_head']">
+                                        'price']">
           <th ng-repeat="x in table_header_data">
             {{$root.lang.data[x]}}
+          </th>
+          <th>
+            {{$root.lang.data.cancel_product_head}}
           </th>
         </tr>
         <tbody>
           <tr ng-repeat="bought_product in bought_products">
             <td>
-              <img ng-src="./img/termekek/{{bought_product.img}}" 
-                   alt="bought_product.name">
+              <img ng-src="./img/termekek/{{bought_product.kep}}"
+                   class="img-fluid"
+                   alt="{{bought_product.name}}">
             </td>
-            <td>
+            <td ng-repeat="x in bought_products">
               <button class="btn btn-primary">
-                {{$root.lang.data.cancel_product}}
+                X
               </button>
             </td>
           </tr>
