@@ -8,8 +8,8 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$query ="";
-$result = $db->execute($query, $args);
+// $query ="";
+// $result = $db->execute($query, $args);
 
 $db = null;
 
