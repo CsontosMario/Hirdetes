@@ -367,6 +367,7 @@
         })
         .then(result =>{
           $scope.bought_products = result;
+          $scope.$applyAsync();
         })
         .catch(e => console.log(e))
 
