@@ -6,7 +6,7 @@ $db = new Database();
 
 $args=Util::getArgs();
 
-$query="";
+$query= $db->preparateInsert("kosarelemek", $args);
 
 $result=$db->execute($query);
 
