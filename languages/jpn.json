@@ -123,5 +123,6 @@
   "cant_buy":"このサイトからショッピングするにはログインしてください！",
   "duplicate_user":"このユーザーは既に存在します。 別の名前またはメールアドレスを使用してください。",
   "plant_name_table":"製品名",
-  "product_img":"製品画像"
+  "product_img":"製品画像",
+  "cancel_product":"商品をカートから削除する"
 }

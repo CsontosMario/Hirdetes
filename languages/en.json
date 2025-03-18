@@ -123,5 +123,6 @@
   "cant_buy":"Log in to be able to shop from this site!",
   "duplicate_user":"This user already exists! Please use a different name or email address!",
   "plant_name_table":"Product name",
-  "product_img":"Product picture"
+  "product_img":"Product picture",
+  "cancel_product":"Remove product from cart"
 }

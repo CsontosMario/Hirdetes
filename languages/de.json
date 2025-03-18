@@ -123,5 +123,6 @@
   "cant_buy":"Melden Sie sich an, um auf dieser Website einkaufen zu können!",
   "duplicate_user":"Dieser Benutzer existiert bereits! Bitte einen anderen Namen bzw. eine andere E-Mail-Adresse verwenden!",
   "plant_name_table":"Produktname",
-  "product_img":"Produktbild"
+  "product_img":"Produktbild",
+  "cancel_product":"Produkt aus dem Warenkorb entfernen"
 }
