@@ -2,7 +2,8 @@
   <div class="row mt-5">
     <div class="col col-md-1"></div>
     <!-- Kosárba tett termékel -->
-    <div class="col col-md-4">
+    <div class="col col-md-4"
+         ng-if="bought_products">
       <table class="table table-bordered table-striped">
         <tr ng-init="table_header_data=['plant_name_table',
                                         'packaging','quantity',
@@ -32,6 +33,14 @@
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- Üres kosár -->
+    <div class="col col-md-4"
+         ng-if="!bought_products">
+      <h1 class="text-info">
+        {{$root.lang.data.empty_cart}}
+      </h1>
     </div>
 
     <!-- Vásárlás befejezése -->
