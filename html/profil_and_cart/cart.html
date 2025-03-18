@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row mt-5">
     <div class="col col-md-1"></div>
+    <!-- Kosárba tett termékel -->
     <div class="col col-md-4">
       <table class="table table-bordered table-striped">
         <tr ng-init="table_header_data=['product_img','plant_name_table','packaging','quantity','price', 'cancel_product_head']">
@@ -19,7 +20,7 @@
       </table>
     </div>
 
-  <!--<div class="container">-->
+    <!-- Vásárlás befejezése -->
     <div class="row justify-content-center col col-md-5">
       <form class="w-auto p-3" 
             style="border:1px solid #ccc" 
@@ -94,7 +95,7 @@
                   ng-disabled="cart_form.$invalid" 
                   ng-click="pay()">
             <i class="fa-solid fa-cart-shopping me-1"></i>
-            {{$root.lang.data.pay}}
+            {{$root.lang.data.finish_paying}}
           </button>
         </div>
       </form>

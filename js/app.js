@@ -126,7 +126,7 @@
             data: {
               termekID:product_id,
               db:quantity,
-              ar:product_ar
+              ar:product_ar*quantity
             }
           })
           .then(result => {

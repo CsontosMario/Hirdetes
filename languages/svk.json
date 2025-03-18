@@ -125,5 +125,6 @@
   "plant_name_table":"Názov produktu",
   "product_img":"Obrázok produktu",
   "cancel_product":"Odstránenie produktu z košíka",
-  "cancel_product_head":"Odstránenie produktu"
+  "cancel_product_head":"Odstránenie produktu",
+  "finish_paying":"Dokončenie nákupu"
 }

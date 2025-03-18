@@ -125,5 +125,6 @@
   "plant_name_table":"Product name",
   "product_img":"Product picture",
   "cancel_product":"Remove product from cart",
-  "cancel_product_head":"Remove product"
+  "cancel_product_head":"Remove product",
+  "finish_paying":"Complete purchase"
 }

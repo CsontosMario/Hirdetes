@@ -125,5 +125,6 @@
   "plant_name_table":"Termék neve",
   "product_img":"Termék képe",
   "cancel_product":"Termék eltávolítása a kosárból",
-  "cancel_product_head":"Termék eltávolítása"
+  "cancel_product_head":"Termék eltávolítása",
+  "finish_paying":"Vásárlás befejezése"
 }

@@ -125,5 +125,6 @@
   "plant_name_table":"製品名",
   "product_img":"製品画像",
   "cancel_product":"商品をカートから削除する",
-  "cancel_product_head":"製品の削除"
+  "cancel_product_head":"製品の削除",
+  "finish_paying":"購入の完了"
 }

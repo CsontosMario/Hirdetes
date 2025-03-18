@@ -125,5 +125,6 @@
   "plant_name_table":"Produktname",
   "product_img":"Produktbild",
   "cancel_product":"Produkt aus dem Warenkorb entfernen",
-  "cancel_product_head":"Produktentfernung"
+  "cancel_product_head":"Produktentfernung",
+  "finish_paying":"Abschluss des Kaufs"
 }

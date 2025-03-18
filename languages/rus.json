@@ -124,5 +124,6 @@
   "plant_name_table":"Название продукта",
   "product_img":"Изображение продукта",
   "cancel_product":"Удаление продукта из корзины",
-  "cancel_product_head":"Удаление продукта"
+  "cancel_product_head":"Удаление продукта",
+  "finish_paying":"Завершение покупки"
 }
