@@ -12,12 +12,17 @@ $query = $db->preparateInsert("regisztracio", $args);
 
 $result = $db->execute($query, array_values($args));
 
+$query_s = "SELECT `email`, `nev` FROM `regisztracio`";
+$result_s = $db->execute($query_s);
+
 $db = null;
 
-if ($result['email'] === $args['email'] || $result['nev'] === $args['nev']) {
+if ($result_s['email'] === $args['email'] || $result_s['nev'] === $args['nev']) {
   Util::setError("duplicate_user");
+  $result = null;
 }
-
-$result = $result[0];
+else{
+  $result = $result[0];
+}
 
 Util::setResponse($result);
