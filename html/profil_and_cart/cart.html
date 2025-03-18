@@ -4,8 +4,12 @@
     <!-- Kosárba tett termékel -->
     <div class="col col-md-4">
       <table class="table table-bordered table-striped">
-        <tr ng-init="table_header_data=['product_img','plant_name_table','packaging','quantity','price', 'cancel_product_head']">
-          <th ng-repeat="x in table_header_data">{{$root.lang.data[x]}}</th>
+        <tr ng-init="table_header_data=['product_img','plant_name_table',
+                                        'packaging','quantity',
+                                        'price','cancel_product_head']">
+          <th ng-repeat="x in table_header_data">
+            {{$root.lang.data[x]}}
+          </th>
         </tr>
         <tbody>
           <tr ng-repeat="bought_product in bought_products">
@@ -38,57 +42,56 @@
         <!-- Fizetési mód -->
         <div class="mb-3">
           <label for="pay_type" 
-                class="form-label">
+                 class="form-label">
             <b>
               <i class="fa-solid fa-credit-card"></i>
               {{$root.lang.data.pay_type}}:
             </b>
             <select class="form-select" 
-                  aria-label="Default select example" 
-                  id="pay_type">
+                    aria-label="Default select example" 
+                    id="pay_type">
             <option selected 
                     ng-repeat="x in pay_types track by $index">
               {{$root.lang.data[x.megnevezes]}}
             </option>
           </select>
           </label>
-          
         </div>
 
         <!-- Kártya szám -->
         <div class="mb-3">
           <label for="ccn" 
-                class="form-label">
+                 class="form-label">
             <b>
               <i class="fa-solid fa-hashtag"></i>
               {{$root.lang.data.card_num}}:
             </b>
           </label>
           <input id="ccn" 
-                type="tel" 
-                inputmode="numeric" 
-                pattern="[0-9\s]{13,19}" 
-                autocomplete="cc-number" 
-                maxlength="19"
-                class="form-control"
-                placeholder="xxxx xxxx xxxx xxxx"
-                required>
+                 type="tel" 
+                 inputmode="numeric" 
+                 pattern="[0-9\s]{13,19}" 
+                 autocomplete="cc-number" 
+                 maxlength="19"
+                 class="form-control"
+                 placeholder="xxxx xxxx xxxx xxxx"
+                 required>
         </div>
 
         <!-- Lejárati dátum -->
         <div class="mb-3">
           <label for="date" 
-                class="form-label">
+                 class="form-label">
             <b>
               <i class="fa-solid fa-calendar-days"></i>
               {{$root.lang.data.expiration_date}}:
             </b>
           </label>
           <input id="date" 
-                type="date" 
-                class="form-control"
-                min="2025-01-01"
-                max="2025-10-01">
+                 type="date" 
+                 class="form-control"
+                 min="2025-01-01"
+                 max="2025-10-01">
         </div>
 
         <!-- Gomb (fizetés) -->
