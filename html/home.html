@@ -2,11 +2,7 @@
 
   <!-- Carousel -->
   <div class="row mt-5"
-       ng-init="discount=['10',
-                          '25',
-                          '50',
-                          '75',
-                          '90'];
+       ng-init="discount=['10','25','50','75','90'];
                 buttons=['prev', 'next']">
     <div id="carouselExampleCaptions" 
          class="carousel slide">
@@ -29,9 +25,7 @@
              ng-class="{'active': $index === 0}" 
              ng-repeat="d in discount track by $index">
           <img ng-src="./img/discounts/final_v1/{{d}}.png" 
-               class="d-block 
-                      w-50 
-                      mx-auto" 
+               class="d-block w-50 mx-auto" 
                alt="{{d}}">
           <div class="carousel-caption d-none d-md-block">
             <h5>
@@ -69,8 +63,9 @@
       <thead>
         <tr class="text-capitalize"
             ng-init="data_=['day','opening','closing']">
-          <th ng-repeat="y in data_">{{$root.lang.data[y]}}</th>
-          
+          <th ng-repeat="y in data_">
+            {{$root.lang.data[y]}}
+          </th>
         </tr>
       </thead>
       <tbody ng-init="days=['mondayToFriday','saturdayToSunday']">
