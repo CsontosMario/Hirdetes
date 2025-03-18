@@ -122,7 +122,7 @@
 
         $scope.toCart = (product, quantity) => {
           http.request({
-            url: "./php/cartelements.php",
+            url: "./php/toCart.php",
             data: $scope.sign_up
           })
           .then(result => {
