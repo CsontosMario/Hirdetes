@@ -366,7 +366,7 @@
           data: $rootScope.user.id
         })
         .then(result =>{
-          
+          $scope.bought_products = result;
         })
         .catch(e => console.log(e))
 

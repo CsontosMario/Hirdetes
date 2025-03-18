@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Már 18. 08:56
+-- Létrehozás ideje: 2025. Már 18. 09:51
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -75,7 +75,6 @@ CREATE TABLE `kosarelemek` (
   `id` int(11) NOT NULL,
   `kosarID` int(11) NOT NULL,
   `termekID` int(11) NOT NULL,
-  `kosarDataID` int(11) NOT NULL,
   `db` int(11) NOT NULL,
   `ar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -84,35 +83,12 @@ CREATE TABLE `kosarelemek` (
 -- A tábla adatainak kiíratása `kosarelemek`
 --
 
-INSERT INTO `kosarelemek` (`id`, `kosarID`, `termekID`, `kosarDataID`, `db`, `ar`) VALUES
-(1, 1, 1, 1, 3, 3000),
-(2, 2, 2, 2, 12, 4800),
-(3, 3, 3, 3, 6, 2400),
-(4, 4, 4, 4, 16, 8000),
-(5, 5, 5, 5, 19, 4750);
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `kosar_kotes`
---
-
-CREATE TABLE `kosar_kotes` (
-  `id` int(11) NOT NULL,
-  `kosarID` int(11) NOT NULL,
-  `termekID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- A tábla adatainak kiíratása `kosar_kotes`
---
-
-INSERT INTO `kosar_kotes` (`id`, `kosarID`, `termekID`) VALUES
-(1, 1, 1),
-(2, 2, 2),
-(3, 3, 3),
-(4, 4, 4),
-(5, 5, 5);
+INSERT INTO `kosarelemek` (`id`, `kosarID`, `termekID`, `db`, `ar`) VALUES
+(1, 1, 1, 3, 3000),
+(2, 2, 2, 12, 4800),
+(3, 3, 3, 6, 2400),
+(4, 4, 4, 16, 8000),
+(5, 5, 5, 19, 4750);
 
 -- --------------------------------------------------------
 
@@ -255,12 +231,6 @@ ALTER TABLE `kosarelemek`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `kosar_kotes`
---
-ALTER TABLE `kosar_kotes`
-  ADD PRIMARY KEY (`id`);
-
---
 -- A tábla indexei `programozoink`
 --
 ALTER TABLE `programozoink`
@@ -299,12 +269,6 @@ ALTER TABLE `kosar`
 -- AUTO_INCREMENT a táblához `kosarelemek`
 --
 ALTER TABLE `kosarelemek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT a táblához `kosar_kotes`
---
-ALTER TABLE `kosar_kotes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --

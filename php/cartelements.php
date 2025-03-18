@@ -8,8 +8,12 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-// $query ="";
-// $result = $db->execute($query, $args);
+$query ="SELECT `zoldsegek`.`kep`, `zoldsegek`.`megnevezes`, `zoldsegek`.`kiszereles`, `kosarelemek`.`db`, `kosarelemek`.`ar` FROM `kosarelemek`
+          INNER JOIN `zoldsegek` ON `zoldsegek`.`termekID` = `kosarelemek`.`termekID`
+          INNER JOIN `kosar` ON `kosar`.`id` = `kosarelemek`.`kosarID`
+          INNER JOIN `regisztracio` ON `regisztracio`.`felhasznaloID` = `kosar`.`felhasznaloID`
+          WHERE `kosar`.`felhasznaloID` = ?";
+$result = $db->execute($query, $args);
 
 $db = null;
 
