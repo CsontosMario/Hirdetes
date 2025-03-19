@@ -338,7 +338,18 @@
     .controller('profileController', [
       '$rootScope',
       '$scope',
-      function ($rootScope, $scope) {
+      'http',
+      function ($rootScope, $scope, http) {
+
+        http.request({
+          url: "./php/profile.php",
+          data: $rootScope.user.id
+        })
+        .then(result =>{
+          $scope.profile_data = result
+          $scope.$applyAsync();
+        })
+        .catch(e=>console.log(e))
 
         //Ideiglenesen teljesen kiüríti a profilt!!!
         $scope.cancel_update = () => {
