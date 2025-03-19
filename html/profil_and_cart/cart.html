@@ -32,12 +32,12 @@
               {{$root.lang.data[bought_product.kiszereles]}}
             </td>
             <td>
-              {{bought_product.db}} <p class="fw-bold">db</p>
+              <p>{{bought_product.db}} <span class="fw-bold">db</span></p>
             </td>
             <td>
-              {{bought_product.ar}} <p class="fw-bold">huf</p>
+              <p>{{bought_product.ar}} <span class="fw-bold">huf</span></p>
             </td>
-            <td>
+            <td class="justify-content-center">
               <button class="btn btn-danger"
                       ng-click="remove_from_cart()">
                 X
