@@ -127,5 +127,6 @@
   "cancel_product":"製品の削除",
   "finish_paying":"購入の完了",
   "empty_cart":"バスケットは空です",
-  "confirm_delete":"製品を削除してもよろしいですか?"
+  "confirm_delete":"製品を削除してもよろしいですか?",
+  "unit_price":"本体価格"
 }

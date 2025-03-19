@@ -127,5 +127,6 @@
   "cancel_product":"Produktentfernung",
   "finish_paying":"Abschluss des Kaufs",
   "empty_cart":"Einkaufswagen ist leer.",
-  "confirm_delete":"Sind Sie sicher, dass Sie das Produkt löschen möchten?"
+  "confirm_delete":"Sind Sie sicher, dass Sie das Produkt löschen möchten?",
+  "unit_price":"Stückpreis"
 }

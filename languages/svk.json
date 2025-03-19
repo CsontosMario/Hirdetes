@@ -127,5 +127,6 @@
   "cancel_product":"Odstránenie produktu",
   "finish_paying":"Dokončenie nákupu",
   "empty_cart":"Košík je prázdny.",
-  "confirm_delete":"Naozaj chcete odstrániť produkt?"
+  "confirm_delete":"Naozaj chcete odstrániť produkt?",
+  "unit_price":"Jednotková cena"
 }

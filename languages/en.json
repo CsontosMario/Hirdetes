@@ -127,5 +127,6 @@
   "cancel_product":"Remove product",
   "finish_paying":"Complete purchase",
   "empty_cart":"Cart is empty.",
-  "confirm_delete":"Are you sure you want to delete the product?"
+  "confirm_delete":"Are you sure you want to delete the product?",
+  "unit_price":"Unit price"
 }

@@ -7,7 +7,7 @@
       <table class="table table-bordered table-striped">
         <tr ng-init="table_header_data=['plant_name_table',
                                         'packaging','quantity',
-                                        'price']">
+                                        'unit_price','price']">
           <th>
             {{$root.lang.data.product_img}}
           </th>
@@ -32,13 +32,20 @@
               {{$root.lang.data[bought_product.kiszereles]}}
             </td>
             <td>
-              <p>{{bought_product.db}} <span class="fw-bold">db</span></p>
+              <p>
+                <input type="number"
+                       class="w-50"
+                       value={{bought_product.db}}> <span class="fw-bold">db</span>
+              </p>
             </td>
             <td>
               <p>{{bought_product.ar}} <span class="fw-bold">huf</span></p>
             </td>
-            <td class="justify-content-center">
-              <button class="btn btn-danger"
+            <td>
+              <p>{{bought_product.db*bought_product.ar}} <span class="fw-bold">huf</span></p>
+            </td>
+            <td>
+              <button class="btn btn-danger text-center"
                       ng-click="remove_from_cart()">
                 X
               </button>
@@ -57,7 +64,7 @@
     </div>
 
     <!-- Vásárlás befejezése -->
-    <div class="row justify-content-center col col-md-5 offset-1">
+    <div class="row justify-content-center col col-md-5 offset-2">
       <form class="w-auto p-3" 
             style="border:1px solid #ccc" 
             name="cart_form">

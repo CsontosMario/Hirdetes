@@ -127,5 +127,6 @@
   "cancel_product":"Termék eltávolítása",
   "finish_paying":"Vásárlás befejezése",
   "empty_cart":"Üres a kosár",
-  "confirm_delete":"Biztos törölni szeretnéd a terméket?"
+  "confirm_delete":"Biztos törölni szeretnéd a terméket?",
+  "unit_price":"Egységár"
 }
