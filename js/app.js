@@ -346,7 +346,7 @@
           data: $rootScope.user.id
         })
         .then(result =>{
-          $scope.profile_data = result
+          $scope.profile_data = result;
           $scope.$applyAsync();
         })
         .catch(e=>console.log(e))
