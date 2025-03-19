@@ -20,12 +20,25 @@
         </tr>
         <tbody>
           <tr ng-repeat="bought_product in bought_products">
-            <td ng-repeat="x in bought_products">
+            <td>
               <img ng-src="./img/termekek/{{bought_product.kep}}"
                    class="img-fluid rounded"
-                   alt="{{bought_product.name}}">
+                   alt="{{bought_product.megnevezes}}">
             </td>
-            <td ng-repeat="z in bought_products">
+            <td>
+              {{$root.lang.data[bought_product.megnevezes]}}
+            </td>
+            <td>
+              {{$root.lang.data[bought_product.kiszereles]}}
+            </td>
+            <td>
+              {{bought_product.db}}
+            </td>
+            <td>
+              {{bought_product.ar}} 
+              <p class="fw-bold">huf</p>
+            </td>
+            <td>
               <button class="btn btn-danger"
                       ng-click="remove_from_cart()">
                 X
