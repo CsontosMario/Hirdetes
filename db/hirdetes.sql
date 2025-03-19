@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Már 18. 09:51
+-- Létrehozás ideje: 2025. Már 19. 09:36
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -88,7 +88,13 @@ INSERT INTO `kosarelemek` (`id`, `kosarID`, `termekID`, `db`, `ar`) VALUES
 (2, 2, 2, 12, 4800),
 (3, 3, 3, 6, 2400),
 (4, 4, 4, 16, 8000),
-(5, 5, 5, 19, 4750);
+(5, 5, 5, 19, 4750),
+(6, 3, 2, 7, 2800),
+(7, 1, 10, 3, 2400),
+(8, 3, 5, 7, 1750),
+(9, 1, 6, 2, 400),
+(10, 3, 4, 7, 3500),
+(11, 3, 1, 5, 5000);
 
 -- --------------------------------------------------------
 
@@ -269,7 +275,7 @@ ALTER TABLE `kosar`
 -- AUTO_INCREMENT a táblához `kosarelemek`
 --
 ALTER TABLE `kosarelemek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT a táblához `programozoink`
