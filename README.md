@@ -30,4 +30,4 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
 - [] Adatbázis átnézése 
   - Kosár dátum -> datetime     <= Állapot: 0% (nincs kész)
-  - Tagolás                     <= Állapot: 100% (kész)
+  - Tagolás                     <= Állapot: 100% (kész (folyamatos javítások))
