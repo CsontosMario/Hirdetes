@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="row mt-5">
-    <div class="col col-md-1"></div>
+<div class="container-fluid">
+  <div class="row mt-5 justify-content-center">
+    <!-- <div class="col col-md-1"></div> -->
     <!-- Kosárba tett termékel -->
-    <div class="col col-md-4"
+    <div class="mb-3 col-12 col-lg-8 overflow-x-auto"
          ng-if="bought_products">
       <table class="table table-bordered table-striped">
         <tr ng-init="table_header_data=['plant_name_table',
@@ -22,7 +22,7 @@
           <tr ng-repeat="bought_product in bought_products">
             <td>
               <img ng-src="./img/termekek/{{bought_product.kep}}"
-                   class="img-fluid rounded"
+                   class="rounded" height="60"
                    alt="{{bought_product.megnevezes}}">
             </td>
             <td>
@@ -35,7 +35,8 @@
               <p>
                 <input type="number"
                        class="w-50"
-                       value={{bought_product.db}}
+                       ng-init="model.db=bought_product.db"
+                       ng-model="model.db"
                        min="1"
                        max="20"> 
                 <span class="fw-bold">
@@ -53,7 +54,7 @@
             </td>
             <td>
               <p>
-                {{bought_product.db*bought_product.ar}} 
+                {{model.db*bought_product.ar}} 
                 <span class="fw-bold">
                   huf
                 </span>
@@ -71,7 +72,7 @@
     </div>
 
     <!-- Üres kosár -->
-    <div class="col col-md-4"
+    <div class="mb-3 col-12 col-lg-8"
          ng-if="!bought_products">
       <h1 class="text-info">
         {{$root.lang.data.empty_cart}}
@@ -79,7 +80,7 @@
     </div>
 
     <!-- Vásárlás befejezése -->
-    <div class="row justify-content-center col col-md-5 offset-2">
+    <div class="mb-3 col-12 col-lg-4 col-xxl-3">
       <form class="w-auto p-3" 
             style="border:1px solid #ccc" 
             name="cart_form">
