@@ -3,9 +3,9 @@
     <div class="mb-3 col-12 col-lg-8 overflow-x-auto">
       <table class="table table-bordered table-striped">
         <tr>
-          <th>Termék képe</th>
-          <th>Termék neve</th>
-          <th>Kiszerelés</th>
+          <th>{{$root.lang.data.product_img}}</th>
+          <th ng-repeat="x in table_header_data">{{$root.lang.data[x]}}</th>
+          <th>{{$root.lang.data[bought_product.kiszereles]}}</th>
           <th>db</th>
           <th>Ár</th>
           <th>Egységár</th>
@@ -50,7 +50,7 @@
            class="form-label">
       <b>
         <i class="fa-solid fa-calendar-days"></i>
-        Lejárati dátum
+        {{$root.lang.data.expiration_date}}:
       </b>
     </label>
     <input id="date" 
@@ -63,7 +63,7 @@
     <button type="button" 
             class="btn btn-primary">
       <i class="fa-solid fa-cart-shopping me-1"></i>
-      Vásárlás befejezése
+      {{$root.lang.data.finish_paying}}
     </button>
   </div>
 </div>
