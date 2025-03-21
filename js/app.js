@@ -4,12 +4,13 @@
     'ui.router',
     'app.common'
   ])
-    .config([
-      '$stateProvider',
-      '$urlRouterProvider',
-      function ($stateProvider, $urlRouterProvider) {
-        $stateProvider
-          .state('root', {
+
+  .config([
+    '$stateProvider',
+    '$urlRouterProvider',
+    function ($stateProvider, $urlRouterProvider) {
+      $stateProvider
+      .state('root', {
             abstract: true,
             views: {
               '@': {
@@ -23,59 +24,59 @@
                 templateUrl: './html/footer.html'
               }
             }
-          })
-          .state('home', {
+      })
+      .state('home', {
             url: '/',
             parent: 'root',
             templateUrl: './html/home.html',
             controller: 'homeController'
-          })
-          .state('products', {
+      })
+      .state('products', {
             url: '/products',
             parent: 'root',
             templateUrl: './html/products.html',
             controller: 'productsController'
-          })
-          .state('aboutOurFarmers', {
+      })
+      .state('aboutOurFarmers', {
             url: '/about_our_farmers',
             parent: 'root',
             templateUrl: './html/farmers_and_programmers/about_our_farmers.html',
             controller: 'about_our_farmersController'
-          })
-          .state('aboutUs', {
+      })
+      .state('aboutUs', {
             url: '/about_our_website_creators',
             parent: 'root',
             templateUrl: './html/farmers_and_programmers/about_us.html',
             controller: 'about_usController'
-          })
-          .state('register', {
+      })
+      .state('register', {
             url: '/profile/sign_up',
             parent: 'root',
             templateUrl: './html/profil_and_cart/sign_up.html',
             controller: 'registerController'
-          })
-          .state('login', {
+      })
+      .state('login', {
             url: '/profile/sign_in',
             parent: 'root',
             templateUrl: './html/profil_and_cart/sign_in.html',
             controller: 'loginController'
-          })
-          .state('profil', {
+      })
+      .state('profil', {
             url: '/profile/profile',
             parent: 'root',
             templateUrl: './html/profil_and_cart/profile.html',
             controller: 'profileController'
-          })
-          .state('cart', {
+      })
+      .state('cart', {
             url: '/cart',
             parent: 'root',
             templateUrl: './html/profil_and_cart/cart.html',
             controller: 'cartController'
-          })
+      })
 
-        $urlRouterProvider.otherwise('/');
-      }
-    ])
+      $urlRouterProvider.otherwise('/');
+    }
+  ])
 
     .run([
       '$rootScope',
@@ -86,6 +87,8 @@
         $rootScope.user.id    = util.localStorage('get', 'loginID');
         $rootScope.user.name  = util.localStorage('get', 'loginName');
         console.log('Run...' + $state.current.name);
+        
+        //Kilépés
         $rootScope.kilep = () => {
           if (confirm($rootScope.lang.data.exit_question)) {
             $rootScope.user.id = null;
@@ -95,7 +98,7 @@
             $rootScope.$applyAsync();
             $state.go('home');
           }
-        }
+        };
       }
     ])
 
@@ -118,7 +121,7 @@
           $scope.zoldsegek = response;
           $scope.$applyAsync();
         })
-        .catch(e => console.log(e))
+        .catch(e => console.log(e));
 
         $scope.toCart = (product_id, quantity, product_ar) => {
           http.request({
@@ -130,13 +133,14 @@
             }
           })
           .then(result => {
-            $scope.data = result
-            $scope.$applyAsync()
+            $scope.data = result;
+            $scope.$applyAsync();
             alert($rootScope.lang.data.registered);
           })
-          .catch(e => console.log(e))
+          .catch(e => console.log(e));
 
-        }
+        };
+
         console.log('Products controller...');
       }
     ])
@@ -188,18 +192,18 @@
               data: $scope.sign_up
             })
             .then(result => {
-              $scope.data = result
+              $scope.data = result;
               $state.go('login');
               $scope.$applyAsync();
               alert($rootScope.lang.data.registered1);
             })
             .catch(e => {
-              alert($rootScope.lang.data[e])
+              alert($rootScope.lang.data[e]);
             })
           } else {
             alert($rootScope.lang.data.wrong_password);
           }
-        }
+        };
 
         //Be van jelentkezve egy felhasználó
         $scope.register_logged_in = () => {
@@ -219,7 +223,7 @@
           } else {
             alert($rootScope.lang.data.wrong_password);
           }
-        }
+        };
       }
     ])
 
@@ -349,7 +353,7 @@
           $scope.profile_data = result;
           $scope.$applyAsync();
         })
-        .catch(e=>console.log(e))
+        .catch(e=>console.log(e));
 
         //Ideiglenesen teljesen kiüríti a profilt!!!
         $scope.cancel_update = () => {
