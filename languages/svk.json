@@ -129,6 +129,6 @@
   "empty_cart":"Košík je prázdny.",
   "confirm_delete":"Naozaj chcete odstrániť produkt?",
   "unit_price":"Jednotková cena",
-  "deleted_item":"A termék ki lett törölve a kosárból.",
-  "not_deleted_item":"The item isn't removed from the cart!"
+  "deleted_item":"Produkt bol odstránený z košíka.",
+  "not_deleted_item":"Vybraný produkt nebude vymazaný z košíka."
 }

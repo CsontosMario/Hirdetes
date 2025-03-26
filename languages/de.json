@@ -129,6 +129,6 @@
   "empty_cart":"Einkaufswagen ist leer.",
   "confirm_delete":"Sind Sie sicher, dass Sie das Produkt löschen möchten?",
   "unit_price":"Stückpreis",
-  "deleted_item":"A termék ki lett törölve a kosárból.",
-  "not_deleted_item":"The item isn't removed from the cart!"
+  "deleted_item":"Das Produkt wurde aus dem Warenkorb entfernt.",
+  "not_deleted_item":"Das ausgewählte Produkt wird nicht aus dem Warenkorb gelöscht."
 }

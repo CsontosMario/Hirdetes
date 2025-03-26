@@ -129,6 +129,6 @@
   "empty_cart":"バスケットは空です",
   "confirm_delete":"製品を削除してもよろしいですか?",
   "unit_price":"本体価格",
-  "deleted_item":"A termék ki lett törölve a kosárból.",
-  "not_deleted_item":"The item isn't removed from the cart!"
+  "deleted_item":"商品はカートから削除されました。",
+  "not_deleted_item":"選択した商品はカートから削除されません。"
 }

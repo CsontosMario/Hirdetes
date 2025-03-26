@@ -129,6 +129,6 @@
   "empty_cart":"Cart is empty.",
   "confirm_delete":"Are you sure you want to delete the product?",
   "unit_price":"Unit price",
-  "deleted_item":"A termék ki lett törölve a kosárból.",
-  "not_deleted_item":"The item isn't removed from the cart!"
+  "deleted_item":"The product has been removed from the cart.",
+  "not_deleted_item":"The selected product will not be deleted from the cart."
 }

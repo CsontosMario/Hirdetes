@@ -130,5 +130,5 @@
   "confirm_delete":"Biztos törölni szeretnéd a terméket?",
   "unit_price":"Egységár",
   "deleted_item":"A termék ki lett törölve a kosárból.",
-  "not_deleted_item":"The item isn't removed from the cart!"
+  "not_deleted_item":"A kiválasztott termék nem lesz törölve a kosárból."
 }
