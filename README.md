@@ -26,7 +26,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # QOL szükségletek:
 
-    -Regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész)
+    -Regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész) // Nem fontos
 
 - [] Adatbázis átnézése 
   - Kosár dátum -> datetime     <= Állapot: 0% (nincs kész)

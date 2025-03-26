@@ -14,7 +14,7 @@ $query ="SELECT `zoldsegek`.`kep`, `zoldsegek`.`megnevezes`,
             INNER JOIN `zoldsegek` ON `zoldsegek`.`termekID` = `kosarelemek`.`termekID`
             INNER JOIN `kosar` ON `kosar`.`id` = `kosarelemek`.`kosarID`
             INNER JOIN `regisztracio` ON `regisztracio`.`felhasznaloID` = `kosar`.`felhasznaloID`
-          WHERE `kosar`.`felhasznaloID` = ?";
+          WHERE `regisztracio`.`felhasznaloID` = ?";
           
 $result = $db->execute($query, strval($args));
 

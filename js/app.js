@@ -395,7 +395,15 @@
         //Tartalom kiszedése a kosárból
         $scope.remove_from_cart=()=>{
           if (confirm($rootScope.lang.data.confirm_delete) === true) {
-            console.log("The item is removed from the cart!");
+            //Megadott termék tölése az adatbázisból
+            http.request({
+              url:"./php/",
+              data:""
+            })
+            .then(result =>{
+              $scope.$applyAsync();
+            })
+            .catch(e=>console.log(e));
           }
           else{
             console.log("The item isn't removed from the cart!");  
