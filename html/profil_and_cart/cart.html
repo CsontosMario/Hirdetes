@@ -1,69 +1,18 @@
 <div class="container-fluid">
   <div class="row mt-5 justify-content-center">
-    <div class="mb-3 col-12 col-lg-8 overflow-x-auto">
+    <div class="mb-3 col-12 col-lg-8 overflow-x-auto" 
+         ng-if="bought_products">
       <table class="table table-bordered table-striped">
         <tr>
-          <th>{{$root.lang.data.product_img}}</th>
-          <th ng-repeat="x in table_header_data">{{$root.lang.data[x]}}</th>
-          <th>{{$root.lang.data[bought_product.kiszereles]}}</th>
-          <th>db</th>
+          <th>Termék képe</th>
+          <th>Termék neve</th>
           <th>Ár</th>
+          <th>Mennyiség</th>
+          <th>Kiszerelés</th>
           <th>Egységár</th>
+          <th>Termék eltávolítása</th>
         </tr>
       </table>
     </div>
-  </div>
-
-  <div class="mb-3">
-    <label for="fizetes" class="form-label">
-      <b>
-        <i class="fa-solid fa-credit-card"></i>
-        Fizetési mód
-      </b>
-      <select class="form-select" aria-label="Default select example" id="fizetes">
-        <option selected>
-          Készpénz
-        </option>
-      </select>
-    </label>
-  </div>
-  <div class="mb-3">
-    <label for="ccn" 
-           class="form-label">
-      <b>
-        <i class="fa-solid fa-hashtag"></i>
-        Kártya szám
-      </b>
-    </label>
-    <input id="ccn" 
-           type="tel" 
-           inputmode="numeric" 
-           pattern="[0-9\s]{13,19}" 
-           autocomplete="cc-number" 
-           maxlength="19"
-           class="form-control"
-           placeholder="xxxx xxxx xxxx xxxx"
-           required>
-  </div>
-  <div class="mb-3">
-    <label for="date" 
-           class="form-label">
-      <b>
-        <i class="fa-solid fa-calendar-days"></i>
-        {{$root.lang.data.expiration_date}}:
-      </b>
-    </label>
-    <input id="date" 
-           type="date" 
-           class="form-control"
-           min="2025-01-01"
-           max="2025-10-01">
-  </div>
-  <div class="mb-3">
-    <button type="button" 
-            class="btn btn-primary">
-      <i class="fa-solid fa-cart-shopping me-1"></i>
-      {{$root.lang.data.finish_paying}}
-    </button>
   </div>
 </div>
