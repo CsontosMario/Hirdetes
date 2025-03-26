@@ -1,6 +1,5 @@
 <div class="container-fluid">
   <div class="row mt-5 justify-content-center">
-    <!-- <div class="col col-md-1"></div> -->
     <!-- Kosárba tett termékel -->
     <div class="mb-3 col-12 col-lg-8 overflow-x-auto"
          ng-if="bought_products">
@@ -24,7 +23,9 @@
         <tbody>
           <tr ng-repeat="bought_product in bought_products">
             <td>
-              <p class="fw-bold">{{$index+1}}</p>
+              <p class="fw-bold">
+                {{$index+1}}
+              </p>
             </td>
             <td>
               <img ng-src="./img/termekek/{{bought_product.kep}}"
@@ -157,7 +158,7 @@
         <div class="mb-3">
           <button type="button" 
                   class="btn btn-primary" 
-                  ng-disabled="cart_form.$invalid" 
+                  ng-disabled="cart_form.$invalid"
                   ng-click="pay()">
             <i class="fa-solid fa-cart-shopping me-1"></i>
             {{$root.lang.data.finish_paying}}

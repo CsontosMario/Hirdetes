@@ -413,7 +413,14 @@
         
         //Fizetés
         $scope.pay = ()=>{
-          alert($rootScope.lang.data.pay_msg);
+          http.request({
+            url:"./php/buy_items.php",
+            data:""
+          })
+          .then(result=>{
+            alert($rootScope.lang.data.pay_msg);
+          })
+          .catch(e=>console.log(e));
         };
 
         console.log('Cart controller...');
