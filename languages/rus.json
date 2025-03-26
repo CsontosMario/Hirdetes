@@ -127,5 +127,7 @@
   "finish_paying":"Завершение покупки",
   "empty_cart":"Корзина пуста.",
   "confirm_delete":"Вы уверены, что хотите удалить продукт?",
-  "unit_price":"Цена за единицу товара"
+  "unit_price":"Цена за единицу товара",
+  "deleted_item":"A termék ki lett törölve a kosárból.",
+  "not_deleted_item":"The item isn't removed from the cart!"
 }

@@ -70,7 +70,7 @@
       .state('cart', {
             url: '/cart',
             parent: 'root',
-            templateUrl: './html/profil_and_cart/cart.html',
+            templateUrl: './html/profil_and_cart/cart_old.html',
             controller: 'cartController'
       })
 
@@ -397,16 +397,17 @@
           if (confirm($rootScope.lang.data.confirm_delete) === true) {
             //Megadott termék tölése az adatbázisból
             http.request({
-              url:"./php/",
+              url:"./php/fromCart.php",
               data:""
             })
             .then(result =>{
               $scope.$applyAsync();
+              alert($rootScope.lang.data.deleted_item);
             })
             .catch(e=>console.log(e));
           }
           else{
-            console.log("The item isn't removed from the cart!");  
+            alert($rootScope.lang.data.not_deleted_item);  
           }
         };
         
