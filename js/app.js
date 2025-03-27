@@ -120,6 +120,14 @@
         // })
         // .catch(e => console.log(e));
 
+        fetch("./php/hirdetes.php")
+        .then(response => response.json())
+        .then(response =>{
+          $scope.zoldsegek = response;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e));
+
         $scope.toCart = (product_id, quantity, product_ar) => {
           // http.request({
           //   url: "./php/toCart.php",
@@ -151,6 +159,15 @@
         //   $scope.$applyAsync();
         // })
         // .catch(e => console.log(e));
+        
+        fetch("./php/producers.php")
+        .then(response => response.json())
+        .then(response =>{
+          $scope.farmers = response;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e));
+
         console.log('About_our_farmers controller...');
       }
     ])
@@ -165,6 +182,15 @@
         //   $scope.$applyAsync();
         // })
         // .catch(e => console.log(e));
+
+        fetch("./php/programmers.php")
+        .then(response => response.json())
+        .then(response =>{
+          $scope.programmers = response;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e));
+        
         console.log('Products controller...');
       }
     ])
@@ -353,7 +379,7 @@
         )
         .then()
         .then()
-        .catch()
+        .catch();
 
         //Ideiglenesen teljesen kiüríti a profilt!!!
         $scope.cancel_update = () => {
