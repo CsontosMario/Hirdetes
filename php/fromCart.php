@@ -8,7 +8,7 @@ $args=Util::getArgs();
 
 $query = "";
 
-$result = $db->execute($query);
+$result = $db->execute($query, array_values($args));
 
 $db = null;
 
