@@ -55,7 +55,7 @@
 
   <!-- Hívási fogadó óra táblázat -->
   <div class="row justify-content-center mt-5">
-    <h1 class="text-center mb-4">
+    <h1 class="text-center mb-4 text-info">
       <i class="fa-solid fa-clock"></i>
       {{$root.lang.data.callHours}}
     </h1>
@@ -72,7 +72,9 @@
         <tr ng-repeat="x in days"
             ng-init="availability_open = ''" 
             ng-init="availability_close = ''">
-          <td>{{$root.lang.data[x]}}</td>
+          <td>
+            {{$root.lang.data[x]}}
+          </td>
           <td ng-if="x == 'mondayToFriday' ? availability_open = '9:00' : availability_open = '-'">
             {{availability_open}}
           </td>
