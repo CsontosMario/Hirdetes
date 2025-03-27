@@ -271,7 +271,7 @@
           // })
           // .catch(e => alert($rootScope.lang.data[e]));
 
-          fetch(
+          fetch("./php/felhasznalo.php",
             {
               method:"POST",
               body: $scope.sign_in
