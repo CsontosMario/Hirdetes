@@ -270,6 +270,21 @@
           //     $scope.$applyAsync();
           // })
           // .catch(e => alert($rootScope.lang.data[e]));
+
+          fetch(
+            {
+              method:"POST",
+              body: $scope.sign_in
+            }
+          )
+          .then(response => response.json())
+          .then(response => {
+            $rootScope.user.id = response.data.felhasznaloID;
+            $rootScope.user.name = response.data.nev;
+            $state.go('home');
+            $scope.$applyAsync();
+          })
+          .catch(e => console.log(e));
         }
       }
     ])
