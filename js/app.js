@@ -123,7 +123,7 @@
         fetch("./php/hirdetes.php")
         .then(response => response.json())
         .then(response =>{
-          $scope.zoldsegek = response;
+          $scope.zoldsegek = response.data;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e));
@@ -163,7 +163,7 @@
         fetch("./php/producers.php")
         .then(response => response.json())
         .then(response =>{
-          $scope.farmers = response;
+          $scope.farmers = response.data;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e));
@@ -186,7 +186,7 @@
         fetch("./php/programmers.php")
         .then(response => response.json())
         .then(response =>{
-          $scope.programmers = response;
+          $scope.programmers = response.data;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e));
