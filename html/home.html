@@ -72,7 +72,7 @@
         <tr ng-repeat="x in days"
             ng-init="availability_open = ''" 
             ng-init="availability_close = ''">
-          <td>
+          <td class="fw-semibold">
             {{$root.lang.data[x]}}
           </td>
           <td ng-if="x == 'mondayToFriday' ? availability_open = '9:00' : availability_open = '-'">
