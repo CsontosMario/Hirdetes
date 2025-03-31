@@ -1,7 +1,8 @@
 ; (function (window, angular) {
 
   angular.module('app', [
-    'ui.router'
+    'ui.router',
+    'app.common'
   ])
 
   .config([
@@ -80,10 +81,11 @@
     .run([
       '$rootScope',
       '$state',
-      function ($rootScope, $state) {
+      'util',
+      function ($rootScope, $state, util) {
         $rootScope.user       = {};
-        // $rootScope.user.id    = util.localStorage('get', 'loginID');
-        // $rootScope.user.name  = util.localStorage('get', 'loginName');
+        $rootScope.user.id    = util.localStorage('get', 'loginID');
+        $rootScope.user.name  = util.localStorage('get', 'loginName');
         console.log('Run...' + $state.current.name);
         
         //Kilépés
@@ -91,8 +93,8 @@
           if (confirm($rootScope.lang.data.exit_question)) {
             $rootScope.user.id = null;
             $rootScope.user.name = null;
-            // util.localStorage('remove', 'loginID');
-            // util.localStorage('remove', 'loginName');
+            util.localStorage('remove', 'loginID');
+            util.localStorage('remove', 'loginName');
             $rootScope.$applyAsync();
             $state.go('home');
           }
@@ -112,37 +114,30 @@
     .controller('productsController', [
       '$rootScope',
       '$scope',
+      'http',
       function ($rootScope, $scope, http) {
-        // http.request("./php/hirdetes.php")
-        // .then(response => {
-        //   $scope.zoldsegek = response;
-        //   $scope.$applyAsync();
-        // })
-        // .catch(e => console.log(e));
-
-        fetch("./php/hirdetes.php")
-        .then(response => response.json())
-        .then(response =>{
-          $scope.zoldsegek = response.data;
+        http.request("./php/hirdetes.php")
+        .then(response => {
+          $scope.zoldsegek = response;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e));
 
         $scope.toCart = (product_id, quantity, product_ar) => {
-          // http.request({
-          //   url: "./php/toCart.php",
-          //   data: {
-          //     termekID:product_id,
-          //     db:quantity,
-          //     ar:product_ar*quantity
-          //   }
-          // })
-          // .then(result => {
-          //   $scope.data = result;
-          //   $scope.$applyAsync();
-          //   alert($rootScope.lang.data.registered);
-          // })
-          // .catch(e => console.log(e));
+          http.request({
+            url: "./php/toCart.php",
+            data: {
+              termekID:product_id,
+              db:quantity,
+              ar:product_ar*quantity
+            }
+          })
+          .then(result => {
+            $scope.data = result;
+            $scope.$applyAsync();
+            alert($rootScope.lang.data.registered);
+          })
+          .catch(e => console.log(e));
         };
 
         console.log('Products controller...');
@@ -152,18 +147,11 @@
     //About our farmers controller
     .controller('about_our_farmersController', [
       '$scope',
+      'http',
       function ($scope, http) {
-        // http.request('./php/producers.php')
-        // .then(result => {
-        //   $scope.farmers = result;
-        //   $scope.$applyAsync();
-        // })
-        // .catch(e => console.log(e));
-        
-        fetch("./php/producers.php")
-        .then(response => response.json())
-        .then(response =>{
-          $scope.farmers = response.data;
+        http.request('./php/producers.php')
+        .then(result => {
+          $scope.farmers = result;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e));
@@ -175,23 +163,14 @@
     //About us controller
     .controller('about_usController', [
       '$scope',
+      'http',
       function ($scope, http) {
-        // http.request('./php/programmers.php')
-        // .then(result => {
-        //   $scope.programmers = result;
-        //   $scope.$applyAsync();
-        // })
-        // .catch(e => console.log(e));
-
-        fetch("./php/programmers.php")
-        .then(response => response.json())
-        .then(response =>{
-          $scope.programmers = response.data;
+        http.request('./php/programmers.php')
+        .then(result => {
+          $scope.programmers = result;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e));
-        
-        console.log('Products controller...');
       }
     ])
 
@@ -200,25 +179,26 @@
       '$rootScope',
       '$scope',
       '$state',
-      function ($rootScope,$scope,$state) {
+      'http',
+      function ($rootScope,$scope,$state, http) {
         console.log('Register controller...');
 
         //Nincs bejelentkezve egy felhasználó se
         $scope.register = () => {
           if ($scope.confirm_password === $scope.sign_up.jelszo) {
-            // http.request({
-            //   url: "./php/register.php",
-            //   data: $scope.sign_up
-            // })
-            // .then(result => {
-            //   $scope.data = result;
-            //   $state.go('login');
-            //   $scope.$applyAsync();
-            //   alert($rootScope.lang.data.registered1);
-            // })
-            // .catch(e => {
-            //   alert($rootScope.lang.data[e]);
-            // })
+            http.request({
+              url: "./php/register.php",
+              data: $scope.sign_up
+            })
+            .then(result => {
+              $scope.data = result;
+              $state.go('login');
+              $scope.$applyAsync();
+              alert($rootScope.lang.data.registered1);
+            })
+            .catch(e => {
+              alert($rootScope.lang.data[e]);
+            })
           } else {
             alert($rootScope.lang.data.wrong_password);
           }
@@ -227,18 +207,18 @@
         //Be van jelentkezve egy felhasználó
         $scope.register_logged_in = () => {
           if ($scope.confirm_password === $scope.sign_up.jelszo) {
-            // http.request({
-            //   url: "./php/register.php",
-            //   data: $scope.sign_up
-            // })
-            // .then(result => {
-            //   $scope.data = result;
-            //   $scope.$applyAsync();
-            //   alert($rootScope.lang.data.registered2);
-            // })
-            // .catch(e => {
-            //   alert($rootScope.lang.data[e])
-            // })
+            http.request({
+              url: "./php/register.php",
+              data: $scope.sign_up
+            })
+            .then(result => {
+              $scope.data = result;
+              $scope.$applyAsync();
+              alert($rootScope.lang.data.registered2);
+            })
+            .catch(e => {
+              alert($rootScope.lang.data[e])
+            })
           } else {
             alert($rootScope.lang.data.wrong_password);
           }
@@ -251,40 +231,26 @@
       '$rootScope',
       '$scope',
       '$state',
-      function ($rootScope, $scope, $state) {
+      'http',
+      function ($rootScope, $scope, $state, http) {
         console.log('Login controller...');
         $scope.login = () => {
-          // http.request({
-          //   url: "./php/felhasznalo.php",
-          //   data: $scope.sign_in
-          // })
-          // .then(result => {
-          //     $rootScope.user.id = result.felhasznaloID;
-          //     $rootScope.user.name = result.nev;
-          //     util.localStorage('set', 'loginID', $rootScope.user.id);
-          //     util.localStorage('set', 'loginName', $rootScope.user.name);
-          //     alert($rootScope.lang.data.sign_in_success_1 + "\n" + 
-          //           $rootScope.lang.data.sign_in_success_2 + " " + 
-          //           $rootScope.user.name + "!");
-          //     $state.go('home');
-          //     $scope.$applyAsync();
-          // })
-          // .catch(e => alert($rootScope.lang.data[e]));
-
-          fetch("./php/felhasznalo.php",
-            {
-              method:"POST",
-              body: $scope.sign_in
-            }
-          )
-          .then(response => response.json())
-          .then(response => {
-            $rootScope.user.id = response.data.felhasznaloID;
-            $rootScope.user.name = response.data.nev;
-            $state.go('home');
-            $scope.$applyAsync();
+          http.request({
+            url: "./php/felhasznalo.php",
+            data: $scope.sign_in
           })
-          .catch(e => console.log(e));
+          .then(result => {
+              $rootScope.user.id = result.felhasznaloID;
+              $rootScope.user.name = result.nev;
+              util.localStorage('set', 'loginID', $rootScope.user.id);
+              util.localStorage('set', 'loginName', $rootScope.user.name);
+              alert($rootScope.lang.data.sign_in_success_1 + "\n" + 
+                    $rootScope.lang.data.sign_in_success_2 + " " + 
+                    $rootScope.user.name + "!");
+              $scope.$applyAsync();
+              $state.go('home');
+          })
+          .catch(e => alert($rootScope.lang.data[e]));
         }
       }
     ])
@@ -374,28 +340,18 @@
     .controller('profileController', [
       '$rootScope',
       '$scope',
-      function ($rootScope, $scope) {
+      'http',
+      function ($rootScope, $scope, http) {
 
-        // http.request({
-        //   url: "./php/profile.php",
-        //   data: $rootScope.user.id
-        // })
-        // .then(result =>{
-        //   $scope.profile_data = result;
-        //   $scope.$applyAsync();
-        // })
-        // .catch(e=>console.log(e));
-
-        fetch("./php/profile.php",
-          {
-            method:"POST",
-            body: $rootScope.user.id
-          }
-        )
-        .then()
-        .then()
-        .catch();
-
+        http.request({
+          url: "./php/profile.php",
+          data: $rootScope.user.id
+        })
+        .then(result =>{
+          $scope.profile_data = result;
+          $scope.$applyAsync();
+        })
+        .catch(e=>console.log(e));
         //Ideiglenesen teljesen kiüríti a profilt!!!
         $scope.cancel_update = () => {
           $scope.profile.name = "";
@@ -411,7 +367,8 @@
     .controller('cartController', [
       '$rootScope',
       '$scope',
-      function ($rootScope, $scope) {
+      'http',
+      function ($rootScope, $scope, http) {
 
         //Fizetési típusok
         // http.request("./php/cart.php")
@@ -434,33 +391,33 @@
 
         //Tartalom kiszedése a kosárból
         $scope.remove_from_cart=()=>{
-          // if (confirm($rootScope.lang.data.confirm_delete) === true) {
-          //   //Megadott termék tölése az adatbázisból
-          //   http.request({
-          //     url:"./php/fromCart.php",
-          //     data:""
-          //   })
-          //   .then(result =>{
-          //     $scope.$applyAsync();
-          //     alert($rootScope.lang.data.deleted_item);
-          //   })
-          //   .catch(e=>console.log(e));
-          // }
-          // else{
-          //   alert($rootScope.lang.data.not_deleted_item);  
-          // }
+          if (confirm($rootScope.lang.data.confirm_delete) === true) {
+            //Megadott termék tölése az adatbázisból
+            http.request({
+              url:"./php/fromCart.php",
+              data:""
+            })
+            .then(result =>{
+              $scope.$applyAsync();
+              alert($rootScope.lang.data.deleted_item);
+            })
+            .catch(e=>console.log(e));
+          }
+          else{
+            alert($rootScope.lang.data.not_deleted_item);  
+          }
         };
         
         //Fizetés
         $scope.pay = ()=>{
-          // http.request({
-          //   url:"./php/buy_items.php",
-          //   data:""
-          // })
-          // .then(result=>{
-          //   alert($rootScope.lang.data.pay_msg);
-          // })
-          // .catch(e=>console.log(e));
+          http.request({
+            url:"./php/buy_items.php",
+            data:""
+          })
+          .then(result=>{
+            alert($rootScope.lang.data.pay_msg);
+          })
+          .catch(e=>console.log(e));
         };
 
         console.log('Cart controller...');
