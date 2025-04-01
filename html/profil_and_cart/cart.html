@@ -1,18 +1,170 @@
 <div class="container-fluid">
   <div class="row mt-5 justify-content-center">
-    <div class="mb-3 col-12 col-lg-8 overflow-x-auto" 
+    <!-- Kosárba tett termékel -->
+    <div class="mb-3 col-12 col-lg-8 overflow-x-auto"
          ng-if="bought_products">
       <table class="table table-bordered table-striped">
-        <tr>
-          <th>Termék képe</th>
-          <th>Termék neve</th>
-          <th>Ár</th>
-          <th>Mennyiség</th>
-          <th>Kiszerelés</th>
-          <th>Egységár</th>
-          <th>Termék eltávolítása</th>
+        <tr ng-init="table_header_data=['plant_name_table',
+                                        'packaging','quantity',
+                                        'unit_price','price']">
+          <th>
+            #
+          </th>
+          <th>
+            {{$root.lang.data.product_img}}
+          </th>
+          <th ng-repeat="x in table_header_data track by $index">
+            {{$root.lang.data[x]}}
+          </th>
+          <th>
+            {{$root.lang.data.cancel_product}}
+          </th>
         </tr>
+        <tbody>
+          <tr ng-repeat="bought_product in bought_products">
+            <td>
+              <p class="fw-bold">
+                {{$index+1}}
+              </p>
+            </td>
+            <td>
+              <img ng-src="./img/termekek/{{bought_product.kep}}"
+                   class="rounded" 
+                   height="60"
+                   alt="{{bought_product.megnevezes}}">
+            </td>
+            <td>
+              {{$root.lang.data[bought_product.megnevezes]}}
+            </td>
+            <td>
+              {{$root.lang.data[bought_product.kiszereles]}}
+            </td>
+            <td>
+              <p>
+                <input type="number"
+                       class="w-50"
+                       ng-init="model.db=bought_product.db"
+                       ng-model="model.db"
+                       min="1"
+                       max="20"> 
+                <span class="fw-bold">
+                  db
+                </span>
+              </p>
+            </td>
+            <td>
+              <p>
+                {{bought_product.ar}} 
+                <span class="fw-bold">
+                  huf
+                </span>
+              </p>
+            </td>
+            <td>
+              <p>
+                {{model.db*bought_product.ar}} 
+                <span class="fw-bold">
+                  huf
+                </span>
+              </p>
+            </td>
+            <td>
+              <button class="btn btn-danger text-center"
+                      ng-click="remove_from_cart()">
+                X
+              </button>
+            </td>
+          </tr>
+        </tbody>
       </table>
+    </div>
+
+    <!-- Üres kosár -->
+    <div class="mb-3 col-12 col-lg-8"
+         ng-if="!bought_products">
+      <h1 class="text-info">
+        {{$root.lang.data.empty_cart}}
+      </h1>
+    </div>
+
+    <!-- Vásárlás befejezése -->
+    <div class="mb-3 col-12 col-lg-4 col-xxl-3">
+      <form class="w-auto p-3" 
+            style="border:1px solid #ccc" 
+            name="cart_form">
+        <div class="mb-3">
+          <h1 class="text-center pb-3 text-info">
+            <i class="fa-solid fa-cart-shopping me-1"></i>
+            {{$root.lang.data.pay}}
+          </h1>
+        </div>
+
+        <!-- Fizetési mód -->
+        <div class="mb-3">
+          <label for="pay_type" 
+                 class="form-label">
+            <b>
+              <i class="fa-solid fa-credit-card"></i>
+              {{$root.lang.data.pay_type}}:
+            </b>
+            <select class="form-select" 
+                    aria-label="Default select example" 
+                    id="pay_type">
+            <option selected 
+                    ng-repeat="x in pay_types track by $index">
+              {{$root.lang.data[x.megnevezes]}}
+            </option>
+          </select>
+          </label>
+        </div>
+
+        <!-- Kártya szám -->
+        <div class="mb-3">
+          <label for="ccn" 
+                 class="form-label">
+            <b>
+              <i class="fa-solid fa-hashtag"></i>
+              {{$root.lang.data.card_num}}:
+            </b>
+          </label>
+          <input id="ccn" 
+                 type="tel" 
+                 inputmode="numeric" 
+                 pattern="[0-9\s]{13,19}" 
+                 autocomplete="cc-number" 
+                 maxlength="19"
+                 class="form-control"
+                 placeholder="xxxx xxxx xxxx xxxx"
+                 required>
+        </div>
+
+        <!-- Lejárati dátum -->
+        <div class="mb-3">
+          <label for="date" 
+                 class="form-label">
+            <b>
+              <i class="fa-solid fa-calendar-days"></i>
+              {{$root.lang.data.expiration_date}}:
+            </b>
+          </label>
+          <input id="date" 
+                 type="date" 
+                 class="form-control"
+                 min="2025-01-01"
+                 max="2025-10-01">
+        </div>
+
+        <!-- Gomb (fizetés) -->
+        <div class="mb-3">
+          <button type="button" 
+                  class="btn btn-primary" 
+                  ng-disabled="cart_form.$invalid"
+                  ng-click="pay()">
+            <i class="fa-solid fa-cart-shopping me-1"></i>
+            {{$root.lang.data.finish_paying}}
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

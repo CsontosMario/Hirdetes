@@ -70,7 +70,7 @@
       .state('cart', {
             url: '/cart',
             parent: 'root',
-            templateUrl: './html/profil_and_cart/cart_old.html',
+            templateUrl: './html/profil_and_cart/cart.html',
             controller: 'cartController'
       })
 
