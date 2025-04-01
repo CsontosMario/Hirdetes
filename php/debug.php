@@ -2,13 +2,9 @@
 declare(strict_types=1);
 
 $_POST['data'] = '{
-    "nev": "sasasasa",
-    "email": "odry.attilac@keri.mako.hu",
-    "jelszo": "1234Aa",
-    "iranyitoszam": "233232",
-    "telepules": "SSSS",
-    "cim": "dffdfdfd",
-    "orszag": "sdds"
+    "felhasznaloID": "9",
+    "datum": "2025-05-10",
+    "fizetesTipus": "KP"
 }';
 
-require_once('register.php');
+require_once('buy_items.php');
