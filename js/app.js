@@ -138,6 +138,7 @@
             alert($rootScope.lang.data.registered);
           })
           .catch(e => console.log(e));
+
         };
 
         console.log('Products controller...');
@@ -154,8 +155,7 @@
           $scope.farmers = result;
           $scope.$applyAsync();
         })
-        .catch(e => console.log(e));
-
+        .catch(e => console.log(e))
         console.log('About_our_farmers controller...');
       }
     ])
@@ -170,7 +170,8 @@
           $scope.programmers = result;
           $scope.$applyAsync();
         })
-        .catch(e => console.log(e));
+        .catch(e => console.log(e))
+        console.log('Products controller...');
       }
     ])
 
@@ -180,7 +181,7 @@
       '$scope',
       '$state',
       'http',
-      function ($rootScope,$scope,$state, http) {
+      function ($rootScope,$scope,$state,http) {
         console.log('Register controller...');
 
         //Nincs bejelentkezve egy felhasználó se
@@ -230,9 +231,10 @@
     .controller('loginController', [
       '$rootScope',
       '$scope',
-      '$state',
       'http',
-      function ($rootScope, $scope, $state, http) {
+      'util',
+      '$state',
+      function ($rootScope, $scope, http, util, $state) {
         console.log('Login controller...');
         $scope.login = () => {
           http.request({
@@ -247,8 +249,8 @@
               alert($rootScope.lang.data.sign_in_success_1 + "\n" + 
                     $rootScope.lang.data.sign_in_success_2 + " " + 
                     $rootScope.user.name + "!");
-              $scope.$applyAsync();
               $state.go('home');
+              $scope.$applyAsync();
           })
           .catch(e => alert($rootScope.lang.data[e]));
         }
@@ -352,6 +354,7 @@
           $scope.$applyAsync();
         })
         .catch(e=>console.log(e));
+
         //Ideiglenesen teljesen kiüríti a profilt!!!
         $scope.cancel_update = () => {
           $scope.profile.name = "";
@@ -371,23 +374,23 @@
       function ($rootScope, $scope, http) {
 
         //Fizetési típusok
-        // http.request("./php/cart.php")
-        // .then(result => {
-        //     $scope.pay_types = result;
-        //     $scope.$applyAsync();
-        // })
-        // .catch(e => console.log(e));
+        http.request("./php/cart.php")
+        .then(result => {
+            $scope.pay_types = result;
+            $scope.$applyAsync();
+        })
+        .catch(e => console.log(e));
 
         //Megvett termékek adatainak leszedése
-        // http.request({
-        //   url:"./php/cartelements.php",
-        //   data: $rootScope.user.id
-        // })
-        // .then(result =>{
-        //   $scope.bought_products = result;
-        //   $scope.$applyAsync();
-        // })
-        // .catch(e => console.log(e));
+        http.request({
+          url:"./php/cartelements.php",
+          data: $rootScope.user.id
+        })
+        .then(result =>{
+          $scope.bought_products = result;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e));
 
         //Tartalom kiszedése a kosárból
         $scope.remove_from_cart=()=>{
