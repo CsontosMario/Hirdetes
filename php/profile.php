@@ -14,4 +14,6 @@ $result = $db->execute($query, $args);
 
 $db = null;
 
+$result = $result[0];
+
 Util::setResponse($result);
