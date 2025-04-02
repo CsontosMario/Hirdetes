@@ -69,8 +69,7 @@
         <input type="text"
                class="form-control" 
                id="country" 
-               ng-model="profile.country"
-               value={{profile_data.orszag}}>
+               ng-model="profile_data.orszag">
       </div>
 
       <!-- Település változtatása -->
@@ -83,8 +82,7 @@
         <input type="text" 
                class="form-control" 
                id="settlement" 
-               ng-model="profile.settlement"
-               value={{profile_data.telepules}}>
+               ng-model="profile_data.telepules">
       </div>
 
       <!-- Lakcím bekérése -->
@@ -96,8 +94,7 @@
         <input type="text" 
                class="form-control" 
                id="r_adress"
-               ng-model="profile.cim"
-               value={{profile_data.cim}} 
+               ng-model="profile_data.cim"
                required>
       </div>
 
@@ -112,8 +109,7 @@
                class="form-control" 
                id="postal_code" 
                style="max-width:120px;"
-               ng-model="profile.postal_code"
-               value={{profile_data.iranyitoszam}}>
+               ng-model="profile_data.iranyitoszam">
       </div>
 
       <!-- Mentés (gomb) -->
