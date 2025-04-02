@@ -37,17 +37,17 @@
             templateUrl: './html/products.html',
             controller: 'productsController'
       })
-      .state('aboutOurFarmers', {
-            url: '/about_our_farmers',
+      .state('aboutOurFarm', {
+            url: '/about_our_farm',
             parent: 'root',
-            templateUrl: './html/farmers_and_programmers/about_our_farmers.html',
-            controller: 'about_our_farmersController'
+            templateUrl: './html/about_our_farm.html',
+            controller: 'about_our_farmController'
       })
-      .state('aboutUs', {
-            url: '/about_our_website_creators',
-            parent: 'root',
-            templateUrl: './html/farmers_and_programmers/about_us.html',
-            controller: 'about_usController'
+      .state('aboutOurFarmers', {
+        url: '/about_our_farmers',
+        parent: 'root',
+        templateUrl: './html/farmers/about_our_farmers.html',
+        controller: 'about_our_farmersController'
       })
       .state('register', {
             url: '/profile/sign_up',
@@ -146,8 +146,8 @@
       }
     ])
 
-    //About our farmers controller
-    .controller('about_our_farmersController', [
+    //About our farm controller
+    .controller('about_our_farmController', [
       '$scope',
       'http',
       function ($scope, http) {
@@ -157,7 +157,7 @@
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))
-        console.log('About_our_farmers controller...');
+        console.log('About_our_farm controller...');
       }
     ])
 
@@ -255,6 +255,21 @@
           })
           .catch(e => alert($rootScope.lang.data[e]));
         }
+      }
+    ])
+
+    //About our farmers controller
+    .controller('about_our_farmersController', [
+      '$scope',
+      'http',
+      function ($scope, http) {
+        http.request('./php/producers.php')
+        .then(result => {
+          $scope.farmers = result;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e))
+        console.log('About_our_farmers controller...');
       }
     ])
 
