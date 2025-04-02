@@ -127,6 +127,7 @@
           http.request({
             url: "./php/toCart.php",
             data: {
+              kosarID:$rootScope.user.id,
               termekID:product_id,
               db:quantity,
               ar:product_ar*quantity
@@ -373,6 +374,9 @@
       'http',
       function ($rootScope, $scope, http) {
 
+        //A kosár frissítése új termékek berakása után.
+        $scope.$applyAsync();
+        
         //Fizetési típusok
         http.request("./php/cart.php")
         .then(result => {
