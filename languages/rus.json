@@ -131,5 +131,6 @@
   "unit_price":"Цена за единицу товара",
   "deleted_item":"Товар удален из корзины.",
   "not_deleted_item":"Выбранный товар не будет удален из корзины.",
-  "add_product":"Продукт был добавлен в корзину."
+  "add_product":"Продукт был добавлен в корзину.",
+  "go_to_cart":"Szeretne átlépni a kosár oldalra?"
 }

@@ -132,5 +132,6 @@
   "unit_price":"Egységár",
   "deleted_item":"A termék ki lett törölve a kosárból.",
   "not_deleted_item":"A kiválasztott termék nem lesz törölve a kosárból.",
-  "add_product":"A termék hozzá lett adva a kosárhoz."
+  "add_product":"A termék hozzá lett adva a kosárhoz.",
+  "go_to_cart":"Szeretne átlépni a kosár oldalra?"
 }

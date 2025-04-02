@@ -132,5 +132,6 @@
   "unit_price":"Stückpreis",
   "deleted_item":"Das Produkt wurde aus dem Warenkorb entfernt.",
   "not_deleted_item":"Das ausgewählte Produkt wird nicht aus dem Warenkorb gelöscht.",
-  "add_product":"Das Produkt wurde dem Einkaufswagen hinzugefügt."
+  "add_product":"Das Produkt wurde dem Einkaufswagen hinzugefügt.",
+  "go_to_cart":"Szeretne átlépni a kosár oldalra?"
 }

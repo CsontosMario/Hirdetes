@@ -132,5 +132,6 @@
   "unit_price":"Jednotková cena",
   "deleted_item":"Produkt bol odstránený z košíka.",
   "not_deleted_item":"Vybraný produkt nebude vymazaný z košíka.",
-  "add_product":"Produkt bol pridaný do košíka."
+  "add_product":"Produkt bol pridaný do košíka.",
+  "go_to_cart":"Szeretne átlépni a kosár oldalra?"
 }

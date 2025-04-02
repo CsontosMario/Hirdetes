@@ -132,5 +132,6 @@
   "unit_price":"Unit price",
   "deleted_item":"The product has been removed from the cart.",
   "not_deleted_item":"The selected product will not be deleted from the cart.",
-  "add_product":"The product has been added to the cart."
+  "add_product":"The product has been added to the cart.",
+  "go_to_cart":"Szeretne átlépni a kosár oldalra?"
 }
