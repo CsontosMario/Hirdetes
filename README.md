@@ -20,7 +20,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
     -Betenni a profilba a bejelentkezett fiók megadott adatait és azt lehessen változtatni    <= Állapot: 0% (nincs kész)
     -A profilban lehessen profilképet berakni.                                                <= Állapot: 0% (nincs kész)
     -Kosár befejezése                                                                         <= Állapot: 40% (nincs kész)
-    -Termékek megvétele gomb használatával a termékek mennyiségét betenni az adatbázisba      <= Állapot: 40% (nincs kész)
+    -Ha már a megvásárolandó termék benn van a kosárban akkor egybe rakja.                    <= Állapot: 0% (nincs kész)
 
   # Hibák:
     

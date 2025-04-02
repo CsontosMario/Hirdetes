@@ -136,7 +136,7 @@
           .then(result => {
             $scope.data = result;
             $scope.$applyAsync();
-            alert($rootScope.lang.data.registered);
+            alert($rootScope.lang.data.add_product);
           })
           .catch(e => console.log(e));
 

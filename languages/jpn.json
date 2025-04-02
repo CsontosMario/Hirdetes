@@ -131,5 +131,6 @@
   "confirm_delete":"製品を削除してもよろしいですか?",
   "unit_price":"本体価格",
   "deleted_item":"商品はカートから削除されました。",
-  "not_deleted_item":"選択した商品はカートから削除されません。"
+  "not_deleted_item":"選択した商品はカートから削除されません。",
+  "add_product":"商品がカートに追加されました。"
 }
