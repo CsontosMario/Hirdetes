@@ -133,5 +133,7 @@
   "deleted_item":"商品はカートから削除されました。",
   "not_deleted_item":"選択した商品はカートから削除されません。",
   "add_product":"商品がカートに追加されました。",
-  "go_to_cart":"Szeretne átlépni a kosár oldalra?"
+  "go_to_cart":"Szeretne átlépni a kosár oldalra?",
+  "gallery":"Galéria",
+  "information":"Farmunkról"
 }
