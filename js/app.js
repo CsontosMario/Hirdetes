@@ -434,7 +434,7 @@
         $scope.pay = ()=>{
           http.request({
             url:"./php/buy_items.php",
-            data:""
+            data:$rootScope.user.id
           })
           .then(result=>{
             alert($rootScope.lang.data.pay_msg);

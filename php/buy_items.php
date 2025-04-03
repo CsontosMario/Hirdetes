@@ -8,9 +8,14 @@ $args = Util::getArgs();
 
 $db = new Database();
 
-$query = $db->preparateInsert("kosar", $args);
+$query = "DELETE FROM `kosarelemek` 
+                WHERE `kosarID` = ?";
 
-$result = $db->execute($query, array_values($args));
+$result = $db->execute($query, $args);
+
+// $query = $db->preparateInsert("kosar", $args);
+
+// $result = $db->execute($query, array_values($args));
 
 $db = null;
 
