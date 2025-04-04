@@ -17,7 +17,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
   # Feladatok:
 
     -Különböző nyelvekre lefordítani a weboldalt                                              <= Állapot: 100% (kész (folyamatos bővülés))
-    -Betenni a profilba a bejelentkezett fiók megadott adatait és azt lehessen változtatni    <= Állapot: 0% (nincs kész)
+    -Betenni a profilba a bejelentkezett fiók megadott adatait és azt lehessen változtatni    <= Állapot: 50% (nincs kész)
     -A profilban lehessen profilképet berakni.                                                <= Állapot: 0% (nincs kész)
     -Kosár befejezése                                                                         <= Állapot: 40% (nincs kész)
     -Ha már a megvásárolandó termék benn van a kosárban akkor egybe rakja.                    <= Állapot: 0% (nincs kész)
@@ -28,7 +28,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
 
   # QOL szükségletek:
 
-    -Regisztráció után egyből bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész) // Nem fontos
+    -Regisztráció után a felhasználó egybőli bejelentkeztetése az oldalba <= Állapot: 0% (nincs kész) // Nem fontos
 
 - [] Adatbázis átnézése 
   - Kosár dátum -> datetime     <= Állapot: 0% (nincs kész)
