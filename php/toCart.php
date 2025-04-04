@@ -16,7 +16,7 @@ $result = $db->execute($query, ["kosarID" => $args['kosarID'],
                                 "termekID" => $args['termekID']]);
 
 //Check if result is empty or not
-if (!is_null($result)) {
+if (is_null($result)) {
   //Place new product in the cart
   $query= $db->preparateInsert("kosarelemek", $args);
   $result=$db->execute($query, array_values($args));
