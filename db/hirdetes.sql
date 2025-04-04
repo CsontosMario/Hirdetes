@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Ápr 04. 08:49
+-- Létrehozás ideje: 2025. Ápr 04. 13:20
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -237,7 +237,8 @@ ALTER TABLE `kosar`
 -- A tábla indexei `kosarelemek`
 --
 ALTER TABLE `kosarelemek`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kosar` (`kosarID`,`id`);
 
 --
 -- A tábla indexei `programozoink`
