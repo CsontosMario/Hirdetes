@@ -46,8 +46,14 @@
       .state('aboutOurFarmers', {
         url: '/about_our_farmers',
         parent: 'root',
-        templateUrl: './html/farmers/about_our_farmers.html',
+        templateUrl: './html/farmers_and_programmers/about_our_farmers.html',
         controller: 'about_our_farmersController'
+      })
+      .state('aboutUs', {
+            url: '/about_our_website_creators',
+            parent: 'root',
+            templateUrl: './html/farmers_and_programmers/about_us.html',
+            controller: 'about_usController'
       })
       .state('register', {
             url: '/profile/sign_up',
@@ -158,6 +164,21 @@
         })
         .catch(e => console.log(e))
         console.log('About_our_farm controller...');
+      }
+    ])
+
+    //About us controller
+    .controller('about_usController', [
+      '$scope',
+      'http',
+      function ($scope, http) {
+        http.request('./php/programmers.php')
+        .then(result => {
+          $scope.programmers = result;
+          $scope.$applyAsync();
+        })
+        .catch(e => console.log(e))
+        console.log('Products controller...');
       }
     ])
 
