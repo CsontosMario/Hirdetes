@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Ápr 01. 10:33
+-- Létrehozás ideje: 2025. Ápr 04. 08:49
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -94,7 +94,9 @@ INSERT INTO `kosarelemek` (`id`, `kosarID`, `termekID`, `db`, `ar`) VALUES
 (8, 3, 5, 7, 1750),
 (9, 1, 6, 2, 400),
 (10, 3, 4, 7, 3500),
-(11, 3, 1, 5, 5000);
+(11, 3, 1, 5, 5000),
+(12, 12, 8, 3, 1350),
+(13, 3, 9, 5, 4000);
 
 -- --------------------------------------------------------
 
@@ -156,7 +158,7 @@ INSERT INTO `regisztracio` (`felhasznaloID`, `email`, `nev`, `telefonszam`, `jel
 (9, 'petecastallengtion@gmail.com', 'Pete Castallengtion', NULL, '1234aA', 10000, 'New York', 'Park Avenue', 'United States'),
 (10, 'soujiseta2011@gmail.com', 'Souji Seta', '+8175322198', '1234aA', 777, 'Fuefuki, Yamanashi Prefecture', 'Yamanashi Prefectural Rd 303', 'Japan'),
 (11, 'odry.atilla@keri.mako.hu', 'Ódry Atilla', NULL, '1234aA', NULL, NULL, NULL, NULL),
-(12, 'dummy@dummy.dummy', 'Sophie', NULL, '1234aA', NULL, NULL, NULL, NULL);
+(12, 'dummy@dummy.dummy', 'Sophie', NULL, '1234aA', NULL, NULL, NULL, 'Magyarország');
 
 -- --------------------------------------------------------
 
@@ -276,7 +278,7 @@ ALTER TABLE `kosar`
 -- AUTO_INCREMENT a táblához `kosarelemek`
 --
 ALTER TABLE `kosarelemek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT a táblához `programozoink`
