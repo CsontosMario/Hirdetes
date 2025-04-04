@@ -6,6 +6,7 @@ $args=Util::getArgs();
 
 $db = new Database();
 
+//Checking if product is alredy in the cart
 $query = "SELECT `termekID` 
             FROM `kosarelemek` 
            WHERE `kosarID` = :kosarID 
@@ -14,12 +15,14 @@ $query = "SELECT `termekID`
 $result = $db->execute($query, ["kosarID" => $args['kosarID'], 
                                 "termekID" => $args['termekID']]);
 
+//Check if result is empty or not
 if (!is_null($result)) {
+  //Place new product in the cart
   $query= $db->preparateInsert("kosarelemek", $args);
-
   $result=$db->execute($query, array_values($args));
 }
 else{
+  //Update alredy existing product amount
   $query= "UPDATE `kosarelemek` 
               SET `db`=`db`+ :db,
                   `ar`=`ar`+ :ar
