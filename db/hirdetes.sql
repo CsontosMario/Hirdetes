@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Ápr 04. 13:23
+-- Létrehozás ideje: 2025. Ápr 08. 09:47
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `hirdetes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `farm`
+--
+
+CREATE TABLE `farm` (
+  `id` int(11) NOT NULL,
+  `kep` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `farm`
+--
+
+INSERT INTO `farm` (`id`, `kep`) VALUES
+(1, 'farm1.jpg'),
+(2, 'farm2.jpg'),
+(3, 'farm3.jpg'),
+(4, 'farm4.jpg'),
+(5, 'farm5.jpg'),
+(6, 'farm6.jpg'),
+(7, 'farm7.jpg');
 
 -- --------------------------------------------------------
 
@@ -219,6 +243,12 @@ INSERT INTO `zoldsegek` (`termekID`, `kep`, `megnevezes`, `leiras`, `ar`, `kisze
 --
 
 --
+-- A tábla indexei `farm`
+--
+ALTER TABLE `farm`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `fizetes`
 --
 ALTER TABLE `fizetes`
@@ -267,6 +297,12 @@ ALTER TABLE `zoldsegek`
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
+
+--
+-- AUTO_INCREMENT a táblához `farm`
+--
+ALTER TABLE `farm`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT a táblához `kosar`

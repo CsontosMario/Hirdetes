@@ -166,9 +166,9 @@
       '$scope',
       'http',
       function ($scope, http) {
-        http.request('./php/producers.php')
+        http.request('./php/farm.php')
         .then(result => {
-          $scope.farmers = result;
+          $scope.farm_kepek = result;
           $scope.$applyAsync();
         })
         .catch(e => console.log(e))

@@ -42,13 +42,13 @@
                id="pills-gallery" 
                role="tabpanel" 
                aria-labelledby="pills-gallery-tab">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 mt-3">
-              <div class="col" ng-init="pictures=['farm1.jpg','farm2.jpg','farm3.jpg',
-                                                  'farm4.jpg','farm5.jpg','farm6.jpg','farm7.jpg']">
+            <div class="row row-cols-1 row-cols-md-3 mt-3">
+              <div class="col">
                 <div class="card shadow-sm-bottom-end overflow-hidden"
-                     ng-repeat="picture in pictures track by $index">
-                  <img ng-src="./img/farm/{{picture}}" 
-                       alt="image">
+                     ng-repeat="picture in farm_kepek track by $index">
+                  <img ng-src="./img/farm/{{picture.kep}}"
+                       alt="image" 
+                       class="img-fluid">
                 </div>
               </div>
             </div>
