@@ -442,12 +442,15 @@
         .catch(e => console.log(e));
 
         //Tartalom kiszedése a kosárból
-        $scope.remove_from_cart=()=>{
+        $scope.remove_from_cart=(index)=>{
           if (confirm($rootScope.lang.data.confirm_delete) === true) {
             //Megadott termék tölése az adatbázisból
             http.request({
               url:"./php/fromCart.php",
-              data:""
+              data:{
+                "kosarID":$rootScope.user.id,
+                "termekID":$scope.bought_products[index].termekID
+              }
             })
             .then(result =>{
               $scope.$applyAsync();
