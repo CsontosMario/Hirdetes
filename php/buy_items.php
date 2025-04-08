@@ -11,7 +11,7 @@ $db = new Database();
 $query = "DELETE FROM `kosarelemek` 
                 WHERE `kosarID` = ?";
 
-$result = $db->execute($query, $args);
+$result = $db->execute($query, array_values($args));
 
 // $query = $db->preparateInsert("kosar", $args);
 

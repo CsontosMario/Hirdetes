@@ -394,11 +394,11 @@
 
         //Ideiglenesen teljesen kiüríti a profilt!!!
         $scope.cancel_update = () => {
-          $scope.profile.name = "";
-          $scope.profile.country = "";
-          $scope.profile.settlement = "";
-          $scope.profile.cim = "";
-          $scope.profile.postal_code = "";
+          $scope.profile_data.nev = "";
+          $scope.profile_data.orszag = "";
+          $scope.profile_data.telepules = "";
+          $scope.profile_data.cim = "";
+          $scope.profile_data.iranyitoszam = "";
         }
       }
     ])
@@ -455,10 +455,13 @@
         $scope.pay = ()=>{
           http.request({
             url:"./php/buy_items.php",
-            data:$rootScope.user.id
+            data:{
+              "kosarID":$rootScope.user.id,
+            }
           })
           .then(result=>{
             alert($rootScope.lang.data.pay_msg);
+            $scope.$applyAsync();
           })
           .catch(e=>console.log(e));
         };
