@@ -38,19 +38,20 @@
         <!-- Épek/információk helye -->
         <div class="tab-content" id="pills-tabContent">
           <!-- Képek -->
-          <div class="tab-pane fade show active justify-content-center" 
+          <div class="tab-pane fade show active" 
                id="pills-gallery" 
                role="tabpanel" 
                aria-labelledby="pills-gallery-tab">
-            <div class="row row-cols-1 row-cols-md-3 mt-3">
-              <div class="col">
-                <div class="card shadow-sm-bottom-end overflow-hidden"
+            <div class="row row-cols-1 row-cols-md-3 mt-3 g-2 justify-content-center">
+              <!-- <div class="col"> -->
+                <div class="col card shadow-sm-bottom-end overflow-hidden mx-1 p-0"
+                     style="max-width:350px;"
                      ng-repeat="picture in farm_kepek track by $index">
                   <img ng-src="./img/farm/{{picture.kep}}"
                        alt="image" 
                        class="img-fluid">
                 </div>
-              </div>
+              <!-- </div> -->
             </div>
           </div>
           <!-- Információk -->
