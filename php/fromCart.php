@@ -6,9 +6,11 @@ $db = new Database();
 
 $args=Util::getArgs();
 
-$query = "";
+$query = "DELETE FROM `kosarelemek` 
+                WHERE `kosarID` = :kosarID 
+                  AND `termekID` = :termekID";
 
-$result = $db->execute($query, array_values($args));
+$result = $db->execute($query, $args);
 
 $db = null;
 
