@@ -26,6 +26,7 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
     
     -A farmunk oldalon a képeket nem egymás mellé teszi az oldal
     -A kosárban a vásárlás véglegesítése után nem mutatja frissítés nélkül a változtatásokat.
+    -A farmunk oldalon a farmunkról az információk megjelenik a galériában is.
 
   # QOL szükségletek:
 

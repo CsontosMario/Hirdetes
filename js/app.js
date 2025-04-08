@@ -21,7 +21,8 @@
                 controller: 'headerController'
               },
               'footer@root': {
-                templateUrl: './html/footer.html'
+                templateUrl: './html/footer.html',
+                controller: 'footerController'
               }
             }
       })
@@ -113,6 +114,14 @@
       '$scope',
       function ($scope) {
         console.log('Home controller...');
+      }
+    ])
+
+    //Footer controller
+    .controller('footerController', [
+      '$scope',
+      function ($scope) {
+        $scope.current_year = moment().year().toString();
       }
     ])
 
