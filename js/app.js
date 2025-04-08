@@ -139,21 +139,27 @@
         .catch(e => console.log(e));
 
         $scope.toCart = (product_id, quantity, product_ar) => {
-          http.request({
-            url: "./php/toCart.php",
-            data: {
-              kosarID:$rootScope.user.id,
-              termekID:product_id,
-              db:quantity,
-              ar:product_ar*quantity
-            }
-          })
-          .then(result => {
-            $scope.data = result;
-            $scope.$applyAsync();
-            alert($rootScope.lang.data.add_product);
-          })
-          .catch(e => console.log(e));
+          if (!quantity) {
+            alert($rootScope.lang.data.invalid_quantity);
+          }
+          else{
+            http.request({
+              url: "./php/toCart.php",
+              data: {
+                kosarID:$rootScope.user.id,
+                termekID:product_id,
+                db:quantity,
+                ar:product_ar*quantity
+              }
+            })
+            .then(result => {
+              $scope.data = result;
+              $scope.$applyAsync();
+              alert($rootScope.lang.data.add_product);
+              $state.go("cart");
+            })
+            .catch(e => console.log(e));
+          }
 
         };
 
@@ -173,21 +179,6 @@
         })
         .catch(e => console.log(e))
         console.log('About_our_farm controller...');
-      }
-    ])
-
-    //About us controller
-    .controller('about_usController', [
-      '$scope',
-      'http',
-      function ($scope, http) {
-        http.request('./php/programmers.php')
-        .then(result => {
-          $scope.programmers = result;
-          $scope.$applyAsync();
-        })
-        .catch(e => console.log(e))
-        console.log('Products controller...');
       }
     ])
 

@@ -138,5 +138,6 @@
   "information":"Farmunkról",
   "about_our_farm":"",
   "aboutOurProgrammers":"Fejlesztőinkről",
-  "wbsite_creators":"Weboldalunk fejlesztői"
+  "wbsite_creators":"Weboldalunk fejlesztői",
+  "invalid_quantity":"A termék mennyisége nem lehet nagyobb 20-nál és nem lehet kisebb 1-nél!"
 }

@@ -137,5 +137,6 @@
   "information":"Farmunkról",
   "about_our_farm":"",
   "aboutOurProgrammers":"О наших разработчиках",
-  "wbsite_creators":"Разработчики нашего сайта"
+  "wbsite_creators":"Разработчики нашего сайта",
+  "invalid_quantity":"Количество товара не может быть более 20 и не менее 1!"
 }

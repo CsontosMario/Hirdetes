@@ -138,5 +138,6 @@
   "information":"Farmunkról",
   "about_our_farm":"",
   "aboutOurProgrammers":"私たちの開発者について",
-  "wbsite_creators":"私たちのウェブサイト開発者"
+  "wbsite_creators":"私たちのウェブサイト開発者",
+  "invalid_quantity":"製品の数量は 20 を超えてはならず、1 未満であってはなりません。"
 }
