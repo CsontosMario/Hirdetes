@@ -444,8 +444,8 @@
               }
             })
             .then(result =>{
-              $scope.$applyAsync();
               alert($rootScope.lang.data.deleted_item);
+              $scope.$applyAsync();
             })
             .catch(e=>console.log(e));
           }

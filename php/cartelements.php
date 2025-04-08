@@ -8,7 +8,7 @@ $db = new Database();
 
 $args = Util::getArgs();
 
-$query ="SELECT `zoldsegek`.`kep`, `zoldsegek`.`megnevezes`, 
+$query ="SELECT `zoldsegek`.`kep`, `zoldsegek`.`megnevezes`, `kosarelemek`.`termekID`, 
                 `zoldsegek`.`kiszereles`, `kosarelemek`.`db`, `zoldsegek`.`ar` 
            FROM `kosarelemek`
             INNER JOIN `zoldsegek` ON `zoldsegek`.`termekID` = `kosarelemek`.`termekID`
