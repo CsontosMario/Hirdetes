@@ -79,7 +79,8 @@
       <!-- Mentés (gomb) -->
       <button type="button" 
               class="btn btn-primary" 
-              ng-disabled="profile_form.$invalid">
+              ng-disabled="profile_form.$invalid || !changes.change"
+              ng-click="change_profile()">
         <i class="fa-solid fa-floppy-disk"></i>
         {{$root.lang.data.save}}
       </button>

@@ -380,26 +380,31 @@
       '$rootScope',
       '$scope',
       'http',
-      function ($rootScope, $scope, http) {
+      'util',
+      function ($rootScope, $scope, http, util) {
+
+        $scope.changes = {
+          profil_base: null,
+          change : false
+        };
 
         http.request({
           url: "./php/profile.php",
           data: $rootScope.user.id
         })
         .then(result =>{
-          $scope.profile_data = result;
+          $scope.profile_data = util.objMerge($scope.profile_data, result);
+          $scope.changes.profil_base = util.objMerge({}, $scope.profile_data);
           $scope.$applyAsync();
         })
         .catch(e=>console.log(e));
 
-        //Ideiglenesen teljesen kiüríti a profilt!!!
-        $scope.cancel_update = () => {
-          $scope.profile_data.nev = "";
-          $scope.profile_data.orszag = "";
-          $scope.profile_data.telepules = "";
-          $scope.profile_data.cim = "";
-          $scope.profile_data.iranyitoszam = "";
-        }
+        $scope.$watch('profile_data', (newValue, oldValue) => {
+          if (newValue) {
+            $scope.changes.change = 
+                !angular.equals(newValue, $scope.changes.profil_base);
+          }
+        }, true);
       }
     ])
 
