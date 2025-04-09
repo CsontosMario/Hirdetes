@@ -163,7 +163,7 @@
         <div class="mb-3">
           <button type="button" 
                   class="btn btn-primary" 
-                  ng-disabled="cart_form.$invalid || !bought_products"
+                  ng-disabled="cart_form.$invalid && !bought_products"
                   ng-click="pay()">
             <i class="fa-solid fa-cart-shopping me-1"></i>
             {{$root.lang.data.finish_paying}}
