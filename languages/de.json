@@ -139,5 +139,6 @@
   "about_our_farm":"",
   "aboutOurProgrammers":"Entwickler",
   "wbsite_creators":"Unsere Webseitenentwickler",
-  "invalid_quantity":"Die Menge des Produkts darf nicht mehr als 20 und nicht weniger als 1 betragen!"
+  "invalid_quantity":"Die Menge des Produkts darf nicht mehr als 20 und nicht weniger als 1 betragen!",
+  "repeated_card_number":"Ezt a kártyaszámot már használja egy másik felhasználó!"
 }

@@ -139,5 +139,6 @@
   "about_our_farm":"",
   "aboutOurProgrammers":"Our programmers",
   "wbsite_creators":"The developers of our website",
-  "invalid_quantity":"The quantity of the product cannot be greater than 20 and cannot be less than 1!"
+  "invalid_quantity":"The quantity of the product cannot be greater than 20 and cannot be less than 1!",
+  "repeated_card_number":"Ezt a kártyaszámot már használja egy másik felhasználó!"
 }

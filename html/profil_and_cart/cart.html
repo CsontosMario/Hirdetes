@@ -109,7 +109,9 @@
             </b>
             <select class="form-select" 
                     aria-label="Default select example" 
-                    id="pay_type">
+                    id="pay_type"
+                    ng-model="cart.fizetesTipus"   
+                    required>
             <option selected 
                     ng-repeat="x in pay_types track by $index">
               {{$root.lang.data[x.megnevezes]}}
@@ -134,7 +136,8 @@
                  autocomplete="cc-number" 
                  maxlength="19"
                  class="form-control"
-                 placeholder="xxxx xxxx xxxx xxxx"
+                 placeholder="xxxx-xxxx-xxxx-xxxx"
+                 ng-model="cart.kartyaSzam"
                  required>
         </div>
 
@@ -151,14 +154,16 @@
                  type="date" 
                  class="form-control"
                  min="2025-01-01"
-                 max="2025-10-01">
+                 max="2025-10-01"
+                 ng-model="cart.datum"
+                 required>
         </div>
 
         <!-- Gomb (fizetés) -->
         <div class="mb-3">
           <button type="button" 
                   class="btn btn-primary" 
-                  ng-disabled="cart_form.$invalid"
+                  ng-disabled="cart_form.$invalid || !bought_products"
                   ng-click="pay()">
             <i class="fa-solid fa-cart-shopping me-1"></i>
             {{$root.lang.data.finish_paying}}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Ápr 09. 08:51
+-- Létrehozás ideje: 2025. Ápr 09. 09:30
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.1.17
 
@@ -75,19 +75,20 @@ CREATE TABLE `kosar` (
   `id` int(11) NOT NULL,
   `felhasznaloID` int(11) NOT NULL,
   `datum` datetime NOT NULL,
-  `fizetesTipus` varchar(11) NOT NULL
+  `fizetesTipus` varchar(11) NOT NULL,
+  `kartyaSzam` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `kosar`
 --
 
-INSERT INTO `kosar` (`id`, `felhasznaloID`, `datum`, `fizetesTipus`) VALUES
-(1, 1, '2017-11-15 00:00:00', 'A'),
-(2, 2, '2016-09-06 00:00:00', 'BK'),
-(3, 3, '2019-06-12 00:00:00', 'KP'),
-(4, 4, '2023-12-04 00:00:00', 'KP'),
-(5, 5, '2018-03-20 00:00:00', 'BK');
+INSERT INTO `kosar` (`id`, `felhasznaloID`, `datum`, `fizetesTipus`, `kartyaSzam`) VALUES
+(1, 1, '2017-11-15 00:00:00', 'A', '1122-5983-7321-5555'),
+(2, 2, '2016-09-06 00:00:00', 'BK', '7777-5555-3333-4444'),
+(3, 3, '2019-06-12 00:00:00', 'KP', '6666-9999-3524-1111'),
+(4, 4, '2023-12-04 00:00:00', 'KP', '5682-3341-6688-4716'),
+(5, 5, '2018-03-20 00:00:00', 'BK', '1234-5678-9012-3456');
 
 -- --------------------------------------------------------
 
@@ -260,6 +261,7 @@ ALTER TABLE `fizetes`
 --
 ALTER TABLE `kosar`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `kartyaSzam` (`kartyaSzam`),
   ADD KEY `felhasznaloID` (`felhasznaloID`),
   ADD KEY `fizetesID` (`fizetesTipus`);
 

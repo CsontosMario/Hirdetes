@@ -465,6 +465,9 @@
             url:"./php/buy_items.php",
             data:{
               "kosarID":$rootScope.user.id,
+              "fizetesTipus":$scope.cart.fizetesTipus,
+              "kartyaSzam":$scope.cart.kartyaSzam,
+              "datum":$scope.cart.datum
             }
           })
           .then(result=>{

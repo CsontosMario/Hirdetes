@@ -139,5 +139,6 @@
   "about_our_farm":"",
   "aboutOurProgrammers":"O našich vývojároch",
   "wbsite_creators":"Vývojári našich webových stránok",
-  "invalid_quantity":"Množstvo produktu nemôže byť väčšie ako 20 a nemôže byť menšie ako 1!"
+  "invalid_quantity":"Množstvo produktu nemôže byť väčšie ako 20 a nemôže byť menšie ako 1!",
+  "repeated_card_number":"Ezt a kártyaszámot már használja egy másik felhasználó!"
 }
