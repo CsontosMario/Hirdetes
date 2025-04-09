@@ -134,11 +134,11 @@
   "not_deleted_item":"Das ausgewählte Produkt wird nicht aus dem Warenkorb gelöscht.",
   "add_product":"Das Produkt wurde dem Einkaufswagen hinzugefügt.",
   "go_to_cart":"Szeretne átlépni a kosár oldalra?",
-  "gallery":"Galéria",
-  "information":"Farmunkról",
+  "gallery":"Bildergalerie",
+  "information":"Über unseren Bauernhof",
   "about_our_farm":"",
   "aboutOurProgrammers":"Entwickler",
   "wbsite_creators":"Unsere Webseitenentwickler",
   "invalid_quantity":"Die Menge des Produkts darf nicht mehr als 20 und nicht weniger als 1 betragen!",
-  "repeated_card_number":"Ezt a kártyaszámot már használja egy másik felhasználó!"
+  "repeated_card_number":"Diese Kartennummer wird bereits von einem anderen Benutzer genutzt!"
 }

@@ -133,11 +133,11 @@
   "not_deleted_item":"Выбранный товар не будет удален из корзины.",
   "add_product":"Продукт был добавлен в корзину.",
   "go_to_cart":"Szeretne átlépni a kosár oldalra?",
-  "gallery":"Galéria",
-  "information":"Farmunkról",
+  "gallery":"Галерея",
+  "information":"О нашей ферме",
   "about_our_farm":"",
   "aboutOurProgrammers":"О наших разработчиках",
   "wbsite_creators":"Разработчики нашего сайта",
   "invalid_quantity":"Количество товара не может быть более 20 и не менее 1!",
-  "repeated_card_number":"Ezt a kártyaszámot már használja egy másik felhasználó!"
+  "repeated_card_number":"Этот номер карты уже используется другим пользователем!"
 }

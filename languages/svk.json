@@ -135,10 +135,10 @@
   "add_product":"Produkt bol pridaný do košíka.",
   "go_to_cart":"Szeretne átlépni a kosár oldalra?",
   "gallery":"Galéria",
-  "information":"Farmunkról",
+  "information":"O našej farme",
   "about_our_farm":"",
   "aboutOurProgrammers":"O našich vývojároch",
   "wbsite_creators":"Vývojári našich webových stránok",
   "invalid_quantity":"Množstvo produktu nemôže byť väčšie ako 20 a nemôže byť menšie ako 1!",
-  "repeated_card_number":"Ezt a kártyaszámot már használja egy másik felhasználó!"
+  "repeated_card_number":"Toto číslo karty už používa iný používateľ!"
 }
