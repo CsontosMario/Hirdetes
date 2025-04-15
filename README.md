@@ -17,16 +17,13 @@ A Hirdedés nevű vizsgaremek feladat Git-Hub oldala.
   # Feladatok:
 
     -Különböző nyelvekre lefordítani a weboldalt                                              <= Állapot: 100% (kész (folyamatos bővülés))
-    -Betenni a profilba a bejelentkezett fiók megadott adatait és azt lehessen változtatni    <= Állapot: 50% (nincs kész)
-    -A profilban lehessen profilképet berakni.                                                <= Állapot: 0% (nincs kész)
+    -Betenni a profilba a bejelentkezett fiók megadott adatait és azt lehessen változtatni    <= Állapot: 60% (nincs kész)
     -Kosár befejezése                                                                         <= Állapot: 70% (nincs kész)
-    -Nem kívánt termék törlése a kosárból                                                     <= Állapot: 5% (nincs kész)
+    -Nem kívánt termék törlése a kosárból                                                     <= Állapot: 90% (nincs kész)
 
   # Hibák:
     
-    -A farmunk oldalon a képeket nem egymás mellé teszi az oldal
     -A kosárban a vásárlás véglegesítése után nem mutatja frissítés nélkül a változtatásokat.
-    -A farmunk oldalon a farmunkról az információk megjelenik a galériában is.
 
   # QOL szükségletek:
 
