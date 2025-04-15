@@ -140,5 +140,7 @@
   "aboutOurProgrammers":"O našich vývojároch",
   "wbsite_creators":"Vývojári našich webových stránok",
   "invalid_quantity":"Množstvo produktu nemôže byť väčšie ako 20 a nemôže byť menšie ako 1!",
-  "repeated_card_number":"Toto číslo karty už používa iný používateľ!"
+  "repeated_card_number":"Toto číslo karty už používa iný používateľ!",
+  "successful_p_change":"A változtatás sikeres volt!",
+  "unsuccessful_p_change":"A változtatás sikertelen volt!"
 }

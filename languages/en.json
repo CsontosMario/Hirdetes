@@ -140,5 +140,7 @@
   "aboutOurProgrammers":"Our programmers",
   "wbsite_creators":"The developers of our website",
   "invalid_quantity":"The quantity of the product cannot be greater than 20 and cannot be less than 1!",
-  "repeated_card_number":"This card number is already used by another user!"
+  "repeated_card_number":"This card number is already used by another user!",
+  "successful_p_change":"A változtatás sikeres volt!",
+  "unsuccessful_p_change":"A változtatás sikertelen volt!"
 }

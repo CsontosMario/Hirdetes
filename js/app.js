@@ -388,23 +388,126 @@
           change : false
         };
 
-        http.request({
-          url: "./php/profile.php",
-          data: $rootScope.user.id
-        })
-        .then(result =>{
-          $scope.profile_data = util.objMerge($scope.profile_data, result);
-          $scope.changes.profil_base = util.objMerge({}, $scope.profile_data);
-          $scope.$applyAsync();
-        })
-        .catch(e=>console.log(e));
+        // Set local methods
+        let methods = {
 
-        $scope.$watch('profile_data', (newValue, oldValue) => {
-          if (newValue) {
-            $scope.changes.change = 
-                !angular.equals(newValue, $scope.changes.profil_base);
-          }
-        }, true);
+        // Initialize
+        init: () => {
+
+          // Set model from rootscope model
+          $scope.model = util.objMerge({}, $rootScope.user);
+
+          // Get rest data
+          methods.get();
+        },
+
+        // Get data
+        get: () => {
+
+          // Http request
+          http.request({
+            url: "./php/profile.php",
+            data: $rootScope.user.id
+          })
+          .then(response => {
+
+            // Set model
+            methods.set(response).then(() => {
+
+              // Set events
+              methods.events();
+
+            });
+          })
+          .catch(e => alert(e));
+        },
+
+        // Set model
+        set: (response) => {
+
+          // Create promise
+          return new Promise((resolve) => {
+
+            // Create new deffered object
+            let set = util.deferredObj();
+
+            set.promise.resolve()
+
+            // Wait for set completed
+            set.completed.then(() => {
+
+              // Merge model with response, save start model properties,
+              $scope.model = util.objMerge($scope.model, response);
+
+              $scope.profile_data = util.objMerge({}, $scope.model);
+
+              // Apply change, and resolve
+              $scope.$applyAsync();
+              resolve();
+            })
+          });
+        },
+
+        // Events
+        events: () => {
+
+          // Watch user profile changed
+          $scope.$watch('model', (newValue, oldValue) => {
+            if (newValue) {
+              $scope.changes.change = 
+                  !angular.equals(newValue, $scope.profile_data);
+            }
+          }, true);
+        }
+        };
+
+        // Set scope methods
+        $scope.methods = {
+
+        // Save
+        save: () => {
+
+          // Get only data, that has changed
+          let data = $scope.model
+
+          // Set user identifier
+          data.id = $rootScope.user.id;
+
+          // Http request
+          http.request({
+            method: "POST",
+            url: "./php/profile_change.php",
+            data: data
+          })
+          .then(response => {
+
+            // Check response
+            if (response.affectedRows) {
+
+              // Update user properties
+              $rootScope.user = util.objMerge($rootScope.user, data, true);
+
+              // Update local storage
+              util.localStorage('set', 'name', $rootScope.user.name);
+
+
+              // Show result
+              alert($rootScope.lang.data.successful_p_change);
+
+              $state.go('home')
+
+            } else alert($rootScope.lang.data.unsuccessful_p_change);
+          })
+          .catch(e => alert(e));
+        },
+
+        // Cancel
+        cancel: () => $state.go('home')
+        };
+
+        // Initialize
+        methods.init();
+
       }
     ])
 
