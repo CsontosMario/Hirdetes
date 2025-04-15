@@ -141,6 +141,6 @@
   "wbsite_creators":"私たちのウェブサイト開発者",
   "invalid_quantity":"製品の数量は 20 を超えてはならず、1 未満であってはなりません。",
   "repeated_card_number":"このカード番号はすでに他のユーザーが使用しています。",
-  "successful_p_change":"A változtatás sikeres volt!",
-  "unsuccessful_p_change":"A változtatás sikertelen volt!"
+  "successful_p_change":"変更は成功しました!",
+  "unsuccessful_p_change":"変更は失敗しました!"
 }

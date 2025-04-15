@@ -140,6 +140,6 @@
   "wbsite_creators":"Разработчики нашего сайта",
   "invalid_quantity":"Количество товара не может быть более 20 и не менее 1!",
   "repeated_card_number":"Этот номер карты уже используется другим пользователем!",
-  "successful_p_change":"A változtatás sikeres volt!",
-  "unsuccessful_p_change":"A változtatás sikertelen volt!"
+  "successful_p_change":"Изменение прошло успешно!",
+  "unsuccessful_p_change":"Изменение не удалось!"
 }
