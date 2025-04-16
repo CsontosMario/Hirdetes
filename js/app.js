@@ -130,7 +130,9 @@
       '$rootScope',
       '$scope',
       'http',
-      function ($rootScope, $scope, http) {
+      '$state',
+      function ($rootScope, $scope, http, $state) {
+        
         http.request("./php/hirdetes.php")
         .then(response => {
           $scope.zoldsegek = response;
@@ -156,7 +158,7 @@
               $scope.data = result;
               $scope.$applyAsync();
               alert($rootScope.lang.data.add_product);
-              $state.go("cart");
+              //$state.go("cart");
             })
             .catch(e => console.log(e));
           }
@@ -391,74 +393,74 @@
         // Set local methods
         let methods = {
 
-        // Initialize
-        init: () => {
+          // Initialize
+          init: () => {
 
-          // Set model from rootscope model
-          $scope.model = util.objMerge({}, $rootScope.user);
+            // Set model from rootscope model
+            $scope.model = util.objMerge({}, $rootScope.user);
 
-          // Get rest data
-          methods.get();
-        },
+            // Get rest data
+            methods.get();
+          },
 
-        // Get data
-        get: () => {
+          // Get data
+          get: () => {
 
-          // Http request
-          http.request({
-            url: "./php/profile.php",
-            data: $rootScope.user.id
-          })
-          .then(response => {
-
-            // Set model
-            methods.set(response).then(() => {
-
-              // Set events
-              methods.events();
-
-            });
-          })
-          .catch(e => alert(e));
-        },
-
-        // Set model
-        set: (response) => {
-
-          // Create promise
-          return new Promise((resolve) => {
-
-            // Create new deffered object
-            let set = util.deferredObj();
-
-            set.promise.resolve()
-
-            // Wait for set completed
-            set.completed.then(() => {
-
-              // Merge model with response, save start model properties,
-              $scope.model = util.objMerge($scope.model, response);
-
-              $scope.profile_data = util.objMerge({}, $scope.model);
-
-              // Apply change, and resolve
-              $scope.$applyAsync();
-              resolve();
+            // Http request
+            http.request({
+              url: "./php/profile.php",
+              data: $rootScope.user.id
             })
-          });
-        },
+            .then(response => {
 
-        // Events
-        events: () => {
+              // Set model
+              methods.set(response).then(() => {
 
-          // Watch user profile changed
-          $scope.$watch('model', (newValue, oldValue) => {
-            if (newValue) {
-              $scope.changes.change = 
-                  !angular.equals(newValue, $scope.profile_data);
-            }
-          }, true);
-        }
+                // Set events
+                methods.events();
+
+              });
+            })
+            .catch(e => alert(e));
+          },
+
+          // Set model
+          set: (response) => {
+
+            // Create promise
+            return new Promise((resolve) => {
+
+              // Create new deffered object
+              let set = util.deferredObj();
+
+              set.promise.resolve()
+
+              // Wait for set completed
+              set.completed.then(() => {
+
+                // Merge model with response, save start model properties,
+                $scope.model = util.objMerge($scope.model, response);
+
+                $scope.profile_data = util.objMerge({}, $scope.model);
+
+                // Apply change, and resolve
+                $scope.$applyAsync();
+                resolve();
+              })
+            });
+          },
+
+          // Events
+          events: () => {
+
+            // Watch user profile changed
+            $scope.$watch('profile_data', (newValue, oldValue) => {
+              if (newValue) {
+                $scope.changes.change = 
+                    !angular.equals($scope.model, $scope.profile_data);
+              }
+            }, true);
+          }
         };
 
         // Set scope methods
@@ -570,6 +572,7 @@
           })
           .then(result=>{
             alert($rootScope.lang.data.pay_msg);
+            $scope.bought_products = [];
             $scope.$applyAsync();
           })
           .catch(e=>console.log(e));
