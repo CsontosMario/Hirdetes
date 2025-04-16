@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 require_once("../../common/php/environment.php");
 
-$args = Util::getArgs();
+$args = Util::getArgs(false);
 
 $db = new Database();
 
 $query = "DELETE FROM `kosarelemek` 
                 WHERE `kosarID` = ?";
 
-$result = $db->execute($query, array_values($args));
+$result = $db->execute($query, $args);
 
 // $query = $db->preparateInsert("kosar", $args);
 

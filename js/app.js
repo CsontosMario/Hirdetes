@@ -566,12 +566,7 @@
         $scope.pay = ()=>{
           http.request({
             url:"./php/buy_items.php",
-            data:{
-              "kosarID":$rootScope.user.id,
-              "fizetesTipus":$scope.cart.fizetesTipus,
-              "kartyaSzam":$scope.cart.kartyaSzam,
-              "datum":$scope.cart.datum
-            }
+            data:$rootScope.user.id
           })
           .then(result=>{
             alert($rootScope.lang.data.pay_msg);
