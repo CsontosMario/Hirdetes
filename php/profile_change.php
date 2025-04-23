@@ -16,7 +16,7 @@ $query = "UPDATE `regisztracio`
                  `orszag`=:orszag 
            WHERE `felhasznaloID` = :felhasznaloID";
 
-$result = $db->execute($query, $args);
+$result = $db->execute($query, array_values($args));
 
 $db = null;
 

@@ -479,7 +479,14 @@
           http.request({
             method: "POST",
             url: "./php/profile_change.php",
-            data: data
+            data: {
+              felhasznaloID : data.id,
+              nev : data.nev,
+              iranyitoszam : data.iranyitoszam,
+              telepules : data.telepules,
+              cim : data.cim,
+              orszag : data.orszag
+            }
           })
           .then(response => {
 
