@@ -477,7 +477,6 @@
 
           // Http request
           http.request({
-            method: "POST",
             url: "./php/profile_change.php",
             data: {
               felhasznaloID : data.id,
